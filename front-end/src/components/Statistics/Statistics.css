@@ -1,0 +1,65 @@
+.statistics-section {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    opacity: 0;  
+    width: 100%;  
+    height: 90vh;  
+    margin-bottom: 5vw;   
+}  
+
+.statistics-section--visible {  
+    opacity: 1;  
+}  
+
+.statistics-section__items {  
+    display: flex;  
+    width: 100%;  
+    height: auto;  
+    justify-content: space-around;  
+    margin: 4vh 0;  
+}  
+
+.statistics-section__item {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    box-sizing: border-box;   
+    width: 20vw;  
+    height: auto;  
+}  
+
+.statistics-section__title {  
+    margin: 0 0 3vw 0;  
+    font-size: 3vw;  
+    width: fit-content;  
+    background: linear-gradient(90deg, #D1FDFF, #FDDB92);  
+    filter: drop-shadow(1px -1px 2px #fff6a875) drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));  
+    -webkit-background-clip: text;   
+    -webkit-text-fill-color: transparent;  
+}  
+
+.statistics-section__item-desc {  
+    text-align: center;  
+    color: white;  
+    font-size: 2vw;  
+    font-family: EurostileRegular;  
+    margin-top: 10px;  
+}  
+
+.statistics-section__item-image {  
+    width: 6vw;  
+}  
+
+.animated-number {  
+    background: linear-gradient(90deg, #177fd8, #c3f486, #e88e0c); 
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;  
+    margin-top: 15px;  
+    font-size: 2vw;  
+}  
+
+@keyframes zoomIn {  
+    0% { transform: scale(0.7); opacity: 0; }  
+    100% { transform: scale(1); opacity: 1; }  
+}
