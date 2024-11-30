@@ -7,6 +7,7 @@ on:
 
 jobs:
   trigger-webhook:
+    runs-on: ubuntu-latest
     steps:
       - name: Call Webhook
         run: |
