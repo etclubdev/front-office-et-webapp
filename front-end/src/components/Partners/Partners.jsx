@@ -1,17 +1,8 @@
 import Slider from "react-slick";
-import { partner1, partner2, partner3, partner4, partner5, partner6, partner7 } from "../../assets/partners";
-
 import './Partners.css';
+import { partnersData } from "../../mocks/data";
 
-const partners = [
-    { id: 0, name: "Anh Phạm Hưởng", role: "CEO & Co-Founder GFI Venture", img: partner1 },
-    { id: 1, name: "Anh Văn Viết Hùng", role:"Operations Executive tại CareerBuilder", img: partner2 },
-    { id: 2, name: "Anh Nguyễn Thành Đạt", role:"Founder & CEO Công ty TNM Consulting", img: partner3 },
-    { id: 3, name: "Anh Ryan Thanh Nguyễn", role:"Engineer Manager in NAB", img: partner4 },
-    { id: 4, name: "Anh An Bùi", role:"Analytics & Engineering Manager tại On Point", img: partner5 },
-    { id: 4, name: "Anh Thanh Trần", role:"Head of Digital Bank tại OCB", img: partner6 },
-    { id: 4, name: "Chị Cara Thảo Phan", role:"Senior BA - Product Owner tại AIA", img: partner7 },
-];
+const partners = partnersData.partners;
 
 export const Partners = () => {
 
@@ -72,7 +63,7 @@ export const Partners = () => {
               <Slider {...settings}>
                   {partners.map(partner => (
                       <div key={partner.id} className="partner">
-                          <img src={partner.img} alt={partner.name} />
+                          <img src={require(`../../mocks${partner.image}`)} alt={partner.name} />
                           <div className="partner__name">{partner.name}</div>
                           <div className="partner__role">{partner.role}</div>
                       </div>

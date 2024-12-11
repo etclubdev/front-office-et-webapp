@@ -1,0 +1,28 @@
+{
+    "characteristics":[
+        {
+            "id": 0,
+            "title": "NĂNG ĐỘNG",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "image": "/images/profiles/productive.jpg"
+        },
+        {
+            "id": 1,
+            "title": "SÁNG TẠO",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "image": "/images/profiles/creative.jpg"
+        },
+        {
+            "id": 2,
+            "title": "ĐỔI MỚI",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "image": "/images/profiles/innovative.jpg"
+        },
+        {
+            "id": 3,
+            "title": "TIÊN PHONG",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "image": "/images/profiles/pioneering.jpg"
+        }
+    ]
+}

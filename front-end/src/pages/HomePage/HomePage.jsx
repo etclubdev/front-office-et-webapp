@@ -11,7 +11,6 @@ import { Partners } from '../../components/Partners/Partners';
 import { Footer } from '../../components/Footer';
 import { Introduction } from '../../components/Introduction';
 
-import { noTextLogo, item } from '../../assets/logos';
 
 
 export const HomePage = () => {  

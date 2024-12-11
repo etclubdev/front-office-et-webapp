@@ -1,5 +1,6 @@
 import './Footer.css';
-import { horizontalLogo } from '../../assets/logos';
+import { horizontalLogo } from '../../assets/images/logos';
+
 
 export const Footer = () => {
     return (

@@ -1,14 +1,8 @@
-import Slider from "react-slick";
 import './Departments.css';
-import { event, tech, pr, hr, fer } from "../../assets/profiles";
+import Slider from "react-slick";
+import { departmentsData } from "../../mocks/data";
 
-const departments = [
-    { id: 0, name: "EVENT", img: event },
-    { id: 1, name: "TECH", img: tech },
-    { id: 2, name: "PR", img: pr },
-    { id: 3, name: "HR", img: hr },
-    { id: 4, name: "FER", img: fer },
-];
+const departments = departmentsData.departments;
 
 function PrevArrow(props) {
     const { className, style, onClick } = props;
@@ -74,7 +68,7 @@ export const Departments = () => {
         <Slider {...settings}>  
             {departments.map(department => (  
                 <div key={department.id} className="departments-section__department">  
-                    <img src={department.img} alt={department.name} className="departments-section__department-image" />  
+                    <img src={require(`../../mocks${department.image}`)} alt={department.name} className="departments-section__department-image" />  
                     <button className="departments-section__button">{"BAN " + department.name}</button>  
                     <div className="departments-section__hover-overlay">Nội dung hiển thị khi hover</div>  
                 </div>  

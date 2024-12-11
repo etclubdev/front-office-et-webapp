@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { horizontalLogo } from '../../assets/logos';
+import { horizontalLogo } from '../../assets/images/logos';
 
 export const Navbar = () => {
   const [scrollingDown, setScrollingDown] = useState(false);

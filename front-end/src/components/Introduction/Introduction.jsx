@@ -1,5 +1,6 @@
 import './Introduction.css';
-import { noTextLogo } from '../../assets/logos';
+import { noTextLogo } from '../../assets/images/logos';
+
 
 export const Introduction = () => {
     return (
