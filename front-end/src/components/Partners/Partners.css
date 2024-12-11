@@ -8,7 +8,7 @@
     margin-bottom: 5vww;
 }
 
-.partners__title{
+.partners-title{
     font-size: 3.7vw;
     background: linear-gradient(90deg, #D1FDFF, #FDDB92);
     -webkit-background-clip: text;
@@ -16,14 +16,14 @@
     align-self: center;
 }
 
-.partners__desc{
+.partners-desc{
     font-size: 1.3vw;
     color: white;
     align-self: center;
     margin: 1vw 0 4vw 0;
 }
 
-.partners__background {
+.partners-background {
     position: relative;
     background: linear-gradient(0deg, #d9d9d92a 70%, transparent 50%);
     height: auto; 
@@ -57,7 +57,7 @@
     box-sizing: border-box;
 }
 
-.partner__name{
+.partner-name{
     margin: 1vw 0 0.5vw 0;
     width: 15vw;
     font-size: 1.2vw;
@@ -67,7 +67,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.partner__role{
+.partner-role{
     font-size: 1vw;
     width: 15vw;
     text-align: center;

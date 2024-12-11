@@ -57,21 +57,21 @@ export const Partners = () => {
 
     return(
         <div className="partners-section">
-            <div className="partners__title">CHUYÊN GIA ĐỒNG HÀNH</div>
-            <div className="partners__desc">ET chân thành cảm ơn các thầy cô/ anh chị đã đồng hành và ủng hộ hoạt động của CLB</div>
-            <div className="partners__background">
+            <div className="partners-title">CHUYÊN GIA ĐỒNG HÀNH</div>
+            <div className="partners-desc">ET chân thành cảm ơn các thầy cô/ anh chị đã đồng hành và ủng hộ hoạt động của CLB</div>
+            <div className="partners-background">
               <Slider {...settings}>
                   {partners.map(partner => (
                       <div key={partner.id} className="partner">
                           <img src={require(`../../mocks${partner.image}`)} alt={partner.name} />
-                          <div className="partner__name">{partner.name}</div>
-                          <div className="partner__role">{partner.role}</div>
+                          <div className="partner-name">{partner.name}</div>
+                          <div className="partner-role">{partner.role}</div>
                       </div>
                   ))}
               </Slider>
             </div>
             <div className="FAQs-section">
-              <div className="partners__title">FAQs</div>
+              <div className="partners-title">FAQs</div>
             </div>
         </div>
     )

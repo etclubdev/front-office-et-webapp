@@ -20,7 +20,7 @@
     justify-content: space-around;
 }  
 
-.AboutUsSection.visible .bio--logo{
+.aboutus-section.visible .bio-logo{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,7 @@
     animation: moveUpAndHold 2s ease-in-out; 
 }
 
-.bio--logo img {
+.bio-logo img {
     width: 20vw;
     height: auto;    
 }
@@ -40,7 +40,8 @@
     background: linear-gradient(90deg, #177fd8, #c3f486, #e88e0c); 
 }
 
-.bio--name {
+.bio-name {
+    width: 22vw;
     text-align: center;
     margin: 0;
     font-size: 2.3vw;  
@@ -50,18 +51,18 @@
     -webkit-text-fill-color: transparent; 
 }
 
-.bio--detail {  
+.bio-detail {  
     display: flex;  
     flex-direction: column;   
     align-items: center;  
 }  
 
 
-.AboutUsSection.visible #detail-item-1{
+.aboutus-section.visible #detail-item-1{
     animation: moveDownAndHold 2s ease-in-out;         
 }
 
-.AboutUsSection.visible #detail-item-2{
+.aboutus-section.visible #detail-item-2{
     animation: moveUpAndHold 2s ease-in-out; 
 }
 

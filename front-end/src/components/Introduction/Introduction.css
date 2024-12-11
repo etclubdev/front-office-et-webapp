@@ -16,7 +16,7 @@
   }
 }
 
-.intro__content {
+.intro-content {
     width: 40vw;
     margin: 10vw;
     color: white;
@@ -25,7 +25,7 @@
 }
 
 
-.intro__title{
+.intro-title{
     font-family: EurostileBoldExtendedTwo;
     margin: 0;
     font-size: 4vw;  
@@ -42,7 +42,7 @@
     to { width: 100%; }  
 } 
 
-.intro__desc{
+.intro-desc{
     margin-top: 2vw;
     font-family: EurostileRegular;
     opacity: 0.9;
@@ -59,7 +59,7 @@
     to { opacity: 1; }  
 } 
 
-.intro__more{
+.intro-more{
     border-radius: 0.5vw;
     margin-top: 2vw;
     width: fit-content;
@@ -72,14 +72,14 @@
     animation: fadeIn 4s steps(30, end);  
 }
 
-.intro__more:hover {  
+.intro-more:hover {  
     background: linear-gradient(90deg, #f2dc1b, #fffae5);  
     transform: scale(1.05);  
     -webkit-background-clip: text;  
     -webkit-text-fill-color: transparent;  
 }  
 
-.intro__logo{
+.intro-logo{
     width: 50%;
     height: 60vw;
     left: 7vw;
@@ -87,7 +87,7 @@
     animation: fly 3s ease-in-out infinite; 
 }
 
-.intro__img{
+.intro-img{
     width: 25vw;
     height: 25vw;
     object-fit: cover;
@@ -95,14 +95,14 @@
     top: 9vw;
 }
 
-.intro__img.backgr{
+.intro-img.backgr{
     position: absolute;
     /* left: 61vw; */
     filter: grayscale(100%) brightness(50%);  
     opacity: 0.3;
 }
 
-.intro__blur.item-1{
+.intro-blur.item-1{
     scale: 1.1;
     position: absolute;
     left: 10vw;
@@ -110,7 +110,7 @@
     opacity: 0.8;
 }
 
-.intro__blur.item-2{
+.intro-blur.item-2{
     scale: 1.2;
     position: absolute;
     margin-top: 13vw;
@@ -119,17 +119,17 @@
     opacity: 0.4;
 }
 
-.intro__blur__item{
+.intro-blur-item{
     position: relative;
     border-radius: 50%;
 }
 
-    .intro__blur__item.sub-item-1{
+    .intro-blur-item.sub-item-1{
         width: 37vw;
         height: 37vw;
         background: radial-gradient(circle, #3cc9f0 0%, rgba(255, 0, 0, 0) 70%);  
     }
-    .intro__blur__item.sub-item-2{
+    .intro-blur-item.sub-item-2{
         position: absolute;
         top: 20%;
         /* left: -15%; */
@@ -138,7 +138,7 @@
         background: radial-gradient(circle, #ffe713 0%, rgba(255, 0, 0, 0) 70%);  
     }
 
-    .intro__blur__item.sub-item-3{
+    .intro-blur-item.sub-item-3{
         position: absolute;
         top: 55%;
         /* left: 40%; */

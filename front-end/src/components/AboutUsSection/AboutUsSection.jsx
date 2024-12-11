@@ -28,10 +28,10 @@ export const AboutUsSection = () => {
     return (
         <div className={`AboutUsSection ${isVisible ? 'visible' : ''}`}>
             <div className="bio">
-                <div className="bio--logo">
+                <div className="bio-logo">
                     <img src={verticalLogo} alt="ET Club" />
                     <div className='division-bar'></div>
-                    <div className='bio--name'>Câu lạc bộ<br />Công nghệ Kinh Tế</div>
+                    <div className='bio-name'>Câu lạc bộ<br />Công nghệ Kinh Tế</div>
                 </div>
 
                 <div id='detail-item-1' className="bio-detail">

@@ -16,7 +16,7 @@
     0% { transform: scale(0.7); opacity: 0; }  
     100% { transform: scale(1); opacity: 1; }  
 }
-.statistics-section__items {  
+.statistics-items {  
     width: 100%;  
     display: flex;  
     
@@ -24,7 +24,7 @@
     flex-wrap: wrap;
 }  
 
-.statistics-section__item {  
+.statistics-item {  
     width: 20vw;  
     height: auto;  
     margin-top: 5vw;
@@ -34,7 +34,7 @@
     box-sizing: border-box;   
 }  
 
-.statistics-section__title {  
+.statistics-title {  
     margin-left: 3vw;  
     font-size: 3vw;  
     width: fit-content;  
@@ -44,7 +44,7 @@
     -webkit-text-fill-color: transparent;  
 }  
 
-.statistics-section__item-desc {  
+.statistics-item-desc {  
     text-align: center;  
     color: white;  
     font-size: 1.5vw;  
@@ -52,7 +52,7 @@
     margin-top: 10px;  
 }  
 
-.statistics-section__item-image {  
+.statistics-item-image {  
     width: 4vw;  
 }  
 

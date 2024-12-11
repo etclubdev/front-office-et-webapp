@@ -14,28 +14,33 @@
     z-index: 2000;
 }
 
-.footer__aboutET{
+.footer-aboutET{
     width: 18vw;
 }
 
 
-.footer__aboutET-logo{
+.footer-aboutET-logo{
     width: 18vw;
     height: auto; 
 }
 
-.footer__aboutET-desc{
+.footer-aboutET-title{
+    font-size: 1.2vw;
+    color: white;
+}
+
+.footer-aboutET-desc{
     font-size: 1vw;
     width: fit-content;
     text-align: justify;
     margin-top: 0.7vw;
 }
 
-.footer__item{
+.footer-item{
     max-width: 17vw;
 }
 
-.footer__item-title{
+.footer-item-title{
     font-size: 1.25vw;
     width: fit-content;
     font-family: EurostileDemi;
@@ -45,7 +50,7 @@
     margin-bottom: 2vw;
 }   
 
-.footer__item-content{
+.footer-item-content{
     font-size: 1vw;
     margin-top: 0.7vw;
     text-align: justify;
@@ -55,7 +60,7 @@
     color: white;
 }
 
-.footer__social{
+.footer-social{
     display: flex;
     align-items: center;
     align-content: center;
@@ -63,13 +68,13 @@
 }
 
 
-.footer__social-link{
+.footer-social-link{
     font-size: 1vw;
     text-decoration: none;
     color: white;
 }
 
-.footer__social-icon{
+.footer-social-icon{
     width: 2vw;
     height: 2vw;
     font-size: 0.8vw;

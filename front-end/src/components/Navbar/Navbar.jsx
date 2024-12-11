@@ -32,15 +32,15 @@ export const Navbar = () => {
   return (
     <div className="nav-section">
       <div className={`nav ${scrollingDown ? 'nav-hidden' : ''}`}>
-        <img src={horizontalLogo} alt="ET Club" className="nav__logo" />
-        <div className="nav__menu">
-            <a className="nav__item" href='/'>
-                <p className="nav__item-content">Trang chủ</p>
+        <img src={horizontalLogo} alt="ET Club" className="nav-logo" />
+        <div className="nav-menu">
+            <a className="nav-item" href='/'>
+                <p className="nav-item-content">Trang chủ</p>
             </a>
-            <a className="nav__item dropbtn">
-                <div className="nav__item-dropbtn">
-                    <p className="nav__item-content">Giới thiệu</p>
-                    <i className="fa-solid fa-angle-down nav__icon" style={{ color: '#ffffff' }}></i>
+            <a className="nav-item dropbtn">
+                <div className="nav-item-dropbtn">
+                    <p className="nav-item-content">Giới thiệu</p>
+                    <i className="fa-solid fa-angle-down nav-icon" style={{ color: '#ffffff' }}></i>
                 </div>
                 <div class="dropdown-content">
                     <a href="#"><p>Về ET Club</p></a>
@@ -48,10 +48,10 @@ export const Navbar = () => {
                     <a href="#"><p>Liên hệ</p></a>
                 </div>
             </a>
-            <a className="nav__item dropbtn">
-                <div className="nav__item-dropbtn">
-                    <p className="nav__item-content">Hoạt động</p>
-                    <i className="fa-solid fa-angle-down nav__icon" style={{ color: '#ffffff' }}></i>
+            <a className="nav-item dropbtn">
+                <div className="nav-item-dropbtn">
+                    <p className="nav-item-content">Hoạt động</p>
+                    <i className="fa-solid fa-angle-down nav-icon" style={{ color: '#ffffff' }}></i>
                 </div>
                 <div class="dropdown-content">
                     <a href="#"><p>Talkshow/Workshop</p></a>
@@ -59,11 +59,11 @@ export const Navbar = () => {
                     <a href="#"><p>Hoạt động nội bộ</p></a>
                 </div>
             </a>
-            <a className="nav__item">
-                <p className="nav__item-content">ET News</p>
+            <a className="nav-item">
+                <p className="nav-item-content">ET News</p>
             </a>
-            <a className="nav__item">
-                <p className="nav__item-content">Tìm kiếm CTV</p>
+            <a className="nav-item">
+                <p className="nav-item-content">Tìm kiếm CTV</p>
             </a>
         </div>
       </div>

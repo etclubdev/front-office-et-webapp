@@ -30,21 +30,21 @@ export const Statistics = () => {
     return (!isVisible)
         ? <div className="statistics-section"></div>
         : <div className="statistics-section statistics-section--visible">
-            <h1 id="statistics-item-title" className="statistics-section__title">NHỮNG CON SỐ ẤN TƯỢNG</h1>
+            <h1 id="statistics-item-title" className="statistics-title">NHỮNG CON SỐ ẤN TƯỢNG</h1>
 
-            <div className="statistics-section__items">
+            <div className="statistics-items">
                 {
                     statistics.map((item) => {
                         return (
-                            <div className="statistics-section__item">
-                                <img src={require(`../../mocks${item.image}`)} alt={item.title} className="statistics-section__item-image" />
+                            <div className="statistics-item">
+                                <img src={require(`../../mocks${item.image}`)} alt={item.title} className="statistics-item-image" />
                                 <AnimatedNumber
                                     id="statistics-time"
                                     value={item.value}
                                     duration={item.duration}
-                                    className="statistics-section__item-value"
+                                    className="statistics-item-value"
                                 />
-                                <div className="statistics-section__item-desc">{item.title}</div>
+                                <div className="statistics-item-desc">{item.title}</div>
                             </div>
                         )
                     })

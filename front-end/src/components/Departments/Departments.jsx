@@ -64,13 +64,13 @@ export const Departments = () => {
     };
     return (
       <div className="departments-section">  
-        <div className="departments-section__title">ĐIỂM GIAO THOA TUYỆT VỜI <br /> GIỮA CÔNG NGHỆ & KINH TẾ</div>  
+        <div className="departments-title">ĐIỂM GIAO THOA TUYỆT VỜI <br /> GIỮA CÔNG NGHỆ & KINH TẾ</div>  
         <Slider {...settings}>  
             {departments.map(department => (  
-                <div key={department.id} className="departments-section__department">  
-                    <img src={require(`../../mocks${department.image}`)} alt={department.name} className="departments-section__department-image" />  
-                    <button className="departments-section__button">{"BAN " + department.name}</button>  
-                    <div className="departments-section__hover-overlay">Nội dung hiển thị khi hover</div>  
+                <div key={department.id} className="department">  
+                    <img src={require(`../../mocks${department.image}`)} alt={department.name} className="department-image" />  
+                    <button className="department-button">{"BAN " + department.name}</button>  
+                    <div className="department-hover-overlay">Nội dung hiển thị khi hover</div>  
                 </div>  
             ))}  
         </Slider>  
