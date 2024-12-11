@@ -1,6 +1,8 @@
 import Slider from "react-slick";
 import './Partners.css';
 import { partnersData } from "../../mocks/data";
+import { PARTNERS_CONTENT } from '../../constants'
+
 
 const partners = partnersData.partners;
 
@@ -57,8 +59,8 @@ export const Partners = () => {
 
     return(
         <div className="partners-section">
-            <div className="partners-title">CHUYÊN GIA ĐỒNG HÀNH</div>
-            <div className="partners-desc">ET chân thành cảm ơn các thầy cô/ anh chị đã đồng hành và ủng hộ hoạt động của CLB</div>
+            <div className="partners-title">{PARTNERS_CONTENT.title}</div>
+            <div className="partners-desc">{PARTNERS_CONTENT.desc}</div>
             <div className="partners-background">
               <Slider {...settings}>
                   {partners.map(partner => (

@@ -1,8 +1,9 @@
 import './Statistics.css';
-import AnimatedNumber from './AnimatedNumber';
 import { useState, useEffect } from 'react';
-
+import AnimatedNumber from './AnimatedNumber';
+import { Available } from '../Available';
 import { statisticsData } from '../../mocks/data';
+import { STATISTICS_TITLE } from '../../constants';
 
 const statistics = statisticsData.statistics;
 
@@ -15,8 +16,8 @@ export const Statistics = () => {
         const position = element.getBoundingClientRect();
 
         if (position.top < window.innerHeight - 100 && position.bottom >= 0) {
-            element.style.animation = "zoomIn 1s ease-in-out";
             setIsVisible(true);
+            element.classList.add('visible');
         }
     };
 
@@ -27,29 +28,30 @@ export const Statistics = () => {
         };
     }, []);
 
-    return (!isVisible)
-        ? <div className="statistics-section"></div>
-        : <div className="statistics-section statistics-section--visible">
-            <h1 id="statistics-item-title" className="statistics-title">NHỮNG CON SỐ ẤN TƯỢNG</h1>
-
-            <div className="statistics-items">
-                {
-                    statistics.map((item) => {
-                        return (
-                            <div className="statistics-item">
-                                <img src={require(`../../mocks${item.image}`)} alt={item.title} className="statistics-item-image" />
-                                <AnimatedNumber
-                                    id="statistics-time"
-                                    value={item.value}
-                                    duration={item.duration}
-                                    className="statistics-item-value"
-                                />
-                                <div className="statistics-item-desc">{item.title}</div>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+    return (
+        <div className="statistics-section">
+            <Available when={isVisible} parentClassName={'statistics-section'}>
+                <h1 id="statistics-item-title" className="statistics-section-title">{STATISTICS_TITLE}</h1>
+                <div className="statistics-section-items">
+                    {
+                        statistics.map((item) => {
+                            return (
+                                <div className="statistics-section-item">
+                                    <img src={require(`../../mocks${item.image}`)} alt={item.title} className="statistics-section-item-image" />
+                                    <AnimatedNumber
+                                        id="statistics-time"
+                                        value={item.value}
+                                        duration={item.duration}
+                                        className="statistics-section-item-value"
+                                    />
+                                    <div className="statistics-section-item-desc">{item.title}</div>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </Available>
         </div>
+    )
 }
 

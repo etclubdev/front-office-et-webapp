@@ -1,13 +1,13 @@
-.AboutUsSection {
+.aboutus-section {
     position: relative;  
     opacity: 0;
     width: 100%;
-    height: auto;
-    margin-bottom: 20vh; 
+    height: 40vw;
+    margin-bottom: 5vw; 
     box-sizing: border-box;
 }
 
-.AboutUsSection.visible {
+.aboutus-section.visible {
     opacity: 1;
     transform: translateY(0);  
     transition: opacity 2s ease, transform 1s ease;
@@ -41,7 +41,7 @@
 }
 
 .bio-name {
-    width: 22vw;
+    width: 21vw;
     text-align: center;
     margin: 0;
     font-size: 2.3vw;  
