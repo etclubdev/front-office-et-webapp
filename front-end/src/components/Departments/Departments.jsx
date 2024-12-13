@@ -1,48 +1,10 @@
 import './Departments.css';
 import Slider from "react-slick";
+import { SliderArrow } from '../SliderArrow';
 import { departmentsData } from "../../mocks/data";
 import { DEPARTMENT_TITLE } from '../../constants.js';    
 
 const departments = departmentsData.departments;
-
-function PrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "block",
-          height: "auto",
-          zIndex: 1000, 
-          position: "absolute", 
-          top: "12vw",
-          left: "1.5vw",
-        }}
-
-        onClick={onClick}
-      />
-    );
-  }
-
-function NextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ 
-          ...style, 
-          display: "block", 
-          height: "auto", 
-          zIndex: 1000, 
-          position: "absolute", 
-          top: "12vw", 
-          right: "2vw",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
 
 export const Departments = () => {
     const settings = {
@@ -55,15 +17,14 @@ export const Departments = () => {
         autoplay: true,
         autoplaySpeed: 2000,
         initialSlide: 0,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
+        nextArrow: <SliderArrow />,
+        prevArrow: <SliderArrow />,
         responsive: [  
             { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1 } }, // Kích thước lớn hơn 1200px  
             { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1 } },  // Kích thước từ 768px đến 1200px  
             { breakpoint: 480, settings: { slidesToShow: 3, slidesToScroll: 1 } }   // Kích thước nhỏ hơn 480px  
         ] 
     };
-
 
     return (
       <div className="departments-section">  

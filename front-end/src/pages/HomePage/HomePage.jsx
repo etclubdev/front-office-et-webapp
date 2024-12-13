@@ -7,7 +7,7 @@ import { Statistics } from '../../components/Statistics';
 import { Departments } from '../../components/Departments';
 import { GetInvolvedBanner } from '../../components/GetInvolvedBanner';
 import { Characteristics } from '../../components/Characteristics';
-import { Partners } from '../../components/Partners/Partners';
+import { Partners } from '../../components/Partners';
 import { Footer } from '../../components/Footer';
 import { Introduction } from '../../components/Introduction';
 

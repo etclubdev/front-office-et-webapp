@@ -1,43 +1,14 @@
 import Slider from "react-slick";
 import './Partners.css';
+import { SliderArrow } from "../SliderArrow";
 import { partnersData } from "../../mocks/data";
-import { PARTNERS_CONTENT } from '../../constants'
+import { PARTNERS_CONTENT } from '../../constants';
 
 
 const partners = partnersData.partners;
 
 export const Partners = () => {
-
-    function PrevArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={className}
-            style={{ ...style, width: "2vw", height: "2vw", display: "block", zIndex: 1000, position: "absolute",  top: "8vw", left:"1vw" }}
-            onClick={onClick}
-          />
-        );
-      }
-    
-    function NextArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={className}
-            style={{
-                ...style,
-                display: "block",
-                height: "auto",
-                zIndex: 1000, 
-                position: "absolute", 
-                top: "8vw",
-                right:"2vw",
-            }}
-            onClick={onClick}
-          />
-        );
-      }  
-
+  
     const settings = {
         dots: false,
         infinite: true,
@@ -48,8 +19,8 @@ export const Partners = () => {
         autoplay: true,
         autoplaySpeed: 2000,
         initialSlide: 0,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
+        nextArrow: <SliderArrow />,
+        prevArrow: <SliderArrow />,
         responsive: [  
             { breakpoint: 1200, settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: true } }, 
             { breakpoint: 768, settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: true } }, 
