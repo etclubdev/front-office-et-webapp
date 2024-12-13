@@ -30,7 +30,7 @@ export const AboutUsSection = ({ myRef }) => {
 
     return (
         <div className={'aboutus-section'} ref={myRef}>
-            <Available when={isVisible} parentClassName={'aboutus-section'}>
+            <Available when={isVisible}>
                 <div className="bio">
                     <div className="bio-logo">
                         <img src={verticalLogo} alt="ET Club" />
