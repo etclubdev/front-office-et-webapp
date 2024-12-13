@@ -1,8 +1,7 @@
 import './Banner.css';  
-import { useState } from 'react';    
-import { banner112022, banner042023, banner112023 , banner102024 } from '../../assets/banners';
+import { bannerData } from "../../mocks/data";
 
-const banners = [banner102024, banner112023, banner042023, banner112022];  
+const banners = bannerData.banners;
 
 export const Banner = () => {  
 
@@ -12,7 +11,7 @@ export const Banner = () => {
                 <div className="banner-list__previous"></div>
                 {  
                     banners.map((banner, index) =>   
-                        <img key={index} id={`banner-${index}`} className={`banner`} src={banner} alt="" />  
+                        <img key={index} id={`banner-${index}`} className={`banner`} src={require(`../../mocks${banner.image}`)} alt={banner.title} />  
                     )  
                 }  
                 <div className="banner-list__next"></div>

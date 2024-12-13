@@ -1,7 +1,5 @@
 import './Departments.css';
 import Slider from "react-slick";
-import { useState, useEffect } from "react";
-import { Available } from '../Available';
 import { departmentsData } from "../../mocks/data";
 import { DEPARTMENT_TITLE } from '../../constants.js';    
 
