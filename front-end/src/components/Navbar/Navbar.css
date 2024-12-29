@@ -1,0 +1,113 @@
+.nav-section{
+    width: 100%;  
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;  
+    top: 0;  
+    z-index: 2000; 
+    margin-top: 2vw; 
+    transition: transform 0.5s ease;
+}
+
+.nav {  
+    width: 80%;  
+    align-self: center;
+    display: flex;    
+    background-color: #2b66937b;  
+    align-items: center;  
+    justify-content: space-between;  
+    padding: 0.5vw 2vw;
+    border-radius: 1.5vw;
+    transition: transform 0.5s ease; 
+}  
+
+.nav-hidden {
+    transform: translateY(-200%); /* Move the navbar up to hide it */
+  }
+
+.nav-logo {  
+    width: 15vw;  
+    height: auto;  
+}  
+
+.nav-menu {  
+    width: 70%;  
+    display: flex;  
+    justify-content: space-around;  
+}  
+
+.nav-item {   
+    width: 8.5vw;
+    height: 2.5vw;
+    color: white;
+    display: flex;  
+    align-items: center;  
+    justify-content: center;
+    border-radius: 0.5vw;
+    cursor: pointer;  
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;  
+} 
+
+.nav-item.dropbtn{
+    display: block;
+}
+
+.nav-item-dropbtn{
+    width: 100%;
+    height: 100%;
+    display: flex;  
+    align-items: center;  
+    justify-content: center;
+}
+
+.nav-item-content{
+    font-size: 1vw;
+}
+
+.dropdown-content {
+    position: absolute;
+    
+    display: none;
+    z-index: 1;
+  }
+
+.nav-icon {  
+    margin: 0.2vw 0 0 0.5vw;  
+    font-size: 1vw;  
+}  
+
+.nav-item:hover {  
+    transform: scale(1.1); 
+    color: black;
+    background: linear-gradient(90deg, #3cc9f0, #fffae5);  
+}
+
+.dropdown-content a{
+    width: 13vw;
+    min-height: 2.5vw;
+    margin-top: 1vw;
+    background: linear-gradient(90deg, #3cc9f0, #fffae5);  
+    border-radius: 0.5vw;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.dropdown-content a p{
+    margin-left: 1vw;
+    font-size: 1vw;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background: linear-gradient(90deg, #30a0be, #c0bcad);  
+
+  }
+  
+  .nav-item.dropbtn:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
