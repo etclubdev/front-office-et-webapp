@@ -1,0 +1,149 @@
+.nav-section {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000; 
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+.nav {
+    width: 100%;
+    max-width: 68vw;
+    height: 4vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1vw;
+}
+
+.nav-logo {
+    width: 21vw;
+    height: 4vw;
+
+    background-size: contain;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 0.9vw;
+    color: #E0E0E0;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5vw 1vw;
+    border-radius: 0.2vw;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item:hover {
+    color: #000;
+    background: linear-gradient(90deg, #3cc9f0, #fffae5);
+}
+
+.nav-hidden {
+    transform: translateY(-200%); /* Move the navbar up to hide it */
+}
+
+.searchbar-group {
+    display: flex;
+    align-items: center;
+    width: 11vw;
+    height: 2.7vw;
+    background: rgba(186, 186, 181, 0.12);
+    border-radius: 2.6vw;
+    padding: 0 0.8vw;
+}
+
+.input-placeholder {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8vw;
+    color: #E0E0E0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .nav {
+        padding: 0 0.6vw;
+    }
+
+    .nav-logo {
+        width: 15vw;
+    }
+
+    .nav-menu {
+        gap: 0.8vw;
+    }
+
+    .nav-item {
+        font-size: 0.9vw;
+        padding: 0.4vw 0.8vw;
+    }
+
+    .searchbar-group {
+        width: 9vw;
+        height: 2.3vw;
+    }
+
+    .input-placeholder {
+        font-size: 0.7vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-logo {
+        margin-bottom: 1vw;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5vw;
+    }
+
+    .nav-item {
+        font-size: 0.8vw;
+        padding: 0.4vw 0.6vw;
+    }
+
+    .searchbar-group {
+        width: 100%;
+        height: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-item {
+        font-size: 0.7vw;
+        padding: 0.3vw 0.4vw;
+    }
+
+    .searchbar-group {
+        height: 1.8vw;
+    }
+
+    .input-placeholder {
+        font-size: 0.6vw;
+    }
+}

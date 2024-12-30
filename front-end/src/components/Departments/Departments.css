@@ -1,0 +1,115 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.departments-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10vh;
+}
+
+.departments-title {
+    width: 50vw;
+    font-size: 3vw;
+    text-align: center;
+    background: linear-gradient(90deg, #D1FDFF, #FDDB92);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-self: center;
+}
+
+.department {
+    position: relative;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    width: 27vw;
+}
+
+.department-image {
+    width: 23vw;
+    margin: 4vw 0;
+    height: auto;
+    border-radius: 2vw;
+    box-shadow:
+        0.5vw 0.5vw 0.5vw #81d0d2,
+        -0.2vw -0.2vw 0.5vw #81d0d2;
+    outline: none;
+    cursor: all-scroll;
+}
+
+.department:hover {
+    transform: scale(1.05);
+}
+
+.department-button {
+    position: absolute;
+    font-family: EurostileDemi;
+    width: 8vw;
+    height: 2.5vw;
+    font-size: 1vw;
+    text-align: center;
+    bottom: 5.5vw;
+    right: 21%;
+    transform: translate(-50%, 0);
+    background: linear-gradient(90deg, #47A8B4, #5D3E91) padding-box,
+        linear-gradient(to right, #D1FDFF, #FDDB92) border-box;
+    border-radius: 0.8vw;
+    border: 0.2vw solid transparent;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.department-hover-overlay {
+    font-size: 1vw;
+    position: absolute;
+    top: 50%;
+    left: 45.8%;
+    width: 91.8%;
+    height: 65.8%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.department:hover .department-hover-overlay {
+    opacity: 1;
+}
+
+.slick-arrow.slick-next {
+    display: block;
+    height: auto;
+    z-index: 1000;
+    position: absolute;
+    top: 12vw;
+    right: 2vw;
+}
+
+.slick-arrow.slick-prev{
+    display: block;
+    height: auto;
+    z-index: 1000; 
+    position: absolute; 
+    top: 12vw;
+    left: 1.5vw;
+}

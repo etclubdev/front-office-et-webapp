@@ -1,0 +1,24 @@
+{  
+  "banners": [  
+    {  
+      "id": 0,  
+      "title": "Tìm kiếm CTV 04/2023",  
+      "image": "/images/banners/banner-04-2023.jpg"  
+    }, 
+    {
+      "id": 1,  
+      "title": "Tìm kiếm CTV 10/2024",  
+      "image": "/images/banners/banner-10-2024.png"
+    },
+    {
+      "id": 2,  
+      "title": "Tìm kiếm CTV 11/2022",  
+      "image": "/images/banners/banner-11-2022.jpg"
+    },
+    {
+      "id": 3,  
+      "title": "Tìm kiếm CTV 11/2023",  
+      "image": "/images/banners/banner-11-2023.jpg"
+    }
+  ]  
+} 

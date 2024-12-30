@@ -1,0 +1,40 @@
+{
+    "statistics": [
+        {
+            "id": 0,
+            "title": "Thời gian hoạt động",
+            "value": 6,
+            "duration": 100000,
+            "image": "/images/statistics/img1.png"
+        },
+        {
+            "id": 1,
+            "title": "Cựu thành viên",
+            "value": 1200,
+            "duration": 3000,
+            "image": "/images/statistics/img2.png"
+        },
+        {
+            "id": 2,
+            "title": "Số đối tác",
+            "value": 100,
+            "duration": 3000,
+            "image": "/images/statistics/img3.png"
+        },
+        {
+            "id": 3,
+            "title": "Số chương trình tổ chức",
+            "value": 50,
+            "duration": 3000,
+            "image": "/images/statistics/img4.png"
+        },
+        {
+            "id": 4,
+            "title": "Lượt tiếp cận",
+            "value":26,
+            "duration": 3000,
+            "image": "/images/statistics/img5.png"
+        }
+
+    ]
+}

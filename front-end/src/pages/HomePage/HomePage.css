@@ -1,0 +1,46 @@
+body {  
+    margin: 0;  
+    padding: 0;  
+    width: 100%;  
+    height: auto;  
+    background-image: 1; 
+    background-color: #091c32;  
+    overflow-x: hidden;
+  
+   }  
+  
+    .star {  
+      position: absolute;  
+      background-color: white;  
+      border-radius: 50%;  
+      opacity: 0.8;  
+      animation: twinkle 1s infinite alternate;  
+    }  
+    
+    @keyframes twinkle {  
+      from {  
+          opacity: 0.8;  
+      }  
+      to {  
+          opacity: 0.2;  
+      }  
+    }
+  
+    .homepage__container{
+      margin: 4vw 12vw 0 12vw;
+    }
+  
+    .homepage__intro{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .intro-item {
+      width: 120%;
+      opacity: 0;  
+      }
+  
+      
+  
+    
