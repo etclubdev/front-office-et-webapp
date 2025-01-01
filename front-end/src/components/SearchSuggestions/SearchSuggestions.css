@@ -1,0 +1,42 @@
+.suggestions{
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto';
+    color: #fff;
+
+}
+
+.suggestions-text{
+    font-size: 2vw;
+    font-style: italic;
+}
+
+.suggestion{
+    height: 8vw;
+    display: flex;
+    margin: 2vw 0;
+    background: rgba(30, 40, 95, 0.32);
+}
+
+.suggestion-img{
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+    margin-right: 2vw;
+}
+
+.suggestion-content{
+    width: 80%;
+}
+
+.suggestion-title {
+    font-weight: bold;
+    font-size: 1.3vw
+}
+
+.suggestion-desc {
+    font-size: 0.8vw;
+    line-height: 1.4vw;
+    letter-spacing: 0.08vw;
+    text-align: justify;
+}
