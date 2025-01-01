@@ -4,10 +4,7 @@
     background: linear-gradient(90deg, #80E8F1 0%, #80E8F1 12%, #4FAAC2 32.75%, #2270AC 53.5%, #0D3DA4 100%);
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    font-family: 'Roboto';
-    
+    align-items: center;    
 }
 
 .search-container{
@@ -24,11 +21,14 @@
 
 .close-btn{
     width: 3vw;  
-    height: 3vw;  
+    height: 3vw; 
+    transition: transform 0.3s ease;
+ 
 }
 
 .close-btn:hover{
-    color: #ffffffda
+    color: hsla(0, 100%, 51%);
+    transform: scale(1.1);
 }
 
 .search-input{
@@ -55,6 +55,7 @@
 }
 
 .search-input input{
+    font-family: "Montserrat";
     width: 98%;
     height: 3.5vw;
     border: none;
@@ -66,6 +67,7 @@
 }
 
 .search-input input::placeholder{
+    font-family: "Montserrat";
     color: #fff;
     font-style: italic;
     text-shadow: none;
