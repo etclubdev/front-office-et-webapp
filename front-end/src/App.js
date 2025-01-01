@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // import { HomePage } from './pages/HomePage';
 import  TetCountDownTimerPage  from './pages/EventPages/TetCountDownTimerPage/TetCountDownTimerPage';
+import SearchPage from './pages/SearchPage';
 
 import { createStar } from './utils/createStarUtil';
 
@@ -19,6 +20,7 @@ function App() {
       <div className="root-container">  
         <Routes>  
           <Route path="/" element={<TetCountDownTimerPage />} /> 
+          <Route path="/search" element={<SearchPage />} /> 
         </Routes>  
       </div>  
     </Router>  
