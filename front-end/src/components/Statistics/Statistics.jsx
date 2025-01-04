@@ -37,7 +37,7 @@ export const Statistics = () => {
                         statistics.map((item) => {
                             return (
                                 <div className="statistics-section-item">
-                                    <img src={require(`../../mocks${item.image}`)} alt={item.title} className="statistics-section-item-image" />
+                                    
                                     <AnimatedNumber
                                         id="statistics-time"
                                         value={item.value}

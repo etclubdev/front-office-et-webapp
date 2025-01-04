@@ -2,11 +2,12 @@ import Slider from "react-slick";
 import './Partners.css';
 import { SliderArrow } from "../SliderArrow";
 import { partnersData } from "../../mocks/data";
-import { PARTNERS_CONTENT } from '../../constants';
+import { companionsData } from "../../mocks/data";
+import { COMPANION_CONTENT, PARTNERS_CONTENT } from '../../constants';
 
 
 const partners = partnersData.partners;
-
+const companions = companionsData.companions;
 export const Partners = () => {
   
     const settings = {
@@ -28,6 +29,18 @@ export const Partners = () => {
         ] 
     };
 
+    const settings1 = {
+        ...settings,
+        slidesToShow: 3,
+        responsive: settings.responsive.map((item) => ({
+            ...item,
+            setting:{
+                ...item.settings,
+                slidesToShow: 3
+            }
+        }))
+    };
+
     return(
         <div className="partners-section">
             <div className="partners-title">{PARTNERS_CONTENT.title}</div>
@@ -43,8 +56,17 @@ export const Partners = () => {
                   ))}
               </Slider>
             </div>
-            <div className="FAQs-section">
-              <div className="partners-title">FAQs</div>
+            <div className="companions-title">{COMPANION_CONTENT.title}</div>
+            <div className="companions-desc">{COMPANION_CONTENT.desc}</div>
+            <div className="companions-background">
+              <Slider {...settings1}>
+                  {companions.map(companion => (
+                      <div key={companion.id} className="partner">
+                          <img src={require(`../../mocks${companion.image}`)} alt={companion.name} />
+                          <div className="partner-name">{companion.name}</div>
+                      </div>
+                  ))}
+              </Slider>
             </div>
         </div>
     )

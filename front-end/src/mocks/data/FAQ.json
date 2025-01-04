@@ -1,0 +1,22 @@
+{
+    "questions": [
+        { 
+            "id": 0,
+            "question": "Anh Phạm Hưởng", 
+            "role": "CEO & Co-Founder GFI Venture",
+            "image": "/images/partners/partner1.png" 
+        },
+        { 
+            "id": 1,
+            "question": "Anh Văn Viết Hùng", 
+            "role":"Operations Executive tại CareerBuilder", 
+            "image": "/images/partners/partner2.png" 
+        },
+        { 
+            "id": 2,
+            "question": "Anh Nguyễn Thành Đạt", 
+            "role":"Founder & CEO Công ty TNM Consulting", 
+            "image": "/images/partners/partner3.png" 
+        }
+    ]
+}

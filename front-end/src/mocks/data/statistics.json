@@ -1,39 +1,35 @@
 {
     "statistics": [
         {
-            "id": 0,
-            "title": "Thời gian hoạt động",
-            "value": 6,
-            "duration": 100000,
-            "image": "/images/statistics/img1.png"
+            "id": 1,
+            "title": "Chương trình",
+            "value": 50,
+            "duration": 3000
         },
         {
             "id": 1,
-            "title": "Cựu thành viên",
-            "value": 1200,
-            "duration": 3000,
-            "image": "/images/statistics/img2.png"
+            "title": "Năm hoạt động",
+            "value": 6,
+            "duration": 100000
+            
         },
         {
             "id": 2,
-            "title": "Số đối tác",
-            "value": 100,
-            "duration": 3000,
-            "image": "/images/statistics/img3.png"
+            "title": "Cựu thành viên",
+            "value": 1200,
+            "duration": 3000
         },
         {
             "id": 3,
-            "title": "Số chương trình tổ chức",
-            "value": 50,
-            "duration": 3000,
-            "image": "/images/statistics/img4.png"
+            "title": "Đối tác",
+            "value": 100,
+            "duration": 3000
         },
         {
             "id": 4,
             "title": "Lượt tiếp cận",
             "value":26,
-            "duration": 3000,
-            "image": "/images/statistics/img5.png"
+            "duration": 3000
         }
 
     ]

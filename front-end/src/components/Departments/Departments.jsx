@@ -1,8 +1,7 @@
 import './Departments.css';
 import Slider from "react-slick";
 import { SliderArrow } from '../SliderArrow';
-import { departmentsData } from "../../mocks/data";
-import { DEPARTMENT_TITLE } from '../../constants.js';    
+import { departmentsData } from "../../mocks/data";  
 
 const departments = departmentsData.departments;
 
@@ -27,14 +26,13 @@ export const Departments = () => {
     };
 
     return (
-      <div className="departments-section">  
-          <div className="departments-title">{DEPARTMENT_TITLE}</div>  
+      <div className="departments-section">            
           <Slider {...settings}>  
             {departments.map(department => (  
               <div key={department.id} className="department">  
                 <img src={require(`../../mocks${department.image}`)} alt={department.name} className="department-image" />  
                 <button className="department-button">{"BAN " + department.name}</button>  
-                <div className="department-hover-overlay">Nội dung hiển thị khi hover</div>  
+                {/* <div className="department-hover-overlay">Nội dung hiển thị khi hover</div>   */}
               </div>  
             ))}  
           </Slider>   

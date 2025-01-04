@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 10vh;
+    background: linear-gradient(180deg, #0F4081 0%, #737373 123.16%);
 }
 
 .departments-title {
@@ -30,7 +31,7 @@
 
 .department-image {
     width: 23vw;
-    margin: 4vw 0;
+    margin: 4vw;
     height: auto;
     border-radius: 2vw;
     box-shadow:
@@ -52,13 +53,13 @@
     font-size: 1vw;
     text-align: center;
     bottom: 5.5vw;
-    right: 21%;
+    right: 27%;
     transform: translate(-50%, 0);
-    background: linear-gradient(90deg, #47A8B4, #5D3E91) padding-box,
-        linear-gradient(to right, #D1FDFF, #FDDB92) border-box;
-    border-radius: 0.8vw;
+    background: linear-gradient(180deg, #FDFDFD 0.1%, #AEE8FF 107.38%) padding-box,
+    #81d0d2  border-box;
+    border-radius: 10px;
     border: 0.2vw solid transparent;
-    color: white;
+    color: #0F4081;
     cursor: pointer;
 }
 
@@ -78,8 +79,8 @@
     font-size: 1vw;
     position: absolute;
     top: 50%;
-    left: 45.8%;
-    width: 91.8%;
+    left: 40%;
+    width: 80%;
     height: 65.8%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
@@ -112,4 +113,29 @@
     position: absolute; 
     top: 12vw;
     left: 1.5vw;
+}
+
+@media (max-width: 768px) {
+    .departments-section {
+        width: 95%;
+        height: auto;
+        left: 2.5%;
+        top: 1rem;
+        padding: 0.5rem;
+    }
+
+    .department {
+        width: 90%;
+    }
+
+    .department-image {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .department-button {
+        font-size: 0.8rem;
+        width: auto;
+        height: auto;
+    }
 }

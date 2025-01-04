@@ -8,7 +8,7 @@ export const CHARACTERISTICS_TITLE = {
 };
 export const DEPARTMENT_TITLE = "ĐIỂM GIAO THOA TUYỆT VỜI GIỮA CÔNG NGHỆ & KINH TẾ";
 export const GETINVOLVED_CONTENT = {
-    title: "CHƯƠNG TRÌNH TUYỂN CỘNG TÁC VIÊN THÁNG 10/2024 ĐANG DIỄN RA",
+    title: "CHƯƠNG TRÌNH TUYỂN CỘNG TÁC VIÊN THÁNG 10/2024",
     desc: "Nhanh tay nhấn “ĐĂNG KÝ NGAY” bên dưới để trở thành mảnh ghép đặc biệt của ET",
     signUp: "ĐĂNG KÝ NGAY"
 }
@@ -21,4 +21,9 @@ export const PARTNERS_CONTENT = {
     title: "CHUYÊN GIA ĐỒNG HÀNH",
     desc: "ET chân thành cảm ơn các thầy cô/ anh chị đã đồng hành và ủng hộ hoạt động của CLB"
 }
+export const COMPANION_CONTENT = {
+    title: "ĐỐI TÁC ĐỒNG HÀNH",
+    desc: "ET chân thành cảm ơn các thầy cô/ anh chị đã đồng hành và ủng hộ hoạt động của CLB"
+}
 export const STATISTICS_TITLE = "NHỮNG CON SỐ ẤN TƯỢNG";
+export const FAQ_TITLE = "CÂU HỎI THƯỜNG GẶP";

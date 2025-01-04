@@ -8,7 +8,7 @@
     margin-bottom: 5vww;
 }
 
-.partners-title{
+.partners-title, .companions-title{
     font-size: 3.7vw;
     background: linear-gradient(90deg, #D1FDFF, #FDDB92);
     -webkit-background-clip: text;
@@ -16,20 +16,28 @@
     align-self: center;
 }
 
-.partners-desc{
+.companions-title {
+    margin-top: 50px;
+}
+
+.partners-desc, .companions-desc{
     font-size: 1.3vw;
     color: white;
     align-self: center;
     margin: 1vw 0 4vw 0;
 }
 
-.partners-background {
+.partners-background, .companions-background {
     position: relative;
     background: linear-gradient(0deg, #d9d9d92a 70%, transparent 50%);
     height: auto; 
     width: 100%; 
     padding-bottom: 2.5vw;
 }
+
+/* .companions-background {
+    display: flex;
+} */
 
 .slick-prev:before, .slick-next:before {
     font-size: 2vw; 

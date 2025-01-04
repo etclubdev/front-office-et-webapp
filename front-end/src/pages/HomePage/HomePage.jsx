@@ -10,6 +10,7 @@ import { Characteristics } from '../../components/Characteristics';
 import { Partners } from '../../components/Partners';
 import { Footer } from '../../components/Footer';
 import { Introduction } from '../../components/Introduction';
+import { FAQ } from '../../components/FAQ';
 
 
 
@@ -44,13 +45,14 @@ export const HomePage = () => {
       <Introduction/>
       <div className="homepage__container">
         <AboutUsSection/>
-        <Characteristics/>
         <Statistics/>
-        <Departments/>
+        <Characteristics/>
       </div>
-      <GetInvolvedBanner/>       
+        <Departments/>         
       <div className="homepage__container">
+        <GetInvolvedBanner/>  
         <Partners/>
+        <FAQ/>
       </div>
       <Footer/>
     </div>   
