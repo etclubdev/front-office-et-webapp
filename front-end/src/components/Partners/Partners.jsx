@@ -13,7 +13,7 @@ export const Partners = () => {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: "2vw",
@@ -23,22 +23,10 @@ export const Partners = () => {
         nextArrow: <SliderArrow />,
         prevArrow: <SliderArrow />,
         responsive: [  
-            { breakpoint: 1200, settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: true } }, 
-            { breakpoint: 768, settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: true } }, 
-            { breakpoint: 480, settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: true } }   
+            { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } }, 
+            { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } }, 
+            { breakpoint: 480, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } }   
         ] 
-    };
-
-    const settings1 = {
-        ...settings,
-        slidesToShow: 3,
-        responsive: settings.responsive.map((item) => ({
-            ...item,
-            setting:{
-                ...item.settings,
-                slidesToShow: 3
-            }
-        }))
     };
 
     return(
@@ -59,7 +47,7 @@ export const Partners = () => {
             <div className="companions-title">{COMPANION_CONTENT.title}</div>
             <div className="companions-desc">{COMPANION_CONTENT.desc}</div>
             <div className="companions-background">
-              <Slider {...settings1}>
+              <Slider {...settings}>
                   {companions.map(companion => (
                       <div key={companion.id} className="partner">
                           <img src={require(`../../mocks${companion.image}`)} alt={companion.name} />

@@ -104,9 +104,10 @@
 .dropdown-content a:hover {
     background: #0F4081;  
     transform: scale(1.1);
+    cursor: pointer;
   }
   
-  .nav-item.dropbtn:hover .dropdown-content {
+.nav-item.dropbtn:hover .dropdown-content {
     display: flex;
     flex-direction: column;
 }
@@ -128,7 +129,16 @@
     background: transparent;
     font-family: 'Roboto', sans-serif;
     font-size: 0.8vw;
-    color: #E0E0E0;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+.input-placeholder::placeholder {
+    color: white; 
+    opacity: 1; 
 }
 
 /* Responsive Styles */

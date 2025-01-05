@@ -23,7 +23,7 @@ export const PARTNERS_CONTENT = {
 }
 export const COMPANION_CONTENT = {
     title: "ĐỐI TÁC ĐỒNG HÀNH",
-    desc: "ET chân thành cảm ơn các thầy cô/ anh chị đã đồng hành và ủng hộ hoạt động của CLB"
+    desc: "ET chân thành cảm ơn các đơn vị đối tác đã đồng hành và ủng hộ hoạt động của CLB"
 }
 export const STATISTICS_TITLE = "NHỮNG CON SỐ ẤN TƯỢNG";
 export const FAQ_TITLE = "CÂU HỎI THƯỜNG GẶP";

@@ -48,9 +48,10 @@ export const HomePage = () => {
         <Statistics/>
         <Characteristics/>
       </div>
-        <Departments/>         
+        <Departments/>      
+        <GetInvolvedBanner/>    
       <div className="homepage__container">
-        <GetInvolvedBanner/>  
+        {/* <GetInvolvedBanner/>   */}
         <Partners/>
         <FAQ/>
       </div>

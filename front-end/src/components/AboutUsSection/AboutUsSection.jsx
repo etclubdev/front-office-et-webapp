@@ -38,7 +38,7 @@ export const AboutUsSection = ({ myRef }) => {
                     </div>
                     <div className="bio-logo">
                         <img src={verticalLogo} alt="ET Club" />
-                        <p className="">{DEPARTMENT_TITLE}</p>  
+                        <p className="content">{DEPARTMENT_TITLE}</p>  
                     </div>
                 </div>
             </Available>

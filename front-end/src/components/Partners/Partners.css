@@ -10,7 +10,7 @@
 
 .partners-title, .companions-title{
     font-size: 3.7vw;
-    background: linear-gradient(90deg, #D1FDFF, #FDDB92);
+    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     align-self: center;
@@ -22,7 +22,7 @@
 
 .partners-desc, .companions-desc{
     font-size: 1.3vw;
-    color: white;
+    color: black;
     align-self: center;
     margin: 1vw 0 4vw 0;
 }
@@ -70,7 +70,7 @@
     width: 15vw;
     font-size: 1.2vw;
     text-align: center;
-    background: linear-gradient(90deg, #FFA8A8, #FCFF00);
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -79,7 +79,7 @@
     font-size: 1vw;
     width: 15vw;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .FAQs-section {

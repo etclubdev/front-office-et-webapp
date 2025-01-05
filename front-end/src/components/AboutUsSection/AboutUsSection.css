@@ -22,11 +22,16 @@
 }  
 
 .aboutus-section.visible .bio-logo{
+    width: 90%;
+    margin-top: 70px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     position: relative;  
     animation: moveUpAndHold 2s ease-in-out; 
+    border-radius: 50px;
+    background: linear-gradient(270deg, rgba(91, 124, 168, 0.90) 0%, #0F4081 68.9%, rgba(91, 146, 168, 0.80) 100%);
+    padding: 1vw ; 
 }
 
 .bio-logo img {
@@ -45,11 +50,22 @@
 .bio-detail {  
     display: flex;  
     flex-direction: row-reverse;   
-    /* align-items:flex-end;   */
+    align-items:center;  
     justify-content:space-around ;
     width: 100%;
 }  
 
+.content {
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px; /* 130.556% */
+    letter-spacing: -1px;
+}
 
 .aboutus-section.visible #detail-item-1{
     animation: moveDownAndHold 2s ease-in-out;         
@@ -81,6 +97,7 @@
     letter-spacing: -1px;  
     border-radius: 53px;
     background: rgba(217, 217, 217, 0.28);
+    padding: 2vw;
 }  
 
 @keyframes moveUpAndHold {  

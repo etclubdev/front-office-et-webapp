@@ -55,8 +55,7 @@ export const Footer = () => {
                     </div>  
                     <a className="footer-social-link" href='https://www.facebook.com/ETClub.UEH'>Facebook</a>  
                 </div>  
-            </div>  
-            {/* <div className='division-bar'></div> */}
+            </div>              
         </div>      
     )
 }

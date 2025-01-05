@@ -18,7 +18,8 @@
 
   .banner-section {  
     position: relative;  
-    margin: 4vw 0 5vw 0;   
+    margin-top: 0;
+    z-index: 1;
     width: 100%;  
     height: auto;  
     overflow-x: hidden;  
@@ -34,8 +35,9 @@
 
 .banner {  
     flex: 0 0 100%;  
+    /* flex-wrap: wrap; */
     width: 100vw;  
-    height: 92vh; 
+    height: 100vh; 
     transition: opacity 0.5s ease;  
     object-fit: cover;  
 }  

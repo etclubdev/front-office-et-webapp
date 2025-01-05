@@ -5,5 +5,6 @@ import departmentsData from './departments.json';
 import partnersData from './partners.json';
 import statisticsData from './statistics.json';
 import companionsData from './companions.json';
+import FAQs from './FAQ.json';
 
-export { characteristicsData, bannerData, bioData, departmentsData, partnersData, statisticsData, companionsData }
+export { characteristicsData, bannerData, bioData, departmentsData, partnersData, statisticsData, companionsData, FAQs }

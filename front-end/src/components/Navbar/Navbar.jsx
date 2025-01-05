@@ -57,8 +57,7 @@ export const Navbar = () => {
                 <p className="nav-item-content">Tìm kiếm CTV</p>
             </a>
             <div className="searchbar-group">
-            <div className="search-container">
-              <div className="master-input-text">
+              <div className="search-container">
                 <input
                   className="input-placeholder"
                   type="text"
@@ -66,7 +65,6 @@ export const Navbar = () => {
                 />
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
