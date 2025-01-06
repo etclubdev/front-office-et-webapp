@@ -19,14 +19,15 @@
 }
  
 .FAQ-question { 
-    display: flex;  
-    /* justify-content: space-around;  */
+    display: flex;
+    font-family: 'Montserrat';
+    font-weight: 500;
     padding-left: 20px;
     align-items: center; 
     flex-wrap: wrap;  
     position: relative; 
     font-size: 1.2vw;
-    margin-top: 20px;
+    margin-top: 35px;
     /* height: calc(681px / 1459px * 100%);
     flex: 1 1 calc(681px / 1459px * 100%);  */
     width: 800px;
@@ -43,8 +44,10 @@
 .FAQ-title {  
     margin-top: 50px;  
     font-size: 3vw;  
+    font-weight: 900;
+    font-family: 'Montserrat';
     width: fit-content;  
-    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);  
+    background: linear-gradient(180deg, #47A8B4 0%, #5D3E91 100%);  
     filter: drop-shadow(1px -1px 2px #fff6a875) drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));  
     -webkit-background-clip: text;   
     -webkit-text-fill-color: transparent;  

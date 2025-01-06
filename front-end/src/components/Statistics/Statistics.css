@@ -56,8 +56,10 @@
 .statistics-section-title {  
     margin-left: 3vw;  
     font-size: 3vw;  
+    font-weight: 900;
+    font-family: 'Roboto';
     width: fit-content;  
-    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);  
+    background: linear-gradient(180deg, #47A8B4 0%, #5D3E91 100%);  
     filter: drop-shadow(1px -1px 2px #fff6a875) drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));  
     -webkit-background-clip: text;   
     -webkit-text-fill-color: transparent;  
@@ -66,16 +68,17 @@
 .statistics-section-item-desc {  
     text-align: center;  
     color: white;  
-    font-size: 1.5vw;  
-    font-family: EurostileRegular;  
-    margin-top: 10px;  
+    font-size: 45px;  
+    font-family: 'Be Vietnam';  
+    margin-top: 5px;  
 }  
 
 .animated-number {  
-    background: white; 
+    background: white;   
+    font-family: 'Be Vietnam';  
     -webkit-background-clip: text;  
     -webkit-text-fill-color: transparent;  
     margin-top: 1vw;  
-    font-size: 6vw;  
+    font-size: 128px;  
     font-weight: 900;
 }  

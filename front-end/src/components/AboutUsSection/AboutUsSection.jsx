@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Available } from '../Available';
 import { verticalLogo } from '../../assets/images/logos';
 import { bioData } from '../../mocks/data';
-import { DEPARTMENT_TITLE } from '../../constants.js';  
+import { DEPARTMENT_TITLE } from '../../constants.js';
 
 const bioItem = bioData.bio;
 
@@ -34,11 +34,12 @@ export const AboutUsSection = ({ myRef }) => {
                 <div className="bio">
                     <div id='detail-item-1' className="bio-detail">
                         <p className='detail-desc'>{bioItem[0].content}</p>
+                        <p className='background-overlay'></p>
                         <img className='detail-img' src={require(`../../mocks${bioItem[0].image}`)} alt="ET Club" />
                     </div>
                     <div className="bio-logo">
                         <img src={verticalLogo} alt="ET Club" />
-                        <p className="content">{DEPARTMENT_TITLE}</p>  
+                        <p className="content">{DEPARTMENT_TITLE}</p>
                     </div>
                 </div>
             </Available>

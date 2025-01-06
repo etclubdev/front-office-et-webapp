@@ -22,7 +22,8 @@
 .characteristics-heading {  
     width: 59vw;
     font-size: 2.5vw;  
-    text-align: center;  
+    text-align: center; 
+    font-weight: 900; 
     background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);  
     filter: drop-shadow(1px -1px 2px #fff6a875) drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));  
     -webkit-background-clip: text;   

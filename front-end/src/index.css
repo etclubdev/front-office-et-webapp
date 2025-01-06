@@ -1,39 +1,98 @@
 @font-face {
-    font-family: "EurostileDemi";
+    font-family: "Eurostile";
     src: url("./assets/fonts/Eurostile/SFUEurostileDemi.TTF");
     font-weight: bold;  
     font-style: bold;  
   }
   
+@font-face {
+  font-family: "EurostileNormal";
+  src: url("./assets/fonts/Eurostile/SFUEurostileRegular.TTF");
+  font-weight: normal;  
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: "Eurostile";
+  src: url("./assets/fonts/Eurostile/SFUEurostileBoldOblique.TTF");
+  font-weight: normal;  
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: "Eurostile";
+  src: url("./assets/fonts/Eurostile/SFUEurostileBoldExtendedTwo.TTF");
+  font-weight: normal;  
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
   @font-face {
-    font-family: "EurostileRegular";
-    src: url("./assets/fonts/Eurostile/SFUEurostileRegular.TTF");
-    font-weight: normal;  
-    font-style: normal;  
-  }
-  
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Be Vietnam Normal";
+  src: url("./assets/fonts/Be Vietnam/BeVietnam-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
   @font-face {
-    font-family: "EurostileBoldOblique";
-    src: url("./assets/fonts/Eurostile/SFUEurostileBoldOblique.TTF");
-    font-weight: normal;  
-    font-style: normal;  
-  }
+  font-family: "Be Vietnam";
+  src: url("./assets/fonts/Be Vietnam/BeVietnam-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Be Vietnam";
+  src: url("./assets/fonts/Be Vietnam/BeVietnam-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Be Vietnam";
+  src: url("./assets/fonts/Be Vietnam/BeVietnam-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: EurostileNormal, Eurostile;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
   
-  @font-face {
-    font-family: "EurostileBoldExtendedTwo";
-    src: url("./assets/fonts/Eurostile/SFUEurostileBoldExtendedTwo.TTF");
-    font-weight: normal;  
-    font-style: normal;  
-  }
-  
-  body {
-    margin: 0;
-    font-family: EurostileDemi, EurostileRegular;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }

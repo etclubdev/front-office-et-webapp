@@ -1,21 +1,4 @@
-/* .intro-section{
-    margin-top: 4vw;
-    display: flex;
-    justify-content: space-between;
-    animation: moveDown 0.5s ease-in;
-} */
-
-/* Introduction Styles */
-
-/* .intro-section {
-    /* background: url("../../assets/images/banners/banner102024.png") no-repeat center center/cover; 
-    height: 120vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  } 
-  */
-
+/* 
   .banner-section {  
     position: relative;  
     margin-top: 0;
@@ -35,8 +18,8 @@
 
 .banner {  
     flex: 0 0 100%;  
-    /* flex-wrap: wrap; */
-    width: 100vw;  
+    flex-wrap: wrap;  
+    width: auto;  
     height: 100vh; 
     transition: opacity 0.5s ease;  
     object-fit: cover;  
@@ -52,4 +35,4 @@
       background-size: cover;
     }
   }
-  
+   */
