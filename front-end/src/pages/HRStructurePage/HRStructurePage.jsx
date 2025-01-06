@@ -1,16 +1,15 @@
 import './HRStructurePage.css';
 
+import { Navbar } from '../../components/Navbar';
 import { HRStructure } from '../../mocks/data';
 import HRStructureTree from '../../mocks/images/hr-structure/hr-structure-tree.png'
 
 const hrData = HRStructure.hrStructure;
 
-console.log(HRStructureTree);
-
-
 export const HRStructurePage = () => {
     return (
         <div className="hr-structure-page">
+            <Navbar/>
             <div className="hr-structure-tree">
                 {
                     hrData.map((department, index) => {
