@@ -19,3 +19,32 @@
     line-height: 1.8vw;
     text-align: center;
 }
+
+.activities-desc{
+    text-align: justify;
+    font-size: 1.5vw;
+}
+
+.activity-container.highlight-1{
+    width: 50vw;
+}
+
+.activity-container.highlight-1 img{
+    width: 50vw;
+}
+
+.activity-container.highlight-2{
+    width: 25vw;
+}
+
+.activity-container.highlight-2 img{
+    width: 25vw;
+}
+
+.activity-container.highlight-2 .activity-name,
+.activity-container.highlight-1 .activity-name
+{
+    font-size: 2vw;
+    line-height: 2.5vw;
+    margin-bottom: 0;
+}

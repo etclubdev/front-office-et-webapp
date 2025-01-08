@@ -9,7 +9,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import toogleIcon from '../../mocks/images/activities/toogleIcon.png';
 
-export const ActivitiesSlider = ({typeId, activities}) => {
+export const ActivitiesSlider = ({activities}) => {
     const [isSliderVisible, setSliderVisible] = useState(true);
 
     const settings = {
@@ -30,46 +30,47 @@ export const ActivitiesSlider = ({typeId, activities}) => {
         ]
     };
 
-    // const toggleSlider = () => {
-    //     setSliderVisible(!isSliderVisible);
-    //     // const toogleIcon = document.querySelector(`#${categoryid}-icon`);
-    //     if (isSliderVisible){
-    //         toogleIcon.classList.add('active');
-    //     }
-    //     else {
-    //         toogleIcon.classList.remove('active')
-    //     }
-    // };
+    const toggleSlider = () => {
+        setSliderVisible(!isSliderVisible);
+        const toogleIcon = document.querySelector(`#${activities.id}-icon`);
+        if (isSliderVisible){
+            toogleIcon.classList.add('active');
+        }
+        else {
+            toogleIcon.classList.remove('active')
+        }
+    };
 
     return(
         <div className="activities-slider">
             <div className="activities-title-container">
                 <img 
+                    id={`${activities.id}-icon`}
                     className="activities-title-icon"
                     src={toogleIcon}
-                    // onClick={toggleSlider}
+                    onClick={toggleSlider}
                     alt="Activities Icon"
                 />
-                <p className="activities-title">{activities[0].type}</p>
+                <p className="activities-title">{activities.type}</p>
                 <div className="activities-division-bar"></div>
             </div>
 
             <CSSTransition
                 in={isSliderVisible} 
                 timeout={300} 
-                classNames="activity-slider"
+                classNames="slider"
                 unmountOnExit 
             >
                 {
-                    activities.length > 2 ? (
+                    activities.items.length > 2 ? (
                         <Slider {...settings}>
-                            {activities.map((item, index) => (
+                            {activities.items.map((item, index) => (
                                 <Activity activity={item} active={false}/>
                             ))}
                         </Slider>
                     ) : <div style={{marginLeft: "1vw",display: "flex", gap: "4vw"}}>
                         {
-                            activities.map((item, index) => (
+                            activities.items.map((item, index) => (
                                 <Activity activity={item} active={false}/>
                             ))
                         }

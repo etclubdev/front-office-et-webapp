@@ -7,34 +7,56 @@ import ActivitiesSlider from '../../components/ActivitiesSlider';
 
 const activities = activitiesData.activities;
 
-const onGoingActivities = activities.filter(item => item.status.includes("Đang diễn ra"))
+const filterType = (type) => {
+    return activities.filter(item => item.type.includes(type));
+}
 
-const talkShowActivities = activities.filter(item => item.type.includes("Talkshow/Workshop"));
-const prActivities = activities.filter(item => item.type.includes("Hoạt động truyền thông"));
-const gameActivities = activities.filter(item => item.type.includes("Game"));
-const competitionActivities = activities.filter(item => item.type.includes("Cuộc thi"));
-const internalActivities = activities.filter(item => item.type.includes("Hoạt động nội bộ"))
+const filterStatus= (status) => {
+    return activities.filter(item => item.status.includes(status));
+}
 
+const types = ["Talkshow/Workshop", "Hoạt động truyền thông", "Game", "Cuộc thi", "Hoạt động nội bộ"]
+
+const filteredActivities = types.map((type, index) => {
+    let activityType = type;
+    return {
+        id: `type-${index}`,
+        type: activityType,
+        items: filterType(type)
+    }
+})
+
+const ongoingActivities = filterStatus("Đang diễn ra");
 
 export const ActivitiesPage = () => {
+
+    
+
     return (
         <div className="activities-page">
             <div className="ongoing-activities-container">
                 <div className="ongoing-activities">
                     {
-                        onGoingActivities.map(item => {
+                        ongoingActivities.map((item, index) => {
                             return (
-                                <Activity activity={item} active={true}/>
+                                <Activity index={index} activity={item} active={true}/>
                             )
                         })
                     }
                 </div>
             </div>
-            <ActivitiesSlider activities={talkShowActivities}/>
-            <ActivitiesSlider activities={prActivities}/>
-            <ActivitiesSlider activities={competitionActivities}/>
-            <ActivitiesSlider activities={internalActivities}/>
 
+            <div className="completed-activities-container">
+                <div className="completed-activities">
+                    {
+                        filteredActivities.map(item => {
+                            return (
+                                <ActivitiesSlider activities={item}/>
+                            )
+                        })
+                    }
+                </div>
+            </div>
         </div>
     )
 }

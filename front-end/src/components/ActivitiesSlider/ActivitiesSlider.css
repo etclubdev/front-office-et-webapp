@@ -14,7 +14,7 @@
 }
 
 .activities-title{
-    width: 25vw;
+    width: 60%;
     font-size: 2vw;
      font-weight: 900;
     background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
@@ -22,14 +22,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0 2vw;
-
+    white-space: nowrap;
 }
 
 .activities-division-bar{
     background-color: #5177A4;
-    width: 47vw;
     height: 0.1vw;
     justify-self: right;
+    flex-grow: 1;
 }
 
 .activities-title-icon{

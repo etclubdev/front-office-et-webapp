@@ -1,7 +1,7 @@
 .activities-page{
     padding-top: 4vw;
     width: 100vw;
-    height: 450vh;
+    height: auto;
     background: linear-gradient(181deg, #FDFDFD 1.18%, #AEE8FF 162.45%);
     display: flex;
     flex-direction: column;
@@ -11,6 +11,7 @@
 
 .activities-slider{
     width: 80vw;
+    margin-bottom: 5vw;
 }
 
 .ongoing-activities-container{
@@ -23,6 +24,7 @@
 }
 
 .ongoing-activities img {
-    width: auto;
+    max-width: 50vw;
     height: auto;
 }
+
