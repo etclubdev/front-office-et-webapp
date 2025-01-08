@@ -1,18 +1,17 @@
 import './FAQsPage.css';
 
 import { FAQsQuestion } from '../../mocks/data';
-import Question from '../../components/Question';
-console.log(FAQsQuestion);
+import TopicQuestion from '../../components/TopicQuestion';
 
-const aboutETFAQs = FAQsQuestion['about-et'];
-
+const { "about-et": aboutET, "about-activities": aboutActivities, "about-being-a-eter": aboutBeingAEter, others } = FAQsQuestion
 
 export const FAQsPage = () => {
     return (
         <div className="faqs-page">
-            {
-                aboutETFAQs.map(item => <Question item={item}/>)
-            }
+            <TopicQuestion topicQuestion={aboutET}/>
+            <TopicQuestion topicQuestion={aboutActivities}/>
+            <TopicQuestion topicQuestion={aboutBeingAEter}/>
+            <TopicQuestion topicQuestion={others}/>
         </div>
     )
 }
