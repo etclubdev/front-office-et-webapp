@@ -1,0 +1,89 @@
+{
+    "about-et":[
+        {
+            "id": "about-et-0",
+            "question": "ET Club là gì?",
+            "answer": "ET Club là câu lạc bộ chuyên về công nghệ và kinh tế tại UEH. Chúng tôi tạo ra một môi trường để sinh viên học hỏi và áp dụng công nghệ trong lĩnh vực kinh tế."
+        },
+
+        {
+            "id": "about-et-1",
+            "question": "Ai có thể tham gia ET Club?",
+            "answer":"ET Club chào đón tất cả các sinh viên quan tâm đến công nghệ, kinh tế, hoặc cả hai lĩnh vực. "
+        },
+
+        {
+            "id": "about-et-2",
+            "question": "Lợi ích khi tham gia ET Club là gì?",
+            "answer": [
+                "Khi tham gia ET Club, bạn sẽ:",
+                "Được học tập và thực hành các kỹ năng công nghệ hiện đại.",
+                "Kết nối với các sinh viên và chuyên gia có cùng đam mê.",
+                "Tham gia các sự kiện như workshop, hackathon, và các dự án thực tế."
+            ]
+        }
+    ],
+
+    "about-activities": [
+        {
+            "id": "about-activities-0",
+            "question": "ET Club tổ chức các sự kiện gì?",
+            "answer": [
+                "Chúng tôi tổ chức nhiều sự kiện như:",
+                "Workshop về lập trình, phân tích dữ liệu.",
+                "Talkshow về ứng dụng công nghệ trong kinh tế.",
+                "Hackathon và các cuộc thi sáng tạo."
+            ]
+        },
+        {
+            "id":"about-activities-1",
+            "question": "Làm sao để đăng ký tham gia sự kiện?",
+            "answer": "Bạn có thể đăng ký tham gia sự kiện qua website chính thức của ET Club hoặc theo dõi các thông báo trên Facebook và website của chúng tôi."
+        },
+        {
+            "id":"about-activities-2",
+            "question": "Sự kiện có dành cho người ngoài trường không?",
+            "answer": "Một số sự kiện được mở cho cả sinh viên trong và ngoài trường. Vui lòng kiểm tra thông tin chi tiết trong từng sự kiện cụ thể."
+        }
+    ],
+
+    "about-being-a-eter": [
+        {
+            "id":"about-being-a-eter-0",
+            "question": "Làm sao để trở thành thành viên của ET Club?",
+            "answer": "Bạn chỉ cần điền vào form đăng ký trên website của chúng tôi. Sau đó, chúng tôi sẽ gửi email xác nhận và hẹn bạn vào buổi phỏng vấn gần nhất."
+        },
+        {
+            "id":"about-being-a-eter-1",
+            "question": "Tôi có cần kinh nghiệm trước để tham gia không?",
+            "answer": "Không! ET Club hoan nghênh tất cả mọi người, từ người mới bắt đầu đến những bạn đã có kinh nghiệm."
+        },
+        {
+            "id":"about-being-a-eter-2",
+            "question": "Thành viên có phải đóng phí không?",
+            "answer": "Không."
+        }
+    ],
+
+    "others":[
+        {
+            "id":"others-0",
+            "question": "Làm thế nào để liên hệ với ET Club?",
+            "answer": [
+                "Bạn có thể liên hệ với chúng tôi qua:",
+                "Email: et@ueh.edu.vn",
+                "Facebook: https://www.facebook.com/ETClub.UEH"
+            ]
+        },
+        {
+            "id":"others-1",
+            "question": "Có thể đóng góp hoặc hợp tác với ET Club không?",
+            "answer": "Chắc chắn rồi! Chúng tôi luôn tìm kiếm đối tác và các nhà tài trợ. Vui lòng liên hệ qua email để biết thêm chi tiết."
+        },
+        {
+            "id":"others-2",
+            "question": "Tôi có thể tham gia nhiều câu lạc bộ cùng lúc không?",
+            "answer": "Được! ET Club khuyến khích bạn khám phá và phát triển ở nhiều lĩnh vực khác nhau."
+        }
+    ]
+}
