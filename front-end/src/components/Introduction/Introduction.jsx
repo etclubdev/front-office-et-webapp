@@ -11,7 +11,7 @@ export const Introduction = () => {
 
   return (
     <div className="">
-      <Carousel arrows infinite={true}>
+      <Carousel autoplay>
         {banners.map((banner, idx) => (
           <img src={require(`../../mocks${banner.image}`)} alt={`slide ${idx}`} />
         ))}

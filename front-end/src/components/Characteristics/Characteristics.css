@@ -1,13 +1,16 @@
 .characteristics-section {  
+    margin-top: 15vh;
     width: 100%;  
     height: 100vh;  
-    display: flex;  
+    position: relative;
+    /* display: flex;  
+    flex-wrap: wrap;
     flex-direction: column;  
     justify-content: center;  
-    align-items: center;  
+    align-items: center;   */
     margin-bottom: 5vw;  
     opacity: 0; 
-    
+    row-gap: 20px;
 }
 
 .characteristics-section.visible{
@@ -19,7 +22,7 @@
     0% { transform: scale(0.7); opacity: 0; }  
     100% { transform: scale(1); opacity: 1; }  
 }
-.characteristics-heading {  
+/* .characteristics-heading {  
     width: 59vw;
     font-size: 2.5vw;  
     text-align: center; 
@@ -28,9 +31,168 @@
     filter: drop-shadow(1px -1px 2px #fff6a875) drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));  
     -webkit-background-clip: text;   
     -webkit-text-fill-color: transparent;  
+}   */
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    gap: 0.5vh;
+}
+
+.heading-first {
+    color: #000;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Roboto';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 46px; /* 115% */
+}
+
+.heading-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2vw;
+}
+
+.word {
+    color: #F0DEA9;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-shadow: 4px 4px 0px #1E285F;
+    /* title test */
+    font-family: Montserrat;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 46px; /* 76.667% */
+}
+
+.decor-bar {
+    width: 719px;
+    height: 13px;
+    margin: 2vh 0;
+    background: #1E285F;
+}
+
+.heading-last {
+    color: #1E285F;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 46px; /* 153.333% */
+}
+
+.char1, .char2, .char3, .char4 {
+    display: flex;
+    border-radius: 380px;
+    width: 380px;
+    height: 380px;
+    flex-shrink: 0;
+    border: 10px solid #FDFDFD;
+    background: #0F4081;
+    margin-left: 5.5vw;
+}
+
+.char1-container, .char2-container, .char3-container, .char4-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+}
+
+.char1-container {
+    top: 5vh;
+    left: 10vw;
+}
+
+.char2-container {
+    top: 48vh;
+    left: 20vw;
+}
+
+.char3-container {
+    top: 1.5vh;
+    left: 55vw;
+}
+
+.char4-container {
+    top: 49vh;
+    left: 50vw;
+}
+
+.characteristics-item-title {  
+    position: absolute;
+    font-size: 40px;   
+    color: white;  
+    text-shadow: 1px 1px 3px #292929; 
+    font-family: 'Be Vietnam Normal'; 
 }  
 
-.characteristics-items {  
+.characteristics-item-desc {  
+    position: absolute;
+    width: 15vw;  
+    color: white;  
+    font-size: 1.25vw;  
+    font-family: 'Montserrat';  
+}
+
+.characteristics-item-image {  
+    width: 154px;
+    height: 155px;
+    border-radius: 161px;
+    border: 10px solid #FFF;
+    box-shadow: 0px 4px 8px 0px #FDDB92;
+    position: absolute;
+}  
+
+/* Title position */
+.c1, .c4 {
+    top: 14vh;
+    left: 15vw;
+}
+
+.c2 {
+    top: 13.5vh;
+    left: 11vw;
+}
+
+.c3 {
+    top: 13.5vh;
+    left: 11vw;
+}
+/* Description position */
+.b1, .b2, .b3, .b4 {
+    top: 22vh;
+    left: 10vw;
+}
+
+
+/* Image position */
+.a1, .a4 {
+    top: 3vh;
+    left: 5vw;
+}
+
+.a2 {
+    top: 4vh;
+    right: 4vw;
+}
+
+.a3 {
+    right: 0
+}
+
+/* Homepage ver1.0 css */
+/* .characteristics-items {  
     display: flex;  
     gap: 3vw;   
     margin-top: 5vw;  
@@ -61,5 +223,5 @@
     width: 15vw;  
     color: white;  
     font-size: 1.25vw;  
-    font-family: EurostileRegular;  
-}
+    font-family: 'EurostileRegular';  
+} */

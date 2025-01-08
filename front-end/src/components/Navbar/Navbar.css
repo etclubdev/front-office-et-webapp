@@ -13,7 +13,6 @@
     display: flex;
     padding: 11px 68px;
     gap: 84px;
-    /* background-color: #0F4081; */
 }
 
 .nav-section.scrolled {
@@ -72,7 +71,6 @@
 .nav-item:hover {  
     transform: scale(1.1); 
     cursor: pointer;
-    /* background: #0F4081;   */
 }
 
 .nav-item.dropbtn{
@@ -93,15 +91,15 @@
 
 .dropdown-content {
     position: absolute;
-    margin: 1.7vh 0 0 -1vw;
-    background: #0D3DA4 80%; 
+    margin: 1vh 0 0 -1vw;
+    background: linear-gradient(0deg, #178DE2 97%, transparent 60%); 
     display: none;
     z-index: 1;
   }
 
   .dropdown-content a{
     width: 13vw;
-    min-height: 2.5vw;
+    min-height: 1vw;
     margin-top: 1vw; 
     border-radius: 0.5vw;
     display: flex;
