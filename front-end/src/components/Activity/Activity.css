@@ -1,0 +1,21 @@
+.activity-container{
+    width: 27vw;
+    display: flex;
+     flex-direction: column;
+}
+
+.activity-image{
+    width: 27vw;
+    height: 27vw;
+    object-fit: cover;
+    box-shadow: 5px 5px 30px 5px #A1EFF2;
+}
+
+.activity-name{
+    margin-top: 2vw;
+    color: #0F4081;
+     font-size: 1.3vw;
+     font-weight: 900;
+    line-height: 1.8vw;
+    text-align: center;
+}

@@ -1,0 +1,28 @@
+.activities-page{
+    padding-top: 4vw;
+    width: 100vw;
+    height: 450vh;
+    background: linear-gradient(181deg, #FDFDFD 1.18%, #AEE8FF 162.45%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.activities-slider{
+    width: 80vw;
+}
+
+.ongoing-activities-container{
+    width: 80%;
+}
+
+.ongoing-activities{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ongoing-activities img {
+    width: auto;
+    height: auto;
+}

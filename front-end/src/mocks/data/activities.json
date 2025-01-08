@@ -1,0 +1,121 @@
+{
+    "activities": [
+        {
+            "id": "AC001",
+            "name": "TÌM KIẾM CTV “NEXUS WHERE PROGRAMMING LANGUAGES CONNECT”",
+            "desc": "Chương trình tìm kiếm CTV hằng năm được tổ chức nhằm tìm kiếm thế hệ CTV tài năng kế thừa và phát huy những truyền thống tốt đẹp của CLB",
+            "image": "/images/activities/1.png",
+            "status": "Đang diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Hoạt động truyền thông"
+        },
+        {
+            "id": "AC002",
+            "name": "CHUYỆN GÌ SẼ XẢY RA NẾU ET MỞ RẠP CHIẾU PHIM",
+            "desc": "Những tình cảm trong sáng được truyền tải thông qua buổi chiếu phim của ET, hứa hẹn sẽ mang lại nhiều cảm xúc cho khán giả.",
+            "image": "/images/activities/2.png",
+            "status": "Đang diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Talkshow/Workshop"
+        },
+        {
+            "id": "AC003",
+            "name": "CHÍNH THỨC: BOOTH TRUYỀN THÔNG CHƯƠNG TRÌNH QUYỀN CHỦ THỂ DỮ LIỆU RA MẮT NGÀY 28/12!!!",
+            "desc": "",
+            "image": "/images/activities/3.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Hoạt động truyền thông"
+        },
+        {
+            "id": "AC004",
+            "name": "CÙNG TÌM HIỂU VỀ QUYỀN LỢI CỦA NGƯỜI LAO ĐỘNG TRONG NGÀNH CNTT NHÉ IT-ERS ƠI!",
+            "desc": "",
+            "image": "/images/activities/4.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Talkshow/Workshop"
+        },
+        {
+            "id": "AC005",
+            "name": "WEB3? BLOCKCHAIN? NẾU NHỮNG THUẬT NGỮ NÀY VỪA LẠ VỪA QUEN VỚI BẠN THÌ HÃY ĐẾN NGAY VỚI WS CỦA ET",
+            "desc": "",
+            "image": "/images/activities/5.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Talkshow/Workshop"
+        },
+        {
+            "id": "AC006",
+            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
+            "desc": "",
+            "image": "/images/activities/6.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": ["Game", "Hoạt động truyền thông"]
+        },
+        {
+            "id": "AC007",
+            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
+            "desc": "",
+            "image": "/images/activities/7.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Cuộc thi"
+        },
+        {
+            "id": "AC008",
+            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
+            "desc": "",
+            "image": "/images/activities/8.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Cuộc thi"
+        },
+        {
+            "id": "AC009",
+            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
+            "desc": "",
+            "image": "/images/activities/1.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Hoạt động truyền thông"
+        },
+        {
+            "id": "AC010",
+            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
+            "desc": "",
+            "image": "/images/activities/10.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Hoạt động truyền thông"
+        },
+        {
+            "id": "AC011",
+            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
+            "desc": "",
+            "image": "/images/activities/11.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Hoạt động nội bộ"
+        },
+        {
+            "id": "AC012",
+            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
+            "desc": "",
+            "image": "/images/activities/12.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Hoạt động nội bộ"
+        },
+        {
+            "id": "AC013",
+            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
+            "desc": "",
+            "image": "/images/activities/13.png",
+            "status": "Đã diễn ra",
+            "startDate": "2024-12-30 18:00:00",
+            "type": "Hoạt động nội bộ"
+        }
+    ]
+}
