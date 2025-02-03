@@ -1,0 +1,104 @@
+.info-section{
+    width: max-content;
+   
+}
+.info-form{
+    height: auto;
+    margin: 2vw;
+    display: flex;
+ }
+ .info-avatar{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+
+ }
+
+ .info-form{
+    display: flex;
+ }
+
+ .form-group{
+    display: flex;
+     flex-direction: column;
+    width: 20vw;
+    height: 5vw;
+    margin-left: 4vw;
+
+ }
+
+ .required-icon{
+    color: #ff0000;
+ }
+
+ .form-row{
+    display: flex;
+ }
+
+ .form-group input{
+    width: 100%;
+    height: 50%;
+    padding-left: 0.5vw;
+    border: none;
+     border-radius: 0.4vw;
+     outline: none;
+    color: #000;
+     font-size: 1vw;
+     font-family: "Montserrat";
+ }
+
+ .form-group select{
+    width: calc(100% + 0.5vw);
+    height: calc(50% + 0.2vw);
+    padding-left: 0.5vw;
+    font-family: 'Montserrat';
+     font-size: 1vw;
+    border: none;
+     border-radius: 0.4vw;
+     outline: none;
+ }
+
+ .form-group label{
+    font-size: 1vw;
+    margin-bottom: 0.2vw
+ }
+
+ .info-btns{
+    width: 98%;
+    display: flex;
+    justify-content: flex-end;
+ }
+
+ .info-btn{
+    padding: 0.8vw 2.2vw;
+    margin-left: 1vw;
+    font-family: "Montserrat";
+     font-size: 1vw;
+     font-weight: 900;
+    border-radius: 0.3vw;
+    border: none;
+    cursor: pointer;
+ }
+
+ .info-btn.save{
+    background: #0F4081;
+    color: #fff;
+ }
+
+ .info-btn.save:hover{
+    background: #092b58;
+    color: #fff;
+ }
+
+ .info-btn.cancel{
+    background: #D9D9D9;
+    color: #6E6E6E;
+ }
+
+ .info-btn.cancel:hover{
+    background: #bcbbbb;
+    color: #6E6E6E;
+ }
+
+
+

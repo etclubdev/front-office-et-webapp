@@ -1,0 +1,6 @@
+.personal-profile-container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, #FDFDFD 0.14%, #AEE8FF 110.05%);
+    display: flex;
+}
