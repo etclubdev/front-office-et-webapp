@@ -1,0 +1,9 @@
+{
+    "users": [
+        {
+            "userId": "etadmin_user",
+            "userName": "ET Admin",
+            "userImage": "/images/profiles/1.png"
+        }
+    ]
+}
