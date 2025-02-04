@@ -21,10 +21,10 @@ export const Sidebar = () => {
             <img className='side-bar-logo' src={horizontalLogin} alt="ET Club" />
             <div  className="side-bar-items">
                 <Link onClick={(e) => handleClick(e.currentTarget.id)} to='user/info' className="side-bar-item" id='side-bar-user'>
-                    <img className='user-avatar' src={require(`../../mocks${user.userImage}`)} alt="" />
+                    <img className='user-avatar' src={require(`../../mocks${user.image}`)} alt="" />
                     <div className="user-info">
-                        <p className="user-name">{user.userName}</p>
-                        <p className="user-id">@{user.userId}</p>
+                        <p className="user-name">{user.name}</p>
+                        <p className="user-id">@{user.id}</p>
                     </div>
                 </Link>
                 <Link onClick={(e) => handleClick(e.currentTarget.id)} to="account" className="side-bar-item" id='side-bar-account'>
