@@ -13,7 +13,7 @@ export const SearchPage = () => {
         <div className="search-section">
             <div className="search-container">
                 <div className="search-close">
-                    <a href="/"><FontAwesomeIcon className='close-btn' color='#fff' icon={faTimes} /></a>
+                    <a href="/"><FontAwesomeIcon className='close-btn' icon={faTimes} /></a>
                 </div>
                 <div className="search-input">
                     <div className="vertical-bar"></div>

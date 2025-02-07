@@ -1,27 +1,19 @@
 import './SearchSuggestions.css';
 import { etNews } from '../../mocks/data';
+import { findSimilarEtNews, findTop3LatestNews } from '../../utils/findEtNews';
+
+let searchData = [];
+searchData = etNews.etnews;
 
 export const SearchSuggestions = ({ target }) => {
-    let searchData = {};
-    searchData.etNews = etNews.etnews;
-
-    const findTop3Newest = () => {
-        const top3NewestItems = searchData.etNews
-            .sort((a, b) => b.createdDate - a.createdDate)
-            .slice(0, 3)
-        return top3NewestItems;
+    
+    if (target){
+        searchData = findSimilarEtNews(searchData, target);
     }
-
-    const findMostSimilar = () => {
-        const mostSimilarItems = searchData.etNews
-            .filter(item => item.title.includes(target.toUpperCase()))
-
-        return mostSimilarItems;
+    else{
+        searchData = findTop3LatestNews(searchData);
     }
-
-    if (target) searchData = findMostSimilar();
-    else searchData = findTop3Newest();
-
+    
     return (
         <div className="suggestions">
             <p className='suggestions-text'>Bạn có thể sẽ quan tâm</p>
