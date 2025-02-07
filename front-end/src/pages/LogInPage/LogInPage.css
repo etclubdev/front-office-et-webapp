@@ -9,12 +9,12 @@
 }
 
 .log-in-form{
-    width: 40vw;
-    height: 38.5vw;
+    width: 45vw;
+    height: 45vw;
     padding: 1.5vw;
     border-radius: 1vw;
     background: #FDFDFD;
-    box-shadow: 8px 6px 25px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0vw 0.2vw 2vw 1vw rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,6 +28,7 @@
 }
 
  .log-in-logo{
+    margin-top: 2lvw;
     width: 10.5vw;
     height: auto;
  }
@@ -53,6 +54,7 @@
  .log-in-desc{
     margin: 0 1vw;
     color: rgba(0, 0, 0, 0.40);
+     font-size: 1vw;
  }
 
 .log-in form{
@@ -61,29 +63,31 @@
     display: flex;
      flex-direction: column;
 }
-.log-in-input{
+.log-in-form-control{
     width: 27vw;
+    height: 6.5vw;
     margin-bottom: 1.2vw;
     display: flex;
      flex-direction: column;
  }
  
- .log-in-input label{
+ .log-in-form-control label{
     margin-bottom: 0.5vw;
     color: #000;
      font-size: 1.2vw;
      font-weight: 600;
  }
 
- .log-in-input input{
+ .log-in-form-control input{
     width: 90%;
     height: 2.5vw;
     padding-right: 2.5vw;
-    border: 0.5px solid #000;
+    border: 0.1vw solid #000;
      border-radius: 0.5vw;
     color: #000;
      font-family: 'Montserrat';
      font-size: 1vw;
+     text-indent: 1vw;
  }
 
  .password-input{
@@ -104,10 +108,16 @@
     color: #141313af;
  }
 
+ .log-in-error{
+    font-size: 0.9vw;
+    margin: 0.5vw 0 0 0;
+    color: rgb(255, 0, 0);
+    font-style: italic;
+ }
+
 .log-in button{
     width: 27vw;
     height: 2.7vw;
-    margin-top: 1vw;
     background: #0F4081;
     border-radius: 0.5vw;
     color: #fff;
