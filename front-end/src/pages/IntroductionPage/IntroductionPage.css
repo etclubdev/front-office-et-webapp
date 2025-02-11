@@ -1,0 +1,47 @@
+.introduction-page{
+    width: 100vw;
+    height: fit-content;
+    background: linear-gradient(180deg, #FDFDFD 0.1%, #AEE8FF 107.38%);
+}
+.introduction-page .et-avatar{
+    width: 100vw;
+    height: 100vh;
+ }
+
+ .introduction-page .et-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .introduction-page .et-cover{
+    position: absolute;
+     top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+ }
+
+ .introduction-page .et-text{
+    position: relative;
+     top: 4.5vw;
+    color: #fff;
+     font-weight: 900;
+     font-size: 4vw;
+ }
+
+ .introduction-page .et-logo{
+    width: 50vw;
+    position: relative;
+     top: 5vw;
+ }
+
+ .introduction-page .introduction-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+     justify-content: center;
+ }
