@@ -1,0 +1,29 @@
+{
+    "departments": [
+        {
+            "id": 0,
+            "name": "EVENT",
+            "image": "/images/profiles/event.jpg"
+        },
+        {
+            "id": 1,
+            "name": "TECH",
+            "image": "/images/profiles/tech.jpg"
+        },
+        {
+            "id": 2,
+            "name": "PR",
+            "image": "/images/profiles/pr.jpg"
+        },
+        {
+            "id": 3,
+            "name": "HR",
+            "image": "/images/profiles/hr.jpg"
+        },
+        {
+            "id": 4,
+            "name": "FER",
+            "image": "/images/profiles/fer.jpg"
+        }
+    ]
+}
