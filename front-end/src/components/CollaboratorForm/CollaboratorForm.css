@@ -1,0 +1,241 @@
+.collaborator-form {
+    width: 100vw;
+    height: 400vh;
+    background: linear-gradient(80deg, rgba(20, 153, 233, 0.78) 40.06%, rgba(20, 183, 233, 0.78) 52.39%, #82e5fb 68.99%);
+    display: flex;
+    justify-content: center;
+    padding-top: 10vw;
+}
+
+.collaborator-form-control {
+    width: 50vw;
+    min-height: 8vw;
+    
+}
+
+.collaborator-form-control label{
+    color: #FFF;
+    font-size: 1.5vw;
+}
+
+.collaborator-form-control label p{
+    margin: 0.5vw 0 1.5vw 0;
+    font-size: 1.2vw;
+    color: #FFF;
+}
+
+.collaborator-form-control input, .collaborator-form-select select{
+    width: 100%;
+    height: 2.5vw;
+    background: rgba(255, 255, 255, 0.55);
+    border: none;
+    box-shadow: 0.1vw 0.3vw 0.3vw rgba(120, 237, 255, 0.707);
+    border-radius: 0.5vw;
+    outline: none;
+    text-indent: 1vw;
+    transition: box-shadow 0.3s ease-in-out; 
+    margin-top: 1vw;
+    color: #fff;
+    font-family: 'Montserrat';
+}
+
+.collaborator-form-control input:focus, .collaborator-form-select select:focus {
+    box-shadow: 0 0 1vw rgba(0, 150, 255, 0.6);
+}
+
+.collaborator-form-control input:focus-visible {
+    background: #ffffff !important;
+    color: #000 !important;
+    box-shadow: 0 0 1vw rgba(0, 150, 255, 0.6);
+}
+
+
+.collaborator-form-radio{
+    width: 50vw;
+    margin-bottom: 2vw;
+}
+
+.collaborator-form-radio label{
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    font-size: 1.5vw;
+}
+
+.collaborator-form-radio input{
+    margin: 0 2vw 0 0;
+    appearance: none; 
+    width: 1.4vw;
+    height: 1.4vw;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.50);
+    border: 0.01vw solid rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    position: relative;
+}
+
+.collaborator-form-radio input:checked {
+    background: rgb(255, 143, 253);
+    border-color: black;
+    box-shadow: 0 0 1vw rgba(0, 150, 255, 0.6);
+}
+
+.collaborator-form-radio p{
+    color: #fff;
+    font-size: 1.3vw;
+}
+
+.collaborator-form-radio-container{
+    border-radius: 0.8vw;
+    background: rgba(255, 255, 255, 0.40);
+    padding: 2vw 4vw;
+    margin-top: 1vw;
+}
+
+.collaborator-form-errors{
+    color: #ff000f;
+    font-size: 1.2vw;
+    line-height: 3vw;
+}
+
+.collaborator-form-button {
+    margin-top: 4vw;
+    width: 100%;
+    height: 3.5vw;
+    border-radius: 0.5vw;
+    border: none;
+    background: linear-gradient(90deg, #1865ad 0.01%, #3b99cf 55.17%, #80DBF6 99.99%);
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7vw;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0.5vw 0.7vw rgba(0, 0, 0, 0.2);
+}
+
+.collaborator-form-button:hover {
+    background: linear-gradient(90deg, #22609a 0.01%, #3587b6 55.17%, #80DBF6 99.99%);
+    box-shadow: 0 0.5vw 0.7vw rgba(0, 0, 0, 0.25);
+}
+
+.collaborator-form-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0.5vw 0.7vw rgba(0, 0, 0, 0.2);
+}
+
+.collaborator-form-button:focus {
+    outline: none;
+    box-shadow: 0 0.5vw 0.7vw rgba(24, 101, 173, 0.6);
+}
+
+.collaborator-form-upload {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-bottom: 2.5vw;
+    border-radius: 0.8vw;
+    background: rgba(255, 255, 255, 0.55);
+    margin: auto;
+    
+}
+
+#file-upload-title{
+    margin-left: 2.5vw;
+    width: fit-content;
+    font-size: 1.5vw;
+    font-weight: bold;
+    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.upload-box {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 10vw;
+    border: 0.1vw dashed #000;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    border-radius: 0.8vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.upload-box .collaborator-form-errors{
+    margin: 0.5vw 0 0 0;
+    font-style: italic;
+    line-height: 1vw;
+}
+
+#cvFile {
+    display: none;
+}
+
+.upload-box:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 1vw 2.2vw;
+    font-size: 1.5vw;
+    color: white;
+    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
+    border-radius: 0.8vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+    background: linear-gradient(135deg, #3c8f9a 0%, #493173 100%);
+}
+
+#file-name {
+    display: block;
+    margin-top: 0.8vw;
+    font-size: 1.1vw;
+    color: #333;
+}
+
+.collaborator-form-select{
+    width: 50vw;
+    min-height: 8vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.collaborator-form-select label{
+    color: #FFF;
+    font-size: 1.5vw;
+}
+
+.collaborator-form-select select option {
+    background: #95cae7; 
+    color: #fff;
+    font-size: 1.2vw;
+    line-height: 2vw;
+}
+
+.collaborator-form-select select option:hover {
+    background: #58c7f9;
+    color: white;
+}
+
+.collaborator-form-select select {
+    background: rgba(255, 255, 255, 0.55);
+    color: #fff;
+    transition: all 0.3s ease, color 0.3s ease;
+}
+
+.collaborator-form-select select:not([value=""]), .collaborator-form-select select:focus-visible {
+    background: #ffffff !important;
+    color: #000 !important;
+}
