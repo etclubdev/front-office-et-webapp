@@ -1,0 +1,80 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+.etnews-page{
+    width: 100vw;
+    height: auto;
+    background: linear-gradient(181deg, #FDFDFD 1.18%, #AEE8FF 162.45%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.et-news-section{
+    width: 70%;
+}
+
+.et-news-highlight{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 0;
+}
+
+.highlight-title{
+    margin: 3vw 0;
+    font-size: 4vw;
+     font-weight: 900;
+    background: linear-gradient(0deg, #47A8B4 0%, #5D3E91 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.highlight-news{
+    display: flex;
+    gap: 2vw;
+}
+
+#highlight-news-1 .vertical-news{
+    width: 31vw;
+}
+
+#highlight-news-1 .vertical-news-title{
+    margin: 1vw 0;
+    font-size: 1.5vw;
+    line-height: 2vw;
+}
+
+#highlight-news-1 .vertical-news-content{
+    font-size: 1vw;
+    line-height: 1.5vw;
+}
+
+#highlight-news-2 .horizontal-news{
+    flex: 1;
+}
+
+#highlight-news-2 .horizontal-news-img{
+    width: 10vw;
+    height: 10vw;
+}
+
+#highlight-news-2 .horizontal-news-title{
+    font-size: 1.2vw;
+}
+
+#highlight-news-2 .horizontal-news-content{
+    font-size: 0.7vw;
+    line-height: 1vw;
+}
+
+.et-news-categories{
+    width: 100%;
+    height: auto;
+}
+
+.et-news-slider .slick-list{
+    width: 100%;
+    height: 40vw;
+}
