@@ -8,16 +8,16 @@
         },
         {
             "id": 1,
-            "title": "Năm hoạt động",
-            "value": 6,
-            "duration": 100000
+            "title": "Cựu thành viên",
+            "value": 120,
+            "duration": 3000
             
         },
         {
             "id": 2,
-            "title": "Cựu thành viên",
-            "value": 1200,
-            "duration": 3000
+            "title": "Năm hoạt động",
+            "value": 6,
+            "duration": 100000
         },
         {
             "id": 3,
