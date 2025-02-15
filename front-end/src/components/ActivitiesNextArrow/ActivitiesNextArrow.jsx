@@ -1,6 +1,6 @@
 import nextArrow from '../../mocks/images/activities/nextArrow.png'
 
-export const NextArrow = (props) => {
+export const ActivitiesNextArrow = (props) => {
     const { onClick } = props;
     return (
         <img  

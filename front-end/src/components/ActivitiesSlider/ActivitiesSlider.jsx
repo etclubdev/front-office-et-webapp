@@ -1,7 +1,7 @@
 import './ActivitiesSlider.css';
 
-import Activity from '../Activity';
-import NextArrow from '../NextArrow';
+import { Activity } from '../Activity';
+import { ActivitiesNextArrow } from '../ActivitiesNextArrow';
 
 import Slider from "react-slick";
 import { useState } from 'react';
@@ -18,11 +18,11 @@ export const ActivitiesSlider = ({activities}) => {
         slidesToShow: 2.5,
         slidesToScroll: 1,
         centerMode: true,
-        centerPadding: "17vw",
+        centerPadding: "14vw",
         autoplay: true,
         autoplaySpeed: 2000,
         initialSlide: 0,
-        nextArrow: <NextArrow />,
+        nextArrow: <ActivitiesNextArrow />,
         responsive: [
             { breakpoint: 1200, settings: { slidesToShow: 2.5, slidesToScroll: 1 } },
             { breakpoint: 768, settings: { slidesToShow: 2.5, slidesToScroll: 1 } },
@@ -51,7 +51,7 @@ export const ActivitiesSlider = ({activities}) => {
                     onClick={toggleSlider}
                     alt="Activities Icon"
                 />
-                <p className="activities-title">{activities.type}</p>
+                <p className="activities-slider-title">{activities.type}</p>
                 <div className="activities-division-bar"></div>
             </div>
 
@@ -68,7 +68,7 @@ export const ActivitiesSlider = ({activities}) => {
                                 <Activity activity={item} active={false}/>
                             ))}
                         </Slider>
-                    ) : <div style={{marginLeft: "1vw",display: "flex", gap: "4vw"}}>
+                    ) : <div style={{display: "flex", gap: "0vw"}}>
                         {
                             activities.items.map((item, index) => (
                                 <Activity activity={item} active={false}/>

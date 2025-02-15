@@ -7,6 +7,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
 }
 
 .activities-slider{
@@ -15,16 +18,97 @@
 }
 
 .ongoing-activities-container{
-    width: 80%;
+    width: 70%;
 }
 
 .ongoing-activities{
     display: flex;
-    justify-content: space-between;
+    gap: 4vw
 }
 
 .ongoing-activities img {
     max-width: 50vw;
     height: auto;
 }
+
+.ongoing-activities .activity-container.highlight-1{
+    width: 65%;
+}
+
+.ongoing-activities .activity-container.highlight-1 img{
+    width: 100%;
+}
+
+.ongoing-activities .activity-container.highlight-2{
+    flex: 1;
+}
+
+.ongoing-activities .activity-container.highlight-2 img{
+    width: 100%;
+}
+
+.ongoing-activities .activity-container.highlight-1 .activity-name{
+    font-size: 1.8vw;
+    line-height: 2.2vw;
+    text-align: left;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.ongoing-activities .activity-container.highlight-2 .activity-name{
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.ongoing-activities .activity-container.highlight-2 .activities-desc,
+.ongoing-activities .activity-container.highlight-1 .activities-desc{
+    font-size: 1vw
+}
+
+.completed-activities-container{
+    width: 70%;
+}
+
+.completed-activities-container .activity-name{
+    width: 22vw;
+}
+
+
+.completed-activities-container .activities-slider{
+    width: 100%;
+}
+
+.completed-activities .activity-container img{
+    width: 22vw;
+    height: 22vw;
+    object-fit: cover;
+}
+
+.activities-page-division-bar{
+    width: 15vw;
+    height: 0.1vw;
+    background-color: #536EA1;
+    margin: 3vw 0 5vw 0
+}
+
+.activities-title{
+    font-size: 2.5vw;
+    line-height: 5vw;
+    text-align: center;
+    font-weight: 900;
+    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+  
+.blur-circle {
+    position: absolute;
+    border-radius: 50%;
+    transition: all 1s ease-in-out;
+  }
 

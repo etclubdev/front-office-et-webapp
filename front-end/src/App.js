@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // import { HomePage } from './pages/HomePage';
 import  TetCountDownTimerPage  from './pages/EventPages/TetCountDownTimerPage/TetCountDownTimerPage';
-import ActivitiesPage from './pages/ActivitiesPage';
+import { ActivitiesPage } from './pages/ActivitiesPage';
 
 import { createStar } from './utils/createStarUtil';
 

@@ -1,3 +1,2 @@
-import { ActivitiesSlider } from "./ActivitiesSlider";
+export * from "./ActivitiesSlider";
 
-export default ActivitiesSlider;

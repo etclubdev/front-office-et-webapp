@@ -1,3 +1,1 @@
-import { ActivitiesPage } from "./ActivitiesPage";
-
-export default ActivitiesPage;
+export * from './ActivitiesPage'
