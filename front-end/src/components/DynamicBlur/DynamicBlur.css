@@ -1,0 +1,17 @@
+.dynamic-blur-circle {
+    position: absolute;
+    border-radius: 50%;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    z-index: 0;
+    will-change: transform, opacity, filter;
+    animation: floating 6s infinite alternate ease-in-out;
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(20px);
+    }
+}
