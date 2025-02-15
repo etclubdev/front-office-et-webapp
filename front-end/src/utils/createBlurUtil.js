@@ -16,7 +16,7 @@ const createBlur = (className) => {
     return Array.from({ length: count }).map(() => ({
         size: Math.random() * 200 + 50, 
         blur: Math.random() * 60 + 5,  
-        opacity: Math.random() * 0.4 + 0.2,
+        opacity: Math.random() * 0.5 + 0.3,
         top: Math.random() * pageHeight + "px",
         left: Math.random() * 120 - 20 + "%",
         background: gradients[Math.floor(Math.random() * gradients.length)], // Chọn màu ngẫu nhiên
