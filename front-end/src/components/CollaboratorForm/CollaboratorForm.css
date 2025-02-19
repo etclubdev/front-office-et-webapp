@@ -1,14 +1,22 @@
 .collaborator-form {
     width: 100vw;
-    height: 400vh;
+    height: auto;
     background: linear-gradient(80deg, rgba(20, 153, 233, 0.78) 40.06%, rgba(20, 183, 233, 0.78) 52.39%, #82e5fb 68.99%);
     display: flex;
-    justify-content: center;
+    align-items: center;
     padding-top: 10vw;
+    flex-direction: column;
+    
+}
+
+.collaborator-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .collaborator-form-control {
-    width: 50vw;
+    width: 70vw;
     min-height: 8vw;
     
 }
@@ -51,7 +59,7 @@
 
 
 .collaborator-form-radio{
-    width: 50vw;
+    width: 70vw;
     margin-bottom: 2vw;
 }
 
@@ -101,8 +109,8 @@
 }
 
 .collaborator-form-button {
-    margin-top: 4vw;
-    width: 100%;
+    margin: 4vw 0;
+    width: 30%;
     height: 3.5vw;
     border-radius: 0.5vw;
     border: none;
@@ -135,12 +143,11 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: auto;
+    height: 30vw;
     padding-bottom: 2.5vw;
     border-radius: 0.8vw;
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.40);
     margin: auto;
-    
 }
 
 #file-upload-title{
@@ -148,10 +155,7 @@
     width: fit-content;
     font-size: 1.5vw;
     font-weight: bold;
-    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fff;
 }
 
 .upload-box {
@@ -161,8 +165,8 @@
     align-items: center;
     justify-content: center;
     width: 90%;
-    height: 10vw;
-    border: 0.1vw dashed #000;
+    height: 80%;
+    border: 0.2vw dashed #ffffff;
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     border-radius: 0.8vw;
@@ -179,34 +183,56 @@
     display: none;
 }
 
-.upload-box:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+.file-upload-desc{
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5vw;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 2vw;
+}
+
+.file-import-icon{
+    font-size: 3vw;
+    opacity: 0.8;
+}
+
+.file-upload-desc p{
+    margin: 0;
+}
+
+.file-upload-desc .files-supported{
+    font-size: 1.1vw;
+    font-weight: 100;
 }
 
 .custom-button {
     display: inline-block;
     padding: 1vw 2.2vw;
     font-size: 1.5vw;
-    color: white;
-    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
+    color: rgba(92, 94, 99, 0.70);
+    background-color: #fff;
     border-radius: 0.8vw;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .custom-button:hover {
-    background: linear-gradient(135deg, #3c8f9a 0%, #493173 100%);
+    background-color: #ffffffc4;
 }
 
 #file-name {
     display: block;
     margin-top: 0.8vw;
     font-size: 1.1vw;
-    color: #333;
+    color: #fff;
 }
 
 .collaborator-form-select{
-    width: 50vw;
+    width: 70vw;
     min-height: 8vw;
     display: flex;
     flex-direction: column;
@@ -238,4 +264,39 @@
 .collaborator-form-select select:not([value=""]), .collaborator-form-select select:focus-visible {
     background: #ffffff !important;
     color: #000 !important;
+}
+
+.collaborator-form .seeking-info-container{
+    width: 60%;
+    padding: 1vw 0;
+    background: rgba(133, 134, 139, 0.208);
+    border-radius: 1vw;
+    margin-bottom: 5vw;
+}
+
+.collaborator-form .seeking-info-container .name{
+    font-size: 2.5vw;
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(90deg, #FFC107 31.17%, #FFD740 43.17%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: hard-light;
+}
+
+.collaborator-form .seeking-info-container .date{
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.3vw;
+    margin-top: 0;
+    color: #fff;
+}
+
+.collaborator-form .division-bar{
+    width: 30%;
+    height: 0.3vw;
+    background: linear-gradient(270deg, rgba(19, 83, 167, 0.859) 27.82%, rgba(11, 51, 107, 0.5) 68.79%);
+    border: none;
+    margin: 4vw 0;
 }

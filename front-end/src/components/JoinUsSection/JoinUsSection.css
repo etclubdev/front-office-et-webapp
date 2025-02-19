@@ -1,0 +1,71 @@
+.join-us-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-us-section .title{
+    margin-bottom: 5vw;
+    width: fit-content;
+    font-size: 2.5vw;
+    font-weight: 900;
+    text-shadow: 0.1vw 0.2vw 0.5vw rgba(0, 0, 0, 0.20);
+    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.join-us-section .departments{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    row-gap: 4vw;
+}
+
+.join-us-section .department-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22vw;
+    height: auto;
+    border-radius: 0.5vw;
+    background: #3b5887;
+    padding: 3vw 0;
+    gap: 1vw;
+    box-shadow: 0px -1vw 0px #65a1ca;
+}
+
+.join-us-section .department-card .name{
+    font-size: 1.25vw;
+    font-weight: 900;
+    background: linear-gradient(180deg, #FFB74D 0%, #FFD54F 80.17%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    backdrop-filter: blur(0.2vw);
+    margin: 0 0 1vw 0;
+}
+
+.join-us-section .action-button{
+    width: 80%;
+    background-color: #fff;
+    color: #0F4081;
+    font-weight: 900;
+    font-size: 0.8vw;
+    border-radius: 1vw;
+    padding: 0.3vw 1vw;
+    display: flex;
+    justify-content: space-between;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.join-us-section .action-button:hover{
+    opacity: 0.8;
+}

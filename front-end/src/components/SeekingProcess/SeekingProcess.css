@@ -1,0 +1,128 @@
+.seeking-process-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, rgb(174, 232, 255) 0.1%,
+    rgb(214, 243, 255) 107.38%);
+    padding-top: 5vw;
+}
+
+.seeking-process-section .title{
+    text-align: center;
+    margin-bottom: 5vw;
+    width: fit-content;
+    font-size: 2.5vw;
+    font-weight: 900;
+    text-shadow: 0.1vw 0.2vw 0.5vw rgba(0, 0, 0, 0.20);
+    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.seeking-process-section .process{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.seeking-process-section .banner{
+    width: 55%;
+    height: 85%;
+    min-height: auto;
+    object-fit: cover;
+    border-radius: 2vw;
+    border-radius: 3.0vw;
+    background: #D9D9D9;
+
+    box-shadow: 1.0vw 1.0vw .5vw .0vw rgba(0, 0, 0, 0.25);
+}
+
+.seeking-process-section .rounds-container{
+    width: 40%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.seeking-process-section .rounds-bar{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seeking-process-section .round-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 35%;
+}
+
+.seeking-process-section #last-bar{
+    height: auto;
+}
+
+
+.seeking-process-section .rounds-bar .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2vw;
+    font-weight: 900;
+    color: #fff;
+    width: 2vw;
+    height: 2vw;
+    background: linear-gradient(316deg, #FFF -6.44%, #80DBF6 31.44%, #55B3E9 67.84%);
+    border-radius: 50%;
+}
+
+.seeking-process-section .rounds-bar .vertical{
+    width: 0.4vw;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(316deg, #FFF -6.44%, #80DBF6 31.44%, #55B3E9 67.84%);
+}
+
+.seeking-process-section .rounds{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.seeking-process-section .round-card{
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+    padding: 1vw 1vw;
+    border-radius: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.seeking-process-section .round-card .name{
+    font-size: 1.5vw;
+    font-weight: 900;
+    color: #178DE2;
+    text-shadow: 0.3vw 0.1vw 0.2vw rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+.seeking-process-section .round-card .detail{
+    font-size: 0.8vw;
+    margin: 0;
+    color: #85868C;
+    font-weight: 900;
+}

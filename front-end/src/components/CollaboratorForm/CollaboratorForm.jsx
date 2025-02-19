@@ -3,12 +3,27 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileArrowUp}  from '@fortawesome/free-solid-svg-icons'
+
 import './CollaboratorForm.css';
+
 import { TextInput } from '../TextInput';
 import { RadioInput } from '../RadioInput';
 import { SelectInput } from '../SelectInput';
+import { CountDownTimerV2 } from '../CountDownTimerV2';
 
-import { collaboratorsForm } from '../../mocks/data';
+import { formatDate } from '../../utils/formatDateUtil';
+
+
+const FILE_SIZE_LIMIT = 10 * 1024 * 1024; 
+const SUPPORTED_FORMATS = [
+    "application/pdf",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "image/png",
+    "image/jpeg",
+    "image/jpg"
+];
 
 const schema = yup.object().shape({
     name: yup
@@ -50,11 +65,13 @@ const schema = yup.object().shape({
         .test("required", "Vui lòng tải lên file CV", (value) => {
             return value && value.length > 0;
         })
-        .test("fileType", "Chỉ chấp nhận tệp PDF", (value) => {
-            return value && value[0]?.type === "application/pdf";
+        .test("fileType", "Chỉ chấp nhận tệp PDF, XLSX, PNG, JPG, JPEG", (value) => {
+            return value && SUPPORTED_FORMATS.includes(value[0]?.type);
+        })
+        .test("fileSize", "Dung lượng tối đa 10MB", (value) => {
+            return value && value[0]?.size <= FILE_SIZE_LIMIT;
         })
 });
-
 
 const className = [
     {
@@ -71,7 +88,7 @@ const className = [
     }
 ]
 
-export const CollaboratorForm = () => {
+export const CollaboratorForm = ({ form, seekingInfo }) => {
     const {
         register,
         handleSubmit,
@@ -86,19 +103,25 @@ export const CollaboratorForm = () => {
     };
 
     const cvFile = watch("cvFile");
-
+    
     return (
         <div className="collaborator-form">
+            <CountDownTimerV2 date={seekingInfo.date}/>
+            <hr className="division-bar"/>
+            <div className="seeking-info-container">
+                <p className="name">{seekingInfo.formName}</p>
+                <p className="date">Hạn chót: {formatDate(seekingInfo.date)}</p>
+            </div>
             <form noValidate onSubmit={handleSubmit(onSubmit)}>
                 {
-                    collaboratorsForm.map((item, index) => {
+                    form.map((item, index) => {
                         switch (item.inputType) {
                             case 'text': {
                                 return (
                                     <TextInput
                                         key={'collaborators-' + item.id}
                                         order={index + 1}
-                                        inputInfo={collaboratorsForm[index]}
+                                        inputInfo={form[index]}
                                         register={register}
                                         errors={errors}
                                         className={className[0]}
@@ -111,7 +134,7 @@ export const CollaboratorForm = () => {
                                     <RadioInput
                                         key={'collaborators-' + item.id}
                                         order={index + 1}
-                                        inputInfo={collaboratorsForm[index]}
+                                        inputInfo={form[index]}
                                         register={register}
                                         errors={errors}
                                         className={className[1]}
@@ -124,7 +147,7 @@ export const CollaboratorForm = () => {
                                     <SelectInput
                                     key={'collaborators-' + item.id}
                                         order={index + 1}
-                                        inputInfo={collaboratorsForm[index]}
+                                        inputInfo={form[index]}
                                         register={register}
                                         errors={errors}
                                         className={className[2]}
@@ -138,10 +161,14 @@ export const CollaboratorForm = () => {
                 <div className="collaborator-form-upload">
                     <p id="file-upload-title">Upload Files</p>
                     <label htmlFor="cvFile" className="upload-box">
+                        <div className="file-upload-desc">
+                            <FontAwesomeIcon icon={faFileArrowUp} className="file-import-icon" />
+                            <p>Drag & Drop files here</p>
+                            <p className="files-supported">Files Supported: PDF, XSLS, Image, Scanner <br /> Maximum size: 10MB</p>
+                        </div>
                         <input
                             type="file"
                             id="cvFile"
-                            accept="application/pdf"
                             {...register("cvFile")}
                         />
                         <label htmlFor="cvFile" className="custom-button">

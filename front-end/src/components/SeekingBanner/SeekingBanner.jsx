@@ -1,7 +1,7 @@
 import React from 'react';
 import './SeekingBanner.css'
 
-import { background, seekingImage, block1, block2 } from '../../assets/images/collaborators'
+import { background, seekingImage, block1, block2 } from '../../mocks/images/collaborators'
 
 export const SeekingBanner = () => {
   return (

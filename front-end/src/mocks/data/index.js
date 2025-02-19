@@ -1,3 +1,3 @@
-import collaboratorsForm from './collaborators-form.json';
+import collaborators from './collaborators.json';
 
-export { collaboratorsForm }
+export { collaborators }

@@ -13,6 +13,7 @@
     height: 100%;
     object-fit: cover; 
     z-index: -1; 
+    animation: floating 3s infinite ease-in-out;
 }
 
 .seeking-banner-image {
@@ -25,7 +26,7 @@
 }
 
 .seeking-banner-image img {
-    width: 70vw;
+    width: 75vw;
     height: auto;
     object-fit: contain;
 }
@@ -47,6 +48,7 @@
     height: auto;
     object-fit: contain;
     position: absolute;
+    animation: floating 2s infinite ease-in-out;
 }
 
 #seeking-banner-block-2{
@@ -56,4 +58,11 @@
     object-fit: contain;
     bottom: 0;
     right: 0;
+    animation: floating 3s infinite ease-in-out;
+}
+
+@keyframes floating {
+    0% { scale: 1; }
+    50% { scale: 1.05; } 
+    100% { scale: 1; } 
 }
