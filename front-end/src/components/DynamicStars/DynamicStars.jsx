@@ -8,7 +8,7 @@ export const DynamicStars = ({ parentClassName }) => {
 
     useEffect(() => {
         setStars(createStars(parentClassName));
-    }, []);
+    }, [parentClassName]);
 
     return (
         <div className="dynamic-stars-container">

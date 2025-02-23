@@ -8,25 +8,17 @@ export const DynamicBlur = ({parentClassName}) => {
     const [circles, setCircles] = useState([]);
 
     useEffect(() => {
-        if (parentClassName){
-            setCircles(createBlur(parentClassName));
-        }
+        if (!parentClassName) return;
+
         const parentElement = document.querySelector(`.${parentClassName}`);
-        if (parentElement) {
-            parentElement.style.overflow = "hidden";
-            parentElement.style.position = "relative";
-            parentElement.style.zIndex = "100";
-        }       
+        if (!parentElement) return;
 
+        parentElement.style.overflow = "hidden";
+        parentElement.style.position = "relative";
+        parentElement.style.zIndex = "100";
 
-        return () => {
-            if (parentElement) {
-                parentElement.style.overflow = "hidden";
-                parentElement.style.position = "relative";
-                parentElement.style.zIndex = "100";
-            }   
-        }
-    }, []);
+        setCircles(createBlur(parentClassName));
+    }, [parentClassName]);
 
     return (
         <div className="dynamic-blur-container">
