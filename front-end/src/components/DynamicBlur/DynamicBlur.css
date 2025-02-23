@@ -10,8 +10,10 @@
 @keyframes floating {
     from {
         transform: translateY(0px);
+        opacity: 1;
     }
     to {
         transform: translateY(20px);
+        opacity: 0.9;
     }
 }
