@@ -1,0 +1,87 @@
+.footer{
+    width: 100%;
+    height: max-content;
+    background-color: #113259;
+    bottom: 0;
+    margin-top: 5vw;
+    padding: 5vw;
+    box-sizing: border-box;
+    display: flex;
+    gap: 3vw;
+    color: white;
+    font-family: EurostileRegular;
+    justify-content: space-around;
+    z-index: 2000;
+}
+
+.footer-aboutET{
+    width: 18vw;
+}
+
+
+.footer-aboutET-logo{
+    width: 18vw;
+    height: auto; 
+}
+
+.footer-aboutET-title{
+    font-size: 1.2vw;
+    color: white;
+}
+
+.footer-aboutET-desc{
+    font-size: 1vw;
+    width: fit-content;
+    text-align: justify;
+    margin-top: 0.7vw;
+}
+
+.footer-item{
+    max-width: 17vw;
+}
+
+.footer-item-title{
+    font-size: 1.25vw;
+    width: fit-content;
+    font-family: EurostileDemi;
+    background: linear-gradient(90deg, #D1FDFF, #FDDB92);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2vw;
+}   
+
+.footer-item-content{
+    font-size: 1vw;
+    margin-top: 0.7vw;
+    text-align: justify;
+    text-decoration: none;
+    line-height: 1.5;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-social{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-top: 0.7vw;
+}
+
+
+.footer-social-link{
+    font-size: 1vw;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-social-icon{
+    width: 2vw;
+    height: 2vw;
+    font-size: 0.8vw;
+    margin-right: 1vw;
+    background: linear-gradient(90deg, #96DD99, #4E9D99, #1C4BB2);
+    border-radius: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

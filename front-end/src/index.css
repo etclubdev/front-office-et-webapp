@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "EurostileDemi";
+  src: url("./assets/fonts/Eurostile/SFUEurostileDemi.TTF");
+  font-weight: bold;  
+  font-style: bold;  
+}
+
+@font-face {
+  font-family: "EurostileRegular";
+  src: url("./assets/fonts/Eurostile/SFUEurostileRegular.TTF");
+  font-weight: normal;  
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: "EurostileBoldOblique";
+  src: url("./assets/fonts/Eurostile/SFUEurostileBoldOblique.TTF");
+  font-weight: normal;  
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: "EurostileBoldExtendedTwo";
+  src: url("./assets/fonts/Eurostile/SFUEurostileBoldExtendedTwo.TTF");
+  font-weight: normal;  
+  font-style: normal;  
+}
+
+body {
+  margin: 0;
+  font-family: EurostileDemi, EurostileRegular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,27 @@
+.banner-section {  
+    position: relative;  
+    margin: 4vw 0 5vw 0;   
+    width: 100%;  
+    height: auto;  
+    overflow-x: hidden;  
+}  
+
+.banner-list {  
+    width: 100vw;  
+    height: auto;  
+    display: flex;  
+    transition: transform 0.5s ease-in-out;  
+    box-sizing: border-box;  
+}  
+
+.banner {  
+    flex: 0 0 100%;  
+    width: 100vw;  
+    height: 92vh; 
+    transition: opacity 0.5s ease;  
+    object-fit: cover;  
+}  
+
+.banner-section-banner--active {  
+    opacity: 1;   
+}  

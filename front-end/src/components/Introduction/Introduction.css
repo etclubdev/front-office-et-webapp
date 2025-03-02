@@ -1,0 +1,161 @@
+.intro-section{
+    margin-top: 4vw;
+    display: flex;
+    justify-content: space-between;
+    animation: moveDown 0.5s ease-in;
+}
+
+@keyframes moveDown {
+    from {
+      transform: translateY(-2vw); 
+      opacity: 0; 
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.intro-content {
+    width: 40vw;
+    margin: 10vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.intro-title{
+    font-family: EurostileBoldExtendedTwo;
+    margin: 0;
+    font-size: 4vw;  
+    letter-spacing: 0.7vw; 
+    background: linear-gradient(90deg, #3cc9f0, #fffae5);  
+    filter: drop-shadow(1px -1px 2px #fff6a875) drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));  
+    -webkit-background-clip: text;   
+    -webkit-text-fill-color: transparent;  
+    animation: typing 2s steps(30, end);  
+}  
+
+@keyframes typing {  
+    from { width: 0; }  
+    to { width: 100%; }  
+} 
+
+.intro-desc{
+    margin-top: 2vw;
+    font-family: EurostileRegular;
+    opacity: 0.9;
+    font-size: 1.01vw;  
+    letter-spacing: 0.2vw; 
+    line-height: 1.5vw;
+    text-align: justify;
+    animation: fadeIn 4s steps(30, end);  
+
+}
+
+@keyframes fadeIn {  
+    from { opacity: 0; }  
+    to { opacity: 1; }  
+} 
+
+.intro-more{
+    border-radius: 0.5vw;
+    margin-top: 2vw;
+    width: fit-content;
+    background: linear-gradient(90deg, #3cc9f0, #fffae5);  
+    filter: drop-shadow(1px -1px 2px #fff6a875) drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));  
+    -webkit-background-clip: text;   
+    -webkit-text-fill-color: transparent; 
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    animation: fadeIn 4s steps(30, end);  
+}
+
+.intro-more:hover {  
+    background: linear-gradient(90deg, #f2dc1b, #fffae5);  
+    transform: scale(1.05);  
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;  
+}  
+
+.intro-logo{
+    width: 50%;
+    height: 60vw;
+    left: 7vw;
+    position: relative;
+    animation: fly 3s ease-in-out infinite; 
+}
+
+.intro-img{
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+    position: relative;
+    top: 9vw;
+}
+
+.intro-img.backgr{
+    position: absolute;
+    /* left: 61vw; */
+    filter: grayscale(100%) brightness(50%);  
+    opacity: 0.3;
+}
+
+.intro-blur.item-1{
+    scale: 1.1;
+    position: absolute;
+    left: 10vw;
+    transform: rotate(30deg);
+    opacity: 0.8;
+}
+
+.intro-blur.item-2{
+    scale: 1.2;
+    position: absolute;
+    margin-top: 13vw;
+    left: -10vw;
+    transform: rotate(-110deg);
+    opacity: 0.4;
+}
+
+.intro-blur-item{
+    position: relative;
+    border-radius: 50%;
+}
+
+    .intro-blur-item.sub-item-1{
+        width: 37vw;
+        height: 37vw;
+        background: radial-gradient(circle, #3cc9f0 0%, rgba(255, 0, 0, 0) 70%);  
+    }
+    .intro-blur-item.sub-item-2{
+        position: absolute;
+        top: 20%;
+        /* left: -15%; */
+        width: 26vw;
+        height: 26vw;
+        background: radial-gradient(circle, #ffe713 0%, rgba(255, 0, 0, 0) 70%);  
+    }
+
+    .intro-blur-item.sub-item-3{
+        position: absolute;
+        top: 55%;
+        /* left: 40%; */
+        width: 15vw;
+        height: 15vw;
+        background: radial-gradient(circle, #178be2 0%, rgba(255, 0, 0, 0) 70%);  
+    }
+
+
+      @keyframes fly {  
+        0% {  
+            transform: translateY(0%); /* Bắt đầu từ dưới cùng */  
+        }  
+        50% {  
+            transform: translateY(2%); /* Bay lên 50px */  
+        }  
+        100% {  
+            transform: translateY(0%); /* Trở về vị trí ban đầu */  
+        }  
+    }  
