@@ -6,6 +6,7 @@
 .introduction-page .et-avatar{
     width: 100vw;
     height: 100vh;
+    position: relative;
  }
 
  .introduction-page .et-img{
