@@ -1,3 +1,3 @@
-import et1 from './et1.jpg';
+import introduction from './introduction.jpg';
 
-export { et1 };
+export { introduction };

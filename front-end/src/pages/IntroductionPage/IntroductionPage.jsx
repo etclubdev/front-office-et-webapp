@@ -3,7 +3,7 @@ import './IntroductionPage.css';
 // import Footer from '../../components/Footer';
 import { IntroductionContent } from '../../components/IntroductionContent';
 
-import { et1 } from '../../assets/images/et';
+import { introduction } from '../../assets/images/et';
 import { textLogo } from '../../assets/images/logos';
 
 export const IntroductionPage = () => {
@@ -11,7 +11,7 @@ export const IntroductionPage = () => {
         <div className="introduction-page">
             {/* <NavbarV2 /> */}
             <div className="et-avatar">
-                <img className='et-img' src={et1} alt="" />
+                <img className='et-img' src={introduction} alt="" />
                 <div className="et-cover">
                     <p className="et-text">WE ARE</p>
                     <img className="et-logo" src={textLogo} alt="Economic Technology" />
