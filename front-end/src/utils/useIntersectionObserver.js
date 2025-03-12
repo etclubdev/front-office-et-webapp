@@ -9,8 +9,6 @@ export const useIntersectionObserver = (ref, observedSelector, visibleClass = "v
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                console.log(1);
-                
                 entry.target.classList.toggle(visibleClass, entry.isIntersecting);
             });
         }, options);
