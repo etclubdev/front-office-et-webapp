@@ -1,8 +1,8 @@
 .hr-structure-page{
     width: 100vw;
     height: auto;
-    padding: 8vw 0;
-    margin-bottom: 10vw;
+    padding: 8vw 0 20vw 0;
+    background: linear-gradient(180deg, #FDFDFD 0.1%, #AEE8FF 107.38%);
 }
 
 .hr-structure-tree{
@@ -13,19 +13,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 11vw;
+    gap: 15vw;
 }
 
 .hr-structure-branch{
-    width: 80%;
+    width: 70%;
     display: flex;
      align-items: center;
      justify-content: space-around;
     z-index: 1000;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(3vw);
+    gap: 3vw;
+    scale: 0.96;
+}
+
+.hr-structure-branch.visible{
+    opacity: 1;
+    transform: translateY(0);
+    scale: 1;
 }
 
 .hr-structure-img{
-    width: 40vw;
+    width: 36vw;
     height: auto;
     border-radius: 2vw;
     box-shadow:
@@ -40,6 +51,7 @@
 }
 
 .hr-structure-name{
+    padding-top: 1vw;
     font-size: 2vw;
      font-weight: 900;
      text-align: center;
@@ -56,15 +68,27 @@
 }
 
 .hr-structure-desc{
-    width: 31vw;
-    font-size: 1.3vw;
-     line-height: 3vw;
+    width: 29vw;
+    font-size: 1.2vw;
+    color: #234e77;
+     line-height: 2vw;
      text-align: justify;
 }
 
-.hr-tree{
+@keyframes expand-contract {
+    0%, 100% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(0.98);
+    }
+}
+
+.hr-tree {
     position: absolute;
     top: -7vw;
     width: 70vw;
-
+    transform-origin: top;
+    animation: expand-contract 4s infinite ease-in-out;
 }
+

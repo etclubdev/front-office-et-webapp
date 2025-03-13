@@ -1,17 +1,23 @@
 import './HRStructurePage.css';
+import { useRef } from 'react';
+import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
 
 // import { Navbar } from '../../components/Navbar';
 import { HRStructure } from '../../mocks/data';
-import HRStructureTree from '../../mocks/images/hr-structure/hr-structure-tree.png'
+import HRStructureTree from '../../mocks/images/hr-structure/hr-structure-tree.png';
 
 const hrData = HRStructure.hrStructure;
 
 export const HRStructurePage = () => {
+
+    const ref = useRef(null);
+    useIntersectionObserver(ref, "hr-structure-branch", "visible", {threshold: 0.15});
+
     return (
         <div className="hr-structure-page">
             {/* <Navbar/> */}
             <p className="hr-structure-name title">CƠ CẤU TỔ CHỨC</p>
-            <div className="hr-structure-tree">
+            <div className="hr-structure-tree" ref={ref}>
                 {
                     hrData.map((department, index) => {
                         if (index % 2 === 0)
