@@ -1,20 +1,24 @@
 import './ETNewsPage.css';
 // import { NavbarV2 } from '../../components/NavbarV2';
 // import { Footer } from '../../components/Footer';
-
 import { HorizontalNews } from '../../components/HorizontalNews';
 import { VerticalNews } from '../../components/VerticalNews';
 import { ETNewsSlider } from '../../components/ETNewsSlider';
 
-import getEarliestItems from '../../utils/getEarliestItems';
-import filterEtNews from '../../utils/filterEtNews';
-
-import { etNews } from '../../mocks/data';
-
-const hightlightNews = getEarliestItems(etNews, 4);
-const filteredNews = filterEtNews(etNews);
+import { getAllNews } from '../../api/etNews.service';
+import { useEffect, useState } from 'react';
 
 export const ETNewsPage = () => {
+    const [news, setNews] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await getAllNews();
+            setNews(data);
+        }
+        fetchData();
+    }, [])
+    
+
     return (
         <div className="etnews-page">
             {/* <NavbarV2 /> */}
@@ -23,11 +27,11 @@ export const ETNewsPage = () => {
                     <div className="highlight-title">Nổi bật</div>
                     <div className="highlight-news">
                         <div id="highlight-news-1">
-                            <VerticalNews news={hightlightNews[0]} />
+                            <VerticalNews news={news?.latestNews?.[0]} />
                         </div>
                         <div id="highlight-news-2">
                             {
-                                hightlightNews.map((item, index) => {
+                                news?.latestNews?.map((item, index) => {
                                     if (index !== 0)
                                         return (
                                             <HorizontalNews key={'highlight-news-' + index} news={item} />
@@ -39,10 +43,18 @@ export const ETNewsPage = () => {
                 </div>
                 <div className="et-news-categories">
                     {
-                        filteredNews.map((item, index) => {
-                            return (
-                                <ETNewsSlider key={'et-news-slider-' + index} newsList={item} categoryid={item.id} />
-                            )
+                        Object.entries(news?.groupedNews || {}).map(([category, newsList], index) => {
+                            if (newsList?.length > 0){
+                                return (
+                                    <ETNewsSlider 
+                                        key={`news-list` + index}
+                                        newsList={newsList}
+                                        title={category}
+                                        categoryid={`news-list` + index}
+                                    />
+                                )
+                            }
+                            
                         })
                     }
                 </div>

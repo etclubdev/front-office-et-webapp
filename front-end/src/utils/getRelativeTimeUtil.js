@@ -7,7 +7,7 @@ export default function getRelativeTime(date){
             ? new Date(date * 1000) // Convert timestamp to milliseconds
             : date;
 
-    const diffInMs = targetDate.getTime() - now.getTime();
+    const diffInMs = targetDate?.getTime() - now.getTime();
     const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24));
     const diffInMonths = Math.round(diffInDays / 30); // Approximate months
     const diffInYears = Math.round(diffInDays / 365); // Approximate years

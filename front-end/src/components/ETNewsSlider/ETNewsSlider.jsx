@@ -28,9 +28,9 @@ const settings = {
     ]
 };
 
-export const ETNewsSlider = ({ newsList, categoryid }) => {
+export const ETNewsSlider = ({ newsList, categoryid="id", title }) => {
     const [isSliderVisible, setSliderVisible] = useState(true);
-
+    
     const toggleSlider = () => {
         setSliderVisible(!isSliderVisible);
         const toogleIcon = document.querySelector(`#${categoryid}-icon`);
@@ -51,7 +51,7 @@ export const ETNewsSlider = ({ newsList, categoryid }) => {
                     onClick={toggleSlider}
                     alt="Category Icon"
                 />
-                <p className="category-title">{newsList.title}</p>
+                <p className="category-title">{title}</p>
                 <div className="category-division-bar"></div>
             </div>
 
@@ -62,7 +62,7 @@ export const ETNewsSlider = ({ newsList, categoryid }) => {
                 unmountOnExit 
             >
                 <Slider {...settings}>
-                    {newsList.news.map((item, index) => (
+                    {newsList.map((item, index) => (
                         <VerticalNews key={'vertical-news-' + index} news={item} />
                     ))}
                 </Slider>

@@ -6,9 +6,9 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-image: 1;
-    background-color: #091c32;
+    background: linear-gradient(181deg, #FDFDFD 1.18%, #AEE8FF 162.45%);
     overflow-x: hidden;
 }
 
