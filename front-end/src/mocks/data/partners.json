@@ -1,0 +1,46 @@
+{
+    "partners": [
+        { 
+            "id": 0,
+            "name": "Anh Phạm Hưởng", 
+            "role": "CEO & Co-Founder GFI Venture",
+            "image": "/images/partners/partner1.png" 
+        },
+        { 
+            "id": 1,
+            "name": "Anh Văn Viết Hùng", 
+            "role":"Operations Executive tại CareerBuilder", 
+            "image": "/images/partners/partner2.png" 
+        },
+        { 
+            "id": 2,
+            "name": "Anh Nguyễn Thành Đạt", 
+            "role":"Founder & CEO Công ty TNM Consulting", 
+            "image": "/images/partners/partner3.png" 
+        },
+        { 
+            "id": 3,
+            "name": "Anh Ryan Thanh Nguyễn", 
+            "role":"Engineer Manager in NAB", 
+            "image": "/images/partners/partner4.jpg" 
+        },
+        { 
+            "id": 4,
+            "name": "Anh An Bùi", 
+            "role":"Analytics & Engineering Manager tại On Point", 
+            "image": "/images/partners/partner5.png" 
+        },
+        { 
+            "id": 5,
+            "name": "Anh Thanh Trần", 
+            "role":"Head of Digital Bank tại OCB", 
+            "image": "/images/partners/partner6.png" 
+        },
+        { 
+            "id": 6,
+            "name": "Chị Cara Thảo Phan", 
+            "role":"Senior BA - Product Owner tại AIA", 
+            "image": "/images/partners/partner7.png" 
+        }
+    ]
+}

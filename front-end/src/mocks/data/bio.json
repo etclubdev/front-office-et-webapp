@@ -1,0 +1,14 @@
+{
+    "bio": [
+        {
+            "id": 0,
+            "content": "ET Club là một trong những Câu lạc bộ lớn tại UEH, hoạt động chuyên sâu trong lĩnh vực ứng dụng Công Nghệ vào đời sống thực tế. Trải qua hơn 6 năm hình thành và phát triển, ET Club đã tổ chức hơn 50 sự kiện, mang lại giá trị sâu sắc trong việc ứng dụng các Công Nghệ hiện đại vào nhiều lĩnh vực khác nhau cho hơn 1500 sinh viên tại UEH.",
+            "image": "/images/profiles/et.png"
+        },
+        {
+            "id": 1,
+            "content": "Với sứ mệnh tạo môi trường năng động, khơi dậy đam mê công nghệ và phát triển tư duy sáng tạo. ET Club hứa hẹn sẽ là một điểm dừng chân lý tưởng dành cho các bạn sinh viên có niềm đam mê ứng dụng các Công Nghệ hiện hành vào lĩnh vực Kinh Tế",
+            "image":"/images/profiles/et2.png"
+        }
+    ]
+}

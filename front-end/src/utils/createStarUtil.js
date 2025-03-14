@@ -1,18 +1,19 @@
-const createStar = (className) => {  
-    const star = document.createElement('div');  
-    const size = Math.random() * 0.4; // Kích thước ngôi sao  
-    const left = Math.random() * 100; // Vị trí ngang  
-    const top = Math.random() * 600; // Vị trí dọc  
-    const duration = Math.random() * 2 + 1; // Thay đổi thời gian chuyển động nhấp nháy  
+const createStars = (className) => {
+    const parentElement = document.querySelector(`.${className}`);
+    if (!parentElement) return [];
 
-    star.style.width = `${size}vw`;  
-    star.style.height = `${size}vw`;  
-    star.style.left = `${left}vw`;  
-    star.style.top = `${top}vh`;  
-    star.style.animationDuration = `${duration}s`;  
-    star.className = 'star';  
+    const pageHeight = parentElement.scrollHeight;
+    
+    const baseCount = 30; 
+    const extraCount = Math.floor(pageHeight / 1000) * 20;
+    const count = baseCount + extraCount;
 
-    document.querySelector(`.${className}`).appendChild(star);  
-};  
+    return Array.from({ length: count }).map(() => ({
+        size: Math.random() * 3 + 1, 
+        left: Math.random() * 100 + "%", 
+        top: Math.random() * pageHeight + "px", 
+        animationDuration: Math.random() * 2 + 1 + "s", 
+    }));
+};
 
-export { createStar };
+export { createStars };
