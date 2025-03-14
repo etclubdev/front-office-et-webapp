@@ -37,18 +37,7 @@ export const Question = ({ item }) => {
                 unmountOnExit
             >
                 <div className="answer">
-                    {typeof item.answer === 'object' ? (
-                        <>
-                            <p className="answer-content">{item.answer[0]}</p>
-                            <ul className="answer-content">
-                                {item.answer.slice(1).map((content, index) => (
-                                    <li key={index}>{content}</li>
-                                ))}
-                            </ul>
-                        </>
-                    ) : (
-                        <p className="answer-content">{item.answer}</p>
-                    )}
+                    <p className="answer-content">{item.answer}</p>
                 </div>
             </CSSTransition>
         </div>
