@@ -1,3 +1,1 @@
-import { TopicQuestion } from "./TopicQuestion";
-
-export default TopicQuestion;
+export * from "./TopicQuestion"
