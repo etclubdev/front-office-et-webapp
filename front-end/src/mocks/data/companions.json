@@ -1,0 +1,19 @@
+{
+    "companions": [
+        { 
+            "id": 0,
+            "name": "S Communication", 
+            "image": "/images/logos/scom.jpg" 
+        },
+        { 
+            "id": 1,
+            "name": "MoMo", 
+            "image": "/images/logos/momo.png" 
+        },
+        { 
+            "id": 2,
+            "name": "NashTech", 
+            "image": "/images/logos/nashtech.png" 
+        }
+    ]
+}
