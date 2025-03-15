@@ -1,119 +1,215 @@
-[
+{
+    "ongoing": [
         {
-            "id": "AC001",
-            "name": "TÌM KIẾM CTV “NEXUS WHERE PROGRAMMING LANGUAGES CONNECT”",
-            "desc": "Chương trình tìm kiếm CTV hằng năm được tổ chức nhằm tìm kiếm thế hệ CTV tài năng kế thừa và phát huy những truyền thống tốt đẹp của CLB",
-            "image": "/images/activities/1.png",
-            "status": "Đang diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Hoạt động truyền thông"
+            "activity_id": "ACTI001",
+            "title": "TÌM KIẾM CTV “NEXUS WHERE PROGRAMMING LANGUAGES CONNECT”",
+            "activity_category": "Hoạt động truyền thông",
+            "meta_description": "Chương trình tìm kiếm CTV hằng năm được tổ chức nhằm tìm kiếm thế hệ CTV tài năng kế thừa và phát huy những truyền thống tốt đẹp của CLB.",
+            "thumbnail_image_url": "/images/activities/1.png",
+            "start_date": "2024-12-30",
+            "end_date": "2025-12-30",
+            "register_number": 0,
+            "participated_number": 0,
+            "expense_money": 0.00,
+            "visible": true,
+            "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+            "view_count": 0
         },
         {
-            "id": "AC002",
-            "name": "CHUYỆN GÌ SẼ XẢY RA NẾU ET MỞ RẠP CHIẾU PHIM",
-            "desc": "Những tình cảm trong sáng được truyền tải thông qua buổi chiếu phim của ET, hứa hẹn sẽ mang lại nhiều cảm xúc cho khán giả.",
-            "image": "/images/activities/2.png",
-            "status": "Đang diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Talkshow/Workshop"
-        },
-        {
-            "id": "AC003",
-            "name": "CHÍNH THỨC: BOOTH TRUYỀN THÔNG CHƯƠNG TRÌNH QUYỀN CHỦ THỂ DỮ LIỆU RA MẮT NGÀY 28/12!!!",
-            "desc": "",
-            "image": "/images/activities/3.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Hoạt động truyền thông"
-        },
-        {
-            "id": "AC004",
-            "name": "CÙNG TÌM HIỂU VỀ QUYỀN LỢI CỦA NGƯỜI LAO ĐỘNG TRONG NGÀNH CNTT NHÉ IT-ERS ƠI!",
-            "desc": "",
-            "image": "/images/activities/4.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Talkshow/Workshop"
-        },
-        {
-            "id": "AC005",
-            "name": "WEB3? BLOCKCHAIN? NẾU NHỮNG THUẬT NGỮ NÀY VỪA LẠ VỪA QUEN VỚI BẠN THÌ HÃY ĐẾN NGAY VỚI WS CỦA ET",
-            "desc": "",
-            "image": "/images/activities/5.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Talkshow/Workshop"
-        },
-        {
-            "id": "AC006",
-            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
-            "desc": "",
-            "image": "/images/activities/6.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": ["Game", "Hoạt động truyền thông"]
-        },
-        {
-            "id": "AC007",
-            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
-            "desc": "",
-            "image": "/images/activities/7.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Cuộc thi"
-        },
-        {
-            "id": "AC008",
-            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
-            "desc": "",
-            "image": "/images/activities/8.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Cuộc thi"
-        },
-        {
-            "id": "AC009",
-            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
-            "desc": "",
-            "image": "/images/activities/1.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Hoạt động truyền thông"
-        },
-        {
-            "id": "AC010",
-            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
-            "desc": "",
-            "image": "/images/activities/10.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Hoạt động truyền thông"
-        },
-        {
-            "id": "AC011",
-            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
-            "desc": "",
-            "image": "/images/activities/11.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Hoạt động nội bộ"
-        },
-        {
-            "id": "AC012",
-            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
-            "desc": "",
-            "image": "/images/activities/12.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Hoạt động nội bộ"
-        },
-        {
-            "id": "AC013",
-            "name": "KHÔNG CHỈ LÀ GAME: CÙNG TÌM HIỂU THÔNG ĐIỆP ET GỬI GẮM TRONG TRÒ CHƠI ET “TRASH SLAYER”",
-            "desc": "",
-            "image": "/images/activities/13.png",
-            "status": "Đã diễn ra",
-            "startDate": "2024-12-30 18:00:00",
-            "type": "Hoạt động nội bộ"
+            "activity_id": "ACTI002",
+            "title": "CHUYỆN GÌ SẼ XẢY RA NẾU ET MỞ RẠP CHIẾU PHIM",
+            "activity_category": "Talkshow/Workshop",
+            "meta_description": "Những tình cảm trong sáng được truyền tải thông qua buổi chiếu phim của ET, hứa hẹn sẽ mang lại nhiều cảm xúc cho khán giả.",
+            "thumbnail_image_url": "/images/activities/2.png",
+            "start_date": "2024-12-30",
+            "end_date": "2025-12-30",
+            "register_number": 0,
+            "participated_number": 0,
+            "expense_money": 0.00,
+            "visible": true,
+            "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+            "view_count": 0
         }
-    ]
+    ],
+    "completed": {
+        "Hoạt động truyền thông": [
+            {
+                "activity_id": "ACTI003",
+                "title": "BOOTH TRUYỀN THÔNG CHƯƠNG TRÌNH QUYỀN CHỦ THỂ DỮ LIỆU",
+                "meta_description": "Sự kiện truyền thông ra mắt chương trình Quyền chủ thể dữ liệu.",
+                "thumbnail_image_url": "/images/activities/3.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            },
+            {
+                "activity_id": "ACTI010",
+                "title": "BOOTH TRUYỀN THÔNG CHƯƠNG TRÌNH QUYỀN CHỦ THỂ DỮ LIỆU",
+                "meta_description": "Sự kiện truyền thông ra mắt chương trình Quyền chủ thể dữ liệu.",
+                "thumbnail_image_url": "/images/activities/3.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            },
+            {
+                "activity_id": "ACTI015",
+                "title": "BOOTH TRUYỀN THÔNG CHƯƠNG TRÌNH QUYỀN CHỦ THỂ DỮ LIỆU",
+                "meta_description": "Sự kiện truyền thông ra mắt chương trình Quyền chủ thể dữ liệu.",
+                "thumbnail_image_url": "/images/activities/3.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            }
+
+        ],
+        "Talkshow/Workshop": [
+            {
+                "activity_id": "ACTI004",
+                "title": "TÌM HIỂU QUYỀN LỢI CỦA NGƯỜI LAO ĐỘNG TRONG CNTT",
+                "meta_description": "Sự kiện nhằm cung cấp thông tin về quyền lợi của người lao động trong ngành CNTT.",
+                "thumbnail_image_url": "/images/activities/4.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            },
+            {
+                "activity_id": "ACTI005",
+                "title": "WEB3? BLOCKCHAIN? TÌM HIỂU CÙNG WS CỦA ET",
+                "meta_description": "Buổi workshop giúp người tham gia tìm hiểu về các thuật ngữ Web3 và Blockchain.",
+                "thumbnail_image_url": "/images/activities/5.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            },
+            {
+                "activity_id": "ACTI016",
+                "title": "WEB3? BLOCKCHAIN? TÌM HIỂU CÙNG WS CỦA ET",
+                "meta_description": "Buổi workshop giúp người tham gia tìm hiểu về các thuật ngữ Web3 và Blockchain.",
+                "thumbnail_image_url": "/images/activities/5.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            }
+        ],
+        "Game": [
+            {
+                "activity_id": "ACTI006",
+                "title": "KHÔNG CHỈ LÀ GAME: ET “TRASH SLAYER”",
+                "meta_description": "Sự kiện game kết hợp truyền thông của ET.",
+                "thumbnail_image_url": "/images/activities/6.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            }
+        ],
+        "Cuộc thi": [
+            {
+                "activity_id": "ACTI007",
+                "title": "KHÔNG CHỈ LÀ GAME: ET “TRASH SLAYER”",
+                "meta_description": "Cuộc thi về game Trash Slayer của ET.",
+                "thumbnail_image_url": "/images/activities/7.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            },
+            {
+                "activity_id": "ACTI017",
+                "title": "KHÔNG CHỈ LÀ GAME: ET “TRASH SLAYER”",
+                "meta_description": "Cuộc thi về game Trash Slayer của ET.",
+                "thumbnail_image_url": "/images/activities/7.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            }
+        ],
+        "Hoạt động nội bộ": [
+            {
+                "activity_id": "ACTI011",
+                "title": "KHÔNG CHỈ LÀ GAME: ET “TRASH SLAYER”",
+                "meta_description": "Hoạt động nội bộ của ET liên quan đến game Trash Slayer.",
+                "thumbnail_image_url": "/images/activities/11.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            },
+            {
+                "activity_id": "ACTI018",
+                "title": "KHÔNG CHỈ LÀ GAME: ET “TRASH SLAYER”",
+                "meta_description": "Hoạt động nội bộ của ET liên quan đến game Trash Slayer.",
+                "thumbnail_image_url": "/images/activities/11.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            },
+            {
+                "activity_id": "ACTI021",
+                "title": "KHÔNG CHỈ LÀ GAME: ET “TRASH SLAYER”",
+                "meta_description": "Hoạt động nội bộ của ET liên quan đến game Trash Slayer.",
+                "thumbnail_image_url": "/images/activities/11.png",
+                "start_date": "2024-12-30",
+                "end_date": "2024-12-30",
+                "register_number": 0,
+                "participated_number": 0,
+                "expense_money": 0.00,
+                "visible": true,
+                "content": "Nội dung chi tiết của sự kiện, đảm bảo có ít nhất 50 ký tự.",
+                "view_count": 0
+            }
+        ]
+    }
+}

@@ -20,9 +20,11 @@
     color: #0F4081;
      font-size: 1.3vw;
      font-weight: 900;
+     font-family: 'BeVietnamPro';
     text-align: center;
 }
 
-.activities-desc{
+.activity-desc{
     text-align: justify;
+    font-size: 1vw;
 }
