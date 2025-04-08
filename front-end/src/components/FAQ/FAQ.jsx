@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import './FAQ.css';
 import { FAQ_TITLE } from '../../constants.js';
-import { FAQs } from "../../mocks/data";
 import { CSSTransition } from 'react-transition-group';
 import plusIcon from '../../mocks/images/FAQs/plus.png';
 import minusIcon from '../../mocks/images/FAQs/minus.png';
 
-const questions = FAQs.questions;
 
-export const FAQ = () => {
+export const FAQ = ({ questions }) => {
 
     const [activeQuestion, setActiveQuestion] = useState(null);
 
@@ -22,21 +20,21 @@ export const FAQ = () => {
             <h2 className="FAQ-title">{FAQ_TITLE}</h2>
             <div className="FAQ-items">
                 {questions.map(question => (
-                    <div key={question.id} className="FAQ-item">
+                    <div key={question.faq_id} className="FAQ-item">
                         <div
-                            className={`FAQ-question ${activeQuestion === question.id ? 'active' : ''}`}
-                            onClick={() => toggleAnswer(question.id)}
+                            className={`FAQ-question ${activeQuestion === question.faq_id ? 'active' : ''}`}
+                            onClick={() => toggleAnswer(question.faq_id)}
                         >
                             <p className="question-content">{question.question}</p>
                             <img
                                 className="question-button"
-                                src={activeQuestion === question.id ? minusIcon : plusIcon}
-                                alt={activeQuestion === question.id ? "Collapse" : "Expand"}
+                                src={activeQuestion === question.faq_id ? minusIcon : plusIcon}
+                                alt={activeQuestion === question.faq_id ? "Collapse" : "Expand"}
                             />
                         </div>
 
                         <CSSTransition
-                            in={activeQuestion === question.id}
+                            in={activeQuestion === question.faq_id}
                             timeout={400}
                             classNames="answer"
                             unmountOnExit

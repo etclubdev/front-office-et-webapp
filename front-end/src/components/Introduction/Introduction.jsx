@@ -1,11 +1,11 @@
-import { bannerData } from "../../mocks/data";
 import React from 'react';
 import Slider from "react-slick";
 import { SliderArrow } from "../SliderArrow";
 import './Introduction.css';
+import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
-const banners = bannerData.banners;
-export const Introduction = () => {
+
+export const Introduction = ({ banners }) => {
 
   const settings = {
     dots: false,
@@ -14,11 +14,11 @@ export const Introduction = () => {
     slidesToScroll: 1,
     centerMode: false,
     adaptiveHeight: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     initialSlide: 0,
-    nextArrow: <SliderArrow />,
-    prevArrow: <SliderArrow />,
+    nextArrow: <SliderArrow icon={faChevronRight} />,
+    prevArrow: <SliderArrow icon={faChevronLeft} />,
     responsive: [
       { breakpoint: 1200, settings: { slidesToShow: 1, slidesToScroll: 1 } },
       { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
@@ -29,9 +29,13 @@ export const Introduction = () => {
   return (
     <div className="introduction-slider">
       <Slider {...settings}>
-        {banners.map((banner, idx) => (
-          <img key={idx} src={require(`../../mocks${banner.image}`)} alt={`slide ${idx}`} />
-        ))}
+        {banners.map((banner, idx) => {
+          if (!banner.visible) return null;
+          else
+            return (
+              <img key={banner.banner_id} src={banner.image_url} alt={banner.banner_name} />
+            )
+        })}
       </Slider>
     </div>
   )

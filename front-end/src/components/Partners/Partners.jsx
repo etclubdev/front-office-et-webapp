@@ -1,14 +1,9 @@
 import Slider from "react-slick";
 import './Partners.css';
 import { SliderArrow } from "../SliderArrow";
-import { partnersData } from "../../mocks/data";
-import { companionsData } from "../../mocks/data";
 import { COMPANION_CONTENT, PARTNERS_CONTENT } from '../../constants';
 
-
-const partners = partnersData.partners;
-const companions = companionsData.companions;
-export const Partners = () => {
+export const Partners = ({ partners, companions }) => {
 
     const settings = {
         dots: false,
@@ -34,24 +29,32 @@ export const Partners = () => {
             <div className="partners-title">{PARTNERS_CONTENT.title}</div>
             <div>
                 <Slider {...settings}>
-                    {partners.map(partner => (
-                        <div key={partner.id} className="partner">
-                            <img src={require(`../../mocks${partner.image}`)} alt={partner.name} />
-                            <div className="partner-name">{partner.name}</div>
-                            <div className="partner-role">{partner.role}</div>
-                        </div>
-                    ))}
+                    {partners.map(partner => {
+                        if (!partner.visible) return null;
+                        else
+                            return (
+                                <div key={partner.partner_id} className="partner">
+                                    <img src={partner.avatar_url} alt={partner.partner_name} />
+                                    <div className="partner-name">{partner.partner_name}</div>
+                                    <div className="partner-role">{partner.short_description}</div>
+                                </div>
+                            )
+                    })}
                 </Slider>
             </div>
             <div className="companions-title">{COMPANION_CONTENT.title}</div>
             <div>
                 <Slider {...settings}>
-                    {companions.map(companion => (
-                        <div key={companion.id} className="partner">
-                            <img src={require(`../../mocks${companion.image}`)} alt={companion.name} />
-                            <div className="partner-name">{companion.name}</div>
-                        </div>
-                    ))}
+                    {companions.map(companion => {
+                        if (!companion.visible) return null;
+                        else
+                            return (
+                                <div key={companion.partner_id} className="partner">
+                                    <img src={companion.avatar_url} alt={companion.partner_name} />
+                                    <div className="partner-name">{companion.partner_name}</div>
+                                </div>
+                            )
+                    })}
                 </Slider>
             </div>
         </div>

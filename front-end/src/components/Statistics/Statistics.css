@@ -56,7 +56,7 @@
     margin: 5vw auto 0 auto;  
     font-size: 3vw;  
     font-weight: 900;
-    font-family: 'Roboto';
+    font-family: 'Montserrat';
     width: fit-content;  
     background: linear-gradient(180deg, #47A8B4 0%, #5D3E91 100%);  
     filter: drop-shadow(1px -1px 2px #fff6a875) drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));  
@@ -68,13 +68,14 @@
     text-align: center;  
     color: #0D3DA4;  
     font-size: 20px;  
-    font-family: 'Be Vietnam';  
+    font-weight: 700;
+    font-family: 'BeVietnamPro';  
     margin-top: 5px;  
 }  
 
 .animated-number {  
     background: linear-gradient(90deg, #FFC107 31.17%, #FFD740 43.17%);  
-    font-family: 'Roboto';  
+    font-family: 'Montserrat';  
     -webkit-background-clip: text;  
     -webkit-text-fill-color: transparent;  
     margin-top: 5vh;  
