@@ -11,20 +11,18 @@ import toogleIcon from '../../mocks/images/etnews/toogleIcon.png';
 
 const settings = {
     dots: false,
-    infinite: true,
+    swipe: true, 
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "0vw",
-    autoplay: true,
     autoplaySpeed: 2000,
-    initialSlide: 0,
+    pauseOnFocus: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    variableWidth: false, 
     responsive: [
         { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1 } },
-        { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1 } },
-        { breakpoint: 480, settings: { slidesToShow: 3, slidesToScroll: 1 } }
+        { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+        { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1,  arrows: false} }
     ]
 };
 

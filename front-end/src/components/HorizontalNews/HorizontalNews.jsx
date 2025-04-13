@@ -12,7 +12,7 @@ export const HorizontalNews = ({ news }) => {
             <div className="horizontal-news-img-container">
                 <img
                     className="horizontal-news-img"
-                    src={news?.thumbnail_image_url ? require(`../../mocks${news?.thumbnail_image_url}`) : ""}
+                    src={news?.thumbnail_image_url}
                     alt={news?.title || "news image"}
                 />
                 <div className="et-news-tag">

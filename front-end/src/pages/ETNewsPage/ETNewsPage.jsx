@@ -12,8 +12,10 @@ export const ETNewsPage = () => {
     const [news, setNews] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
-            const data = await getAllNews();
+            const { data } = await getAllNews();
             setNews(data);
+            console.log(data);
+            
         }
         fetchData();
     }, [])

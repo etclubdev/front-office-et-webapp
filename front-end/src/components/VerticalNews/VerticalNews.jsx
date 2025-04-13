@@ -14,7 +14,7 @@ export const VerticalNews = ({ news }) => {
             <div className="vertical-news-img-container">
                 <img
                     className="vertical-news-img"
-                    src={news?.thumbnail_image_url ? require(`../../mocks${news.thumbnail_image_url}`) : ""}
+                    src={news?.thumbnail_image_url}
                     alt={news?.title || "news image"}
                 />
                 <div className="et-news-tag">
