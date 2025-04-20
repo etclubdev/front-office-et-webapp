@@ -27,7 +27,7 @@ export const PostDetails = ({ details, thumbnailShowed = false }) => {
                     </div>
                 </div>
 
-                {thumbnailShowed && <img src={require(`../../mocks${details.thumbnail_image_url}`)} alt="" />}
+                {thumbnailShowed && <img src={details.thumbnail_image_url} alt="" />}
                 <div className="details-content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(details?.content) }}></div>
                 {details.source && <p className="details-references"><strong>Nguồn: </strong>{details.source}</p>}
             </div>
