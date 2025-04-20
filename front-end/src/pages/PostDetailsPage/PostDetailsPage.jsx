@@ -23,7 +23,7 @@ export const PostDetailsPage = () => {
             if (!serviceFunc) return; 
 
             try {
-                const data = await serviceFunc(id);
+                const {data} = await serviceFunc(id);
                 setDetails(data);
             } catch (error) {
                 console.error("Failed to fetch post details:", error);
@@ -35,7 +35,7 @@ export const PostDetailsPage = () => {
 
     return (
         <div className="details-page">
-            {details ? <PostDetails details={details} thumbnailShowed /> : <p>Loading...</p>}
+            {details ? <PostDetails details={details} thumbnailShowed = {!pathname.includes('et-blog')} /> : <p>Loading...</p>}
         </div>
     );
 };
