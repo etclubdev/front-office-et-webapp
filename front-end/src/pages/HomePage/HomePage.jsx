@@ -23,22 +23,29 @@ export const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const bannersData = await getBanners();
+        const bannersResponse = await getBanners();
+        const bannersData = bannersResponse.data || [];
+
         const partnersResponse = await getPartners();
-        const experts = partnersResponse["Đối tác chuyên gia"] || [];
-        const businesses = partnersResponse["Đối tác doanh nghiệp"] || [];
+        const partnersData = partnersResponse.data || {};
+        const experts = partnersData["Đối tác chuyên gia"] || [];
+        const businesses = partnersData["Đối tác doanh nghiệp"] || [];
+
         const faqsResponse = await getFAQs();
+        const faqsData = faqsResponse.data || {};
         const allFaqs = [
-          ...faqsResponse["aboutETClub"],
-          ...faqsResponse["aboutActivities"],
-          ...faqsResponse["aboutMembership"],
-          ...faqsResponse["others"],
+          ...(faqsData["aboutETClub"] || []),
+          ...(faqsData["aboutActivities"] || []),
+          ...(faqsData["aboutMembership"] || []),
+          ...(faqsData["others"] || []),
         ];
         const selectedFaqs = allFaqs.filter(faq =>
           ["FAQS001", "FAQS002", "FAQS013"].includes(faq.faq_id) && faq.visible
         );
+
         const achievementResponse = await getAchievement();
-        const visibleAchievements = achievementResponse.filter(item => item.visible);
+        const achievementData = achievementResponse.data || [];
+        const visibleAchievements = achievementData.filter(item => item.visible);
 
         setBanners(bannersData);
         setExpertPartners(experts);
@@ -47,7 +54,7 @@ export const HomePage = () => {
         setStatisticsData(visibleAchievements);
 
         console.log("Banners data:", bannersData);
-        console.log("Partners data:", partnersResponse);
+        console.log("Partners data:", partnersData);
         console.log("Expert Partners:", experts);
         console.log("Business Partners:", businesses);
         console.log("Selected FAQs:", selectedFaqs);
@@ -64,7 +71,6 @@ export const HomePage = () => {
     <div className="homepage">
       <Navbar />
       <Introduction banners={banners} />
-
 
       <div className="homepage-section">
         <AboutUsSection />

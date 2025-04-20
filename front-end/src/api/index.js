@@ -12,9 +12,9 @@ if (ENV === 'local'){
         get: async (url) => {
             if (url !== ""){
                 const mockData = require(`../mocks/data${url}.json`);
-                return { data: mockData };
+                return { data: { data: mockData }} ;
             }            
-            return {data: []}
+            return { data: {data: []} };
         }
     }
 } else {
