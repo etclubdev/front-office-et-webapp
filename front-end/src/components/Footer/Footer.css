@@ -15,7 +15,7 @@
     box-sizing: border-box;
     display: flex;
     color: white;
-    font-family: 'EurostileNormal';
+    font-family: 'Eurostile';
     justify-content: center;
     gap: 4.5vw;
     z-index: 2000;
@@ -52,7 +52,7 @@
     font-size: 1.25vw;
     font-weight: 700;
     width: fit-content;
-    font-family: 'Roboto';
+    font-family: 'BeVietnamPro';
     background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -106,7 +106,7 @@
     padding-top: 1vw;
     margin-top: 2vw;
     font-size: 0.9vw;
-    font-family: 'Be Vietnam Normal';
+    font-family: 'BeVietnamPro';
     display: flex;
     flex-direction: column;
     align-items: center;

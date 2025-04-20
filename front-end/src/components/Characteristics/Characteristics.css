@@ -33,7 +33,7 @@
     font-size: 40px;
     font-style: normal;
     font-weight: 300;
-    line-height: 46px; /* 115% */
+    line-height: 46px; 
 }
 
 .heading-middle {
@@ -49,12 +49,11 @@
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     text-shadow: 4px 4px 0px #1E285F;
-    /* title test */
     font-family: Montserrat;
     font-size: 60px;
     font-style: italic;
     font-weight: 700;
-    line-height: 46px; /* 76.667% */
+    line-height: 46px; 
 }
 
 .decor-bar {
@@ -71,7 +70,7 @@
     font-size: 30px;
     font-style: normal;
     font-weight: 900;
-    line-height: 46px; /* 153.333% */
+    line-height: 46px; 
 }
 
 .char1, .char2, .char3, .char4 {

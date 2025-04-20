@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import './Partners.css';
 import { SliderArrow } from "../SliderArrow";
 import { COMPANION_CONTENT, PARTNERS_CONTENT } from '../../constants';
+import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 export const Partners = ({ partners, companions }) => {
 
@@ -15,8 +16,8 @@ export const Partners = ({ partners, companions }) => {
         autoplay: false,
         autoplaySpeed: 2000,
         initialSlide: 0,
-        nextArrow: <SliderArrow />,
-        prevArrow: <SliderArrow />,
+        nextArrow: <SliderArrow icon={faChevronRight} />,
+        prevArrow: <SliderArrow icon={faChevronLeft} />,
         responsive: [
             { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } },
             { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } },

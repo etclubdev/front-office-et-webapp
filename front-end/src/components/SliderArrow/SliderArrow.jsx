@@ -1,17 +1,22 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const SliderArrow = (props) => {
-  const { className, style, onClick } = props;
+  const { className, onClick, icon } = props;
+
   return (
-    <div
-      className={className}
+    <FontAwesomeIcon
+      className={`${className} custom-arrow`}
       style={{
-        ...style,
-        display: "block",
+        height: "100%",
+        color: "#fff",
         position: "absolute",
-        top: "50%",  // Center vertically
-        transform: "translateY(-50%)", // Align to the center
-        zIndex: 10,
+        top: "50%",
+        zIndex: 2,
+        transition: "opacity 0.3s ease-in-out",
+        opacity: 0,
+        width: "1vw",
       }}
       onClick={onClick}
+      icon={icon}
     />
   );
-}
+};

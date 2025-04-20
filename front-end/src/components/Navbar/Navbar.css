@@ -41,7 +41,7 @@
 }
 
 .nav-item {
-    font-family: 'EurostileNormal';
+    font-family: 'Eurostile';
     font-size: 1vw;
     font-weight: 700;
     line-height: 0.9vw;
@@ -76,26 +76,31 @@
 
 .dropdown-content {
     position: absolute;
-    margin: -0.7vh 0 0 -1vw;
-    background: linear-gradient(0deg, #178DE2 97%, transparent 60%); 
+    margin: 0 0 0 -1vw;
+    background: white; 
     display: none;
     z-index: 1;
+    padding: 0.3vw 0;
   }
 
   .dropdown-content a{
     width: 13vw;
     min-height: 1vw;
-    margin-top: 0.8vw; 
-    border-radius: 0.5vw;
+    margin-top: 0; 
+    padding: 0.3vw 0;
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 
 .dropdown-content a p{
-    margin-left: 1vw;
+    margin-left: 2vw;
     font-size: 1vw;
-    color: white;
+    color: #0D3DA4;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
 }
 
 .dropdown-content p:hover {
@@ -124,7 +129,7 @@
     border: none;
     outline: none;
     background: transparent;
-    font-family: 'EurostileNormal';
+    font-family: 'Eurostile';
     font-size: 0.8vw;
     color: white;
     font-weight: 600;
@@ -165,7 +170,7 @@
 .input-placeholder::placeholder {
     color: #FFF; 
     opacity: 1; 
-    font-family: 'EurostileNormal';
+    font-family: 'Eurostile';
     font-size: 16px;
     font-weight: 700;
 }

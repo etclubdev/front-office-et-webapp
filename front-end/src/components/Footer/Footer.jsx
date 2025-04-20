@@ -9,7 +9,7 @@ export const Footer = () => {
             <div className="footer-content">
                 <div className="footer-aboutET">
                     <img className='footer-aboutET-logo' src={horizontalLogo} alt="Logo CLB Công Nghệ Kinh Tế" />
-                    <div className="footer-aboutET-title" style={{ fontFamily: "EurostileNormal" }}>CLB Công Nghệ Kinh Tế</div>
+                    <div className="footer-aboutET-title" style={{ fontFamily: "Eurostile" }}>CLB Công Nghệ Kinh Tế</div>
                     <div className="footer-aboutET-desc">Trực thuộc Liên Chi hội Sinh viên khoa Công nghệ thông tin kinh doanh, Đại học Kinh tế TP. Hồ Chí Minh</div>
                 </div>
                 <div className="footer-item">
