@@ -62,6 +62,7 @@
     bottom: 0;
     width: fit-content;
     margin: 0.1vw 0.5vw;
+    z-index: 1;
 }
 
 .horizontal-news .tag-name{

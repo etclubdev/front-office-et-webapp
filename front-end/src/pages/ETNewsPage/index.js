@@ -1,3 +1,3 @@
-import { ETNewsPage } from "./ETNewsPage";
+export * from "./ETNewsPage";
 
-export default ETNewsPage;
+ 

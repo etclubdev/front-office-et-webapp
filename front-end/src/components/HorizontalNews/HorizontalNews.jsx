@@ -3,7 +3,7 @@ import getRelativeTime from '../../utils/getRelativeTimeUtil';
 import getFirstSentence from '../../utils/getFirstSentenceUtil';
 import clockIcon from '../../mocks/images/etnews/clock-icon.svg';
 
-export const HorizontalNews = ({ news }) => {
+export const HorizontalNews = ({ news, isETNews }) => {
     const handleClick = () => {
         console.log(news.etnews_id);
     }

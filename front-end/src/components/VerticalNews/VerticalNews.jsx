@@ -5,9 +5,9 @@ import getFirstSentence from '../../utils/getFirstSentenceUtil';
 import clockIcon from '../../mocks/images/etnews/clock-icon.svg';
 
 
-export const VerticalNews = ({ news }) => {
+export const VerticalNews = ({ news, isETNews }) => {
     const handleClick = () => {
-        console.log(news.etnews_id);
+        console.log(isETNews ? news.etnews_id : news.etblog_id);
     }
     return (
         <div className="vertical-news" onClick={handleClick}>
@@ -19,7 +19,7 @@ export const VerticalNews = ({ news }) => {
                 />
                 <div className="et-news-tag">
                     <div className="tag-square" id="tag-square-1"></div>
-                    <div className="tag-name"><p>ET NEWS</p></div>
+                    <div className="tag-name"><p>{isETNews ? 'ET NEWS' : "ET BLOG"}</p></div>
                     <div className="tag-square" id="tag-square-2"></div>
                 </div>
             </div>
