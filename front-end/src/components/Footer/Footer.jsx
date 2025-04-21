@@ -2,6 +2,7 @@ import './Footer.css';
 import { horizontalLogo } from '../../assets/images/logos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faLinkedinIn, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
     return (
@@ -14,20 +15,19 @@ export const Footer = () => {
                 </div>
                 <div className="footer-item">
                     <div className="footer-item-title">Về ET Club</div>
-                    <div className="footer-item-content">Giới thiệu</div>
-                    <div className="footer-item-content">Cơ cấu tổ chức</div>
+                    <Link to='/introduction' className="footer-item-content">Giới thiệu</Link>
+                    <Link to='/hr-structure' className="footer-item-content">Cơ cấu tổ chức</Link>
                 </div>
                 <div className="footer-item">
                     <div className="footer-item-title">Hoạt động</div>
-                    <div className="footer-item-content">ET News</div>
-                    <div className="footer-item-content">Hoạt động đã diễn ra</div>
-                    <div className="footer-item-content">Hoạt động đang diễn ra</div>
-                    <div className="footer-item-content">Hoạt động nội bộ</div>
+                    <Link to='/activities' className="footer-item-content">Chương trình</Link>
+                    <Link to='/et-news' className="footer-item-content">ET News</Link>
+                    <Link to='/et-blog' className="footer-item-content">ET Blog</Link>
+                    <Link to='/collaborator-seeking' className="footer-item-content">Tìm kiếm CTV</Link>
                 </div>
                 <div className="footer-item">
                     <div className="footer-item-title">Hỗ trợ</div>
-                    <div className="footer-item-content">Liên hệ</div>
-                    <div className="footer-item-content">FAQs</div>
+                    <Link to='/faqs' className="footer-item-content">FAQs</Link>
                 </div>
                 <div className="footer-item">
                     <div className="footer-item-title">Follow us</div>

@@ -8,6 +8,11 @@ body {
   overflow-x: hidden; 
 }   
 
+.homepage {
+  position: relative;
+  min-height: 200vh;
+}
+
 .homepage-section{
   margin: auto;  
   padding: 0;  

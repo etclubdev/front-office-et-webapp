@@ -60,7 +60,7 @@ export const FAQ = ({ questions }) => {
                 ))}
             </div>
             <div className="more-info-container">
-                <a href="/faq-details" className="more-info-link">
+                <a href="/faqs" className="more-info-link">
                     Tìm hiểu thêm
                 </a>
             </div>

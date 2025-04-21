@@ -2,14 +2,14 @@
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 9999; 
-    height: 2vw;
+    z-index: 1; 
+    height: 3.6vw;
     justify-content: center;
     align-items: center;
     background-color: transparent;
     display: flex;
-    padding: 10px 0 10px 40px;
-    gap: 2.5vw;
+    flex-wrap: nowrap;
+    gap: 3vw;
 }
 
 .nav-section.scrolled {
@@ -18,11 +18,13 @@
     .searchbar-group {
         background: #FFF;
         transition: 1s ease;
+        cursor: pointer;
     }
-    .input-placeholder::placeholder, .input-placeholder, .aux-search-icon {
+    .input-placeholder::placeholder, .input-placeholder, .search-icon {
         color: #838383; 
         opacity: 1; 
         transition: color 3s ease;
+        cursor: pointer;
     }
 }
 
@@ -30,9 +32,11 @@
     width: 15vw;
     height: 3vw;
     background-size: contain;
+    cursor: pointer;
 }
 
 .nav-menu {
+    height: 100%;
     width: 70%;
     display: flex;
     justify-content: space-evenly;
@@ -48,9 +52,13 @@
     color: #E0E0E0;
     text-decoration: none;
     text-align: center;
-    padding: 0.5vw 1vw;
+    padding: 0 1vw;
     border-radius: 0.2vw;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s, color 0.3s;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .nav-item:hover {  
@@ -72,6 +80,7 @@
 
 .nav-item-content{
     font-size: 1vw;
+    margin: 0;
 }
 
 .dropdown-content {
@@ -121,6 +130,7 @@
     background: rgba(186, 186, 181, 0.12);
     border-radius: 2.6vw;
     padding: 0 0.8vw;
+    text-decoration: none;
 }
 
 
@@ -130,7 +140,7 @@
     outline: none;
     background: transparent;
     font-family: 'Eurostile';
-    font-size: 0.8vw;
+    font-size: 1vw;
     color: white;
     font-weight: 600;
 }
@@ -145,15 +155,16 @@
     margin-left: 0.9vw;
 }
 
-.aux-search-icon {
-    height: 26px;
-    width: 26px;
+.search-icon {
+    height: 80%;
+    width: 20%;
     margin: 0;
     padding: 0;
     background: none;
-    font-size: 22px;
+    font-size: 1.2vw;
     color: #FFF;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     position: relative;
     line-height: 100%;
     border: none;
@@ -163,7 +174,7 @@
     transition: all 450ms;
 }
 
-.aux-search-icon:hover {
+.search-icon:hover {
     cursor: pointer;
 }
 
@@ -171,11 +182,11 @@
     color: #FFF; 
     opacity: 1; 
     font-family: 'Eurostile';
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 1vw;
+    font-weight: 500;
 }
 
-/* Responsive Styles */
+/* Responsive Styles
 @media (max-width: 1024px) {
     .nav {
         padding: 0 0.6vw;
@@ -243,4 +254,4 @@
     .input-placeholder {
         font-size: 0.6vw;
     }
-}
+} */

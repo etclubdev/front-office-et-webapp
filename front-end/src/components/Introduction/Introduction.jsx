@@ -6,7 +6,8 @@ import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons
 
 
 export const Introduction = ({ banners }) => {
-
+  console.log(banners);
+  
   const settings = {
     dots: false,
     infinite: true,

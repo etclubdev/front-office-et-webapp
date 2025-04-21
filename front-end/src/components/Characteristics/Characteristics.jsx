@@ -37,7 +37,7 @@ export const Characteristics = () => {
                     </div>
                     <div className='heading-last'>KHOA HỌC CÔNG NGHỆ</div>
                 </div>
-                <div className="chars-container">
+               <div className="chars-container">
                     <div className="char1-container">
                         <div className="char1">
                             <div className="characteristics-item-title c1">{etDescItems[0].title}</div>
@@ -70,7 +70,7 @@ export const Characteristics = () => {
                         </div>
                         <img src={require(`../../mocks/images/profiles/innovative.jpg`)} className="characteristics-item-image a4" />
                     </div>
-                </div>
+               </div>
             </Available>
         </div>
     )

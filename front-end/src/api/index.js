@@ -8,6 +8,8 @@ console.log(`Running in ${ENV} mode`);
 let api;
 
 if (ENV === 'local'){
+    console.log(1);
+    
     api = {
         get: async (url) => {
             if (url !== ""){
