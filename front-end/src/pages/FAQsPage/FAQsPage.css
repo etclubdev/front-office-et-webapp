@@ -1,7 +1,8 @@
 .faqs-page{
     padding-top: 10vw;
     width: 100vw;
-    height:auto;    
+    min-height: 100vh;
+    height: auto;    
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,118 +1,87 @@
 {
-    "aboutETClub": [
-        {
-            "id": "FAQS001",
-            "faq_category": "Về ET Club",
-            "question": "ET Club là gì?",
-            "answer": "ET Club là câu lạc bộ chuyên về công nghệ và kinh tế tại UEH. Chúng tôi tạo ra một môi trường để sinh viên học hỏi và áp dụng công nghệ trong lĩnh vực kinh tế.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        },
-        {
-            "id": "FAQS002",
-            "faq_category": "Về ET Club",
-            "question": "Ai có thể tham gia ET Club?",
-            "answer": "ET Club chào đón tất cả các sinh viên quan tâm đến công nghệ, kinh tế, hoặc cả hai lĩnh vực.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        },
-        {
-            "id": "FAQS003",
-            "faq_category": "Về ET Club",
-            "question": "Lợi ích khi tham gia ET Club là gì?",
-            "answer": "Khi tham gia ET Club, bạn sẽ:\n- Được học tập và thực hành các kỹ năng công nghệ hiện đại.\n- Kết nối với các sinh viên và chuyên gia có cùng đam mê.\n- Tham gia các sự kiện như workshop, hackathon, và các dự án thực tế.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        }
+    "Về ET Club": [
+      {
+        "faq_id": "FAQS001",
+        "faq_category": "Về ET Club",
+        "question": "ET Club được thành lập khi nào?",
+        "answer": "ET Club được thành lập từ năm 2010.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS002",
+        "faq_category": "Về ET Club",
+        "question": "Ai có thể tham gia ET Club?",
+        "answer": "Bất kỳ sinh viên nào có đam mê học thuật đều có thể tham gia.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS003",
+        "faq_category": "Về ET Club",
+        "question": "ET Club có trụ sở ở đâu?",
+        "answer": "Trụ sở chính nằm tại phòng 101, khu A, trường ĐH.",
+        "visible": false
+      },
+      {
+        "faq_id": "FAQS011",
+        "faq_category": "Về ET Club",
+        "question": "Ong Huy la ong nao",
+        "answer": "la ong huy",
+        "visible": true
+      }
     ],
-    "aboutActivities": [
-        {
-            "id": "FAQS004",
-            "faq_category": "Về hoạt động và sự kiện",
-            "question": "ET Club tổ chức các sự kiện gì?",
-            "answer": "Chúng tôi tổ chức nhiều sự kiện như:\n- Workshop về lập trình, phân tích dữ liệu.\n- Talkshow về ứng dụng công nghệ trong kinh tế.\n- Hackathon và các cuộc thi sáng tạo.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        },
-        {
-            "id": "FAQS005",
-            "faq_category": "Về hoạt động và sự kiện",
-            "question": "Làm sao để đăng ký tham gia sự kiện?",
-            "answer": "Bạn có thể đăng ký tham gia sự kiện qua website chính thức của ET Club hoặc theo dõi các thông báo trên Facebook và website của chúng tôi.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        },
-        {
-            "id": "FAQS006",
-            "faq_category": "Về hoạt động và sự kiện",
-            "question": "Sự kiện có dành cho người ngoài trường không?",
-            "answer": "Một số sự kiện được mở cho cả sinh viên trong và ngoài trường. Vui lòng kiểm tra thông tin chi tiết trong từng sự kiện cụ thể.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        }
+    "Về hoạt động và sự kiện": [
+      {
+        "faq_id": "FAQS005",
+        "faq_category": "Về hoạt động và sự kiện",
+        "question": "Thành viên có bắt buộc tham gia tất cả sự kiện không?",
+        "answer": "Không, bạn có thể chọn sự kiện phù hợp với lịch cá nhân.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS004",
+        "faq_category": "Về hoạt động và sự kiện",
+        "question": "Làm thế nào để đăng ký tham gia sự kiện?",
+        "answer": "Bạn có thể đăng ký qua link Google Form được gửi trên fanpage.",
+        "visible": false
+      }
     ],
-    "aboutMembership": [
-        {
-            "id": "FAQS007",
-            "faq_category": "Về quy trình tham gia",
-            "question": "Làm sao để trở thành thành viên của ET Club?",
-            "answer": "Bạn chỉ cần điền vào form đăng ký trên website của chúng tôi. Sau đó, chúng tôi sẽ gửi email xác nhận và hẹn bạn vào buổi phỏng vấn gần nhất.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        },
-        {
-            "id": "FAQS008",
-            "faq_category": "Về quy trình tham gia",
-            "question": "Tôi có cần kinh nghiệm trước để tham gia không?",
-            "answer": "Không! ET Club hoan nghênh tất cả mọi người, từ người mới bắt đầu đến những bạn đã có kinh nghiệm.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        },
-        {
-            "id": "FAQS009",
-            "faq_category": "Về quy trình tham gia",
-            "question": "Thành viên có phải đóng phí không?",
-            "answer": "Không.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        }
+    "Về quy trình tham gia": [
+      {
+        "faq_id": "FAQS006",
+        "faq_category": "Về quy trình tham gia",
+        "question": "Quy trình tuyển thành viên mới diễn ra thế nào?",
+        "answer": "Bao gồm: điền form, phỏng vấn và thử việc 1 tháng.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS007",
+        "faq_category": "Về quy trình tham gia",
+        "question": "Thành viên có được hỗ trợ đào tạo không?",
+        "answer": "Có, ET Club tổ chức các buổi training định kỳ.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS008",
+        "faq_category": "Về quy trình tham gia",
+        "question": "Có cần đóng phí khi tham gia CLB?",
+        "answer": "Không, ET Club không thu bất kỳ khoản phí nào.",
+        "visible": false
+      }
     ],
-    "others": [
-        {
-            "id": "FAQS010",
-            "faq_category": "Khác",
-            "question": "Làm thế nào để liên hệ với ET Club?",
-            "answer": "Bạn có thể liên hệ với chúng tôi qua:\n- Email: et@ueh.edu.vn\n- Facebook: https://www.facebook.com/ETClub.UEH",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        },
-        {
-            "id": "FAQS011",
-            "faq_category": "Khác",
-            "question": "Có thể đóng góp hoặc hợp tác với ET Club không?",
-            "answer": "Chắc chắn rồi! Chúng tôi luôn tìm kiếm đối tác và các nhà tài trợ. Vui lòng liên hệ qua email để biết thêm chi tiết.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        },
-        {
-            "id": "FAQS012",
-            "faq_category": "Khác",
-            "question": "Tôi có thể tham gia nhiều câu lạc bộ cùng lúc không?",
-            "answer": "Được! ET Club khuyến khích bạn khám phá và phát triển ở nhiều lĩnh vực khác nhau.",
-            "visible": true,
-            "created_on": "2025-03-14T00:00:00Z",
-            "last_modified_on": "2025-03-14T00:00:00Z"
-        }
+    "Khác": [
+      {
+        "faq_id": "FAQS009",
+        "faq_category": "Khác",
+        "question": "Làm sao để liên hệ ET Club?",
+        "answer": "Bạn có thể inbox fanpage hoặc gửi email đến etclub@abc.edu.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS010",
+        "faq_category": "Khác",
+        "question": "ET Club có tài trợ cho các dự án cá nhân không?",
+        "answer": "Hiện tại chưa có chính sách này. Hiện tại chưa có chính sách này. Hiện tại chưa có chính sách này. Hiện tại chưa có chính sách này.",
+        "visible": true
+      }
     ]
-}
+  }

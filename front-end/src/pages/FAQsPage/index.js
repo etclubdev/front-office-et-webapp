@@ -1,3 +1,1 @@
-import { FAQsPage } from "./FAQsPage";
-
-export default FAQsPage;
+export * from "./FAQsPage";
