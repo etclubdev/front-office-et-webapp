@@ -2,6 +2,7 @@
     width: 100vw;
     height: fit-content;
     background: linear-gradient(180deg, #FDFDFD 0.1%, #AEE8FF 107.38%);
+    z-index: 1;
 }
 .introduction-page .et-avatar{
     width: 100vw;
@@ -45,4 +46,6 @@
     height: auto;
     display: flex;
      justify-content: center;
- }
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,37 @@
+body {  
+  margin: auto;  
+  padding: 0;  
+  width: 100%;  
+  height: auto;  
+  background-image: 1; 
+  background: #D9EEF8;
+  overflow-x: hidden; 
+}   
+
+.homepage {
+  position: relative;
+  min-height: 200vh;
+}
+
+.homepage-section{
+  margin: auto;  
+  padding: 0;  
+  width: 85%;  
+  height: auto; 
+}
+
+.homepage__intro{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.intro-item {
+  width: 120%;
+  opacity: 0;  
+}
+
+  
+      
+  
+    
