@@ -1,0 +1,54 @@
+[
+    {
+        "id": "intro",
+        "title": "GIỚI THIỆU",
+        "desc": "Câu lạc bộ Công Nghệ - Kinh Tế (ET Club) là điểm giao thoa đặc biệt giữa kiến thức công nghệ và kinh tế học. Đây là môi trường năng động giúp sinh viên phát triển toàn diện thông qua các Workshops, Talkshows về lĩnh vực Công Nghệ - Kinh Tế. Bên cạnh đó, câu lạc bộ còn tạo điều kiện để các bạn sinh viên tham gia các dự án thực tế, áp dụng công nghệ giải quyết bài toán kinh doanh, đồng thời mở rộng mối quan hệ, gặp gỡ các anh chị và các chuyên gia trong ngành.",
+        "img": "/images/introduction/logoAndText.png"
+    },
+    {
+        "id": "vision",
+        "title": "TẦM NHÌN",
+        "desc": [
+            "Tạo môi trường năng động, khơi dậy đam mê công nghệ, nâng cao kỹ năng và tư duy sáng tạo cho sinh viên.",
+            "Tổ chức Talkshows, Workshops về Công Nghệ - Kinh Tế, hỗ trợ định hướng nghề nghiệp rõ ràng.",
+            "Là cầu nối giữa doanh nghiệp và sinh viên, giúp tiếp cận thực tiễn, nâng cao kỹ năng và mở rộng quan hệ."
+        ],
+        "img": "/images/introduction/vision.png"
+    },
+    {
+        "id": "mission",
+        "title": "SỨ MỆNH",
+        "desc": [
+            "Tạo môi trường năng động, khơi dậy đam mê công nghệ, nâng cao kỹ năng và tư duy sáng tạo cho sinh viên.",
+            "Tổ chức Talkshows, Workshops về Công Nghệ - Kinh Tế, hỗ trợ định hướng nghề nghiệp rõ ràng.",
+            "Là cầu nối giữa doanh nghiệp và sinh viên, giúp tiếp cận thực tiễn, nâng cao kỹ năng và mở rộng quan hệ."
+        ],
+        "img": "/images/introduction/mission.png"
+    },
+    {
+        "id": "history",
+        "title": "LỊCH SỬ PHÁT TRIỂN",
+        "desc": [
+            {
+                "time": 2018,
+                "activity": "Thành lập CLB Công Nghệ Kinh tế - ET Club với XX thành viên, YY số tiền ban đầu..."
+            },
+            {
+                "time": 2019,
+                "activity": "Thành lập CLB Công Nghệ Kinh tế - ET Club với XX thành viên, YY số tiền ban đầu..."
+            },
+            {
+                "time": 2020,
+                "activity": "Thành lập CLB Công Nghệ Kinh tế - ET Club với XX thành viên, YY số tiền ban đầu..."
+            },
+            {
+                "time": 2021,
+                "activity": "Thành lập CLB Công Nghệ Kinh tế - ET Club với XX thành viên, YY số tiền ban đầu..."
+            },
+            {
+                "time": "2022 - Nay",
+                "activity": "Thành lập CLB Công Nghệ Kinh tế - ET Club với XX thành viên, YY số tiền ban đầu..."
+            }
+        ]
+    }
+]

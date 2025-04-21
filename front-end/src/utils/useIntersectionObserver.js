@@ -4,7 +4,6 @@ export const useIntersectionObserver = (ref, observedSelector, visibleClass = "v
     useEffect(() => {
 
         console.log(ref.current);
-
         if (!ref?.current || !observedSelector) return;
 
         const observer = new IntersectionObserver((entries) => {

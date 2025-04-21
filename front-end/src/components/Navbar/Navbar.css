@@ -10,6 +10,7 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 3vw;
+    box-sizing: border-box;
 }
 
 .nav-section.scrolled {
