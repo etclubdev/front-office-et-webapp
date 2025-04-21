@@ -1,8 +1,8 @@
 import './HRStructurePage.css';
 import { useRef } from 'react';
 import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
-
-// import { Navbar } from '../../components/Navbar';
+import { Footer } from '../../components/Footer';
+import { Navbar } from '../../components/Navbar';
 import { HRStructure } from '../../mocks/data';
 import HRStructureTree from '../../mocks/images/hr-structure/hr-structure-tree.png';
 
@@ -15,7 +15,7 @@ export const HRStructurePage = () => {
 
     return (
         <div className="hr-structure-page">
-            {/* <Navbar/> */}
+            <Navbar/>
             <p className="hr-structure-name title">CƠ CẤU TỔ CHỨC</p>
             <div className="hr-structure-tree" ref={ref}>
                 {
@@ -43,8 +43,9 @@ export const HRStructurePage = () => {
                         }
                     })
                 }
-                <img className='hr-tree' src={HRStructureTree} alt="" />
+                {/* <img className='hr-tree' src={HRStructureTree} alt="" /> */}
             </div>
+            <Footer/>
         </div>
     )
 }
