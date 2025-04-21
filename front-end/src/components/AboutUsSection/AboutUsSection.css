@@ -1,0 +1,92 @@
+.aboutus-section {
+    position: relative;  
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+    margin: 7vw 0;
+}
+
+.aboutus-section.visible {
+    opacity: 1;
+    transform: translateY(0);  
+    transition: opacity 2s ease, transform 1s ease;
+}
+
+.bio {  
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}  
+
+.aboutus-section.visible .bio-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;  
+    animation: moveUpAndHold 2s ease-in-out; 
+}
+
+.bio-logo img {
+    width: 20vw;
+    height: auto;    
+}
+
+.bio-detail {  
+    display: flex;  
+    flex-direction: column;   
+    gap: 4vh;
+    align-items: center;
+}  
+
+.about-us-title {
+    margin: 0 auto;
+    width: 60%;
+    background: linear-gradient(180deg, #47A8B4 0%, #5D3E91 100%); 
+    font-size: 3vw;
+    font-weight: 900;
+    font-family: 'Montserrat';
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.aboutus-section.visible #detail-item-1{
+    animation: moveDownAndHold 2s ease-in-out;         
+}
+
+.aboutus-section.visible #detail-item-2{
+    animation: moveUpAndHold 2s ease-in-out; 
+}
+
+.detail-img {  
+    width: 20vw;  
+    object-fit: cover;
+    height: 15vw;
+    border-radius: 2vw;  
+    box-shadow: 16px 17px 31.9px -5px #737373;     
+}  
+
+.detail-desc {  
+    font-family: 'BeVietnamPro';  
+    width: 20vw;  
+    height: auto;
+    font-size: 1.1vw;
+    text-align: justify;  
+    color: #0F4081;   
+}  
+
+@keyframes moveUpAndHold {  
+    0% { transform: translateY(0); }  
+    50% { transform: translateY(-10%); }  
+  } 
+
+@keyframes moveDownAndHold {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(10%); }
+}

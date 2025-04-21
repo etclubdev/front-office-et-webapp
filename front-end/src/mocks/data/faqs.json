@@ -1,0 +1,87 @@
+{
+    "Về ET Club": [
+      {
+        "faq_id": "FAQS001",
+        "faq_category": "Về ET Club",
+        "question": "ET Club được thành lập khi nào?",
+        "answer": "ET Club được thành lập từ năm 2010.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS002",
+        "faq_category": "Về ET Club",
+        "question": "Ai có thể tham gia ET Club?",
+        "answer": "Bất kỳ sinh viên nào có đam mê học thuật đều có thể tham gia.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS003",
+        "faq_category": "Về ET Club",
+        "question": "ET Club có trụ sở ở đâu?",
+        "answer": "Trụ sở chính nằm tại phòng 101, khu A, trường ĐH.",
+        "visible": false
+      },
+      {
+        "faq_id": "FAQS011",
+        "faq_category": "Về ET Club",
+        "question": "Ong Huy la ong nao",
+        "answer": "la ong huy",
+        "visible": true
+      }
+    ],
+    "Về hoạt động và sự kiện": [
+      {
+        "faq_id": "FAQS005",
+        "faq_category": "Về hoạt động và sự kiện",
+        "question": "Thành viên có bắt buộc tham gia tất cả sự kiện không?",
+        "answer": "Không, bạn có thể chọn sự kiện phù hợp với lịch cá nhân.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS004",
+        "faq_category": "Về hoạt động và sự kiện",
+        "question": "Làm thế nào để đăng ký tham gia sự kiện?",
+        "answer": "Bạn có thể đăng ký qua link Google Form được gửi trên fanpage.",
+        "visible": false
+      }
+    ],
+    "Về quy trình tham gia": [
+      {
+        "faq_id": "FAQS006",
+        "faq_category": "Về quy trình tham gia",
+        "question": "Quy trình tuyển thành viên mới diễn ra thế nào?",
+        "answer": "Bao gồm: điền form, phỏng vấn và thử việc 1 tháng.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS007",
+        "faq_category": "Về quy trình tham gia",
+        "question": "Thành viên có được hỗ trợ đào tạo không?",
+        "answer": "Có, ET Club tổ chức các buổi training định kỳ.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS008",
+        "faq_category": "Về quy trình tham gia",
+        "question": "Có cần đóng phí khi tham gia CLB?",
+        "answer": "Không, ET Club không thu bất kỳ khoản phí nào.",
+        "visible": false
+      }
+    ],
+    "Khác": [
+      {
+        "faq_id": "FAQS009",
+        "faq_category": "Khác",
+        "question": "Làm sao để liên hệ ET Club?",
+        "answer": "Bạn có thể inbox fanpage hoặc gửi email đến etclub@abc.edu.",
+        "visible": true
+      },
+      {
+        "faq_id": "FAQS010",
+        "faq_category": "Khác",
+        "question": "ET Club có tài trợ cho các dự án cá nhân không?",
+        "answer": "Hiện tại chưa có chính sách này. Hiện tại chưa có chính sách này. Hiện tại chưa có chính sách này. Hiện tại chưa có chính sách này.",
+        "visible": true
+      }
+    ]
+  }

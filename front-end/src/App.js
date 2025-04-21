@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 
-// import { HomePage } from './pages/HomePage';
+import { HomePage } from './pages/HomePage';
 import  TetCountDownTimerPage  from './pages/EventPages/TetCountDownTimerPage/TetCountDownTimerPage';
 
 import { DynamicBlur } from './components/DynamicBlur';
@@ -15,7 +15,7 @@ function App() {
         <DynamicStars parentClassName="root-container"/>
         <DynamicBlur parentClassName="root-container"/>
         <Routes>  
-          <Route path="/" element={<TetCountDownTimerPage />} /> 
+          <Route path="/" element={<HomePage />} /> 
         </Routes>  
       </div>  
     </Router>  
