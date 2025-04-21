@@ -1,3 +1,4 @@
+import HRStructure from './hr-structure.json';
 import characteristicsData from './characteristics.json';
 import bannerData from './banners.json';
 import bioData from './bio.json';
@@ -7,4 +8,4 @@ import statisticsData from './achievements.json';
 import companionsData from './companions.json';
 import FAQs from './faqs.json';
 
-export { characteristicsData, bannerData, bioData, departmentsData, partnersData, statisticsData, companionsData, FAQs }
+export { HRStructure, characteristicsData, bannerData, bioData, departmentsData, partnersData, statisticsData, companionsData, FAQs }
