@@ -2,10 +2,14 @@ import './HorizontalNews.css';
 import getRelativeTime from '../../utils/getRelativeTimeUtil';
 import getFirstSentence from '../../utils/getFirstSentenceUtil';
 import clockIcon from '../../mocks/images/etnews/clock-icon.svg';
+import { useNavigate } from 'react-router-dom';
 
 export const HorizontalNews = ({ news, isETNews }) => {
+    const navigate = useNavigate();
+
     const handleClick = () => {
-        console.log(news.etnews_id);
+        const id = isETNews ? news.etnews_id : news.blog_id;
+        navigate(`/${isETNews ? 'et-news' : 'et-blog'}/${id}/`);
     }
     return (
         <div className="horizontal-news" onClick={handleClick}>
@@ -17,7 +21,7 @@ export const HorizontalNews = ({ news, isETNews }) => {
                 />
                 <div className="et-news-tag">
                     <div className="tag-square" id="tag-square-1"></div>
-                    <div className="tag-name"><p>ET NEWS</p></div>
+                    <div className="tag-name"><p>{isETNews ? 'ET NEWS' : "ET BLOG"}</p></div>
                     <div className="tag-square" id="tag-square-2"></div>
                 </div>
             </div>

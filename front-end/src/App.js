@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { HomePage } from './pages/HomePage';
 import  TetCountDownTimerPage  from './pages/EventPages/TetCountDownTimerPage/TetCountDownTimerPage';
+import { PostDetailsPage } from './pages/PostDetailsPage';
 import { ETNewsPage } from './pages/ETNewsPage';
 import { ETBlogPage } from './pages/ETBlogPage';
 import { ActivitiesPage } from './pages/ActivitiesPage';
@@ -21,6 +22,9 @@ function App() {
         <DynamicStars parentClassName="root-container"/>
         <DynamicBlur parentClassName="root-container"/>
         <Routes>  
+          <Route path="/activities/:id" element={<PostDetailsPage />} /> 
+          <Route path="/et-news/:id" element={<PostDetailsPage />} /> 
+          <Route path="/et-blog/:id" element={<PostDetailsPage />} /> 
           <Route path="/et-news" element={<ETNewsPage />} /> 
           <Route path="/et-blog" element={<ETBlogPage />} /> 
           <Route path="/activities" element={<ActivitiesPage />} /> 

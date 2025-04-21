@@ -3,11 +3,14 @@ import './VerticalNews.css';
 import getRelativeTime from '../../utils/getRelativeTimeUtil';
 import getFirstSentence from '../../utils/getFirstSentenceUtil';
 import clockIcon from '../../mocks/images/etnews/clock-icon.svg';
-
+import { useNavigate } from 'react-router-dom';
 
 export const VerticalNews = ({ news, isETNews }) => {
+    const navigate = useNavigate();
+
     const handleClick = () => {
-        console.log(isETNews ? news.etnews_id : news.etblog_id);
+        const id = isETNews ? news.etnews_id : news.blog_id;
+        navigate(`/${isETNews ? 'et-news' : 'et-blog'}/${id}/`);
     }
     return (
         <div className="vertical-news" onClick={handleClick}>

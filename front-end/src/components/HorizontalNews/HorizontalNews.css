@@ -101,3 +101,7 @@
     border: 0.15vw solid #102e44;
     outline: 0.1vw solid #fff;
 }
+
+.relative-time{
+    font-size: 0.8vw;
+}

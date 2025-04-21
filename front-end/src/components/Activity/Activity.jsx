@@ -26,7 +26,7 @@ export const Activity = ({index, activity, ongoing}) => {
 
     return (
         <div id={activity.activity_id} className="activity-container" onClick={handleClick}>
-            <img className="activity-image" src={require(`../../mocks${activity.thumbnail_image_url}`)} alt={activity.name} />
+            <img className="activity-image" src={activity.thumbnail_image_url || require(`../../mocks${activity.thumbnail_image_url}`)} alt={activity.name} />
             <p className="activity-name">{activity.title}</p>
             {isVisible && ongoing ? <p className="activity-desc">{activity.meta_description}</p>: <></>}
         </div>
