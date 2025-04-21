@@ -1,0 +1,36 @@
+{
+    "statistics": [
+        {
+            "id": 1,
+            "title": "Chương trình",
+            "value": 50,
+            "duration": 3000
+        },
+        {
+            "id": 1,
+            "title": "Cựu thành viên",
+            "value": 120,
+            "duration": 3000
+            
+        },
+        {
+            "id": 2,
+            "title": "Năm hoạt động",
+            "value": 6,
+            "duration": 100000
+        },
+        {
+            "id": 3,
+            "title": "Đối tác",
+            "value": 100,
+            "duration": 3000
+        },
+        {
+            "id": 4,
+            "title": "Lượt tiếp cận",
+            "value":26,
+            "duration": 3000
+        }
+
+    ]
+}
