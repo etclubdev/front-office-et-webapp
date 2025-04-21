@@ -7,8 +7,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-image: 1;
-    background: linear-gradient(181deg, #FDFDFD 1.18%, #AEE8FF 162.45%);
+    background: linear-gradient(180deg, #FDFDFD 0.1%, #AEE8FF 107.38%);
     overflow-x: hidden;
 }
 

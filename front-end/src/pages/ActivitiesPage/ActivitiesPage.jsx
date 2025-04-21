@@ -5,37 +5,15 @@ import { ActivitiesSlider } from '../../components/ActivitiesSlider';
 import { filterActivitites } from '../../utils/filterActivities';
 import { useEffect, useState } from 'react';
 import { getAllActivities } from '../../api/activity.service';
-import { generateRandomCircles } from '../../utils/generateRandomCirclesUtil';
-
-// const filterType = (type) => {
-//     return activitiesData.filter(item => item.type.includes(type));
-// }
-
-// const filterStatus= (status) => {
-//     return activitiesData.filter(item => item.status.includes(status));
-// }
-// console.log(filterActivitites(activitiesData));
-
-
-// const types = ["Talkshow/Workshop", "Hoạt động truyền thông", "Game", "Cuộc thi", "Hoạt động nội bộ"]
-
-// const filteredActivities = types.map((type, index) => {
-//     let activityType = type;
-//     return {
-//         id: `type-${index}`,
-//         type: activityType,
-//         items: filterType(type)
-//     }
-// })
-
-// const ongoingActivities = filterStatus("Đang diễn ra");
+import { Navbar } from '../../components/Navbar';
+import { Footer } from '../../components/Footer';
 
 export const ActivitiesPage = () => {
     const [activities, setActivities] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await getAllActivities();
+            const { data } = await getAllActivities();
             setActivities(data);
         }
         fetchData();
@@ -43,7 +21,7 @@ export const ActivitiesPage = () => {
 
     return (
         <div className="activities-page">
-
+            <Navbar />
             {
                 activities?.ongoing?.length > 0 ? (
                     <div className="ongoing-activities-container">
@@ -80,6 +58,7 @@ export const ActivitiesPage = () => {
                     }
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
