@@ -1,0 +1,176 @@
+.introduction-items{
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.introduction-item{
+    z-index: 1000;
+    padding: 8vw 0;
+    opacity: 0;
+    transform: translateY(10vw);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.introduction-item.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.introduction-items .introduction-title{
+    font-size: 3vw;
+     font-weight: 900;
+     text-align: center;
+    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+.introduction-items .introduction-container{
+    margin-top: 5vw;
+    display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+}
+
+.introduction-items .introduction-desc{
+    width: 55%;
+    color: #0F4081;
+     font-size: 1.2vw;
+     line-height: 2.2vw;
+     text-align: justify;
+}
+
+.introduction-items .introduction-img{
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.introduction-division-bar{
+    width: 20%;
+    height: 0.1vw;
+    background-color: #0F4081;
+    align-self: center;
+}
+
+#introduction-history{
+    display: flex;
+     align-items: center;
+}
+
+#introduction-history .introduction-title{
+    font-size: 3vw;
+    margin-right: 8vw;
+    text-align: left;
+}
+
+.introduction-history-tree{
+    display: flex;
+}
+
+.tree-trunk{
+    width: 2.5vw;
+    object-fit: cover;
+}
+
+.left-tree, .right-tree{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.branch-tree{
+    width: 20vw;
+}
+
+.branch-container{
+    display: flex;
+    flex-direction: column;
+}
+
+ .left-tree .branch-container{
+    position: relative;
+     top: 2vw;
+     right: -1.3vw;
+ }
+
+ .right-tree .branch-container{
+    align-items: flex-end;
+    position: relative;
+     right: 1.4vw;
+ }
+
+ .branch-title{
+    font-size: 2vw;
+     font-weight: 900;
+    background: linear-gradient(60deg, #4696E3 0.01%, #55B3E9 55.17%, #2e8f84 99.99%, #3ab2a4);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+ 
+ .branch-content{
+    position: absolute;
+    width: 12vw;
+    color: #0F4081;
+     font-size: 0.8vw;
+     text-align: justify;
+ }
+
+ .left-tree .branch-content{
+    top: 1vw;
+    left: 1.5vw;
+ }
+
+ .right-tree .branch-content{
+    top: 1vw;
+    right: 1.5vw;
+ }
+
+ .branch-title{
+    width: 15vw;
+    position: absolute;
+     top: -4.5vw;
+     
+    text-align: center;
+ }
+
+
+.introduction-circle{
+    width: 50vw;
+    height: 50vw;
+ }
+
+ #circle-1{
+    position: absolute;
+    top: -10vh;
+    left: -30vw;
+ }
+ 
+ #circle-2{
+    position: absolute;
+    top: -10vh;
+    right: -30vw;
+ }
+
+ #circle-3{
+    position: absolute;
+    top: 20vh;
+    right: -20vw;
+ }
+
+ #circle-4{
+    position: absolute;
+    top: 250vh;
+    left: -30vw;
+ }
+
+ #circle-5{
+    position: absolute;
+    top: 180vh;
+    right: -40vw;
+ }

@@ -1,0 +1,32 @@
+[
+    {
+        "achievement_id": "ACHV001",
+        "achievement_name": "Chương trình",
+        "highlight_number": 50,
+        "visible": true
+    },
+    {
+        "achievement_id": "ACHV002",
+        "achievement_name": "Cựu thành viên",
+        "highlight_number": 120,
+        "visible": true
+    },
+    {
+        "achievement_id": "ACHV003",
+        "achievement_name": "Năm hoạt động",
+        "highlight_number": 6,
+        "visible": true
+    },
+    {
+        "achievement_id": "ACHV004",
+        "achievement_name": "Đối tác",
+        "highlight_number": 100,
+        "visible": true
+    },
+    {
+        "achievement_id": "ACHV005",
+        "achievement_name": "Lượt tiếp cận",
+        "highlight_number": 26000,
+        "visible": true
+    }
+]

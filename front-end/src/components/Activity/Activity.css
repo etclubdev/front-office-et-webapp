@@ -1,0 +1,30 @@
+.activity-container{
+    width: 27vw;
+    display: flex;
+     flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.activity-container:hover{
+    transform: scale(1.05);
+}
+
+.activity-image{
+    object-fit: cover;
+    box-shadow: 0.2vw 0.2vw 1vw 0 #A1EFF2;
+}
+
+.activity-name{
+    margin-top: 2vw;
+    color: #0F4081;
+     font-size: 1.3vw;
+     font-weight: 900;
+     font-family: 'BeVietnamPro';
+    text-align: center;
+}
+
+.activity-desc{
+    text-align: justify;
+    font-size: 1vw;
+}

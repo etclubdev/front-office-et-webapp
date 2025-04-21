@@ -1,0 +1,11 @@
+.page-title{
+    margin: 0;
+    font-size: 3vw;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    background: var(--BTN, linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
