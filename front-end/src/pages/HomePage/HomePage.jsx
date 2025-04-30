@@ -1,58 +1,80 @@
-import { useEffect } from 'react';
-
+import { useEffect, useState } from 'react';
 import './HomePage.css';
 import { Navbar } from '../../components/Navbar';
 import { AboutUsSection } from '../../components/AboutUsSection';
 import { Statistics } from '../../components/Statistics';
-import { Departments } from '../../components/Departments';
-import { GetInvolvedBanner } from '../../components/GetInvolvedBanner';
 import { Characteristics } from '../../components/Characteristics';
 import { Partners } from '../../components/Partners';
 import { Footer } from '../../components/Footer';
 import { Introduction } from '../../components/Introduction';
+import { FAQ } from '../../components/FAQ';
+import { getBanners } from '../../api/banners.service';
+import { getPartners } from '../../api/partners.service';
+import { getFAQs } from '../../api/faqs.service';
+import { getAchievement } from '../../api/achievement.service';
 
+export const HomePage = () => {
+  const [banners, setBanners] = useState([]);
+  const [expertPartners, setExpertPartners] = useState([]);
+  const [businessPartners, setBusinessPartners] = useState([]);
+  const [faqData, setFaqData] = useState([]);
+  const [statisticsData, setStatisticsData] = useState([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const bannersResponse = await getBanners();
+        const bannersData = bannersResponse.data || [];
 
-export const HomePage = () => {  
+        const partnersResponse = await getPartners();
+        const partnersData = partnersResponse.data || {};
+        const experts = partnersData["Đối tác chuyên gia"] || [];
+        const businesses = partnersData["Đối tác doanh nghiệp"] || [];
 
-  const createStar = () => {  
-    const star = document.createElement('div');  
-    const size = Math.random() * 0.4; // Kích thước ngôi sao  
-    const left = Math.random() * 100; // Vị trí ngang  
-    const top = Math.random() * 600; // Vị trí dọc  
-    const duration = Math.random() * 2 + 1; // Thay đổi thời gian chuyển động nhấp nháy  
+        const faqsResponse = await getFAQs();
+        const faqsData = faqsResponse.data || {};
+        const allFaqs = faqsData["Về ET Club"] || [];
+        const selectedFaqs = allFaqs.filter(faq => faq.visible);
 
-    star.style.width = `${size}vw`;  
-    star.style.height = `${size}vw`;  
-    star.style.left = `${left}vw`;  
-    star.style.top = `${top}vh`;  
-    star.style.animationDuration = `${duration}s`;  
-    star.className = 'star';  
+        const achievementResponse = await getAchievement();
+        const achievementData = achievementResponse.data || [];
+        const visibleAchievements = achievementData.filter(item => item.visible);
 
-    document.querySelector('.homepage-section').appendChild(star);  
-};  
+        setBanners(bannersData);
+        setExpertPartners(experts);
+        setBusinessPartners(businesses);
+        setFaqData(selectedFaqs);
+        setStatisticsData(visibleAchievements);
 
-  useEffect(() => {  
-      for (let i = 0; i < 100; i++) {  
-          createStar();  
-      }  
-  }, []); 
+        console.log("Banners data:", bannersData);
+        console.log("Partners data:", partnersData);
+        console.log("Expert Partners:", experts);
+        console.log("Business Partners:", businesses);
+        console.log("Selected FAQs:", selectedFaqs);
+        console.log("Statistics data:", visibleAchievements);
+      } catch (err) {
+        console.error("Lỗi khi gọi API:", err);
+      }
+    };
 
-  return (  
-    <div className="homepage-section">
-      <Navbar/>
-      <Introduction/>
-      <div className="homepage__container">
-        <AboutUsSection/>
-        <Characteristics/>
-        <Statistics/>
-        <Departments/>
+    fetchData();
+  }, []);
+
+  return (
+    <div className="homepage">
+      <Navbar />
+      <Introduction banners={banners} />
+
+      <div className="homepage-section">
+        <AboutUsSection />
       </div>
-      <GetInvolvedBanner/>       
-      <div className="homepage__container">
-        <Partners/>
+      <Characteristics />
+      <div className="homepage-section">
+        <Statistics statistics={statisticsData} />
+        <Partners partners={expertPartners} companions={businessPartners} />
+        <FAQ questions={faqData} />
       </div>
-      <Footer/>
-    </div>   
-  );  
-};  
+      <Footer />
+    </div>
+  );
+};

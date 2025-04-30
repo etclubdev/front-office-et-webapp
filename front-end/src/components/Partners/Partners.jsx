@@ -1,50 +1,62 @@
 import Slider from "react-slick";
 import './Partners.css';
 import { SliderArrow } from "../SliderArrow";
-import { partnersData } from "../../mocks/data";
-import { PARTNERS_CONTENT } from '../../constants';
+import { COMPANION_CONTENT, PARTNERS_CONTENT } from '../../constants';
+import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
+export const Partners = ({ partners, companions }) => {
 
-const partners = partnersData.partners;
-
-export const Partners = () => {
-  
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: "2vw",
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         initialSlide: 0,
-        nextArrow: <SliderArrow />,
-        prevArrow: <SliderArrow />,
-        responsive: [  
-            { breakpoint: 1200, settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: true } }, 
-            { breakpoint: 768, settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: true } }, 
-            { breakpoint: 480, settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: true } }   
-        ] 
+        nextArrow: <SliderArrow icon={faChevronRight} />,
+        prevArrow: <SliderArrow icon={faChevronLeft} />,
+        responsive: [
+            { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } },
+            { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } },
+            { breakpoint: 480, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } }
+        ]
     };
 
-    return(
+    return (
         <div className="partners-section">
             <div className="partners-title">{PARTNERS_CONTENT.title}</div>
-            <div className="partners-desc">{PARTNERS_CONTENT.desc}</div>
-            <div className="partners-background">
-              <Slider {...settings}>
-                  {partners.map(partner => (
-                      <div key={partner.id} className="partner">
-                          <img src={require(`../../mocks${partner.image}`)} alt={partner.name} />
-                          <div className="partner-name">{partner.name}</div>
-                          <div className="partner-role">{partner.role}</div>
-                      </div>
-                  ))}
-              </Slider>
+            <div>
+                <Slider {...settings}>
+                    {partners.map(partner => {
+                        if (!partner.visible) return null;
+                        else
+                            return (
+                                <div key={partner.partner_id} className="partner">
+                                    <img src={partner.avatar_url} alt={partner.partner_name} />
+                                    <div className="partner-name">{partner.partner_name}</div>
+                                    <div className="partner-role">{partner.short_description}</div>
+                                </div>
+                            )
+                    })}
+                </Slider>
             </div>
-            <div className="FAQs-section">
-              <div className="partners-title">FAQs</div>
+            <div className="companions-title">{COMPANION_CONTENT.title}</div>
+            <div>
+                <Slider {...settings}>
+                    {companions.map(companion => {
+                        if (!companion.visible) return null;
+                        else
+                            return (
+                                <div key={companion.partner_id} className="partner">
+                                    <img src={companion.avatar_url} alt={companion.partner_name} />
+                                    <div className="partner-name">{companion.partner_name}</div>
+                                </div>
+                            )
+                    })}
+                </Slider>
             </div>
         </div>
     )

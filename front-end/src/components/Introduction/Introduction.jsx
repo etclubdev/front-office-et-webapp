@@ -1,37 +1,43 @@
+import React from 'react';
+import Slider from "react-slick";
+import { SliderArrow } from "../SliderArrow";
 import './Introduction.css';
-import { noTextLogo } from '../../assets/images/logos';
-import { INTRODUCTION_CONTENT } from '../../constants';
+import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
-export const Introduction = ({scrollToRef}) => {
-    return (
-        <div className="intro-section">
-            <div className="intro-content">
-                <div className="intro-title">{INTRODUCTION_CONTENT.title}</div>
-                <div className="intro-desc">{INTRODUCTION_CONTENT.desc}</div>
-                <div className="intro-more" onClick={scrollToRef}>{INTRODUCTION_CONTENT.more}</div>
-            </div>
-            <div className="intro-logo">
-                <div className='intro-blur item-1'>
-                    <div className="intro-blur-item sub-item-1">
-                        <div className="intro-blur-item sub-item-2">
-                            <div className="intro-blur-item sub-item-3">
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div className='intro-blur item-2'>
-                    <div className="intro-blur-item sub-item-1">
-                        <div className="intro-blur-item sub-item-2">
-                            <div className="intro-blur-item sub-item-3">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+export const Introduction = ({ banners }) => {
+  console.log(banners);
+  
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: false,
+    adaptiveHeight: true,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    initialSlide: 0,
+    nextArrow: <SliderArrow icon={faChevronRight} />,
+    prevArrow: <SliderArrow icon={faChevronLeft} />,
+    responsive: [
+      { breakpoint: 1200, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } }
+    ]
+  };
 
-                <img className="intro-img backgr" src={noTextLogo} alt="Logo ET Club" />
-                <img className="intro-img" src={noTextLogo} alt="Logo ET Club" />
-            </div>
-        </div>
-    )
+  return (
+    <div className="introduction-slider">
+      <Slider {...settings}>
+        {banners.map((banner, idx) => {
+          if (!banner.visible) return null;
+          else
+            return (
+              <img key={banner.banner_id} src={banner.image_url} alt={banner.banner_name} />
+            )
+        })}
+      </Slider>
+    </div>
+  )
 }

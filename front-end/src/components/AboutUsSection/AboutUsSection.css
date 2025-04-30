@@ -2,9 +2,13 @@
     position: relative;  
     opacity: 0;
     width: 100%;
-    height: 40vw;
-    margin-bottom: 5vw; 
+    height: auto;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+    margin: 7vw 0;
 }
 
 .aboutus-section.visible {
@@ -33,30 +37,24 @@
     height: auto;    
 }
 
-.division-bar{
-    width: 90%;
-    height: 0.1vw;
-    margin: 2vh 0;
-    background: linear-gradient(90deg, #177fd8, #c3f486, #e88e0c); 
-}
-
-.bio-name {
-    width: 21vw;
-    text-align: center;
-    margin: 0;
-    font-size: 2.3vw;  
-    font-weight: bold;  
-    background: linear-gradient(90deg, #177fd8, #c3f486, #e88e0c); 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-}
-
 .bio-detail {  
     display: flex;  
     flex-direction: column;   
-    align-items: center;  
+    gap: 4vh;
+    align-items: center;
 }  
 
+.about-us-title {
+    margin: 0 auto;
+    width: 60%;
+    background: linear-gradient(180deg, #47A8B4 0%, #5D3E91 100%); 
+    font-size: 3vw;
+    font-weight: 900;
+    font-family: 'Montserrat';
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
 
 .aboutus-section.visible #detail-item-1{
     animation: moveDownAndHold 2s ease-in-out;         
@@ -68,19 +66,19 @@
 
 .detail-img {  
     width: 20vw;  
-    border-radius: 5%;  
-    box-shadow:   
-    10px 10px 15px rgba(255, 246, 168, 0.5),  
-    -2px -5px 20px rgba(255, 246, 168, 0.7);  
+    object-fit: cover;
+    height: 15vw;
+    border-radius: 2vw;  
+    box-shadow: 16px 17px 31.9px -5px #737373;     
 }  
 
 .detail-desc {  
-    font-family: 'EurostileRegular';   
+    font-family: 'BeVietnamPro';  
     width: 20vw;  
     height: auto;
     font-size: 1.1vw;
     text-align: justify;  
-    color: white;   
+    color: #0F4081;   
 }  
 
 @keyframes moveUpAndHold {  
@@ -92,4 +90,3 @@
     0% { transform: translateY(0px); }
     50% { transform: translateY(10%); }
 }
-

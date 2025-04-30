@@ -1,24 +1,32 @@
-{  
-  "banners": [  
-    {  
-      "id": 0,  
-      "title": "Tìm kiếm CTV 04/2023",  
-      "image": "/images/banners/banner-04-2023.jpg"  
-    }, 
-    {
-      "id": 1,  
-      "title": "Tìm kiếm CTV 10/2024",  
-      "image": "/images/banners/banner-10-2024.png"
-    },
-    {
-      "id": 2,  
-      "title": "Tìm kiếm CTV 11/2022",  
-      "image": "/images/banners/banner-11-2022.jpg"
-    },
-    {
-      "id": 3,  
-      "title": "Tìm kiếm CTV 11/2023",  
-      "image": "/images/banners/banner-11-2023.jpg"
-    }
-  ]  
-} 
+[
+  {
+      "banner_id": "BANR001",
+      "banner_name": "Spring Sale",
+      "image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1743520749/bcagv1kyyzd7jthodd7t.png",
+      "visible": true
+  },
+  {
+      "banner_id": "BANR002",
+      "banner_name": "Black Friday",
+      "image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1743520749/bcagv1kyyzd7jthodd7t.png",
+      "visible": true
+  },
+  {
+      "banner_id": "BANR003",
+      "banner_name": "Cyber Monday",
+      "image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1743520749/bcagv1kyyzd7jthodd7t.png",
+      "visible": false
+  },
+  {
+      "banner_id": "BANR004",
+      "banner_name": "Christmas Special",
+      "image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1743520749/bcagv1kyyzd7jthodd7t.png",
+      "visible": true
+  },
+  {
+      "banner_id": "BANR005",
+      "banner_name": "New Year Discount",
+      "image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1743520749/bcagv1kyyzd7jthodd7t.png",
+      "visible": false
+  }
+]

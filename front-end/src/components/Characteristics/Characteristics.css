@@ -1,13 +1,12 @@
 .characteristics-section {  
+    margin-top: 10vw;
     width: 100%;  
-    height: 100vh;  
-    display: flex;  
-    flex-direction: column;  
-    justify-content: center;  
-    align-items: center;  
-    margin-bottom: 5vw;  
+    height: auto;  
+    margin: 5vw 0;  
     opacity: 0; 
-    
+    row-gap: 2vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .characteristics-section.visible{
@@ -19,46 +18,182 @@
     0% { transform: scale(0.7); opacity: 0; }  
     100% { transform: scale(1); opacity: 1; }  
 }
-.characteristics-heading {  
-    width: 59vw;
-    font-size: 2.5vw;  
-    text-align: center;  
-    background: linear-gradient(90deg, #D1FDFF, #FDDB92);  
-    filter: drop-shadow(1px -1px 2px #fff6a875) drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));  
-    -webkit-background-clip: text;   
-    -webkit-text-fill-color: transparent;  
-}  
 
-.characteristics-items {  
-    display: flex;  
-    gap: 3vw;   
-    margin-top: 5vw;  
-}  
+.heading {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    align-self: end;
+}
 
-.characteristics-item {  
-    transition: transform 0.3s ease;  
-}  
+.heading-first {
+    color: #000;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'BeVietnamPro'; 
+    font-size: 2.7vw;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4vw; /* 115% */
+}
 
-.characteristics-item:hover {  
-    transform: scale(1.05);   
-}  
+.heading-middle {
+    display: flex;
+    align-items: center;
+    gap: 2vw
+}
 
-.characteristics-item-image {  
-    width: 15vw;  
-    border-radius: 15px;  
-    filter: drop-shadow(1px 5px 3px #FDDB92);  
-}  
+.word {
+    color: #F0DEA9;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-shadow: 0.4vw 0.4vw 0 #1E285F;
+    /* title test */
+    font-family: Montserrat;
+    font-size: 3.5vw;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.5; /* 76.667% */
+}
+
+.decor-bar {
+    flex: 1;
+    height: 1vw;
+    margin: 2vh 0;
+    background: #1E285F;
+}
+
+.heading-last {
+    color: #1E285F;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Montserrat';
+    font-size: 2.5vw;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.5; /* 153.333% */
+}
+
+.chars-container{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7vw;
+    row-gap: 0vw;
+}
+
+.char1, .char2, .char3, .char4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    border: 1vw solid #FDFDFD;
+    background: #0F4081;
+    margin-left: 5.5vw;
+    position: absolute;
+}
+
+.char1-container, .char2-container, .char3-container, .char4-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+}
+
+.char1-container {
+    top: 0;
+    left: -5%;
+}
+
+.char2-container {
+    top: -5%;
+    left: -5%;
+}
+
+.char3-container {
+    top: -7%;
+    left: 5%;
+}
+
+.char4-container {
+    top: -5%;
+    left: 0;
+}
 
 .characteristics-item-title {  
-    font-size: 2.5vw;  
-    margin: 10px 0 15px 0;  
-    color: #FDDB2A;  
-    text-shadow: 1px 1px 3px #292929;  
+    /* position: absolute; */
+    margin: 0 3vw;
+    font-size: 2.2vw;   
+    color: white;  
+    text-shadow: 0.1vw 0.1vw 0.3 #292929; 
+    font-family: 'BeVietnamPro'; 
 }  
 
 .characteristics-item-desc {  
-    width: 15vw;  
+    /* position: absolute; */
+    width: 18vw;  
     color: white;  
-    font-size: 1.25vw;  
-    font-family: EurostileRegular;  
+    font-size: 0.9vw;  
+    font-family: 'Montserrat';  
+    font-weight: 400;
+    line-height: 1.5vw;
+    text-align: justify;
+    align-self: center;
+}
+
+.characteristics-item-image {  
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1vw solid #FFF;
+    box-shadow: 0 0.4vw 0.8vw 0 #FDDB92;
+    position: absolute;
+    text-align: center;
+    
+}  
+
+.underline {
+    width: 50%;
+    height: 0.3vw;
+    background: white;
+}
+
+
+/* Image position */
+.a1 {
+    top: 2%;
+    left: 10%;
+}
+
+.a2 {
+    top: -7%;
+    right: -10%;
+}
+
+.a3 {
+    right: -10%;
+    top: -10%;
+}
+
+.a4 {
+    top: 2%;
+    left: 10%;
+}
+
+
+
+.char1, .char4{
+    align-items: end;
+}
+
+.char2, .char3{
+    align-items: start;
 }

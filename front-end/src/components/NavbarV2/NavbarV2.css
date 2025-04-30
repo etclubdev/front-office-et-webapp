@@ -1,0 +1,134 @@
+.nav-v2-section{
+    width: 100%;  
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;  
+    top: 0;  
+    z-index: 2000; 
+    transition: transform 0.5s ease;
+}
+
+.nav-v2 {  
+    width: 100%;  
+    align-self: center;
+    display: flex;    
+    background: linear-gradient(-90deg, rgba(128, 232, 241, 0.80) -10.72%, rgba(128, 232, 241, 0.80) 2.56%, rgba(79, 170, 194, 0.80) 25.54%, rgba(34, 112, 172, 0.80) 48.51%, #0D3DA4 100%);
+    align-items: center;  
+    justify-content: space-between;  
+    padding: 0.5vw 2vw;
+    transition: transform 0.5s ease; 
+}  
+
+.nav-v2-hidden {
+    transform: translateY(-200%); /* Move the nav-v2bar up to hide it */
+  }
+
+.nav-v2-logo {  
+    width: 15vw;  
+    height: auto;  
+}  
+
+.nav-v2-menu {  
+    width: 80%;  
+    display: flex;  
+    justify-content: space-around;  
+}  
+
+.nav-v2-item {   
+    width: 8.5vw;
+    height: 2.5vw;
+    color: white;
+    display: flex;  
+    align-items: center;  
+    justify-content: center;
+    border-radius: 0.5vw;
+    cursor: pointer;  
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;  
+} 
+
+.nav-v2-item.dropbtn{
+    display: block;
+}
+
+.nav-v2-item-dropbtn{
+    width: 100%;
+    height: 100%;
+    display: flex;  
+    align-items: center;  
+    justify-content: center;
+}
+
+.nav-v2-item-content{
+    font-size: 1vw;
+}
+
+.dropdown-content {
+    position: absolute;
+    
+    display: none;
+    z-index: 1;
+  }
+
+.nav-v2-icon {  
+    margin: 0.2vw 0 0 0.5vw;  
+    font-size: 1vw;  
+}  
+
+.nav-v2-item:hover {  
+    transform: scale(1.1); 
+    background: linear-gradient(-90deg, rgba(128, 232, 241, 0.80) -10.72%, rgba(128, 232, 241, 0.80) 2.56%, rgba(79, 170, 194, 0.80) 25.54%, rgba(34, 112, 172, 0.80) 48.51%, #0D3DA4 100%);
+
+}
+
+.dropdown-content a{
+    width: 13vw;
+    min-height: 2.5vw;
+    margin-top: 1vw;
+    background: linear-gradient(-90deg, rgba(128, 232, 241, 0.80) -10.72%, rgba(128, 232, 241, 0.80) 2.56%, rgba(79, 170, 194, 0.80) 25.54%, rgba(34, 112, 172, 0.80) 48.51%, #0D3DA4 100%);
+    border-radius: 0.5vw;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.dropdown-content a p{
+    margin-left: 1vw;
+    font-size: 1vw;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background: linear-gradient(90deg, #30a0be, #c0bcad);  
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-v2-item.dropbtn:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-v2-input{
+    width: 11vw;
+    background-color: white;
+    border-radius: 2vw;
+    display: flex;
+    align-items: center;
+}
+
+.nav-v2-search-icon{
+    width: 1vw;
+    margin: 0 0.5vw 0 1vw
+}
+
+.nav-v2-input input{
+    width: 80%;
+    outline: none;
+    border: none;
+    padding-right: 1vw;
+    border-radius: 2vw;
+    font-family: 'Montserrat';
+
+}

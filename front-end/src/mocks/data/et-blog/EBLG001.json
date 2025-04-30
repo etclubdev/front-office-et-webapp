@@ -1,0 +1,13 @@
+{
+    "blog_id": "EBLG001",
+    "title": "Biểu đồ đã lừa bạn như thế nào? Vấn đề Ngữ cảnh trong trực quan hóa dữ liệu (Phần 3)",
+    "thumbnail_image_url": "/images/activities/ACTI001.png",
+    "blog_author": "ET Club",
+    "meta_description": "Khám phá cách biểu đồ có thể gây hiểu lầm nếu không đặt trong ngữ cảnh phù hợp và những lưu ý quan trọng khi trực quan hóa dữ liệu.",
+    "visible": true,
+    "content": "<p>💡 Ở phần trước, chúng ta đã tìm hiểu về cách đường cơ sở giúp truyền tải thông điệp dữ liệu chính xác hơn. Trong phần cuối này, hãy cùng mình xem xét sâu hơn về vai trò của đường cơ sở trong <strong>biểu đồ thanh (bar chart)</strong> và <strong>biểu đồ đường (line chart)</strong>, cũng như một số lưu ý quan trọng khi chọn giá trị bắt đầu cho trục y nhé!</p> <img src=\"https://statics.cdn.200lab.io/2022/07/91.png\" alt=\"Biểu đồ minh họa\"> <h2>📊 ĐƯỜNG CƠ SỞ BẰNG KHÔNG CỦA BIỂU ĐỒ THANH (BAR CHART)</h2> <p>🚨 Trong đa số trường hợp, nếu chọn giá trị bắt đầu của trục y là các giá trị khác 0, người đọc vẫn có thể nhận biết được sự chênh lệch giữa các cột, nhưng khi so sánh mức chênh lệch theo tỷ lệ, điều này có thể gây hiểu lầm...</p> <h2>📈 ĐƯỜNG CƠ SỞ TRONG BIỂU ĐỒ ĐƯỜNG (LINE CHART)</h2> <p>🚨 Khi làm việc với biểu đồ đường, ta thường so sánh trực tiếp các đường xu hướng với nhau nhiều hơn là chiều cao của chúng so với trục x. Vì vậy, điểm bắt đầu của trục y không nhất thiết phải bằng 0...</p> <img src=\"https://statics.cdn.200lab.io/2022/07/91.png\" alt=\"Biểu đồ minh họa\"> <h2>🥸 KẾT LUẬN</h2> <p>Trực Quan Hóa Dữ Liệu là một bước không thể thiếu trong quy trình Phân Tích Dữ Liệu (Data Analysis). Tuy nhiên, để tránh hiểu lầm, chúng ta cần cân nhắc kỹ về ngữ cảnh và cách hiển thị dữ liệu...</p>",
+    "view_count": 0,
+    "created_on": "2025-03-15T08:00:00Z",
+    "last_modified_on": "2025-03-15T10:30:00Z"
+}
+  

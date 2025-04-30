@@ -1,0 +1,17 @@
+.attribution {
+    font-family: inherit;
+    text-align: center;
+    padding: 2rem;
+    color: wheat;
+    font-weight: bold;
+}
+
+.attribution a {
+    font-family: inherit;
+    font-weight: bold;
+    color: #8385A9;
+    letter-spacing: 2px;
+    &:hover {
+        color: #3CC9F0;
+    }
+}
