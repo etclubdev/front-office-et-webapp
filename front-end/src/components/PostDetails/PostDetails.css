@@ -1,0 +1,110 @@
+.details-page{
+    width: 100vw;
+}
+
+@media(max-width: 739px) {
+    .details-page{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+h1 { font-size: clamp(20px, 4vw, 32px); } /* Tối thiểu 20px, tối đa 32px */
+h2 { font-size: clamp(18px, 3.5vw, 28px); }
+h3 { font-size: clamp(16px, 3vw, 24px); }
+h4 { font-size: clamp(14px, 2.5vw, 20px); }
+h5 { font-size: clamp(12px, 2vw, 18px); }
+h6 { font-size: clamp(10px, 1.5vw, 14px); }
+p { font-size: clamp(14px, 2vw, 18px); line-height: 1.6;}
+
+.details-post {
+    padding: 8vw 12vw 8vw 15vw; 
+    width: 100%; 
+    max-width: 1200px;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.details-container {
+    width: 95%; 
+    padding: 0 5%; 
+    text-align: left;
+}
+
+.details-title {
+    width: 100%;
+    font-family: 'BeVietnamPro';
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #0B2F60;
+}
+
+.details-info{
+    width: 100%;
+    margin: 3vw 0;
+    display: flex;
+    justify-content: space-between;
+    color: #5C5E63;
+}
+
+.details-info-item
+{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'BeVietnamPro';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.details-content {
+    width: 100%;
+}
+
+.details-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 40px 0; 
+}
+
+@media(max-width: 739px) {
+    .details-post{
+        width: 100%;
+        justify-content: center;
+        padding: 5% 0;
+    }
+    .details-container {
+        width: 100%; 
+    }
+    .details-info-item{
+        font-size: 10px; 
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .details-post{
+        width: 100%;
+        padding: 5% 6% 5% 2%;
+    }
+    .details-container {
+        width: 100%; 
+        padding: 0 5%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .details-post{
+        width: 100%;
+    }
+    .details-container {
+        width: 70%; 
+        padding: 0 5% 0 2%;
+    }
+}
+

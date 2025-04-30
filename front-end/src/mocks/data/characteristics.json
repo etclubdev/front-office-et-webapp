@@ -2,26 +2,26 @@
     "characteristics":[
         {
             "id": 0,
-            "title": "NĂNG ĐỘNG",
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "title": "Năng động",
+            "desc": "ET Club - nơi hội tụ những bạn trẻ nhiệt huyết, luôn sẵn sàng học hỏi và tham gia các hoạt động thú vị. Đây là môi trường tuyệt vời để bạn khám phá bản thân và gắn kết với mọi người.",
             "image": "/images/profiles/productive.jpg"
         },
         {
             "id": 1,
-            "title": "SÁNG TẠO",
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "title": "Sáng tạo",
+            "desc": "Nơi dành cho những bạn trẻ đam mê sáng tạo, kết hợp giữa công nghệ với kinh tế để tạo ra những giải pháp đột phá, giúp phát triển tư duy mới, vượt qua giới hạn, và kiến tạo giá trị cho tương lai.",
             "image": "/images/profiles/creative.jpg"
         },
         {
             "id": 2,
-            "title": "ĐỔI MỚI",
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "title": "Tiên phong",
+            "desc": "Nơi khơi nguồn sáng tạo, tiên phong ứng dụng công nghệ vào kinh tế. ET Club hướng tới tạo ra một môi trường học tập và thực hành giúp sinh viên phát triển tư duy đổi mới, tự tin đối mặt với thách thức thời đại số",
             "image": "/images/profiles/innovative.jpg"
         },
         {
             "id": 3,
-            "title": "TIÊN PHONG",
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "title": "Đổi mới",
+            "desc": "ET Club dẫn đầu xu hướng đổi mới, tạo ra những giải pháp tiên tiến, giúp sinh viên phát triển tư duy hiện đại và xây dựng nền tảng vững chắc cho tương lai trong thời đại số.",
             "image": "/images/profiles/pioneering.jpg"
         }
     ]
