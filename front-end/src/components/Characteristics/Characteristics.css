@@ -1,22 +1,29 @@
-.characteristics-section {  
+.characteristics-section {
     margin-top: 10vw;
-    width: 100%;  
-    height: auto;  
-    margin: 5vw 0;  
-    opacity: 0; 
+    width: 100%;
+    height: auto;
+    margin: 5vw 0;
+    opacity: 0;
     row-gap: 2vw;
     display: flex;
     flex-direction: column;
 }
 
-.characteristics-section.visible{
-    opacity: 1;   
+.characteristics-section.visible {
+    opacity: 1;
     animation: zoomIn 3s ease-in-out;
 }
 
-@keyframes zoomIn {  
-    0% { transform: scale(0.7); opacity: 0; }  
-    100% { transform: scale(1); opacity: 1; }  
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .heading {
@@ -30,11 +37,12 @@
 .heading-first {
     color: #000;
     font-feature-settings: 'liga' off, 'clig' off;
-    font-family: 'BeVietnamPro'; 
+    font-family: 'BeVietnamPro';
     font-size: 2.7vw;
     font-style: normal;
     font-weight: 300;
-    line-height: 4vw; /* 115% */
+    line-height: 4vw;
+    /* 115% */
 }
 
 .heading-middle {
@@ -53,7 +61,8 @@
     font-size: 3.5vw;
     font-style: italic;
     font-weight: 700;
-    line-height: 1.5; /* 76.667% */
+    line-height: 1.5;
+    /* 76.667% */
 }
 
 .decor-bar {
@@ -70,10 +79,11 @@
     font-size: 2.5vw;
     font-style: normal;
     font-weight: 900;
-    line-height: 1.5; /* 153.333% */
+    line-height: 1.5;
+    /* 153.333% */
 }
 
-.chars-container{
+.chars-container {
     width: 100%;
     height: 80%;
     position: relative;
@@ -84,7 +94,10 @@
     row-gap: 0vw;
 }
 
-.char1, .char2, .char3, .char4 {
+.char1,
+.char2,
+.char3,
+.char4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,7 +111,10 @@
     position: absolute;
 }
 
-.char1-container, .char2-container, .char3-container, .char4-container {
+.char1-container,
+.char2-container,
+.char3-container,
+.char4-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -127,28 +143,28 @@
     left: 0;
 }
 
-.characteristics-item-title {  
+.characteristics-item-title {
     /* position: absolute; */
     margin: 0 3vw;
-    font-size: 2.2vw;   
-    color: white;  
-    text-shadow: 0.1vw 0.1vw 0.3 #292929; 
-    font-family: 'BeVietnamPro'; 
-}  
+    font-size: 2.2vw;
+    color: white;
+    text-shadow: 0.1vw 0.1vw 0.3 #292929;
+    font-family: 'BeVietnamPro';
+}
 
-.characteristics-item-desc {  
+.characteristics-item-desc {
     /* position: absolute; */
-    width: 18vw;  
-    color: white;  
-    font-size: 0.9vw;  
-    font-family: 'Montserrat';  
+    width: 18vw;
+    color: white;
+    font-size: 0.9vw;
+    font-family: 'Montserrat';
     font-weight: 400;
     line-height: 1.5vw;
     text-align: justify;
     align-self: center;
 }
 
-.characteristics-item-image {  
+.characteristics-item-image {
     width: 10vw;
     height: 10vw;
     border-radius: 50%;
@@ -157,8 +173,8 @@
     box-shadow: 0 0.4vw 0.8vw 0 #FDDB92;
     position: absolute;
     text-align: center;
-    
-}  
+
+}
 
 .underline {
     width: 50%;
@@ -190,10 +206,141 @@
 
 
 
-.char1, .char4{
+.char1,
+.char4 {
     align-items: end;
 }
 
-.char2, .char3{
+.char2,
+.char3 {
     align-items: start;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {
+    .characteristics-section {
+        margin-top: 80px;
+    }
+
+    .heading {
+        width: 95%;
+    }
+
+    .heading-first {
+        font-size: 16px;
+    }
+
+    .heading-middle {
+        gap: 10px
+    }
+
+    .word {
+        font-size: 30px;
+    }
+
+    .heading-last {
+        font-size: 18px;
+    }
+
+    .chars-container {
+        align-items: center;
+        min-height: 100vh;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .char1,
+    .char2,
+    .char3,
+    .char4 {
+        width: 60vw;
+        height: 60vw;
+        gap: 10px;
+    }
+
+    .char1-container,
+    .char2-container,
+    .char3-container,
+    .char4-container {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .characteristics-item-title {
+        margin: 0 20px;
+        font-size: 20px;
+    }
+
+    .characteristics-item-desc {
+        width: 170px;
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .characteristics-item-image {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .underline {
+        width: 50%;
+        height: 2px;
+        background: white;
+    }
+
+    /* Image position */
+    .a1 {
+        top: 0%;
+        left: 5%;
+    }
+
+    .a2 {
+        top: -2%;
+        right: 2%;
+    }
+
+    .a3 {
+        top: 0%;
+        left: 5%;
+    }
+
+    .a4 {
+        top: 0%;
+        left: 60%;
+    }
+
+    .char1,
+    .char3 {
+        align-items: end;
+    }
+
+    .char2,
+    .char4 {
+        align-items: start;
+    }
+
+    .char1-container {
+        top: 5%;
+        left: -10%;
+    }
+    
+    .char2-container {
+        top: 0%;
+        left: 10%;
+    }
+    
+    .char3-container {
+        top: -5%;
+        left: -10%;
+    }
+    
+    .char4-container {
+        top: -5%;
+        left: 5%;
+    }
+    
 }
