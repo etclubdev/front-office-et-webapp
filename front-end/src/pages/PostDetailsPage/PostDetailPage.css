@@ -1,9 +1,15 @@
 .details-page{
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
 }
 
-.details-post{
-    margin-top: 7vw;
+@media(max-width: 739px) {
+    .details-page{
+        display: flex;
+        justify-content: center;
+    }
 }
