@@ -1,0 +1,9 @@
+.details-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.details-post{
+    margin-top: 7vw;
+}

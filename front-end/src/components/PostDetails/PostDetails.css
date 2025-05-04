@@ -9,13 +9,13 @@
     }
 }
 
-h1 { font-size: clamp(20px, 4vw, 32px); } /* Tối thiểu 20px, tối đa 32px */
-h2 { font-size: clamp(18px, 3.5vw, 28px); }
-h3 { font-size: clamp(16px, 3vw, 24px); }
-h4 { font-size: clamp(14px, 2.5vw, 20px); }
-h5 { font-size: clamp(12px, 2vw, 18px); }
-h6 { font-size: clamp(10px, 1.5vw, 14px); }
-p { font-size: clamp(14px, 2vw, 18px); line-height: 1.6;}
+.details-post h1 { font-size: clamp(20px, 4vw, 32px); } /* Tối thiểu 20px, tối đa 32px */
+.details-post h2 { font-size: clamp(18px, 3.5vw, 28px); }
+.details-post h3 { font-size: clamp(16px, 3vw, 24px); }
+.details-post h4 { font-size: clamp(14px, 2.5vw, 20px); }
+.details-post h5 { font-size: clamp(12px, 2vw, 18px); }
+.details-post h6 { font-size: clamp(10px, 1.5vw, 14px); }
+.details-post p { font-size: clamp(14px, 2vw, 18px); line-height: 1.6;}
 
 .details-post {
     padding: 8vw 12vw 8vw 15vw; 

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import "./PostDetailPage.css"
 import { useParams, useLocation } from "react-router-dom";
 import { getActivityById } from "../../api/activity.service";
 import { getEtBlogById } from "../../api/etBlog.service";
 import { getEtNewsById } from "../../api/etNews.service";
 import { PostDetails } from "../../components/PostDetails";
+import { Navbar } from "../../components/Navbar";
+import { Footer } from "../../components/Footer";
 
 export const PostDetailsPage = () => {
     const { pathname } = useLocation();
@@ -35,7 +38,9 @@ export const PostDetailsPage = () => {
 
     return (
         <div className="details-page">
+            <Navbar />
             {details ? <PostDetails details={details} thumbnailShowed = {!pathname.includes('et-blog')} /> : <p>Loading...</p>}
+            <Footer />
         </div>
     );
 };
