@@ -1,13 +1,25 @@
 import './SearchPage.css';
 import { SearchSuggestions } from '../../components/SearchSuggestions/SearchSuggestions';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
+import { debounce } from 'lodash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export const SearchPage = () => {
-
     const [target, setTarget] = useState("");
+
+    // Debounced function để cập nhật target
+    const debouncedSearch = useCallback(
+        debounce((value) => {
+            setTarget(value);
+        }, 300), // 300ms debounce
+        []
+    );
+
+    const handleChange = (e) => {
+        debouncedSearch(e.target.value);
+    };
 
     return (
         <div className="search-section">
@@ -17,11 +29,15 @@ export const SearchPage = () => {
                 </div>
                 <div className="search-input">
                     <div className="vertical-bar"></div>
-                    <input placeholder='Nhập từ khóa tìm kiếm' value={target} type="text" onChange={(e) => setTarget(e.target.value)}/>
+                    <input
+                        placeholder='Nhập từ khóa tìm kiếm'
+                        type="text"
+                        onChange={handleChange}
+                    />
                 </div>
                 <div className="horizontal-bar"></div>
-                <SearchSuggestions target={target}/>
+                <SearchSuggestions target={target} />
             </div>
         </div>
-    )
-}
+    );
+};
