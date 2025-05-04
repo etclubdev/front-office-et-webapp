@@ -122,14 +122,26 @@
         height: 23rem;
         flex-direction: column;
     }
+
+    .vertical-news-img{
+        aspect-ratio: 1/1 !important;
+    }
+
+    .vertical-news-time p{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
     #highlight-news-1{
         width: 100%;
         height: 100%;
+        box-sizing: border-box;
+
         .vertical-news-title{
             font-size: 18px;
             line-height: 1.5;
         }
-        .vertical-news-content, .vertical-news-time{
+        .vertical-news-content, .vertical-news-time p{
             font-size: 12px;
             line-height: 1.5;
         }
