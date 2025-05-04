@@ -1,0 +1,78 @@
+{
+    "highlighted": [
+        {
+            "blog_id": "EBLG001",
+            "title": "Khám phá văn hóa Đông Nam Á",
+            "thumbnail_image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1744303746/jwcct4y9sumoifojrexg.png",
+            "blog_author": "Nguyễn Văn A",
+            "meta_description": "Bài viết giới thiệu về các nét đẹp văn hóa đặc trưng của các quốc gia Đông Nam Á.",
+            "visible": true,
+            "content": "<h2>Văn hóa Đông Nam Á</h2><p>Khu vực Đông Nam Á bao gồm nhiều quốc gia như Việt Nam, Thái Lan, Indonesia... mỗi nơi mang một nét văn hóa đặc sắc riêng biệt.</p><img src='https://res.cloudinary.com/dgqolusci/image/upload/v1744303746/jwcct4y9sumoifojrexg.pngpg' alt='Đông Nam Á' style='width:100%;'/><ul><li>Việt Nam: Tết Nguyên Đán, Áo dài</li><li>Thái Lan: Lễ hội té nước Songkran</li><li>Indonesia: Nghệ thuật Batik</li></ul>",
+            "view_count": 152,
+            "created_on": "2025-04-20T08:30:00",
+            "last_modified_on": "2025-04-20T08:30:00"
+        },
+        {
+            "blog_id": "EBLG002",
+            "title": "Lễ hội truyền thống Việt Nam",
+            "thumbnail_image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1744303746/jwcct4y9sumoifojrexg.png",
+            "blog_author": "Trần Thị B",
+            "meta_description": "Tổng hợp những lễ hội đặc sắc ở Việt Nam mang đậm bản sắc dân tộc.",
+            "visible": true,
+            "content": "<h2>Lễ hội Việt Nam</h2><p>Việt Nam nổi tiếng với hàng loạt lễ hội dân gian truyền thống như:</p><ol><li>Lễ hội đền Hùng</li><li>Lễ hội chọi trâu Đồ Sơn</li><li>Lễ hội Gióng</li></ol><p>Mỗi lễ hội đều mang đậm tinh thần cộng đồng và bản sắc dân tộc.</p>",
+            "view_count": 89,
+            "created_on": "2025-04-18T14:45:00",
+            "last_modified_on": "2025-04-18T14:45:00"
+        },
+        {
+            "blog_id": "EBLG003",
+            "title": "Ẩm thực ba miền Bắc Trung Nam",
+            "thumbnail_image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1744303746/jwcct4y9sumoifojrexg.png",
+            "blog_author": "Lê Văn C",
+            "meta_description": "Khám phá hương vị độc đáo của ẩm thực Việt Nam qua ba miền đất nước.",
+            "visible": false,
+            "content": "<h2>Ẩm thực Việt Nam</h2><p>Ẩm thực Việt chia làm 3 miền với đặc trưng riêng:</p><ul><li><strong>Miền Bắc:</strong> Vị thanh nhẹ, nhiều món nước như phở, bún thang.</li><li><strong>Miền Trung:</strong> Đậm đà, cay nồng như bún bò Huế, mì Quảng.</li><li><strong>Miền Nam:</strong> Phóng khoáng, ngọt nhẹ với hủ tiếu, bánh xèo.</li></ul>",
+            "view_count": 37,
+            "created_on": "2025-04-15T10:00:00",
+            "last_modified_on": "2025-04-19T09:15:00"
+        }
+    ],
+    "all": [
+        {
+            "blog_id": "EBLG007",
+            "title": "Khám phá văn hóa Đông Nam Á",
+            "thumbnail_image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1744303746/jwcct4y9sumoifojrexg.png",
+            "blog_author": "Nguyễn Văn A",
+            "meta_description": "Bài viết giới thiệu về các nét đẹp văn hóa đặc trưng của các quốc gia Đông Nam Á.",
+            "visible": true,
+            "content": "<h2>Văn hóa Đông Nam Á</h2><p>Khu vực Đông Nam Á bao gồm nhiều quốc gia như Việt Nam, Thái Lan, Indonesia... mỗi nơi mang một nét văn hóa đặc sắc riêng biệt.</p><img src='https://res.cloudinary.com/dgqolusci/image/upload/v1744303746/jwcct4y9sumoifojrexg.pngpg' alt='Đông Nam Á' style='width:100%;'/><ul><li>Việt Nam: Tết Nguyên Đán, Áo dài</li><li>Thái Lan: Lễ hội té nước Songkran</li><li>Indonesia: Nghệ thuật Batik</li></ul>",
+            "view_count": 152,
+            "created_on": "2025-04-20T08:30:00",
+            "last_modified_on": "2025-04-20T08:30:00"
+        },
+        {
+            "blog_id": "EBLG006",
+            "title": "Lễ hội truyền thống Việt Nam",
+            "thumbnail_image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1744303746/jwcct4y9sumoifojrexg.png",
+            "blog_author": "Trần Thị B",
+            "meta_description": "Tổng hợp những lễ hội đặc sắc ở Việt Nam mang đậm bản sắc dân tộc.",
+            "visible": true,
+            "content": "<h2>Lễ hội Việt Nam</h2><p>Việt Nam nổi tiếng với hàng loạt lễ hội dân gian truyền thống như:</p><ol><li>Lễ hội đền Hùng</li><li>Lễ hội chọi trâu Đồ Sơn</li><li>Lễ hội Gióng</li></ol><p>Mỗi lễ hội đều mang đậm tinh thần cộng đồng và bản sắc dân tộc.</p>",
+            "view_count": 89,
+            "created_on": "2025-04-18T14:45:00",
+            "last_modified_on": "2025-04-18T14:45:00"
+        },
+        {
+            "blog_id": "EBLG005",
+            "title": "Ẩm thực ba miền Bắc Trung Nam",
+            "thumbnail_image_url": "https://res.cloudinary.com/dgqolusci/image/upload/v1744303746/jwcct4y9sumoifojrexg.png",
+            "blog_author": "Lê Văn C",
+            "meta_description": "Khám phá hương vị độc đáo của ẩm thực Việt Nam qua ba miền đất nước.",
+            "visible": false,
+            "content": "<h2>Ẩm thực Việt Nam</h2><p>Ẩm thực Việt chia làm 3 miền với đặc trưng riêng:</p><ul><li><strong>Miền Bắc:</strong> Vị thanh nhẹ, nhiều món nước như phở, bún thang.</li><li><strong>Miền Trung:</strong> Đậm đà, cay nồng như bún bò Huế, mì Quảng.</li><li><strong>Miền Nam:</strong> Phóng khoáng, ngọt nhẹ với hủ tiếu, bánh xèo.</li></ul>",
+            "view_count": 37,
+            "created_on": "2025-04-15T10:00:00",
+            "last_modified_on": "2025-04-19T09:15:00"
+        }
+    ]
+}

@@ -1,0 +1,232 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+.etnews-page{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.et-news-section{
+    width: 70%;
+}
+
+.et-news-highlight{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 0;
+}
+
+.highlight-title{
+    margin: 3vw 0;
+    font-size: 2em;
+     font-weight: 900;
+    background: linear-gradient(0deg, #47A8B4 0%, #5D3E91 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.highlight-news{
+    width: 100%;
+    height: 28em;
+    display: flex;
+    gap: 2vw;
+}
+
+#highlight-news-1{
+    width: 45%;
+}
+
+#highlight-news-1 .vertical-news{
+    width: 100%;
+}
+
+#highlight-news-1 .vertical-news-title{
+    width: 100%;
+    margin: 1vw 0;
+    font-size: 1.5vw;
+    line-height: 2vw;
+}
+
+#highlight-news-1 .vertical-news-img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    margin: 0;
+}
+
+
+#highlight-news-1 .vertical-news-content{
+    font-size: 1vw;
+    line-height: 1.5vw;
+}
+
+#highlight-news-2{
+    width: 55%;
+}
+
+#highlight-news-2 .horizontal-news{
+    width: 100%;
+    gap: 1vw;
+}
+
+#highlight-news-2 .horizontal-news-img-container{
+    width: 30%;
+    margin: 0;
+}
+
+#highlight-news-2 .horizontal-news-img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+#highlight-news-2 .horizontal-news-container{
+    width: 70%;
+}
+
+#highlight-news-2 .horizontal-news-title{
+    width: 100%;
+    font-size: 1.2vw;
+}
+
+#highlight-news-2 .horizontal-news-content{
+    width: 100%;
+    font-size: 0.7vw;
+    line-height: 1vw;
+}
+
+.et-news-categories{
+    width: 100%;
+    height: auto;
+}
+
+.et-news-slider .slick-list{
+    width: 100%;
+    margin: 5vw 0;
+}
+
+@media(max-width: 739px) {
+    .et-news-section{
+        width: 95%;
+    }
+    .highlight-news{
+        height: 23rem;
+        flex-direction: column;
+    }
+    #highlight-news-1{
+        width: 100%;
+        height: 100%;
+        .vertical-news-title{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .vertical-news-content, .vertical-news-time{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    }
+    #highlight-news-2{
+        display: none;
+    }
+
+    .vertical-news{
+        width: 100%;
+        min-height: 26em;
+        .vertical-news-title{
+            width: 90%;
+            margin-left: 0.2em;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .vertical-news-content{
+            width: 90%;
+            margin-left: 0.2em;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    }
+
+    .category-title-icon{
+        display: none;
+    }
+
+    .category-title{
+        font-size: 18px!important;
+        margin-left: 0;
+    }
+    
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .et-news-section{
+        width: 95%;
+    }
+    .highlight-news{
+        height: 20rem;
+    }
+    #highlight-news-1{
+        width: 50%;
+        height: 100%;
+        .vertical-news-title{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .vertical-news-img-container{
+            width: 100%;
+        }
+        .vertical-news-content, .vertical-news-time{
+            width: 100%;
+            font-size: 8px;
+            line-height: 1.5;
+        }
+    }
+
+    #highlight-news-2{
+        .horizontal-news{
+            height: auto;
+        }
+        .horizontal-news-title{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .horizontal-news-img-container{
+            width: 25%;
+        }
+        .horizontal-news-content, .horizontal-news-time{
+            width: 100%;
+            font-size: 8px;
+            line-height: 1.5;
+        }
+    }
+
+
+}
+
+@media (min-width: 1024px){
+    .highlight-news{
+        height: 35rem;
+    }
+
+    #highlight-news-1{
+        width: 50%;
+        height: 100%;
+        .vertical-news-title{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .vertical-news-img-container{
+            width: 100%;
+        }
+        .vertical-news-content, .vertical-news-time{
+            width: 100%;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    }
+}
