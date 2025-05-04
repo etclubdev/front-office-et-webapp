@@ -11,18 +11,21 @@
 }
 
 .et-news-section{
-    width: 70%;
+    width: 100%;
+    padding: 2vw 10vw;
+    box-sizing: border-box;
 }
 
 .et-news-highlight{
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 3vw 0;
+    box-sizing: border-box;
+    padding-bottom: 5vw;
 }
 
 .highlight-title{
-    margin: 3vw 0;
+    margin: 5vw 0;
     font-size: 2em;
      font-weight: 900;
     background: linear-gradient(0deg, #47A8B4 0%, #5D3E91 100%);
@@ -81,7 +84,7 @@
 }
 
 #highlight-news-2 .horizontal-news-img{
-    width: 100%;
+    width: 85%;
     height: auto;
     aspect-ratio: 1/1;
 }
