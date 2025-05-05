@@ -97,7 +97,7 @@
 
 @media(max-width: 739px) {
     .hr-structure-page{
-        padding: 70px 0;
+        padding-top: 70px;
     }
     .hr-structure-name.title{
         font-size: 20px;

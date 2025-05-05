@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import { useEffect } from 'react'
 import { HomePage } from './pages/HomePage';
 import  TetCountDownTimerPage  from './pages/EventPages/TetCountDownTimerPage/TetCountDownTimerPage';
 import SearchPage from './pages/SearchPage';
@@ -10,6 +11,7 @@ import { ActivitiesPage } from './pages/ActivitiesPage';
 import { FAQsPage } from './pages/FAQsPage';
 import { IntroductionPage } from './pages/IntroductionPage';
 import { HRStructurePage } from './pages/HRStructurePage/HRStructurePage';
+import { ComingSoonPage } from './pages/ComingSoonPage';
 
 import { DynamicBlur } from './components/DynamicBlur';
 import { DynamicStars } from './components/DynamicStars';
@@ -27,6 +29,10 @@ function App() {
     matchPath("/activities/:id", location.pathname);
 
   const isNotDetailPosts = !isDetailPost;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="root-container">
@@ -48,6 +54,7 @@ function App() {
         <Route path="/introduction" element={<IntroductionPage />} />
         <Route path="/hr-structure" element={<HRStructurePage />} />
         <Route path="/" element={<HomePage />} />
+        <Route path="/collaborator-seeking" element={<ComingSoonPage />} />
       </Routes>
     </div>
   );
