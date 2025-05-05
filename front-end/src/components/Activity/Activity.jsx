@@ -1,12 +1,10 @@
 import { useEffect } from 'react';
 import './Activity.css';
+import { useNavigate } from 'react-router-dom';
 
 export const Activity = ({index, activity, ongoing}) => {
     const isVisible = activity.visible;
-
-    const handleClick = () => {
-        console.log(activity.activity_id);
-    }
+    const navigate = useNavigate();
 
     useEffect(() => {
         const highlightItem = document.querySelector(`#${activity.activity_id}`);
@@ -23,6 +21,10 @@ export const Activity = ({index, activity, ongoing}) => {
     }, [])
 
     if (!isVisible) return;
+
+    const handleClick = () => {
+        navigate(`/activities/${activity.activity_id}`);
+    }
 
     return (
         <div id={activity.activity_id} className="activity-container" onClick={handleClick}>

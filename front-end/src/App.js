@@ -23,7 +23,6 @@ function App() {
         <DynamicStars parentClassName="root-container"/>
         <DynamicBlur parentClassName="root-container"/>
         <Routes>  
-          <Route path="/" element={<TetCountDownTimerPage />} /> 
           <Route path="/search" element={<SearchPage />} /> 
           <Route path="/activities/:id" element={<PostDetailsPage />} /> 
           <Route path="/et-news/:id" element={<PostDetailsPage />} /> 

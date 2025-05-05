@@ -1,35 +1,37 @@
 import './SearchSuggestions.css';
-import { etNews } from '../../mocks/data';
-import { findSimilarEtNews, findTop3LatestNews } from '../../utils/findEtNews';
+import { getPostType } from "../../utils/getPostTypeUtil";
+import { useNavigate } from 'react-router-dom';
+import { trimText } from '../../utils/trimTextUtil';
 
-let searchData = [];
-searchData = etNews.etnews;
+export const SearchSuggestions = ({ searchData }) => {
 
-export const SearchSuggestions = ({ target }) => {
+    console.log(searchData);
     
-    if (target){
-        searchData = findSimilarEtNews(searchData, target);
+    const navigate = useNavigate();
+
+    const onClick = (to, id) => {
+        navigate(`${to}/${id}`);
     }
-    else{
-        searchData = findTop3LatestNews(searchData);
-    }
-    
+
     return (
         <div className="suggestions">
-            <p className='suggestions-text'>Bạn có thể sẽ quan tâm</p>
             {
-                searchData.map(item => (
-                    <div key={item.postId} className="suggestion">
-                        <p className='suggestion-type'>ET News</p>
-                        <div className='suggestion-post'>
-                            <img className='suggestion-img' src={require(`../../mocks${item.thumbnailImage}`)} alt="" />
-                            <div className="suggestion-content">
-                                <p className="suggestion-title">{item.title}</p>
-                                <p className="suggestion-desc">{item.shortDesc}</p>
+                searchData?.map(item => {
+                    const postType = getPostType(item.table);
+
+                    return (
+                        <div key={item[postType.id]} className="suggestion" onClick={() => onClick(postType.to, item[postType.id])}>
+                            <p className='suggestion-type'>{postType.type}</p>
+                            <div className='suggestion-post'>
+                                <img className='suggestion-img' src={item?.thumbnail_image_url} alt="" />
+                                <div className="suggestion-content">
+                                    <p className="suggestion-title">{item.title}</p>
+                                    <p className="suggestion-desc">{trimText("In a world where technology evolves faster than ever, businesses must adapt to stay competitive. Digital transformation is no longer optional—it's a necessity for survival and growth in the modern era.")}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))
+                    )
+                })
             }
         </div>
     )

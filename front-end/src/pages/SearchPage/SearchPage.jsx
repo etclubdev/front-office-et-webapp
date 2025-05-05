@@ -1,21 +1,42 @@
 import './SearchPage.css';
 import { SearchSuggestions } from '../../components/SearchSuggestions/SearchSuggestions';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 
 import { debounce } from 'lodash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
+import { searchAcrossTables } from '../../api/search.service';
+
 export const SearchPage = () => {
     const [target, setTarget] = useState("");
+    const [results, setResults] = useState([]);
 
-    // Debounced function để cập nhật target
     const debouncedSearch = useCallback(
         debounce((value) => {
             setTarget(value);
         }, 300), // 300ms debounce
         []
     );
+
+    const fetchData = useCallback(async () => {
+        if (!target) return;
+
+        try {
+            const response = await searchAcrossTables(target);
+            setResults(response.data); 
+            
+            console.log(response.data);
+            
+
+        } catch (err) {
+            console.error('Lỗi khi tìm kiếm:', err);
+        }
+    }, [target]);
+
+    useEffect(() => {
+        fetchData();
+    }, [target, fetchData]);
 
     const handleChange = (e) => {
         debouncedSearch(e.target.value);
@@ -36,7 +57,7 @@ export const SearchPage = () => {
                     />
                 </div>
                 <div className="horizontal-bar"></div>
-                <SearchSuggestions target={target} />
+                <SearchSuggestions searchData={results} />
             </div>
         </div>
     );
