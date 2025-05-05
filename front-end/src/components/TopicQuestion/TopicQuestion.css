@@ -36,3 +36,13 @@
     border-bottom: 0.1vw solid #1E285F;
     opacity: 0.29;
 }
+
+@media(max-width: 739px) {
+    .topic-question{
+        width: 90%;
+    }
+
+    .topic-title{
+        font-size: 14px;
+    }
+}
