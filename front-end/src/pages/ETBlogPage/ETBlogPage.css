@@ -18,6 +18,7 @@
 
 .et-blog-highlight{
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -107,6 +108,7 @@
 @media(max-width: 739px) {
     .et-blog-section{
         width: 95%;
+        padding-top: 50px;
     }
 
     .etblog-page .title{
@@ -114,7 +116,7 @@
     }
 
     .highlight-news{
-        height: 25rem;
+        height: auto;
         flex-direction: column;
     }
     #highlight-blog-1{

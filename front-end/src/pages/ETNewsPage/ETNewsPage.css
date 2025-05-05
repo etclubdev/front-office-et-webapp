@@ -36,7 +36,8 @@
 
 .highlight-news{
     width: 100%;
-    height: 28em;
+    min-height: 25em;
+    height: auto;
     display: flex;
     gap: 2vw;
 }
@@ -117,9 +118,10 @@
 @media(max-width: 739px) {
     .et-news-section{
         width: 95%;
+        padding-top: 50px;
     }
     .highlight-news{
-        height: 23rem;
+        height: auto !important;
         flex-direction: column;
     }
 
@@ -134,7 +136,7 @@
 
     #highlight-news-1{
         width: 100%;
-        height: 100%;
+        height: auto;
         box-sizing: border-box;
 
         .vertical-news-title{
@@ -152,7 +154,6 @@
 
     .vertical-news{
         width: 100%;
-        min-height: 26em;
         .vertical-news-title{
             width: 90%;
             margin-left: 0.2em;
