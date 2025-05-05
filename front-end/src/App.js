@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { HomePage } from './pages/HomePage';
-import TetCountDownTimerPage from './pages/EventPages/TetCountDownTimerPage/TetCountDownTimerPage';
+import  TetCountDownTimerPage  from './pages/EventPages/TetCountDownTimerPage/TetCountDownTimerPage';
+import SearchPage from './pages/SearchPage';
 import { PostDetailsPage } from './pages/PostDetailsPage';
 import { ETNewsPage } from './pages/ETNewsPage';
 import { ETBlogPage } from './pages/ETBlogPage';
@@ -36,6 +37,7 @@ function App() {
         </>
       }
       <Routes>
+        <Route path="/search" element={<SearchPage />} /> 
         <Route path="/activities/:id" element={<PostDetailsPage />} />
         <Route path="/et-news/:id" element={<PostDetailsPage />} />
         <Route path="/et-blog/:id" element={<PostDetailsPage />} />
