@@ -1,0 +1,117 @@
+{
+    "etnews": [
+        {
+            "postId": 1,
+            "title": "100 CA MỔ NÃO VÀ TỦY SỐNG BẰNG ROBOT AI DUY NHẤT TẠI VIỆT NAM",
+            "category": "Tin công nghệ Việt Nam",
+            "shortDesc": "Bệnh viện Đa khoa Tâm Anh TPHCM là đơn vị y tế duy nhất tại Việt Nam sở hữu và làm chủ công nghệ mổ não bằng Robot AI Modus V Synaptive.",
+            "content": "Bệnh viện Đa khoa Tâm Anh TPHCM là đơn vị y tế duy nhất tại Việt Nam sở hữu và làm chủ công nghệ mổ não bằng Robot AI Modus V Synaptive. Trên thế giới hiện chỉ có 14 nước sử dụng, phần lớn ở các quốc gia phát triển. Hiện tại, Robot AI hiện đại này được Bệnh viện Đa khoa Tâm Anh TPHCM ứng dụng trong điều trị 7 danh mục bệnh, bao gồm: u não trên lều, u não dưới lều, u trong não thất, u não đường giữa, u não nền sọ, u trong ống sống, xuất huyết não - não thất. Danh mục này sẽ tiếp tục được mở rộng trong thời gian tới. Chi phí thực hiện ca mổ não, tủy sống bằng Robot AI tại Bệnh viện Đa khoa Tâm Anh TPHCM thấp hơn khoảng 40 lần so với mổ tại Mỹ với cùng công nghệ và được thanh toán Bảo hiểm y tế. Hỗ trợ tích cực cho Robot AI trong khám, chẩn đoán u não, u tủy sống, đột quỵ xuất huyết não là những \"siêu máy\" hiện đại bậc nhất như: Hệ thống chụp MRI 3 Tesla, CT 768 và 1975 lát cắt ứng dụng AI hiện đại hàng đầu thế giới, đặc biệt hữu ích trong đánh giá rất nhanh và chính xác u não, u tủy sống, đột quỵ…",
+            "thumbnailImage": "/images/etnews/1.jpg",
+            "createdDate": "2024-12-30 18:00:00",
+            "updateDate": "2024-12-30 18:00:00",
+            "source": "Báo Điện tử Chính phủ",
+            "visible": 1,
+            "viewCount": 1000
+        },
+
+        {
+            "postId": 2,
+            "title": "TỪ 25/12, TÀI KHOẢN MẠNG XÃ HỘI PHẢI XÁC THỰC SỐ ĐIỆN THOẠI",
+            "category": "Tin chính phủ số",
+            "shortDesc": "Nghị định 147/2024/NĐ-CP về quản lý, cung cấp, sử dụng Internet và thông tin trên mạng đã được Chính phủ ban hành và chính thức có hiệu lực từ ngày 25/12/2024.",
+            "content": "",
+            "thumbnailImage": "/images/etnews/2.jpg",
+            "createdDate": "2024-12-30 18:00:00",
+            "updateDate": "2024-12-30 18:00:00",
+            "source": "Thời báo VTV - Đài Truyền Hình Việt Nam",
+            "visible": 1,
+            "viewCount": 1000
+        },
+
+        {
+            "postId": 3,
+            "title": "CHUYỂN GIAO CÔNG NGHỆ SẢN XUẤT THUỐC, VACCINE TẠI VIỆT NAM",
+            "category": "Tin công nghệ Việt Nam",
+            "shortDesc": "Ngày 25/12, Viện Chiến lược và Chính sách Y tế - Bộ Y tế đã tổ chức hội thảo đối thoại chính sách với chủ đề \"Thúc đẩy chuyển giao công nghệ sản xuất thuốc, vắc-xin tại Việt Nam: Kinh nghiệm quốc tế và đề xuất giải pháp\".",
+            "content": "",
+            "thumbnailImage": "/images/etnews/3.jpg",
+            "createdDate": "2024-12-30 18:00:00",
+            "updateDate": "2024-12-30 18:00:00",
+            "source": "Báo Điện tử Chính phủ",
+            "visible": 1,
+            "viewCount": 1000
+        },
+
+        {
+            "postId": 4,
+            "title": "AI TẠO NGHÌN BIẾN THỂ MÃ ĐỘC, 'TRỐN' PHÁT HIỆN",
+            "category": "Tin công nghệ Thế giới",
+            "shortDesc": "Nghiên cứu mới cho thấy các mô hình ngôn ngữ lớn (LLM) có thể tạo ra 10.000 biến thể phần mềm độc hại, tỷ lệ tránh phát hiện 88%.",
+            "content": "",
+            "thumbnailImage": "/images/etnews/4.jpg",
+            "createdDate": "2024-12-30 18:00:00",
+            "updateDate": "2024-12-30 18:00:00",
+            "source": "",
+            "visible": 1,
+            "viewCount": 1000
+        },
+
+        {
+            "postId": 5,
+            "title": "VNEID THÊM TÍNH NĂNG MUA THUỐC",
+            "category": "Tin công nghệ Việt Nam",
+            "shortDesc": "Từ giữa tháng 12, VNeID cho phép người dùng theo dõi lịch sử khám chữa bệnh và mua thuốc từ nhà thuốc FPT Long Châu thông qua Sổ sức khỏe điện tử.",
+            "content": "",
+            "thumbnailImage": "/images/etnews/5.jpg",
+            "createdDate": "2024-12-16 18:00:00",
+            "updateDate": "2024-12-16 18:00:00",
+            "source": "Báo VNExpress",
+            "visible": 1,
+            "viewCount": 1000
+        },
+
+        {
+            "postId": 6,
+            "title": "AI LẬP MƯU PHẢN KHÁNG",
+            "category": "Tin công nghệ Thế giới",
+            "shortDesc": "AI o1 của OpenAI, được công bố ngày 5/12 trong chiến dịch \"Shipmas\", là mô hình tiệm cận trí tuệ nhân tạo tổng quát (AGI) với khả năng tự lập luận và hình thành chuỗi suy nghĩ trước khi phản hồi, được CEO Sam Altman gọi là \"mô hình thông minh nhất thế giới\"",
+            "content": "",
+            "thumbnailImage": "/images/etnews/6.jpg",
+            "createdDate": "2024-12-16 18:00:00",
+            "updateDate": "2024-12-16 18:00:00",
+            "source": "Báo VNExpress",
+            "visible": 1,
+            "viewCount": 1000
+        },
+
+        {
+            "postId": 7,
+            "title": "CỤM CAMERA IPHONE 17 LỘ DIỆN",
+            "category": "Tin công nghệ Thế giới",
+            "shortDesc": "Hình ảnh rò rỉ ngày 8/6 từ nguồn tin Trung Quốc cho thấy iPhone 17 sẽ có cụm camera ngang, giống thiết kế Pixel 9",
+            "content": "",
+            "thumbnailImage": "/images/etnews/7.jpg",
+            "createdDate": "2024-12-16 18:00:00",
+            "updateDate": "2024-12-16 18:00:00",
+            "source": "Báo VNExpress",
+            "visible": 1,
+            "viewCount": 1000
+        },
+
+        {
+            "postId": 8,
+            "title": "GOOGLE RA GEMINI 2.0 TẠO NỘI DUNG ĐA PHƯƠNG THỨC",
+            "category": "Tin công nghệ Thế giới",
+            "shortDesc": "Ngày 11/12/2023, Google ra mắt Gemini 2.0, phiên bản nâng cấp của Gemini 1.5, với khả năng tạo nội dung đa phương thức như văn bản, giọng nói, hình ảnh và chuyển văn bản thành giọng nói.",
+            "content": "",
+            "thumbnailImage": "/images/etnews/8.jpg",
+            "createdDate": "2024-12-16 18:00:00",
+            "updateDate": "2024-12-16 18:00:00",
+            "source": "Báo VNExpress",
+            "visible": 1,
+            "viewCount": 1000
+        }
+
+        
+    ]
+}

@@ -1,8 +1,6 @@
 import './ActivitiesPage.css';
-import { activitiesData } from '../../mocks/data';
 import { Activity } from '../../components/Activity';
 import { ActivitiesSlider } from '../../components/ActivitiesSlider';
-import { filterActivitites } from '../../utils/filterActivities';
 import { useEffect, useState } from 'react';
 import { getAllActivities } from '../../api/activity.service';
 import { Navbar } from '../../components/Navbar';

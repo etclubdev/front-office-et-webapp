@@ -3,12 +3,13 @@ import { horizontalLogo } from '../../assets/images/logos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Navbar.css';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 
 export const Navbar = () => {
   const [scrollingDown, setScrollingDown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const isMobile = window.innerWidth <= 768;
 
@@ -25,9 +26,10 @@ export const Navbar = () => {
   }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const isNotHomepage = location.pathname !== '/';
 
   return (
-    <div className={`nav-section ${scrollingDown ? 'scrolled' : ''}`}>
+    <div className={`nav-section ${(scrollingDown || isNotHomepage) ? 'scrolled' : ''}`}>
       <Link to="/" className="nav-logo-container">
         <img src={horizontalLogo} alt="ET Club" className="nav-logo" />
       </Link>
@@ -71,6 +73,16 @@ const NavbarMenu = ({ isMobile, menuOpen }) => {
   };
   return (
     <div className={`nav-menu ${menuOpen ? 'show' : ''}`}>
+      {
+        isMobile && (
+          <Link to='/search' className="searchbar-group">
+            <div className="search-container">
+              <div className="search-icon"><FontAwesomeIcon icon={faSearch} /></div>
+              <div className="input-placeholder">Tìm kiếm</div>
+            </div>
+          </Link>
+        )
+      }
       <a
         className="nav-item dropbtn"
         onClick={() => isMobile && handleDropdownClick('about')}
@@ -106,12 +118,16 @@ const NavbarMenu = ({ isMobile, menuOpen }) => {
       <Link to='/collaborator-seeking' className="nav-item">
         <p className="nav-item-content">Tìm kiếm CTV</p>
       </Link>
-      <Link to='/search' className="searchbar-group">
-        <div className="search-container">
-          <div className="search-icon"><FontAwesomeIcon icon={faSearch} /></div>
-          <div className="input-placeholder">Tìm kiếm</div>
-        </div>
-      </Link>
+      {
+        !isMobile && (
+          <Link to='/search' className="searchbar-group">
+            <div className="search-container">
+              <div className="search-icon"><FontAwesomeIcon icon={faSearch} /></div>
+              <div className="input-placeholder">Tìm kiếm</div>
+            </div>
+          </Link>
+        )
+      }
     </div>
   )
 }

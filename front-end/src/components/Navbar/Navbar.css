@@ -131,7 +131,7 @@
     flex-direction: column;
 }
 
-.searchbar-group {
+.nav-section .searchbar-group {
     display: flex;
     align-items: center;
     width: 12vw;
@@ -152,7 +152,7 @@
     font-weight: 600;
 }
 
-.search-container {
+.nav-section .search-container {
     display: flex;
     flex-direction: row;
     justify-content: center;

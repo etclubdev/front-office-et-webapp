@@ -1,21 +1,10 @@
-.details-page{
-    width: 100vw;
-}
-
-@media(max-width: 739px) {
-    .details-page{
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.details-page h1 { font-size: clamp(20px, 4vw, 32px); } /* Tối thiểu 20px, tối đa 32px */
-.details-page h2 { font-size: clamp(18px, 3.5vw, 28px); }
-.details-page h3 { font-size: clamp(16px, 3vw, 24px); }
-.details-page h4 { font-size: clamp(14px, 2.5vw, 20px); }
-.details-page h5 { font-size: clamp(12px, 2vw, 18px); }
-.details-page h6 { font-size: clamp(10px, 1.5vw, 14px); }
-.details-page p { font-size: clamp(14px, 2vw, 18px); line-height: 1.6;}
+.details-post h1 { font-size: clamp(20px, 4vw, 32px); } /* Tối thiểu 20px, tối đa 32px */
+.details-post h2 { font-size: clamp(18px, 3.5vw, 28px); }
+.details-post h3 { font-size: clamp(16px, 3vw, 24px); }
+.details-post h4 { font-size: clamp(14px, 2.5vw, 20px); }
+.details-post h5 { font-size: clamp(12px, 2vw, 18px); }
+.details-post h6 { font-size: clamp(10px, 1.5vw, 14px); }
+.details-post p { font-size: clamp(14px, 2vw, 18px); line-height: 1.6;}
 
 .details-post {
     padding: 8vw 12vw 8vw 15vw; 
@@ -30,8 +19,7 @@
 }
 
 .details-container {
-    width: 95%; 
-    padding: 0 5%; 
+    width: 100%; 
     text-align: left;
 }
 
@@ -77,7 +65,6 @@
     .details-post{
         width: 100%;
         justify-content: center;
-        padding: 5% 0;
     }
     .details-container {
         width: 100%; 
@@ -90,7 +77,6 @@
 @media (min-width: 740px) and (max-width: 1023px) {
     .details-post{
         width: 100%;
-        padding: 5% 6% 5% 2%;
     }
     .details-container {
         width: 100%; 
@@ -103,8 +89,7 @@
         width: 100%;
     }
     .details-container {
-        width: 70%; 
-        padding: 0 5% 0 2%;
+        width: 100%; 
     }
 }
 
