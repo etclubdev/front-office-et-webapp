@@ -1,0 +1,17 @@
+.coming-soon-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon-section img{
+    width: 35%;
+}
+
+@media(max-width: 739px){
+    .coming-soon-section img{
+        width: 80%;
+    }
+}

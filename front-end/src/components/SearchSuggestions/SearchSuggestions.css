@@ -47,7 +47,7 @@
 }
 
 .suggestion-content{
-    width: 80%;
+    width: 70%;
     color: #fff;
 }
 
@@ -60,4 +60,34 @@
     font-size: 1vw;
     line-height: 1.5;
     text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .suggestion-type{
+        font-size: 10px;
+        font-weight: 500;
+    }
+    
+    .suggestion-post{
+        min-height: 70px;
+    }
+    
+    
+    .suggestion-img{
+        height: 80px;
+        aspect-ratio: 1/1;
+        box-sizing: border-box;
+        margin-right: 10px;
+        object-fit: cover;
+        justify-content: center;
+    }
+    
+    .suggestion-title {
+        font-size: 10px
+    }
+    
+    .suggestion-desc {
+        font-size: 8px;
+        line-height: 1.5;
+    }
 }

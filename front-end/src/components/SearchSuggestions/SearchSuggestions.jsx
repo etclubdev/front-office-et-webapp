@@ -5,8 +5,6 @@ import { trimText } from '../../utils/trimTextUtil';
 
 export const SearchSuggestions = ({ searchData }) => {
 
-    console.log(searchData);
-    
     const navigate = useNavigate();
 
     const onClick = (to, id) => {
@@ -26,7 +24,7 @@ export const SearchSuggestions = ({ searchData }) => {
                                 <img className='suggestion-img' src={item?.thumbnail_image_url} alt="" />
                                 <div className="suggestion-content">
                                     <p className="suggestion-title">{item.title}</p>
-                                    <p className="suggestion-desc">{trimText("In a world where technology evolves faster than ever, businesses must adapt to stay competitive. Digital transformation is no longer optional—it's a necessity for survival and growth in the modern era.")}</p>
+                                    <p className="suggestion-desc">{trimText(item.meta_description, 100)}</p>
                                 </div>
                             </div>
                         </div>

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import AnimatedNumber from './AnimatedNumber';
 import { Available } from '../Available';
 import { STATISTICS_TITLE } from '../../constants';
+import { PageTitle } from '../../components/PageTitle';
 
 export const Statistics = ({ statistics }) => {
 
@@ -29,7 +30,7 @@ export const Statistics = ({ statistics }) => {
         <div className="statistics-section">
             <div className="division-bar"></div>
             <Available when={isVisible} parentClassName={'statistics-section'}>
-                <h1 id="statistics-item-title" className="statistics-section-title">{STATISTICS_TITLE}</h1>
+                <PageTitle>{STATISTICS_TITLE}</PageTitle>
                 <div className="statistics-section-items">
                     {statistics.map((item) => (
                         <div key={item.achievement_id} className="statistics-section-item">

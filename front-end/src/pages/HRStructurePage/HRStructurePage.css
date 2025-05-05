@@ -93,3 +93,40 @@
     animation: expand-contract 4s infinite ease-in-out;
 }
 
+
+
+@media(max-width: 739px) {
+    .hr-structure-page{
+        padding-top: 70px;
+    }
+    .hr-structure-name.title{
+        font-size: 20px;
+    }
+
+    .hr-structure-branch{
+        flex-direction: column;
+    }
+
+    .hr-structure-branch.odd{
+        flex-direction: column-reverse;
+    }
+
+    .hr-structure-img{
+        width: 100%;
+    }
+
+    .hr-structure-name{
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .hr-structure-content{
+        width: 100%;
+    }
+
+    .hr-structure-desc{
+        font-size: 12px;
+        line-height: 1.5;
+        width: 100%;
+    }
+}

@@ -76,3 +76,54 @@
     width: 10vw;
     height: 10vw;
 }
+
+@media screen and (max-width: 768px) {
+    .search-section .search-container{
+        width: 100%;
+        padding: 5vw;
+    }
+
+    .search-section .search-close{
+        height: 10vw;  
+    }
+    
+    .search-section .close-btn{
+        width: 7vw;  
+        height: 7vw; 
+    }
+
+    .search-section .vertical-bar{
+        width: 1px;
+        height: 25px;
+        background: #178DE2;
+        margin-right: 2vw;
+    }
+    
+    .search-section .horizontal-bar{
+        width: 100%;
+        height: 0.5px;
+        background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
+        margin-top: 2vw;
+        opacity: 0.5;
+    }
+    
+    .search-section .search-input input{
+        font-family: "Montserrat";
+        width: 98%;
+        height: 22px;
+        border: none;
+        background-color: transparent;
+        font-size: 14px;
+        outline: none;
+        color: #4696E3;
+    }
+    
+    .search-section .search-input input::placeholder{
+        font-family: "Montserrat";
+        color: #4696E3;
+        font-style: italic;
+        text-shadow: none;
+        font-size: 12px;
+    }
+    
+}

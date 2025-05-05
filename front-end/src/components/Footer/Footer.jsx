@@ -59,7 +59,7 @@ export const Footer = () => {
             </div>
             <div className="footer-bottom">
                 <div className="footer-division-bar"></div>
-                <p>ETClub 2024 – Pioneering Progress.</p>
+                <p>Developed by Techical Department | ET Club</p>
             </div>
         </div>
     )

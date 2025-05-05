@@ -12,6 +12,8 @@ import toogleIcon from '../../mocks/images/activities/toogleIcon.png';
 export const ActivitiesSlider = ({activities, category, categoryId}) => {
     const [isSliderVisible, setSliderVisible] = useState(true);
     
+    const isMobile = window.innerWidth <= 768;
+
     const settings = {
         dots: false,
         infinite: true,
@@ -27,7 +29,7 @@ export const ActivitiesSlider = ({activities, category, categoryId}) => {
         responsive: [
             { breakpoint: 1200, settings: { slidesToShow: 2.5, slidesToScroll: 1 } },
             { breakpoint: 768, settings: { slidesToShow: 2.5, slidesToScroll: 1 } },
-            { breakpoint: 480, settings: { slidesToShow: 2.5, slidesToScroll: 1 } }
+            { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1, centerPadding: "3vw", arrows: false } }
         ]
     };
 
@@ -63,7 +65,7 @@ export const ActivitiesSlider = ({activities, category, categoryId}) => {
                 unmountOnExit 
             >
                 {
-                    activities?.length > 2 ? (
+                    isMobile || activities?.length > 2 ? (
                         <Slider {...settings}>
                             {activities?.map((item) => (
                                     <Activity key={item.activity_id} activity={item}/>

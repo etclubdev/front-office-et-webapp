@@ -174,3 +174,92 @@
     top: 180vh;
     right: -40vw;
  }
+
+ @media(max-width: 739px) {
+
+    .introduction-items{
+        width: 90%;
+    }
+
+    .introduction-items .introduction-title{
+        font-size: 30px;
+    }
+
+    .introduction-items .introduction-container{
+        flex-direction: column;
+        gap: 20px
+    }
+
+    .introduction-items .introduction-img{
+        width: 70%;
+        height: 70%;
+    }
+
+    .introduction-items .introduction-desc{
+        width: 80%;
+         font-size: 12px;
+         line-height: 1.5;
+        padding: 0;
+    }
+
+    #introduction-history{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .introduction-history-tree{
+        margin-top: 40px;
+    }
+
+    #introduction-history .introduction-title{
+        text-align: center;
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .tree-trunk{
+        width: 30px;
+    }
+
+    .branch-title{
+        font-size: 2vw;
+         font-weight: 900;
+        background: linear-gradient(60deg, #4696E3 0.01%, #55B3E9 55.17%, #2e8f84 99.99%, #3ab2a4);
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+     }
+     
+     .branch-content{
+        width: 90px;
+        color: #0F4081;
+         font-size: 9px;
+     }
+    
+     .left-tree .branch-content{
+        left: 10px;
+     }
+    
+     .right-tree .branch-content{
+        right: 10px;
+     }
+    
+     .branch-title{
+        width: 120px;
+        font-size: 18px;
+        top: -40px;
+     }
+    
+     .branch-tree{
+        width: 150px;
+    }
+
+    .left-tree .branch-container{
+         top: 2vw;
+         right: -15px;
+     }
+    
+     .right-tree .branch-container{
+         right: 15px;
+     }
+}
