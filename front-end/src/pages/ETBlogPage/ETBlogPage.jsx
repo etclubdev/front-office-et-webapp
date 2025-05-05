@@ -14,8 +14,6 @@ export const ETBlogPage = () => {
         const fetchData = async () => {
             const { data } = await getAllBlogs();
             setNews(data);
-            console.log(data);
-            
         }
         fetchData();
     }, [])
@@ -24,10 +22,9 @@ export const ETBlogPage = () => {
     return (
         <div className="etblog-page">
             <Navbar />
-            <div className="title">WELCOME TO ET BLOG</div>
             <div className="et-blog-section">
                 <div className="et-blog-highlight">
-                    <div className="highlight-title">Nổi bật</div>
+                    <div className="highlight-title">ET BLOG</div>
                     <div className="highlight-news">
                         <div id="highlight-blog-1">
                             <VerticalNews news={news?.highlighted?.[0]} />
@@ -49,6 +46,7 @@ export const ETBlogPage = () => {
                         newsList={news?.all}
                         title="Tin mới nhất"
                         categoryid={`blog-list`}
+                        isETNews={false}
                     />  
                 </div>             
             </div>

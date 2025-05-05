@@ -14,8 +14,6 @@ export const ETNewsPage = () => {
         const fetchData = async () => {
             const { data } = await getAllNews();
             setNews(data);
-            console.log(data);
-            
         }
         fetchData();
     }, [])
@@ -26,7 +24,7 @@ export const ETNewsPage = () => {
             <Navbar />
             <div className="et-news-section">
                 <div className="et-news-highlight">
-                    <div className="highlight-title">Nổi bật</div>
+                    <div className="highlight-title">ET NEWS</div>
                     <div className="highlight-news">
                         <div id="highlight-news-1">
                             <VerticalNews isETNews news={news?.latestNews?.[0]} />
