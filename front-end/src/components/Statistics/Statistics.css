@@ -106,3 +106,39 @@
     background: linear-gradient(#3493C8 44.83%, #6AB8E0 68.38%);
     border-radius: 2px;
 }
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {
+    .statistics-section-items{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .statistics-section-item{
+        width: 70%;
+    }
+    
+    .statistics-section-item-desc {  
+        font-size: 20px;  
+        margin-top: 5px;  
+    }  
+    
+    .animated-number {  
+        font-size: 50px; 
+        margin-top: 30px;
+    }  
+    
+    .division-bar {
+        width: 50%; 
+        height: 1px;
+        margin: 2vh 0;
+        background: linear-gradient(#3493C8 44.83%, #6AB8E0 68.38%);
+        border-radius: 2px;
+        margin-bottom: 20px;
+    }
+
+}

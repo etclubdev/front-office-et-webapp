@@ -30,18 +30,8 @@ export const AboutUsSection = ({ myRef }) => {
 
     return (
         <div className={'aboutus-section'} ref={myRef}>
-            <Available when={isVisible}>
                 <div className="about-us-title">{DEPARTMENT_TITLE}</div>
                 <div className="bio">
-                    {/* <div id='detail-item-1' className="bio-detail">
-                        <p className='detail-desc'>{bioItem[0].content}</p>
-                        <p className='background-overlay'></p>
-                        <img className='detail-img' src={require(`../../mocks${bioItem[0].image}`)} alt="ET Club" />
-                    </div>
-                    <div className="bio-logo">
-                        <img src={verticalLogo} alt="ET Club" />
-                        <p className="content">{DEPARTMENT_TITLE}</p>
-                    </div> */}
                     <div className="bio-logo">
                         <img src={verticalLogo} alt="ET Club" />
                     </div>
@@ -54,7 +44,6 @@ export const AboutUsSection = ({ myRef }) => {
                         <img className='detail-img' src={require(`../../mocks${bioItem[1].image}`)} alt="ET Club" />
                     </div>
                 </div>
-            </Available >
         </div >
     )
 }

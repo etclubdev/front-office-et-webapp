@@ -1,12 +1,11 @@
 import './ActivitiesPage.css';
-import { activitiesData } from '../../mocks/data';
 import { Activity } from '../../components/Activity';
 import { ActivitiesSlider } from '../../components/ActivitiesSlider';
-import { filterActivitites } from '../../utils/filterActivities';
 import { useEffect, useState } from 'react';
 import { getAllActivities } from '../../api/activity.service';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
+import { PageTitle } from '../../components/PageTitle';
 
 export const ActivitiesPage = () => {
     const [activities, setActivities] = useState([]);
@@ -15,6 +14,9 @@ export const ActivitiesPage = () => {
         const fetchData = async () => {
             const { data } = await getAllActivities();
             setActivities(data);
+
+            console.log(data);
+            
         }
         fetchData();
     }, []);
@@ -25,7 +27,7 @@ export const ActivitiesPage = () => {
             {
                 activities?.ongoing?.length > 0 ? (
                     <div className="ongoing-activities-container">
-                        <p className="activities-title">CHƯƠNG TRÌNH ĐANG DIỄN RA</p>
+                        <PageTitle>CHƯƠNG TRÌNH ĐANG DIỄN RA</PageTitle>
                         <div className="ongoing-activities">
                             {
                                 activities?.ongoing?.map((item, index) => {
@@ -41,11 +43,13 @@ export const ActivitiesPage = () => {
             }
 
 
+                <PageTitle>CHƯƠNG TRÌNH ĐÃ DIỄN RA</PageTitle>
             <div className="completed-activities-container">
-                <p className="activities-title">CHƯƠNG TRÌNH ĐÃ DIỄN RA</p>
                 <div className="completed-activities">
                     {
                         Object.entries(activities?.completed || {}).map(([category, activities], index) => {
+                            if (activities.length === 0) return;
+                            
                             return (
                                 <ActivitiesSlider 
                                     key={`activities-list-${index}`}

@@ -6,7 +6,7 @@ import minusIcon from '../../mocks/images/FAQs/minus.png';
 
 
 export const Question = ({ item }) => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     const [toggleIcon, setIcon] = useState(minusIcon);
 
     const questionRef = useRef(null);

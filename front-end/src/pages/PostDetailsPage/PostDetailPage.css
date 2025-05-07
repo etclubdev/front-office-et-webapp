@@ -1,0 +1,16 @@
+.details-page{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+@media(max-width: 739px) {
+    .details-page{
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+}

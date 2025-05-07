@@ -1,7 +1,6 @@
-.activities-page{
-    padding-top: 4vw;
+.activities-page {
+    padding-top: 3vw;
     width: 100vw;
-    min-height: 200vh;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -12,24 +11,26 @@
     z-index: 100;
 }
 
-.activities-slider{
+.activities-slider {
     width: 80vw;
     margin-bottom: 5vw;
 }
 
-.ongoing-activities-container{
+.ongoing-activities-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 80%;
 }
 
-.ongoing-activities{
+.ongoing-activities {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4vw
+    gap: 4vw;
+    width: 80%;
+
 }
 
 .ongoing-activities img {
@@ -37,23 +38,24 @@
     height: auto;
 }
 
-.ongoing-activities .activity-container.highlight-1{
+.ongoing-activities .activity-container.highlight-1 {
     width: 65%;
 }
 
-.ongoing-activities .activity-container.highlight-1 img{
+.ongoing-activities .activity-container.highlight-1 img {
     width: 100%;
+    max-height: 30vw;
 }
 
-.ongoing-activities .activity-container.highlight-2{
+.ongoing-activities .activity-container.highlight-2 {
     flex: 1;
 }
 
-.ongoing-activities .activity-container.highlight-2 img{
+.ongoing-activities .activity-container.highlight-2 img {
     width: 100%;
 }
 
-.ongoing-activities .activity-container.highlight-1 .activity-name{
+.ongoing-activities .activity-container.highlight-1 .activity-name {
     font-size: 1.8vw;
     line-height: 2.2vw;
     text-align: left;
@@ -61,7 +63,7 @@
     width: 100%;
 }
 
-.ongoing-activities .activity-container.highlight-2 .activity-name{
+.ongoing-activities .activity-container.highlight-2 .activity-name {
     font-size: 1.2vw;
     line-height: 1.5vw;
     text-align: left;
@@ -69,52 +71,101 @@
 }
 
 .ongoing-activities .activity-container.highlight-2 .activities-desc,
-.ongoing-activities .activity-container.highlight-1 .activities-desc{
+.ongoing-activities .activity-container.highlight-1 .activities-desc {
     font-size: 1vw
 }
 
-.completed-activities-container{
+.completed-activities-container {
     width: 70%;
 }
 
-.completed-activities-container .activity-name{
+.completed-activities-container .activity-name {
     width: 22vw;
 }
 
 
-.completed-activities-container .activities-slider{
+.completed-activities-container .activities-slider {
     width: 100%;
 }
 
-.completed-activities .activity-container img{
+.completed-activities .activity-container img {
     width: 22vw;
     height: 22vw;
     object-fit: cover;
 }
 
-.activities-page-division-bar{
+.activities-page-division-bar {
     width: 15vw;
     height: 0.1vw;
     background-color: #536EA1;
     margin: 3vw 0 5vw 0
 }
 
-.activities-title{
-    font-size: 2.5vw;
-    line-height: 5vw;
-    text-align: center;
-    font-weight: 900;
-    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.activities-page .page-title {
+    padding: 5vw 0;
 }
 
 
-  
+
 .blur-circle {
     position: absolute;
     border-radius: 50%;
     transition: all 1s ease-in-out;
-  }
+}
 
+@media(max-width: 480px) {
+    .ongoing-activities{
+        flex-direction: column;
+    }
+
+    .activities-page {
+        padding-top: 50px;
+    }
+
+    .activities-page .page-title {
+        font-size: 18px;
+        width: 100vw;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .activities-slider {
+        width: 90%;
+        margin-top: 5vw;
+    }
+
+    .activity-container{
+        width: 250px !important;
+    }
+
+    .ongoing-activities .activity-container.highlight-1 .activity-image,
+    .ongoing-activities .activity-container.highlight-2 .activity-image{
+        max-width: 250px;
+        height: 250px;
+        width: 250px;
+        aspect-ratio: 1/1;
+    }
+
+    .completed-activities .activity-container img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .activities-slider-title{
+        font-size: 14px !important;
+    }
+
+    .activity-name{
+        width: 100% !important;
+        font-size: 12px !important;
+    }
+
+    .activity-desc{
+        font-size: 10px !important;
+    }
+}
