@@ -3,6 +3,7 @@ import './Partners.css';
 import { SliderArrow } from "../SliderArrow";
 import { COMPANION_CONTENT, PARTNERS_CONTENT } from '../../constants';
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { PageTitle } from "../PageTitle";
 
 export const Partners = ({ partners, companions }) => {
 
@@ -21,13 +22,13 @@ export const Partners = ({ partners, companions }) => {
         responsive: [
             { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } },
             { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } },
-            { breakpoint: 480, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } }
+            { breakpoint: 480, settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: true } }
         ]
     };
 
     return (
         <div className="partners-section">
-            <div className="partners-title">{PARTNERS_CONTENT.title}</div>
+            <PageTitle>{PARTNERS_CONTENT.title}</PageTitle>
             <div>
                 <Slider {...settings}>
                     {partners.map(partner => {
@@ -43,7 +44,7 @@ export const Partners = ({ partners, companions }) => {
                     })}
                 </Slider>
             </div>
-            <div className="companions-title">{COMPANION_CONTENT.title}</div>
+            <PageTitle>{COMPANION_CONTENT.title}</PageTitle>
             <div>
                 <Slider {...settings}>
                     {companions.map(companion => {

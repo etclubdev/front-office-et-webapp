@@ -4,7 +4,7 @@ import { FAQ_TITLE } from '../../constants.js';
 import { CSSTransition } from 'react-transition-group';
 import plusIcon from '../../mocks/images/FAQs/plus.png';
 import minusIcon from '../../mocks/images/FAQs/minus.png';
-
+import { PageTitle } from '../PageTitle/PageTitle.jsx';
 
 export const FAQ = ({ questions }) => {
 
@@ -17,7 +17,7 @@ export const FAQ = ({ questions }) => {
     return (
         <div className="FAQ-section">
             <div className="division-bar"></div>
-            <h2 className="FAQ-title">{FAQ_TITLE}</h2>
+            <PageTitle>{FAQ_TITLE}</PageTitle>
             <div className="FAQ-items">
                 {questions.map(question => (
                     <div key={question.faq_id} className="FAQ-item">

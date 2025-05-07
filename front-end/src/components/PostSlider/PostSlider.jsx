@@ -28,7 +28,7 @@ const settings = {
 
 export const PostSlider = ({ newsList, categoryid="id", title, isETNews }) => {
     const [isSliderVisible, setSliderVisible] = useState(true);
-    
+
     const toggleSlider = () => {
         setSliderVisible(!isSliderVisible);
         const toogleIcon = document.querySelector(`#${categoryid}-icon`);
@@ -61,7 +61,7 @@ export const PostSlider = ({ newsList, categoryid="id", title, isETNews }) => {
             >
                 <Slider {...settings}>
                     {newsList?.map((item, index) => (
-                        <VerticalNews key={'vertical-news-' + index} news={item} />
+                        <VerticalNews key={'vertical-news-' + index} news={item} isETNews={isETNews} />
                     ))}
                 </Slider>
             </CSSTransition>

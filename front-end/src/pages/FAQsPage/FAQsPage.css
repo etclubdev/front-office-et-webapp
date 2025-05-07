@@ -7,4 +7,12 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    background: linear-gradient(180deg, rgb(225, 246, 255) 0.1%, #AEE8FF 107.38%);
 }
+
+@media(max-width: 739px) {
+    .faqs-page{
+        padding-top: 18vw;
+    }
+}
+

@@ -78,3 +78,34 @@
     max-height: 0;
     opacity: 0;
 }
+
+@media(max-width: 739px) {
+    .question{
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    .question-content{
+        font-size: 10px;
+    }
+
+    .question-button{
+        width: 12px;
+    }
+
+    .answer{
+        width: 90%;
+        height: auto;
+        margin: 2vw;
+        padding-left: 2vw;
+        border-left: 0.2vw solid rgba(89, 191, 231, 0.62);
+    }
+    
+    .answer-content{
+        margin: 0;
+        font-size: 10px;
+        line-height: 1.5;
+        opacity: 0.9;
+        white-space: pre-line;
+    }
+}
