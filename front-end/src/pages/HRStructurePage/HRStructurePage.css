@@ -1,5 +1,6 @@
 .hr-structure-page{
     width: 100vw;
+    min-height: 100vh;
     padding-top: 5vw;
     background: linear-gradient(180deg, #FDFDFD 0.1%, #AEE8FF 107.38%);
     box-sizing: border-box;
@@ -72,7 +73,7 @@
     width: 29vw;
     font-size: 1.2vw;
     color: #234e77;
-     line-height: 2vw;
+     line-height: 1.5;
      text-align: justify;
 }
 

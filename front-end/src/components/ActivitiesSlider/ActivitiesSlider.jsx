@@ -9,29 +9,29 @@ import { CSSTransition } from 'react-transition-group';
 
 import toogleIcon from '../../mocks/images/activities/toogleIcon.png';
 
+const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 2.5,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "14vw",
+    autoplay: true,
+    autoplaySpeed: 2000,
+    initialSlide: 0,
+    nextArrow: <ActivitiesNextArrow />,
+    prevArrow: <></>,
+    responsive: [
+        { breakpoint: 1200, settings: { slidesToShow: 2.5, slidesToScroll: 1 } },
+        { breakpoint: 768, settings: { slidesToShow: 2.5, slidesToScroll: 1 } },
+        { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1, centerPadding: "1vw", arrows: false } }
+    ]
+};
+
 export const ActivitiesSlider = ({activities, category, categoryId}) => {
     const [isSliderVisible, setSliderVisible] = useState(true);
     
     const isMobile = window.innerWidth <= 768;
-
-    const settings = {
-        dots: false,
-        infinite: true,
-        slidesToShow: 2.5,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: "14vw",
-        autoplay: true,
-        autoplaySpeed: 2000,
-        initialSlide: 0,
-        nextArrow: <ActivitiesNextArrow />,
-        prevArrow: <></>,
-        responsive: [
-            { breakpoint: 1200, settings: { slidesToShow: 2.5, slidesToScroll: 1 } },
-            { breakpoint: 768, settings: { slidesToShow: 2.5, slidesToScroll: 1 } },
-            { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1, centerPadding: "3vw", arrows: false } }
-        ]
-    };
 
     const toggleSlider = () => {
         setSliderVisible(!isSliderVisible);
@@ -65,14 +65,14 @@ export const ActivitiesSlider = ({activities, category, categoryId}) => {
                 unmountOnExit 
             >
                 {
-                    isMobile || activities?.length > 2 ? (
+                    ((isMobile && activities?.length > 1) || (!isMobile && activities?.length > 2)) ? (
                         <Slider {...settings}>
                             {activities?.map((item) => (
                                     <Activity key={item.activity_id} activity={item}/>
                                 ))
                             }
                         </Slider>
-                    ) : <div style={{display: "flex", gap: "0vw"}}>
+                    ) : <div style={{display: "flex", gap: "5.5vw"}}>
                         {
                             activities?.map((item) => (
                                 <Activity key={item.activity_id} activity={item}/>
