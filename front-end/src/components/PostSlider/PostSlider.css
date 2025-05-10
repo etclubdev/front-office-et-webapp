@@ -45,20 +45,21 @@
     transform: rotate(-90deg);
 }
 
-.et-news-slider .slider-enter {
+
+.et-post-slider .slider-enter {
     opacity: 0;
     transform: translateY(-20px);
 }
-.et-news-slider .slider-enter-active {
+.et-post-slider .slider-enter-active {
     opacity: 1;
     transform: translateY(0);
     transition: opacity 300ms, transform 300ms;
 }
-.et-news-slider .slider-exit {
+.et-post-slider .slider-exit {
     opacity: 1;
     transform: translateY(0);
 }
-.et-news-slider .slider-exit-active {
+.et-post-slider .slider-exit-active {
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 300ms, transform 300ms;

@@ -58,7 +58,7 @@
     font-family: 'Eurostile';
     font-size: 1vw;
     font-weight: 700;
-    line-height: 0.9vw;
+    line-height: 1;
     color: #E0E0E0;
     text-decoration: none;
     text-align: center;
@@ -175,7 +175,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    line-height: 100%;
+    line-height: 1.5;
     border: none;
     cursor: pointer;
     transition: all 450ms;
@@ -282,7 +282,6 @@
     .dropdown-content a {
         width: 100%;
         text-indent: 30px;
-        padding: 10px 0;
         transition: scale 0.2s ease-in-out;
     }
 

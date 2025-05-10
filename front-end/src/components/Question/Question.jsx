@@ -10,7 +10,9 @@ export const Question = ({ item }) => {
     const [toggleIcon, setIcon] = useState(minusIcon);
 
     const questionRef = useRef(null);
-
+    
+    if (!item.visible) return;
+    
     const toggleAnswer = () => {
         setIsOpen(!isOpen); 
         if(!isOpen){
