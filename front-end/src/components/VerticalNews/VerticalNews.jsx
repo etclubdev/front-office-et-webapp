@@ -8,6 +8,8 @@ import { useNavigate } from 'react-router-dom';
 export const VerticalNews = ({ news, isETNews }) => {
     const navigate = useNavigate();
 
+    if (news && !news.visible) return;
+
     const handleClick = () => {
         const id = isETNews ? news.etnews_id : news.blog_id;
         navigate(`/${isETNews ? 'et-news' : 'et-blog'}/${id}/`);

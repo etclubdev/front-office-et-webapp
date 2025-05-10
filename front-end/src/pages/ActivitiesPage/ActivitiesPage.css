@@ -9,6 +9,7 @@
     overflow: hidden;
     position: relative;
     z-index: 100;
+    min-height: 100vh;
 }
 
 .activities-slider {
@@ -57,7 +58,7 @@
 
 .ongoing-activities .activity-container.highlight-1 .activity-name {
     font-size: 1.8vw;
-    line-height: 2.2vw;
+    line-height: 1.5;
     text-align: left;
     margin-bottom: 0;
     width: 100%;
@@ -65,7 +66,7 @@
 
 .ongoing-activities .activity-container.highlight-2 .activity-name {
     font-size: 1.2vw;
-    line-height: 1.5vw;
+    line-height: 1.5;
     text-align: left;
     margin-bottom: 0;
 }
@@ -130,7 +131,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin: 20px 0;
+        padding-top: 0;
     }
 
     .activities-slider {
@@ -138,8 +139,8 @@
         margin-top: 5vw;
     }
 
-    .activity-container{
-        width: 250px !important;
+    .ongoing-activities .activity-container.highlight-1{
+        width: 100%;
     }
 
     .ongoing-activities .activity-container.highlight-1 .activity-image,
