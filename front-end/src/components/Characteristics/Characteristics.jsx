@@ -38,21 +38,38 @@ export const Characteristics = () => {
                     <div className='heading-last'>KHOA HỌC CÔNG NGHỆ</div>
                 </div>
                <div className="chars-container">
-                    {
-                        etDescItems.map((item, index) => {
-                            const classNameIndex = ++index;
-                            return (
-                                <div className={`char${classNameIndex}-container`}>
-                                <div className={`char${classNameIndex}`}>
-                                    <div className={`characteristics-item-title c${classNameIndex}`}>{item.title}</div>
-                                    <div className={`underline u${classNameIndex}`}></div>
-                                    <div className={`characteristics-item-desc b${classNameIndex}`}>{item.desc}</div>
-                                </div>
-                                <img src={require(`../../mocks${item.image}`)} className={`characteristics-item-image a${classNameIndex}`} />
-                            </div> 
-                            )
-                        })
-                    }
+                    <div className="char1-container">
+                        <div className="char1">
+                            <div className="characteristics-item-title c1">{etDescItems[0].title}</div>
+                            <div className="underline u1"></div>
+                            <div className="characteristics-item-desc b1">{etDescItems[0].desc}</div>
+                        </div>
+                        <img src={require(`../../mocks/images/profiles/productive.jpg`)} className="characteristics-item-image a1" />
+                    </div>
+                    <div className="char2-container">
+                        <div className="char2">
+                            <div className="characteristics-item-title c2">{etDescItems[2].title}</div>
+                            <div className="underline u2"></div>
+                            <div className="characteristics-item-desc b2">{etDescItems[2].desc}</div>
+                        </div>
+                        <img src={require(`../../mocks/images/profiles/pioneering.jpg`)} className="characteristics-item-image a2" />
+                    </div>
+                    <div className="char3-container">
+                        <div className="char3">
+                            <div className="characteristics-item-title c3">{etDescItems[1].title}</div>
+                            <div className="underline u3"></div>
+                            <div className="characteristics-item-desc b3">{etDescItems[1].desc}</div>
+                        </div>
+                        <img src={require(`../../mocks/images/profiles/creative.jpg`)} className="characteristics-item-image a3" />
+                    </div>
+                    <div className="char4-container">
+                        <div className="char4">
+                            <div className="characteristics-item-title c4">{etDescItems[3].title}</div>
+                            <div className="underline u4"></div>
+                            <div className="characteristics-item-desc b4">{etDescItems[3].desc}</div>
+                        </div>
+                        <img src={require(`../../mocks/images/profiles/innovative.jpg`)} className="characteristics-item-image a4" />
+                    </div>
                </div>
             </Available>
         </div>

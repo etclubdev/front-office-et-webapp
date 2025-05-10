@@ -1,63 +1,68 @@
-.vertical-news{
+.vertical-news {
+    width: 22vw;
     display: flex;
     flex-direction: column;
     transition: scale 0.2s ease-in-out;
     cursor: pointer;
+    min-height: 22em;
+    margin-left: 0.2em;
 }
 
-.vertical-news:hover{
+.vertical-news:hover {
     scale: 1.02;
 }
 
-.vertical-news-img-container{
-    position: relative;
+.vertical-news-img-container {
     width: 100%;
+    position: relative;
 }
 
-.vertical-news-img{
+.vertical-news-img {
     width: 100%;
-    aspect-ratio: 5/4;
+    aspect-ratio: 1/1;
     object-fit: cover;
     margin-right: 2vw;
-    border-radius: 1vw;
+    border-radius: 0.5vw;
 }
 
-.vertical-news-container{
+.vertical-news-container {
     width: 100%;
 }
 
-.vertical-news-title{
+.vertical-news-title {
     width: 100%;
     color: #0F4081;
-     font-size: 1.1em;
-     font-weight: 900;
-     font-family: 'BeVietnamPro';
+    font-size: 1.1em;
+    font-weight: 900;
+    font-family: 'BeVietnamPro';
     line-height: 1.5;
     text-align: left;
     margin: 1vw 0 0.5vw 0;
+    font-size: 19px;
 }
 
-.vertical-news-content{
+.vertical-news-content {
     width: 100%;
     color: #000;
-     font-size: 1em;
-     text-align: justify;
-     margin: 0;
-     line-height: 1.5
+    font-size: 1em;
+    text-align: justify;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 10px;
 }
 
-.vertical-news-time{
+.vertical-news-time {
     display: flex;
     color: #838383;
     font-size: 0.8vw;
 }
 
-.clock-icon{
+.clock-icon {
     width: 0.8vw;
     margin-right: 1vw;
 }
 
-.vertical-news .et-news-tag{
+.vertical-news .et-news-tag {
     position: absolute;
     bottom: 0;
     width: fit-content;
@@ -65,7 +70,7 @@
     z-index: 1;
 }
 
-.vertical-news .tag-name{
+.vertical-news .tag-name {
     position: relative;
     outline: 0.1vw solid #fff;
     outline-offset: 0.17vw;
@@ -73,8 +78,7 @@
     transform: translateX(1vw);
 }
 
-
-.vertical-news .tag-square{
+.vertical-news .tag-square {
     position: relative;
     z-index: 1;
     width: 1.5vw;
@@ -82,11 +86,11 @@
     background-color: #ff0000;
 }
 
-.vertical-news #tag-square-1{
+.vertical-news #tag-square-1 {
     transform: translate(0.4vw, 0.9vw);
 }
 
-.vertical-news #tag-square-2{
+.vertical-news #tag-square-2 {
     transform: translate(7.8vw, -0.9vw);
 }
 
@@ -102,57 +106,60 @@
     outline: 0.1vw solid #fff;
 }
 
-@media(max-width: 739px) {
-    .vertical-news{
+/* Mobile */
+@media (max-width: 739px) {
+    .vertical-news {
         min-height: 26em;
-        .vertical-news-content, .vertical-news-title{
-            width: 90%;
-            margin-left: 0.2em;
-        }
-
-        .vertical-news-time{
-            display: flex;
-            color: #838383;
-            font-size: 10px;
-        }
-        
-        .clock-icon{
-            width: 10px;
-            margin-right: 1vw;
-        }
     }
-    
+
+    .vertical-news-title,
+    .vertical-news-content {
+        width: 90%;
+        margin-left: 0.2em;
+    }
+
+    .vertical-news-time {
+        font-size: 10px;
+    }
+
+    .clock-icon {
+        width: 10px;
+        margin-right: 1vw;
+    }
+
+    .vertical-news-img {
+        width: 100%;
+    }
 }
 
+/* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
-    .vertical-news{
+    .vertical-news {
         min-height: 20em;
-        width: 92%;
         margin-left: 0.2em;
+    }
 
-        .vertical-news-title{
-            font-size: 14px;
-        }
+    .vertical-news-title {
+        font-size: 14px;
+    }
 
-        .vertical-news-content{
-            font-size: 8px;
-        }
+    .vertical-news-content {
+        font-size: 8px;
     }
 }
 
+/* Desktop */
 @media (min-width: 1024px) {
-    .vertical-news{
+    .vertical-news {
         min-height: 22em;
-        width: 92%;
         margin-left: 0.2em;
+    }
 
-        .vertical-news-title{
-            font-size: 19px;
-        }
+    .vertical-news-title {
+        font-size: 19px;
+    }
 
-        .vertical-news-content{
-            font-size: 14px;
-        }
-
+    .vertical-news-content {
+        font-size: 10px;
     }
 }

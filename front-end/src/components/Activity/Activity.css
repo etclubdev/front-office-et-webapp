@@ -1,5 +1,4 @@
 .activity-container{
-    width: 27vw;
     display: flex;
      flex-direction: column;
     transition: transform 0.3s ease-in-out;
