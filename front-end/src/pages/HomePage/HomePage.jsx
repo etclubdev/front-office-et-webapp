@@ -33,7 +33,7 @@ export const HomePage = () => {
 
         const faqsResponse = await getFAQs();
         const faqsData = faqsResponse.data || {};
-        const allFaqs = faqsData["Về ET Club"] || [];
+        const allFaqs = faqsData["ET Club"] || [];
         const selectedFaqs = allFaqs.filter(faq => faq.visible);
 
         const achievementResponse = await getAchievement();
