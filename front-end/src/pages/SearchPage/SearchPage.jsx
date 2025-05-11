@@ -8,6 +8,8 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { searchAcrossTables } from '../../api/search.service';
 
+import { Link } from 'react-router-dom';
+
 export const SearchPage = () => {
     const [target, setTarget] = useState("");
     const [results, setResults] = useState([]);
@@ -46,7 +48,7 @@ export const SearchPage = () => {
         <div className="search-section">
             <div className="search-container">
                 <div className="search-close">
-                    <a href="/"><FontAwesomeIcon className='close-btn' icon={faTimes} /></a>
+                    <Link to='/'><FontAwesomeIcon className='close-btn' icon={faTimes} /></Link>
                 </div>
                 <div className="search-input">
                     <div className="vertical-bar"></div>

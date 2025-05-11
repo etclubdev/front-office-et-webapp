@@ -38,7 +38,6 @@ function App() {
     <div className="root-container">
       {
         isNotDetailPosts && <>
-          <DynamicStars parentClassName="root-container" />
           <DynamicBlur parentClassName="root-container" />
         </>
       }

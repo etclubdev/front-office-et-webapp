@@ -8,6 +8,7 @@ import { CSSTransition } from 'react-transition-group';
 
 export const Navbar = () => {
   const [scrollingDown, setScrollingDown] = useState(false);
+  const [isNabBarHovered, setIsNavBarHovered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -29,7 +30,7 @@ export const Navbar = () => {
   const isNotHomepage = location.pathname !== '/';
 
   return (
-    <div className={`nav-section ${(scrollingDown || isNotHomepage) ? 'scrolled' : ''}`}>
+    <div className={`nav-section ${(scrollingDown || isNotHomepage || isNabBarHovered) ? 'scrolled' : ''}`}>
       <Link to="/" className="nav-logo-container">
         <img src={horizontalLogo} alt="ET Club" className="nav-logo" />
       </Link>
@@ -56,6 +57,9 @@ export const Navbar = () => {
         </> :
         <>
           <NavbarMenu
+            handleSetIsNavBarHovered={(value) => {
+              setIsNavBarHovered(value)
+            }}
             isMobile={isMobile}
             menuOpen={menuOpen}
           />
@@ -65,14 +69,15 @@ export const Navbar = () => {
   );
 };
 
-const NavbarMenu = ({ isMobile, menuOpen }) => {
+const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const handleDropdownClick = (name) => {
     setActiveDropdown(prev => (prev === name ? null : name));
   };
+
   return (
-    <div className={`nav-menu ${menuOpen ? 'show' : ''}`}>
+    <div className={`nav-menu ${menuOpen ? 'show' : ''}`} onMouseEnter={() => handleSetIsNavBarHovered(true)} onMouseLeave={() => handleSetIsNavBarHovered(false)}>
       {
         isMobile && (
           <Link to='/search' className="searchbar-group">
