@@ -31,6 +31,14 @@
     background-color: rgba(0, 0, 0, 0.32);
 }
 
+.alt-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(59, 62, 63,0.5);
+    height: 100vh;
+}
+
 @media screen and (max-width: 1024px) {
     .introduction-slider {
         height: 50vh;  

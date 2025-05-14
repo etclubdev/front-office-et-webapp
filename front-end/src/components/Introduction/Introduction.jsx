@@ -3,11 +3,10 @@ import Slider from "react-slick";
 import { SliderArrow } from "../SliderArrow";
 import './Introduction.css';
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 export const Introduction = ({ banners }) => {
-  console.log(banners);
-  
   const settings = {
     dots: false,
     infinite: true,
@@ -26,6 +25,16 @@ export const Introduction = ({ banners }) => {
       { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } }
     ]
   };
+
+  if (!banners || banners.length === 0) {
+    return (
+      <div className="alt-img">
+        <Box>
+          <CircularProgress size="6rem" />
+        </Box>
+      </div>
+    );
+  }
 
   return (
     <div className="introduction-slider">

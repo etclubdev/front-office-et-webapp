@@ -5,7 +5,6 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    margin: 7vw 0;
 }
 
 .partners-section .page-title{
@@ -102,6 +101,14 @@
 
 .partners-section .slick-prev:hover, .slick-next:hover {
     opacity: 1;
+}
+
+.skeleton-alt {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: 5%;
 }
 
 @media screen and (max-width: 480px) {

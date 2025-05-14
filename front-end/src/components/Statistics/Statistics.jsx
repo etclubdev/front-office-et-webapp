@@ -4,12 +4,17 @@ import AnimatedNumber from './AnimatedNumber';
 import { Available } from '../Available';
 import { STATISTICS_TITLE } from '../../constants';
 import { PageTitle } from '../../components/PageTitle';
+import Skeleton from '@mui/material/Skeleton';
 
 export const Statistics = ({ statistics }) => {
 
     const [isVisible, setIsVisible] = useState(false);
 
     const handleScroll = () => {
+        if (!statistics || statistics.length === 0) {
+            console.log("FAIL TO FETCH Statistics data");
+            return;
+        }
         const element = document.querySelector('.statistics-section');
         const position = element.getBoundingClientRect();
 
@@ -24,13 +29,28 @@ export const Statistics = ({ statistics }) => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [statistics]);
+
+    if (!statistics || statistics.length === 0) {
+        return (
+            <div>
+                <PageTitle fontSize="3vw">{STATISTICS_TITLE}</PageTitle>
+
+                <div className="skeleton-alt-stts">
+
+                    <Skeleton variant="rectangular" width="30%" height="10vw" />
+                    <Skeleton variant="rectangular" width="30%" height="10vw" />
+                    <Skeleton variant="rectangular" width="30%" height="10vw" />
+
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className="statistics-section">
-            <div className="division-bar"></div>
             <Available when={isVisible} parentClassName={'statistics-section'}>
-                <PageTitle>{STATISTICS_TITLE}</PageTitle>
+                <PageTitle fontSize="3vw">{STATISTICS_TITLE}</PageTitle>
                 <div className="statistics-section-items">
                     {statistics.map((item) => (
                         <div key={item.achievement_id} className="statistics-section-item">

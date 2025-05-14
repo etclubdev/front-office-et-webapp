@@ -1,7 +1,7 @@
 .introduction-page {
     width: 100vw;
     height: fit-content;
-    background: linear-gradient(180deg, #FDFDFD 0.1%, #AEE8FF 107.38%);
+    /* background: linear-gradient(180deg, #FDFDFD 0.1%, #AEE8FF 107.38%); */
     z-index: 1;
 }
 

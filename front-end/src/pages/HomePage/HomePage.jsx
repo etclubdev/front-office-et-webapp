@@ -70,8 +70,17 @@ export const HomePage = () => {
       </div>
       <Characteristics />
       <div className="homepage-section">
+
+        <div className="division-bar-container">
+          <div className="division-bar"></div>
+        </div>
         <Statistics statistics={statisticsData} />
+
         <Partners partners={expertPartners} companions={businessPartners} />
+
+        <div className="division-bar-container">
+          <div className="division-bar"></div>
+        </div>
         <FAQ questions={faqData} />
       </div>
       <Footer />
