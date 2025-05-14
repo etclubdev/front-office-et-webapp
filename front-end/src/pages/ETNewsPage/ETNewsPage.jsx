@@ -60,7 +60,6 @@ export const ETNewsPage = () => {
                     }
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

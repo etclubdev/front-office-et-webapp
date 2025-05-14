@@ -7,7 +7,7 @@
 
 .introduction-item{
     z-index: 1000;
-    padding: 8vw 0;
+    padding: 4vw 0;
     opacity: 0;
     transform: translateY(10vw);
     transition: opacity 1s ease-out, transform 1s ease-out;

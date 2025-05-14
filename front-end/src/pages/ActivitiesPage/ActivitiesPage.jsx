@@ -62,7 +62,6 @@ export const ActivitiesPage = () => {
                     }
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

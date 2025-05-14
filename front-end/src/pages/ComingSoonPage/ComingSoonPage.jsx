@@ -13,7 +13,6 @@ export const ComingSoonPage = () => {
             <img src={timeManagementImg} alt="" />
             <PageTitle>COMING SOON!</PageTitle>
         </div>
-        <Footer />
     </div>
   )
 }

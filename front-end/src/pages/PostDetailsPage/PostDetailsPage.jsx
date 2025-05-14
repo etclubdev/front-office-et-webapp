@@ -40,7 +40,6 @@ export const PostDetailsPage = () => {
         <div className="details-page">
             <Navbar />
             {details ? <PostDetails details={details} thumbnailShowed = {!pathname.includes('et-blog')} /> : <p>Loading...</p>}
-            <Footer />
         </div>
     );
 };

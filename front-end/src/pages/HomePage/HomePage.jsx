@@ -83,7 +83,6 @@ export const HomePage = () => {
         </div>
         <FAQ questions={faqData} />
       </div>
-      <Footer />
     </div>
   );
 };

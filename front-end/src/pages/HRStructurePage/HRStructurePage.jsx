@@ -1,21 +1,31 @@
 import './HRStructurePage.css';
 import { useRef } from 'react';
 import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
-import { Footer } from '../../components/Footer';
 import { Navbar } from '../../components/Navbar';
 import { HRStructure } from '../../mocks/data';
-import HRStructureTree from '../../mocks/images/hr-structure/hr-structure-tree.png';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import { Link } from 'react-router-dom';
 
 const hrData = HRStructure.hrStructure;
 
 export const HRStructurePage = () => {
 
     const ref = useRef(null);
-    useIntersectionObserver(ref, "hr-structure-branch", "visible", {threshold: 0.15});
+    useIntersectionObserver(ref, "hr-structure-branch", "visible", { threshold: 0.15 });
 
     return (
         <div className="hr-structure-page">
-            <Navbar/>
+            <Navbar />
+            <div className="breadcrumb-container" style={{ width: "70%" }}>
+                <Breadcrumbs aria-label="breadcrumb">
+                    <Link to='/' className="nav-item">
+                        <p className="nav-item-content">Trang chủ</p>
+                    </Link>
+                    <Link to='#' className="nav-item">
+                        <p className="nav-item-content">Cơ cấu tổ chức</p>
+                    </Link>
+                </Breadcrumbs>
+            </div>
             <p className="hr-structure-name title">CƠ CẤU TỔ CHỨC</p>
             <div className="hr-structure-tree" ref={ref}>
                 {
@@ -45,7 +55,6 @@ export const HRStructurePage = () => {
                 }
                 {/* <img className='hr-tree' src={HRStructureTree} alt="" /> */}
             </div>
-            <Footer/>
         </div>
     )
 }

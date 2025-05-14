@@ -50,7 +50,6 @@ export const ETBlogPage = () => {
                     />  
                 </div>             
             </div>
-            <Footer />
         </div>
     )
 }

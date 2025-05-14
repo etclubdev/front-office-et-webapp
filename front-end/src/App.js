@@ -19,6 +19,7 @@ import { DynamicStars } from './components/DynamicStars';
 import { useLocation, matchPath } from 'react-router-dom';
 
 import './App.css';
+import { Footer } from './components/Footer';
 
 function App() {
   const location = useLocation();
@@ -55,6 +56,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/collaborator-seeking" element={<ComingSoonPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
