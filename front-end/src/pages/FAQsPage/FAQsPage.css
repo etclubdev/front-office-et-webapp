@@ -1,15 +1,15 @@
-.faqs-page{
+.faqs-page {
     padding-top: 6vw;
     width: 100vw;
     min-height: 100vh;
-    height: auto;    
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position:relative;
+    position: relative;
 }
 
-.topic-questions{
+.topic-questions {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -17,14 +17,13 @@
     align-items: center;
 
     margin: 3%;
-  backdrop-filter: blur(70px);
-  -webkit-backdrop-filter: blur(70px);
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
     border-radius: 20px;
 }
 
 @media(max-width: 739px) {
-    .faqs-page{
+    .faqs-page {
         padding-top: 18vw;
     }
 }
-

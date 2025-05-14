@@ -15,7 +15,10 @@ export const IntroductionPage = () => {
             <div className="et-avatar">
                 <img className='et-img' src={introduction} alt="" />
                 <div className="et-cover">
-                    <p className="et-text">WE ARE</p>
+                    {/* <p className="et-text">WE ARE</p> */}
+                    <Link to='#' className="nav-item" style={{margin:"0", padding: "0", height:"fit-content", width:"fit-content", marginTop:"5vw"}}>
+                        <p className="nav-item-content" style={{fontSize:"4vw", marginBottom: "0", fontWeight:"900"}}>WE ARE</p>
+                    </Link>
                     <img className="et-logo" src={textLogo} alt="Economic Technology" />
                 </div>
             </div>

@@ -19,10 +19,10 @@ export const HRStructurePage = () => {
             <div className="breadcrumb-container" style={{ width: "70%" }}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link to='/' className="nav-item">
-                        <p className="nav-item-content">Trang chủ</p>
+                        <p className="nav-item-content" style={{textIndent:"0"}}>Trang chủ</p>
                     </Link>
                     <Link to='#' className="nav-item">
-                        <p className="nav-item-content">Cơ cấu tổ chức</p>
+                        <p className="nav-item-content"  style={{textIndent:"0"}}>Cơ cấu tổ chức</p>
                     </Link>
                 </Breadcrumbs>
             </div>

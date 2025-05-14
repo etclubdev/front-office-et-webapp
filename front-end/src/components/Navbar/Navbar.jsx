@@ -77,8 +77,14 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
   };
 
   return (
-    <div className={`nav-menu ${menuOpen ? 'show' : ''}`} onMouseEnter={() => handleSetIsNavBarHovered(true)} onMouseLeave={() => handleSetIsNavBarHovered(false)}>
-      {
+    <div
+    className={`nav-menu ${menuOpen ? 'show' : ''}`}
+    {...(handleSetIsNavBarHovered && {
+      onMouseEnter: () => handleSetIsNavBarHovered(true),
+      onMouseLeave: () => handleSetIsNavBarHovered(false),
+    })}
+  >
+    {
         isMobile && (
           <Link to='/search' className="searchbar-group">
             <div className="search-container">
