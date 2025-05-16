@@ -6,7 +6,9 @@ import { getEtBlogById } from "../../api/etBlog.service";
 import { getEtNewsById } from "../../api/etNews.service";
 import { PostDetails } from "../../components/PostDetails";
 import { Navbar } from "../../components/Navbar";
-import { Footer } from "../../components/Footer";
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 
 export const PostDetailsPage = () => {
     const { pathname } = useLocation();
@@ -23,10 +25,10 @@ export const PostDetailsPage = () => {
 
         const fetchData = async () => {
             const serviceFunc = getPostById();
-            if (!serviceFunc) return; 
+            if (!serviceFunc) return;
 
             try {
-                const {data} = await serviceFunc(id);
+                const { data } = await serviceFunc(id);
                 setDetails(data);
             } catch (error) {
                 console.error("Failed to fetch post details:", error);
@@ -34,12 +36,39 @@ export const PostDetailsPage = () => {
         };
 
         fetchData();
-    }, [id, pathname]); 
+    }, [id, pathname]);
+
+    if (!details || details.length === 0) {
+        return (
+            <div className="alt-img">
+                <Navbar />
+                <Box>
+                    <CircularProgress size="6rem" />
+                </Box>
+            </div>
+        )
+    }
+
+    const breadcrumbsData = [
+        {
+            href: "/",
+            title: "Trang chủ"
+        },
+        {
+            href: "/activities",
+            title: "Hoạt động"
+        },
+        {
+            href: "#",
+            title: "Bài viết"
+        }
+    ]
 
     return (
         <div className="details-page">
             <Navbar />
-            {details ? <PostDetails details={details} thumbnailShowed = {!pathname.includes('et-blog')} /> : <p>Loading...</p>}
+            <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
+            <PostDetails details={details} thumbnailShowed={!pathname.includes('et-blog')} />
         </div>
     );
 };

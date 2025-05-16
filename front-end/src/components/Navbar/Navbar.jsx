@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react';
 import { horizontalLogo } from '../../assets/images/logos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -99,7 +100,7 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
         onClick={() => isMobile && handleDropdownClick('about')}
       >
         <div className={`nav-item-dropbtn ${isMobile && activeDropdown === 'about' ? 'show' : ''}`}>
-          <p className="nav-item-content">Về ET Club</p>
+          <p className="nav-item-content">Về ET Club ⮛</p>
         </div>
         <div
           className={`dropdown-content ${isMobile && activeDropdown === 'about' ? 'show' : ''}`}
@@ -117,7 +118,7 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
         onClick={() => isMobile && handleDropdownClick('etzone')}
       >
         <div className={`nav-item-dropbtn ${isMobile && activeDropdown === 'etzone' ? 'show' : ''}`}>
-          <p className="nav-item-content">ET Zone</p>
+          <p className="nav-item-content">ET Zone ⮛</p>
         </div>
         <div
           className={`dropdown-content ${isMobile && activeDropdown === 'etzone' ? 'show' : ''}`}

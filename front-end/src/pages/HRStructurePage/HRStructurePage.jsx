@@ -3,8 +3,7 @@ import { useRef } from 'react';
 import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
 import { Navbar } from '../../components/Navbar';
 import { HRStructure } from '../../mocks/data';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import { Link } from 'react-router-dom';
+import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 
 const hrData = HRStructure.hrStructure;
 
@@ -13,19 +12,21 @@ export const HRStructurePage = () => {
     const ref = useRef(null);
     useIntersectionObserver(ref, "hr-structure-branch", "visible", { threshold: 0.15 });
 
+    const breadcrumbsData = [
+        {
+            href: "/",
+            title: "Trang chủ"
+        },
+        {
+            href: "#",
+            title: "Cơ cấu tổ chức"
+        }
+    ]
+
     return (
         <div className="hr-structure-page">
             <Navbar />
-            <div className="breadcrumb-container" style={{ width: "70%" }}>
-                <Breadcrumbs aria-label="breadcrumb">
-                    <Link to='/' className="nav-item">
-                        <p className="nav-item-content" style={{textIndent:"0"}}>Trang chủ</p>
-                    </Link>
-                    <Link to='#' className="nav-item">
-                        <p className="nav-item-content"  style={{textIndent:"0"}}>Cơ cấu tổ chức</p>
-                    </Link>
-                </Breadcrumbs>
-            </div>
+            <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
             <p className="hr-structure-name title">CƠ CẤU TỔ CHỨC</p>
             <div className="hr-structure-tree" ref={ref}>
                 {

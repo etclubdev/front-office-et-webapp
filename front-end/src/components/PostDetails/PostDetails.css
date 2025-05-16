@@ -8,7 +8,7 @@
 .details-post div { overflow-wrap: break-word; }
 
 .details-post {
-    padding: 8vw 12vw 8vw 15vw; 
+    padding: 0vw 12vw 8vw 15vw; 
     width: 100%; 
     max-width: 1200px;
     min-height: 100vh;
