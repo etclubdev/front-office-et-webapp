@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import { SliderArrow } from "../SliderArrow";
 import './Introduction.css';
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import { CircularLoading } from '../CircularLoading';
 
 export const Introduction = ({ banners }) => {
   const settings = {
@@ -28,11 +27,7 @@ export const Introduction = ({ banners }) => {
 
   if (!banners || banners.length === 0) {
     return (
-      <div className="alt-img">
-        <Box>
-          <CircularProgress size="6rem" />
-        </Box>
-      </div>
+      <CircularLoading />
     );
   }
 

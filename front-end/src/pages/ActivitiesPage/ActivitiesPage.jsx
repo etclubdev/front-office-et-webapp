@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react';
 import { getAllActivities } from '../../api/activity.service';
 import { Navbar } from '../../components/Navbar';
 import { PageTitle } from '../../components/PageTitle';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
+import { CircularLoading } from '../../components/CircularLoading';
+import { DynamicBlur } from '../../components/DynamicBlur';
 
 
 export const ActivitiesPage = () => {
@@ -23,12 +23,11 @@ export const ActivitiesPage = () => {
 
     if (!activities || activities.length === 0) {
         return (
-            <div className="alt-img">
+            <div className="loading...">
                 <Navbar />
-                <Box>
-                    <CircularProgress size="6rem" />
-                </Box>
+                <CircularLoading />
             </div>
+
         );
     };
 
@@ -46,6 +45,7 @@ export const ActivitiesPage = () => {
     return (
         <div className="activities-page">
             <Navbar />
+            <DynamicBlur parentClassName="root-container" />
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
             {
                 activities?.ongoing?.length > 0 ? (

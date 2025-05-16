@@ -4,6 +4,7 @@ import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
 import { Navbar } from '../../components/Navbar';
 import { HRStructure } from '../../mocks/data';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
+import { DynamicBlur } from '../../components/DynamicBlur';
 
 const hrData = HRStructure.hrStructure;
 
@@ -26,6 +27,7 @@ export const HRStructurePage = () => {
     return (
         <div className="hr-structure-page">
             <Navbar />
+            <DynamicBlur parentClassName="root-container" />
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
             <p className="hr-structure-name title">CƠ CẤU TỔ CHỨC</p>
             <div className="hr-structure-tree" ref={ref}>

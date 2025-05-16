@@ -5,6 +5,7 @@ import { PageTitle } from '../../components/PageTitle';
 import { getAllFAQs } from '../../api/faq.service';
 import { Navbar } from '../../components/Navbar';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
+import { DynamicBlur } from '../../components/DynamicBlur';
 
 export const FAQsPage = () => {
     const [faqs, setFAQs] = useState([]);
@@ -30,6 +31,7 @@ export const FAQsPage = () => {
     return (
         <div className="faqs-page">
             <Navbar />
+            <DynamicBlur parentClassName="root-container" />
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%", paddingBottom: "2vw" }}></CustomBreadcrumbs>
             <PageTitle>CÂU HỎI THƯỜNG GẶP</PageTitle>
             <div className="topic-questions">

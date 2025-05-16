@@ -5,6 +5,7 @@ import { introduction } from '../../assets/images/et';
 import { textLogo } from '../../assets/images/logos';
 import { Link } from 'react-router-dom';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
+import { DynamicBlur } from '../../components/DynamicBlur';
 
 export const IntroductionPage = () => {
     const breadcrumbsData = [
@@ -21,7 +22,7 @@ export const IntroductionPage = () => {
     return (
         <div className="introduction-page">
             <Navbar />
-
+            <DynamicBlur parentClassName="root-container" />
             <div className="et-avatar">
                 <img className='et-img' src={introduction} alt="" />
                 <div className="et-cover">
