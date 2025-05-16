@@ -12,9 +12,10 @@
 }
 
 .et-news-section {
-    width: 100%;
-    padding: 2vw 10vw;
+    margin-top: 8vw;
+    width: 68%;
     box-sizing: border-box;
+    margin-bottom: 2vw;
 }
 
 .et-news-highlight {
@@ -26,8 +27,9 @@
 }
 
 .highlight-title {
-    margin: 5vw 0;
-    font-size: 2em;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    font-size: 2.5em;
     font-weight: 900;
     background: linear-gradient(0deg, #47A8B4 0%, #5D3E91 100%);
     background-clip: text;
