@@ -66,7 +66,7 @@ export const Navbar = () => {
           />
         </>
       }
-    </div>
+      </div>
   );
 };
 
@@ -107,7 +107,7 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
         >
           <Link id="1st" to="/introduction"><p>Giới thiệu</p></Link>
           <Link id="2nd" to="/hr-structure"><p>Cơ cấu tổ chức</p></Link>
-          <Link id="3rd" to="/faqs"><p>FAQs</p></Link>
+          {/* <Link id="3rd" to="/faqs"><p>FAQs</p></Link> */}
         </div>
       </a>
       <Link to='/activities' className="nav-item">
@@ -127,8 +127,11 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
           <Link id="2nd" to="/et-blog"><p>ET Blog</p></Link>
         </div>
       </a>
-      <Link to='/collaborator-seeking' className="nav-item">
+      {/* <Link to='/collaborator-seeking' className="nav-item">
         <p className="nav-item-content">Tìm kiếm CTV</p>
+      </Link> */}
+      <Link to='/faqs' className="nav-item">
+        <p className="nav-item-content">FAQs</p>
       </Link>
       {
         !isMobile && (
