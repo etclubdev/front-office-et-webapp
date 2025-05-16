@@ -1,11 +1,12 @@
 import './ETBlogPage.css';
 import { Navbar } from '../../components/Navbar';
-import { Footer } from '../../components/Footer';
 import { HorizontalNews } from '../../components/HorizontalNews';
 import { VerticalNews } from '../../components/VerticalNews';
 import { PostSlider } from '../../components/PostSlider';
-
 import { getAllBlogs } from '../../api/etBlog.service';
+import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
+import { CircularLoading } from '../../components/CircularLoading';
+import { DynamicBlur } from '../../components/DynamicBlur';
 import { useEffect, useState } from 'react';
 
 export const ETBlogPage = () => {
@@ -18,10 +19,33 @@ export const ETBlogPage = () => {
         fetchData();
     }, [])
 
+        if (!news || news.length === 0) {
+        return (
+            <div className="loading...">
+                <Navbar />
+                <CircularLoading />
+            </div>
+
+        );
+    }
+
+    const breadcrumbsData = [
+        {
+            href: "/",
+            title: "Trang chủ"
+        },
+        {
+            href: "#",
+            title: "Bờ lốc ET"
+        }
+    ]
+
 
     return (
         <div className="etblog-page">
             <Navbar />
+                        <DynamicBlur parentClassName="root-container" />
+            <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
             <div className="et-blog-section">
                 <div className="et-blog-highlight">
                     <div className="highlight-title">ET BLOG</div>
@@ -31,13 +55,13 @@ export const ETBlogPage = () => {
                         </div>
                         <div id="highlight-blog-2">
                             {
-                                news?.highlighted?.map((item, index) => {
-                                    if (index !== 0)
-                                        return (
-                                            <HorizontalNews key={'highlight-blog-' + index} news={item} />
-                                        )
-                                })
+                                news?.highlighted
+                                    ?.filter((_, index) => index !== 0)
+                                    .map((item, index) => (
+                                        <HorizontalNews key={`highlight-blog-${index}`} news={item} />
+                                    ))
                             }
+
                         </div>
                     </div>
                 </div>
@@ -47,8 +71,8 @@ export const ETBlogPage = () => {
                         title="Tin mới nhất"
                         categoryid={`blog-list`}
                         isETNews={false}
-                    />  
-                </div>             
+                    />
+                </div>
             </div>
         </div>
     )
