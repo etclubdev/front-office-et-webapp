@@ -6,9 +6,8 @@ import { getEtBlogById } from "../../api/etBlog.service";
 import { getEtNewsById } from "../../api/etNews.service";
 import { PostDetails } from "../../components/PostDetails";
 import { Navbar } from "../../components/Navbar";
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
+import { CircularLoading } from "../../components/CircularLoading";
 
 export const PostDetailsPage = () => {
     const { pathname } = useLocation();
@@ -40,12 +39,10 @@ export const PostDetailsPage = () => {
 
     if (!details || details.length === 0) {
         return (
-            <div className="alt-img">
-                <Navbar />
-                <Box>
-                    <CircularProgress size="6rem" />
-                </Box>
-            </div>
+                       <div className="loading...">
+                           <Navbar />
+                           <CircularLoading />
+                       </div>
         )
     }
 
@@ -68,6 +65,7 @@ export const PostDetailsPage = () => {
         <div className="details-page">
             <Navbar />
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
+            <img src={require(`../../mocks/images/detailPost/alt-img.png`)} alt="null" className="post-cover" />
             <PostDetails details={details} thumbnailShowed={!pathname.includes('et-blog')} />
         </div>
     );

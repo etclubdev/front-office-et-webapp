@@ -1,15 +1,47 @@
-.details-post h1 { font-size: clamp(20px, 4vw, 32px); overflow-wrap: break-word; } /* Tối thiểu 20px, tối đa 32px */
-.details-post h2 { font-size: clamp(18px, 3.5vw, 28px); overflow-wrap: break-word; }
-.details-post h3 { font-size: clamp(16px, 3vw, 24px); overflow-wrap: break-word; }
-.details-post h4 { font-size: clamp(14px, 2.5vw, 20px); overflow-wrap: break-word; }
-.details-post h5 { font-size: clamp(12px, 2vw, 18px); overflow-wrap: break-word; }
-.details-post h6 { font-size: clamp(10px, 1.5vw, 14px); overflow-wrap: break-word; }
-.details-post p { font-size: clamp(14px, 2vw, 18px); line-height: 1.6; overflow-wrap: break-word; }
-.details-post div { overflow-wrap: break-word; }
+.details-post h1 {
+    font-size: clamp(20px, 4vw, 32px);
+    overflow-wrap: break-word;
+}
+
+/* Tối thiểu 20px, tối đa 32px */
+.details-post h2 {
+    font-size: clamp(18px, 3.5vw, 28px);
+    overflow-wrap: break-word;
+}
+
+.details-post h3 {
+    font-size: clamp(16px, 3vw, 24px);
+    overflow-wrap: break-word;
+}
+
+.details-post h4 {
+    font-size: clamp(14px, 2.5vw, 20px);
+    overflow-wrap: break-word;
+}
+
+.details-post h5 {
+    font-size: clamp(12px, 2vw, 18px);
+    overflow-wrap: break-word;
+}
+
+.details-post h6 {
+    font-size: clamp(10px, 1.5vw, 14px);
+    overflow-wrap: break-word;
+}
+
+.details-post p {
+    font-size: clamp(14px, 2vw, 18px);
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.details-post div {
+    overflow-wrap: break-word;
+}
 
 .details-post {
-    padding: 0vw 12vw 8vw 15vw; 
-    width: 100%; 
+    width: 70%;
+    padding: 5%;
     max-width: 1200px;
     min-height: 100vh;
     height: auto;
@@ -17,11 +49,15 @@
     z-index: 1;
     box-sizing: border-box;
     display: flex;
+    justify-content: center;
 }
 
 .details-container {
-    width: 100%; 
+    width: 100%;
     text-align: left;
+    background: #fff;
+    padding-inline: 5%;
+    padding-block: 2%;
 }
 
 .details-title {
@@ -32,16 +68,15 @@
     color: #0B2F60;
 }
 
-.details-info{
+.details-info {
     width: 100%;
-    margin: 3vw 0;
+    margin: 1vw 0;
     display: flex;
     justify-content: space-between;
     color: #5C5E63;
 }
 
-.details-info-item
-{
+.details-info-item {
     width: fit-content;
     height: fit-content;
     font-family: 'BeVietnamPro';
@@ -59,38 +94,48 @@
     width: 100%;
     height: auto;
     display: block;
-    margin: 40px 0; 
+    margin: 40px 0;
 }
 
 @media(max-width: 739px) {
-    .details-post{
+    .details-post {
         width: 100%;
         justify-content: center;
     }
+
     .details-container {
-        width: 100%; 
+        width: 100%;
     }
-    .details-info-item{
-        font-size: 10px; 
+
+    .details-info-item {
+        font-size: 10px;
     }
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {
-    .details-post{
+    .details-post {
         width: 100%;
     }
+
     .details-container {
-        width: 100%; 
+        width: 100%;
         padding: 0 5%;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1239px) {
-    .details-post{
+    .details-post {
         width: 100%;
     }
+
     .details-container {
-        width: 100%; 
+        width: 100%;
     }
 }
 
+@media screen and (max-width: 768px) {
+    .details-container {
+        padding-block: 0%;
+        padding-inline: 10%;
+    }
+}

@@ -7,12 +7,16 @@ import { faClock } from '@fortawesome/free-regular-svg-icons'
 
 export const PostDetails = ({ details, thumbnailShowed = false }) => {
     const createdOn = new Date(details.created_on).toLocaleDateString("vi-VN");
-    
+
     return (
         <div className="details-post">
             <div className="details-container">
                 <h1 className="details-title">{details.title}</h1>
                 <div className="details-info">
+                    <div className="details-info-item" id="details-time">
+                        <FontAwesomeIcon icon={faClock} />
+                        {createdOn}
+                    </div>
                     <div className="details-info-item">
                         {details.blog_author ?
                             <>
@@ -20,10 +24,6 @@ export const PostDetails = ({ details, thumbnailShowed = false }) => {
                                 {details.blog_author}
                             </>
                             : <></>}
-                    </div>
-                    <div className="details-info-item" id="details-time">
-                        <FontAwesomeIcon icon={faClock} />
-                        {createdOn}
                     </div>
                 </div>
 
