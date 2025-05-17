@@ -6,6 +6,7 @@ import { getAllFAQs } from '../../api/faq.service';
 import { Navbar } from '../../components/Navbar';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { DynamicBlur } from '../../components/DynamicBlur';
+import { CircularLoading } from '../../components/CircularLoading';
 
 export const FAQsPage = () => {
     const [faqs, setFAQs] = useState([]);
@@ -16,6 +17,15 @@ export const FAQsPage = () => {
         }
         fetchData();
     }, [])
+
+    if (!faqs || faqs.length === 0) {
+        return (
+            <div className="loading...">
+                <Navbar />
+                <CircularLoading />;
+            </div>
+        )
+    }
 
     const breadcrumbsData = [
         {

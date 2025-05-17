@@ -1,13 +1,35 @@
 import './IntroductionPage.css';
+import { useEffect, useState } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { IntroductionContent } from '../../components/IntroductionContent';
 import { introduction } from '../../assets/images/et';
 import { textLogo } from '../../assets/images/logos';
-import { Link } from 'react-router-dom';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { DynamicBlur } from '../../components/DynamicBlur';
+import { CircularLoading } from '../../components/CircularLoading';
+import styled from 'styled-components';
 
 export const IntroductionPage = () => {
+
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (isLoading) {
+        return (
+            <div className="loading...">
+                <Navbar />
+                <CircularLoading />;
+            </div>
+        )
+    }
+
     const breadcrumbsData = [
         {
             href: "/",
@@ -19,6 +41,17 @@ export const IntroductionPage = () => {
         }
     ]
 
+    const ResponsiveBreadcrumbs = styled(CustomBreadcrumbs)`
+        width: 70%;
+        padding-bottom: 2vw;
+        top: 1vw;
+
+        @media screen and (max-width: 768px) {
+            top: 1vw;
+        }
+        `;
+
+
     return (
         <div className="introduction-page">
             <Navbar />
@@ -27,14 +60,12 @@ export const IntroductionPage = () => {
                 <img className='et-img' src={introduction} alt="" />
                 <div className="et-cover">
                     {/* <p className="et-text">WE ARE</p> */}
-                    <Link to='#' className="nav-item" style={{ margin: "0", padding: "0", height: "fit-content", width: "fit-content", marginTop: "5vw" }}>
-                        <p className="nav-item-content" style={{ fontSize: "4vw", marginBottom: "0", fontWeight: "900" }}>WE ARE</p>
-                    </Link>
+                    <p className="we-are">WE ARE</p>
                     <img className="et-logo" src={textLogo} alt="Economic Technology" />
                 </div>
             </div>
             <div className="introduction-content">
-                <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%", paddingBottom: "2vw" }}></CustomBreadcrumbs>
+                <ResponsiveBreadcrumbs data={breadcrumbsData} style={{ width: "70%", paddingBottom: "2vw", top: "1vw" }}></ResponsiveBreadcrumbs>
                 <IntroductionContent />
             </div>
         </div>

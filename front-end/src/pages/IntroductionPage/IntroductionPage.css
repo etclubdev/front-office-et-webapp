@@ -53,6 +53,17 @@
     flex-direction: column;
 }
 
+.we-are{
+    margin: 5vw 0 0 0;
+        font-size: 5vw;
+     font-weight: 900;
+     text-align: center;
+    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
 @media(max-width: 739px) {
     .introduction-page .et-text {
         top: 60px;
@@ -63,4 +74,8 @@
         width: 80vw;
         top: 50px;
     }
+
+    .we-are{
+    margin: 13vw 0 28vw 0;
+}
 }

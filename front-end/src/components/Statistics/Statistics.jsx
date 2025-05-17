@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './Statistics.css';
 import { useState, useEffect } from 'react';
 import AnimatedNumber from './AnimatedNumber';

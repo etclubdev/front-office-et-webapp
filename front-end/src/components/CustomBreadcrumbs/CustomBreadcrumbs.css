@@ -1,6 +1,6 @@
 .breadcrumb-container{
     position: absolute;
-    top: 5vw !important;
+    top: 5vw;
 }
 @media screen and (max-width: 768px) {
     .breadcrumb-item{
@@ -8,6 +8,6 @@
     }
     .breadcrumb-container{
     position: absolute;
-    top: 7vw !important;
+    top: 7vw;
 }
 }

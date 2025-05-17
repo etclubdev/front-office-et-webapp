@@ -91,7 +91,8 @@
 }
 
 .details-container img {
-    width: 100%;
+    width: fit-content;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 40px 0;

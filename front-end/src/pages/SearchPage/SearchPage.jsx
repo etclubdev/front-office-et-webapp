@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './SearchPage.css';
 import { SearchSuggestions } from '../../components/SearchSuggestions/SearchSuggestions';
 import { useCallback, useState, useEffect } from 'react';

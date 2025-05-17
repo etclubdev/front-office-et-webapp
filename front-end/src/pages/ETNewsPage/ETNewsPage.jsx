@@ -47,7 +47,9 @@ export const ETNewsPage = () => {
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
             <div className="et-news-section">
                 <div className="et-news-highlight">
-                    <div className="highlight-title">ET NEWS</div>
+                    <div className="highlight-title">
+                        <p style={{margin: "0"}}>ET NEWS</p>
+                    </div>
                     <div className="highlight-news">
                         <div id="highlight-news-1">
                             <VerticalNews isETNews news={news?.latestNews?.[0]} />

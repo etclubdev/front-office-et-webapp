@@ -8,7 +8,6 @@ const createBlur = (className) => {
     if (!parentElement) return [];
 
     const pageHeight = parentElement.scrollHeight;
-    const pageWidth = parentElement.scrollWidth;
     
     const baseCount = 5;
     const extraCount = Math.floor(pageHeight / 1000) * 5;

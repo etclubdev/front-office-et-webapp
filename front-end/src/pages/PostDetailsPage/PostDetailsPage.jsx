@@ -39,10 +39,10 @@ export const PostDetailsPage = () => {
 
     if (!details || details.length === 0) {
         return (
-                       <div className="loading...">
-                           <Navbar />
-                           <CircularLoading />
-                       </div>
+            <div className="loading...">
+                <Navbar />
+                <CircularLoading />
+            </div>
         )
     }
 
@@ -60,6 +60,9 @@ export const PostDetailsPage = () => {
             title: "Bài viết"
         }
     ]
+
+    console.log(details);
+    
 
     return (
         <div className="details-page">

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import './Activity.css';
 import { useNavigate } from 'react-router-dom';
