@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 2vw;
-    margin: 7vw 0;
+    margin: 7vw 0 0 0;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 

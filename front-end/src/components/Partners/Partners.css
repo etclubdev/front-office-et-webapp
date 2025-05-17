@@ -5,6 +5,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    transform: scale(85%) !important;
 }
 
 .partners-section .page-title{
