@@ -1,0 +1,22 @@
+.error-content{
+    color: black;
+    font-size: 30px;
+}
+
+.error-content-detail{
+    color: black;
+    font-size: 20px;
+    margin: 0;
+}
+
+.error-img{
+    width: 20%;
+}
+
+.error-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}

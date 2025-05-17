@@ -1,6 +1,5 @@
 import './AboutUsSection.css';
 import { useState, useEffect } from 'react';
-import { Available } from '../Available';
 import { verticalLogo } from '../../assets/images/logos';
 import { bioData } from '../../mocks/data';
 import { DEPARTMENT_TITLE } from '../../constants.js';
@@ -9,6 +8,7 @@ const bioItem = bioData.bio;
 
 export const AboutUsSection = ({ myRef }) => {
 
+    // eslint-disable-next-line no-unused-vars
     const [isVisible, setIsVisible] = useState(false);
 
     const handleScroll = () => {

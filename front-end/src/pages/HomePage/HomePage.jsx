@@ -5,13 +5,13 @@ import { AboutUsSection } from '../../components/AboutUsSection';
 import { Statistics } from '../../components/Statistics';
 import { Characteristics } from '../../components/Characteristics';
 import { Partners } from '../../components/Partners';
-import { Footer } from '../../components/Footer';
 import { Introduction } from '../../components/Introduction';
 import { FAQ } from '../../components/FAQ';
 import { getBanners } from '../../api/banners.service';
 import { getPartners } from '../../api/partners.service';
 import { getFAQs } from '../../api/faqs.service';
 import { getAchievement } from '../../api/achievement.service';
+import { DynamicBlur } from '../../components/DynamicBlur';
 
 export const HomePage = () => {
   const [banners, setBanners] = useState([]);
@@ -33,7 +33,7 @@ export const HomePage = () => {
 
         const faqsResponse = await getFAQs();
         const faqsData = faqsResponse.data || {};
-        const allFaqs = faqsData["Về ET Club"] || [];
+        const allFaqs = faqsData["ET Club"] || [];
         const selectedFaqs = allFaqs.filter(faq => faq.visible);
 
         const achievementResponse = await getAchievement();
@@ -63,6 +63,7 @@ export const HomePage = () => {
   return (
     <div className="homepage">
       <Navbar />
+      <DynamicBlur parentClassName="root-container" />
       <Introduction banners={banners} />
 
       <div className="homepage-section">
@@ -70,11 +71,19 @@ export const HomePage = () => {
       </div>
       <Characteristics />
       <div className="homepage-section">
+
+        <div className="division-bar-container">
+          <div className="division-bar"></div>
+        </div>
         <Statistics statistics={statisticsData} />
+
         <Partners partners={expertPartners} companions={businessPartners} />
+
+        <div className="division-bar-container">
+          <div className="division-bar"></div>
+        </div>
         <FAQ questions={faqData} />
       </div>
-      <Footer />
     </div>
   );
 };

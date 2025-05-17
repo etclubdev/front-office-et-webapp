@@ -1,0 +1,13 @@
+.breadcrumb-container{
+    position: absolute;
+    top: 5vw;
+}
+@media screen and (max-width: 768px) {
+    .breadcrumb-item{
+        font-size: 10px !important;
+    }
+    .breadcrumb-container{
+    position: absolute;
+    top: 7vw;
+}
+}

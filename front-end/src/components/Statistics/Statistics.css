@@ -98,6 +98,12 @@
     background: linear-gradient(116deg, #FFE078 30%, #FF8FF3 83.43%);
 }
 
+.division-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
 
 .division-bar {
     width: 50%; 
@@ -105,6 +111,13 @@
     margin: 2vh 0;
     background: linear-gradient(#3493C8 44.83%, #6AB8E0 68.38%);
     border-radius: 2px;
+}
+
+.skeleton-alt-stts{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5%;
 }
 
 @media screen and (max-width: 1024px) {}

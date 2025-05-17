@@ -28,14 +28,15 @@ export const IntroductionContent = () => {
                                                         return (
                                                             <div className="branch-container" key={"history-" + i.time}>
                                                                 <p className="branch-title">{i.time}</p>
-                                                                <img className="branch-tree" src={leftBranch}></img>
+                                                                <img className="branch-tree" src={leftBranch} alt='null'></img>
                                                                 <p className="branch-content">{i.activity}</p>
                                                             </div>
                                                         )
+                                                    return null
                                                 })
                                             }
                                         </div>
-                                        <img className="tree-trunk" src={tree}></img>
+                                        <img className="tree-trunk" src={tree} alt='null'></img>
                                         <div className="right-tree">
                                             {
                                                 item.desc.map((i, index) => {
@@ -43,10 +44,11 @@ export const IntroductionContent = () => {
                                                         return (
                                                             <div className="branch-container">
                                                                 <p className="branch-title">{i.time}</p>
-                                                                <img className="branch-tree" src={rightBranch}></img>
+                                                                <img className="branch-tree" src={rightBranch} alt='null'></img>
                                                                 <p className="branch-content">{i.activity}</p>
                                                             </div>
                                                         )
+                                                    return null
                                                 })
                                             }
                                         </div>
