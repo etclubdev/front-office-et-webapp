@@ -114,15 +114,15 @@
 
 
 @media screen and (max-width: 480px) {
-    .partner{
+    .partner, .single-partner{
         width: 100px;
     }
     
-    .partner:hover{
+    .partner:hover, .single-partner:hover{
         transform: scale(1.05);
     }
     
-    .partner img{
+    .partner img, .single-partner img{
         width: 100px;
         height: 100px;
     }
