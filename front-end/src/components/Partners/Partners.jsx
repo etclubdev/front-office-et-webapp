@@ -7,6 +7,8 @@ import { PageTitle } from "../PageTitle";
 import Skeleton from '@mui/material/Skeleton';
 
 export const Partners = ({ partners, companions }) => {
+    const visiblePartners = partners.filter(partner => partner.visible);
+    const visibleCompanions = companions.filter(companion => companion.visible);
 
     const settings = {
         dots: false,
@@ -59,37 +61,56 @@ export const Partners = ({ partners, companions }) => {
             </div>
             <PageTitle>{PARTNERS_CONTENT.title}</PageTitle>
             <div>
-                <Slider {...settings}>
-                    {partners.map(partner => {
-                        if (!partner.visible) return null;
-                        else
-                            return (
-                                <div key={partner.partner_id} className="partner">
-                                    <img src={partner.avatar_url} alt={partner.partner_name} />
-                                    <div className="partner-name">{partner.partner_name}</div>
-                                    <div className="partner-role">{partner.short_description}</div>
-                                </div>
-                            )
-                    })}
-                </Slider>
+                {visiblePartners.length === 1 ? (
+                    <div className="single-partner">
+                        <img src={visiblePartners[0].avatar_url} alt={visiblePartners[0].partner_name} />
+                        <div className="partner-name">{visiblePartners[0].partner_name}</div>
+                        <div className="partner-role">{visiblePartners[0].short_description}</div>
+                    </div>
+                ) : (
+                    <Slider {...settings}>
+                        {visiblePartners.map(partner => {
+                            if (!partner.visible) return null;
+                            else
+                                return (
+                                    <div key={partner.partner_id} className="partner">
+                                        <img src={partner.avatar_url} alt={partner.partner_name} />
+                                        <div className="partner-name">{partner.partner_name}</div>
+                                        <div className="partner-role">{partner.short_description}</div>
+                                    </div>
+                                )
+                        })}
+                    </Slider>
+                )}
             </div>
             <div className="division-bar-container">
                 <div className="division-bar"></div>
             </div>
             <PageTitle>{COMPANION_CONTENT.title}</PageTitle>
             <div>
-                <Slider {...settings}>
-                    {companions.map(companion => {
-                        if (!companion.visible) return null;
-                        else
-                            return (
-                                <div key={companion.partner_id} className="partner">
-                                    <img src={companion.avatar_url} alt={companion.partner_name} />
-                                    <div className="partner-name">{companion.partner_name}</div>
-                                </div>
-                            )
-                    })}
-                </Slider>
+                {
+                    visibleCompanions.length === 1 ? (
+                        <div className="single-partner">
+                            <img src={visibleCompanions[0].avatar_url} alt={visibleCompanions[0].partner_name} />
+                            <div className="partner-name">{visibleCompanions[0].partner_name}</div>
+                            <div className="partner-role">{visibleCompanions[0].short_description}</div>
+                        </div>
+                    ) : (
+                        <Slider {...settings}>
+                            {visibleCompanions.map(companion => {
+                                if (!companion.visible) return null;
+                                else
+                                    return (
+                                        <div key={companion.partner_id} className="partner">
+                                            <img src={companion.avatar_url} alt={companion.partner_name} />
+                                            <div className="partner-name">{companion.partner_name}</div>
+                                            <div className="partner-role">{companion.short_description}</div>
+                                        </div>
+                                    )
+                            })}
+                        </Slider>
+                    )
+                }
             </div>
         </div>
     )
