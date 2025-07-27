@@ -4,6 +4,7 @@ import { SliderArrow } from "../SliderArrow";
 import { COMPANION_CONTENT, PARTNERS_CONTENT } from '../../constants';
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { PageTitle } from "../PageTitle";
+import Skeleton from '@mui/material/Skeleton';
 
 export const Partners = ({ partners, companions }) => {
 
@@ -14,7 +15,7 @@ export const Partners = ({ partners, companions }) => {
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: "2vw",
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         initialSlide: 0,
         nextArrow: <SliderArrow icon={faChevronRight} />,
@@ -26,8 +27,36 @@ export const Partners = ({ partners, companions }) => {
         ]
     };
 
+    if (!partners || !companions || partners.length === 0 || companions.length === 0) {
+        return (
+            <div className="partners-section">
+                <div className="division-bar-container">
+                    <div className="division-bar"></div>
+                </div>
+                <PageTitle>{PARTNERS_CONTENT.title}</PageTitle>
+                <div className="skeleton-alt">
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                </div>
+                <div className="division-bar-container">
+                    <div className="division-bar"></div>
+                </div>
+                <PageTitle>{COMPANION_CONTENT.title}</PageTitle>
+                <div className="skeleton-alt">
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className="partners-section">
+            <div className="division-bar-container">
+                <div className="division-bar"></div>
+            </div>
             <PageTitle>{PARTNERS_CONTENT.title}</PageTitle>
             <div>
                 <Slider {...settings}>
@@ -43,6 +72,9 @@ export const Partners = ({ partners, companions }) => {
                             )
                     })}
                 </Slider>
+            </div>
+            <div className="division-bar-container">
+                <div className="division-bar"></div>
             </div>
             <PageTitle>{COMPANION_CONTENT.title}</PageTitle>
             <div>

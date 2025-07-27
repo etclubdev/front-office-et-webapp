@@ -1,8 +1,8 @@
+import './App.css';
+// eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
 import { useEffect } from 'react'
 import { HomePage } from './pages/HomePage';
-import  TetCountDownTimerPage  from './pages/EventPages/TetCountDownTimerPage/TetCountDownTimerPage';
 import SearchPage from './pages/SearchPage';
 import { PostDetailsPage } from './pages/PostDetailsPage';
 import { ETNewsPage } from './pages/ETNewsPage';
@@ -12,23 +12,20 @@ import { FAQsPage } from './pages/FAQsPage';
 import { IntroductionPage } from './pages/IntroductionPage';
 import { HRStructurePage } from './pages/HRStructurePage/HRStructurePage';
 import { ComingSoonPage } from './pages/ComingSoonPage';
-
-import { DynamicBlur } from './components/DynamicBlur';
-import { DynamicStars } from './components/DynamicStars';
-
-import { useLocation, matchPath } from 'react-router-dom';
-
-import './App.css';
+import { useLocation } from 'react-router-dom';
+// import { useLocation, matchPath } from 'react-router-dom';
+import { Footer } from './components/Footer';
+// import  TetCountDownTimerPage  from './pages/EventPages/TetCountDownTimerPage/TetCountDownTimerPage';
 
 function App() {
   const location = useLocation();
 
-  const isDetailPost =
-    matchPath("/et-blog/:id", location.pathname) ||
-    matchPath("/et-news/:id", location.pathname) ||
-    matchPath("/activities/:id", location.pathname);
+  // const isDetailPost =
+  //   matchPath("/et-blog/:id", location.pathname) ||
+  //   matchPath("/et-news/:id", location.pathname) ||
+  //   matchPath("/activities/:id", location.pathname);
 
-  const isNotDetailPosts = !isDetailPost;
+  // const isNotDetailPosts = !isDetailPost;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -36,12 +33,11 @@ function App() {
 
   return (
     <div className="root-container">
-      {
+      {/* {
         isNotDetailPosts && <>
-          <DynamicStars parentClassName="root-container" />
           <DynamicBlur parentClassName="root-container" />
         </>
-      }
+      } */}
       <Routes>
         <Route path="/search" element={<SearchPage />} /> 
         <Route path="/activities/:id" element={<PostDetailsPage />} />
@@ -56,6 +52,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/collaborator-seeking" element={<ComingSoonPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

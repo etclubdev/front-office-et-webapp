@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react';
 import { horizontalLogo } from '../../assets/images/logos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +9,7 @@ import { CSSTransition } from 'react-transition-group';
 
 export const Navbar = () => {
   const [scrollingDown, setScrollingDown] = useState(false);
+  const [isNabBarHovered, setIsNavBarHovered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -29,7 +31,7 @@ export const Navbar = () => {
   const isNotHomepage = location.pathname !== '/';
 
   return (
-    <div className={`nav-section ${(scrollingDown || isNotHomepage) ? 'scrolled' : ''}`}>
+    <div className={`nav-section ${(scrollingDown || isNotHomepage || isNabBarHovered) ? 'scrolled' : ''}`}>
       <Link to="/" className="nav-logo-container">
         <img src={horizontalLogo} alt="ET Club" className="nav-logo" />
       </Link>
@@ -56,24 +58,34 @@ export const Navbar = () => {
         </> :
         <>
           <NavbarMenu
+            handleSetIsNavBarHovered={(value) => {
+              setIsNavBarHovered(value)
+            }}
             isMobile={isMobile}
             menuOpen={menuOpen}
           />
         </>
       }
-    </div>
+      </div>
   );
 };
 
-const NavbarMenu = ({ isMobile, menuOpen }) => {
+const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const handleDropdownClick = (name) => {
     setActiveDropdown(prev => (prev === name ? null : name));
   };
+
   return (
-    <div className={`nav-menu ${menuOpen ? 'show' : ''}`}>
-      {
+    <div
+    className={`nav-menu ${menuOpen ? 'show' : ''}`}
+    {...(handleSetIsNavBarHovered && {
+      onMouseEnter: () => handleSetIsNavBarHovered(true),
+      onMouseLeave: () => handleSetIsNavBarHovered(false),
+    })}
+  >
+    {
         isMobile && (
           <Link to='/search' className="searchbar-group">
             <div className="search-container">
@@ -88,14 +100,14 @@ const NavbarMenu = ({ isMobile, menuOpen }) => {
         onClick={() => isMobile && handleDropdownClick('about')}
       >
         <div className={`nav-item-dropbtn ${isMobile && activeDropdown === 'about' ? 'show' : ''}`}>
-          <p className="nav-item-content">Về ET Club</p>
+          <p className="nav-item-content">Về ET Club ⮛</p>
         </div>
         <div
           className={`dropdown-content ${isMobile && activeDropdown === 'about' ? 'show' : ''}`}
         >
           <Link id="1st" to="/introduction"><p>Giới thiệu</p></Link>
           <Link id="2nd" to="/hr-structure"><p>Cơ cấu tổ chức</p></Link>
-          <Link id="3rd" to="/faqs"><p>FAQs</p></Link>
+          {/* <Link id="3rd" to="/faqs"><p>FAQs</p></Link> */}
         </div>
       </a>
       <Link to='/activities' className="nav-item">
@@ -106,7 +118,7 @@ const NavbarMenu = ({ isMobile, menuOpen }) => {
         onClick={() => isMobile && handleDropdownClick('etzone')}
       >
         <div className={`nav-item-dropbtn ${isMobile && activeDropdown === 'etzone' ? 'show' : ''}`}>
-          <p className="nav-item-content">ET Zone</p>
+          <p className="nav-item-content">ET Zone ⮛</p>
         </div>
         <div
           className={`dropdown-content ${isMobile && activeDropdown === 'etzone' ? 'show' : ''}`}
@@ -115,8 +127,11 @@ const NavbarMenu = ({ isMobile, menuOpen }) => {
           <Link id="2nd" to="/et-blog"><p>ET Blog</p></Link>
         </div>
       </a>
-      <Link to='/collaborator-seeking' className="nav-item">
+      {/* <Link to='/collaborator-seeking' className="nav-item">
         <p className="nav-item-content">Tìm kiếm CTV</p>
+      </Link> */}
+      <Link to='/faqs' className="nav-item">
+        <p className="nav-item-content">FAQs</p>
       </Link>
       {
         !isMobile && (

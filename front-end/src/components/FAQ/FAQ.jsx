@@ -5,6 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 import plusIcon from '../../mocks/images/FAQs/plus.png';
 import minusIcon from '../../mocks/images/FAQs/minus.png';
 import { PageTitle } from '../PageTitle/PageTitle.jsx';
+import Skeleton from '@mui/material/Skeleton';
 
 export const FAQ = ({ questions }) => {
 
@@ -14,9 +15,22 @@ export const FAQ = ({ questions }) => {
         setActiveQuestion(activeQuestion === id ? null : id);
     };
 
+    if (!questions || questions.length === 0) {
+        return (
+            <div className="skeleton-alt-faqs">
+                <PageTitle>{FAQ_TITLE}</PageTitle>
+                <Skeleton variant="rectangular" width="100%" height="21vw" />
+                <div className="more-info-container">
+                    <a href="/faqs" className="more-info-link">
+                        Tìm hiểu thêm
+                    </a>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className="FAQ-section">
-            <div className="division-bar"></div>
             <PageTitle>{FAQ_TITLE}</PageTitle>
             <div className="FAQ-items">
                 {questions.map(question => (

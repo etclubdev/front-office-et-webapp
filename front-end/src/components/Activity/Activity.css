@@ -12,6 +12,9 @@
 .activity-image{
     object-fit: cover;
     box-shadow: 0.2vw 0.2vw 1vw 0 #A1EFF2;
+    border-radius: 20px;
+    width: fit-content !important;
+    max-width: 90% !important;
 }
 
 .activity-name{

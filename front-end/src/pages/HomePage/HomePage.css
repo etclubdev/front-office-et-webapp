@@ -4,7 +4,6 @@ body {
   width: 100%;  
   height: auto;  
   background-image: 1; 
-  background: #D9EEF8;
   overflow-x: hidden; 
 }   
 
@@ -16,7 +15,7 @@ body {
 .homepage-section{
   margin: auto;  
   padding: 0;  
-  width: 85%;  
+  width: 70%;  
   height: auto; 
 }
 
@@ -29,9 +28,4 @@ body {
 .intro-item {
   width: 120%;
   opacity: 0;  
-}
-
-  
-      
-  
-    
+}    
