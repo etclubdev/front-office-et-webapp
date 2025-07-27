@@ -3,11 +3,9 @@ import Slider from "react-slick";
 import { SliderArrow } from "../SliderArrow";
 import './Introduction.css';
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-
+import { CircularLoading } from '../CircularLoading';
 
 export const Introduction = ({ banners }) => {
-  console.log(banners);
-  
   const settings = {
     dots: false,
     infinite: true,
@@ -26,6 +24,12 @@ export const Introduction = ({ banners }) => {
       { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } }
     ]
   };
+
+  if (!banners || banners.length === 0) {
+    return (
+      <CircularLoading />
+    );
+  }
 
   return (
     <div className="introduction-slider">

@@ -44,7 +44,7 @@ export const Characteristics = () => {
                             <div className="underline u1"></div>
                             <div className="characteristics-item-desc b1">{etDescItems[0].desc}</div>
                         </div>
-                        <img src={require(`../../mocks/images/profiles/productive.jpg`)} className="characteristics-item-image a1" />
+                        <img src={require(`../../mocks/images/profiles/productive.jpg`)} className="characteristics-item-image a1" alt='img'/>
                     </div>
                     <div className="char2-container">
                         <div className="char2">
@@ -52,7 +52,7 @@ export const Characteristics = () => {
                             <div className="underline u2"></div>
                             <div className="characteristics-item-desc b2">{etDescItems[2].desc}</div>
                         </div>
-                        <img src={require(`../../mocks/images/profiles/pioneering.jpg`)} className="characteristics-item-image a2" />
+                        <img src={require(`../../mocks/images/profiles/pioneering.jpg`)} className="characteristics-item-image a2" alt='img'/>
                     </div>
                     <div className="char3-container">
                         <div className="char3">
@@ -60,7 +60,7 @@ export const Characteristics = () => {
                             <div className="underline u3"></div>
                             <div className="characteristics-item-desc b3">{etDescItems[1].desc}</div>
                         </div>
-                        <img src={require(`../../mocks/images/profiles/creative.jpg`)} className="characteristics-item-image a3" />
+                        <img src={require(`../../mocks/images/profiles/creative.jpg`)} className="characteristics-item-image a3" alt='img'/>
                     </div>
                     <div className="char4-container">
                         <div className="char4">
@@ -68,7 +68,7 @@ export const Characteristics = () => {
                             <div className="underline u4"></div>
                             <div className="characteristics-item-desc b4">{etDescItems[3].desc}</div>
                         </div>
-                        <img src={require(`../../mocks/images/profiles/innovative.jpg`)} className="characteristics-item-image a4" />
+                        <img src={require(`../../mocks/images/profiles/innovative.jpg`)} className="characteristics-item-image a4" alt='img'/>
                     </div>
                </div>
             </Available>

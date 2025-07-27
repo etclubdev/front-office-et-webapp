@@ -6,7 +6,8 @@ import { getEtBlogById } from "../../api/etBlog.service";
 import { getEtNewsById } from "../../api/etNews.service";
 import { PostDetails } from "../../components/PostDetails";
 import { Navbar } from "../../components/Navbar";
-import { Footer } from "../../components/Footer";
+import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
+import { CircularLoading } from "../../components/CircularLoading";
 
 export const PostDetailsPage = () => {
     const { pathname } = useLocation();
@@ -23,10 +24,10 @@ export const PostDetailsPage = () => {
 
         const fetchData = async () => {
             const serviceFunc = getPostById();
-            if (!serviceFunc) return; 
+            if (!serviceFunc) return;
 
             try {
-                const {data} = await serviceFunc(id);
+                const { data } = await serviceFunc(id);
                 setDetails(data);
             } catch (error) {
                 console.error("Failed to fetch post details:", error);
@@ -34,13 +35,41 @@ export const PostDetailsPage = () => {
         };
 
         fetchData();
-    }, [id, pathname]); 
+    }, [id, pathname]);
+
+    if (!details || details.length === 0) {
+        return (
+            <div className="loading...">
+                <Navbar />
+                <CircularLoading />
+            </div>
+        )
+    }
+
+    const breadcrumbsData = [
+        {
+            href: "/",
+            title: "Trang chủ"
+        },
+        {
+            href: "/activities",
+            title: "Hoạt động"
+        },
+        {
+            href: "#",
+            title: "Bài viết"
+        }
+    ]
+
+    console.log(details);
+    
 
     return (
         <div className="details-page">
             <Navbar />
-            {details ? <PostDetails details={details} thumbnailShowed = {!pathname.includes('et-blog')} /> : <p>Loading...</p>}
-            <Footer />
+            <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
+            <img src={require(`../../mocks/images/detailPost/alt-img.png`)} alt="null" className="post-cover" />
+            <PostDetails details={details} thumbnailShowed={!pathname.includes('et-blog')} />
         </div>
     );
 };

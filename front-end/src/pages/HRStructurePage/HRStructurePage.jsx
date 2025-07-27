@@ -1,21 +1,34 @@
 import './HRStructurePage.css';
 import { useRef } from 'react';
 import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
-import { Footer } from '../../components/Footer';
 import { Navbar } from '../../components/Navbar';
 import { HRStructure } from '../../mocks/data';
-import HRStructureTree from '../../mocks/images/hr-structure/hr-structure-tree.png';
+import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
+import { DynamicBlur } from '../../components/DynamicBlur';
 
 const hrData = HRStructure.hrStructure;
 
 export const HRStructurePage = () => {
 
     const ref = useRef(null);
-    useIntersectionObserver(ref, "hr-structure-branch", "visible", {threshold: 0.15});
+    useIntersectionObserver(ref, "hr-structure-branch", "visible", { threshold: 0.15 });
+
+    const breadcrumbsData = [
+        {
+            href: "/",
+            title: "Trang chủ"
+        },
+        {
+            href: "#",
+            title: "Cơ cấu tổ chức"
+        }
+    ]
 
     return (
         <div className="hr-structure-page">
-            <Navbar/>
+            <Navbar />
+            <DynamicBlur parentClassName="root-container" />
+            <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
             <p className="hr-structure-name title">CƠ CẤU TỔ CHỨC</p>
             <div className="hr-structure-tree" ref={ref}>
                 {
@@ -45,7 +58,6 @@ export const HRStructurePage = () => {
                 }
                 {/* <img className='hr-tree' src={HRStructureTree} alt="" /> */}
             </div>
-            <Footer/>
         </div>
     )
 }

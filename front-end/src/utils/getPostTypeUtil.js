@@ -20,5 +20,7 @@ export function getPostType(table) {
                 type: 'Hoạt động',
                 to: '/activities'
             }
+        default:
+            return null
     }
 }
