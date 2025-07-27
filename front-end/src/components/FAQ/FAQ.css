@@ -117,6 +117,13 @@
     opacity: 0;
 }
 
+.division-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
 .division-bar {
     width: 50%; 
     height: 3px;
@@ -155,6 +162,10 @@
 .more-info-link:hover {
     opacity: 0.7;
     cursor: pointer;
+}
+
+.skeleton-alt-faqs {
+    margin: 5%;
 }
 
 @media screen and (max-width: 480px) {

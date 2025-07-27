@@ -12,9 +12,10 @@
 }
 
 .et-blog-section {
-    width: 100%;
-    padding: 2vw 10vw;
+    margin-top: 8vw;
+    width: 68%;
     box-sizing: border-box;
+    margin-bottom: 2vw;
 }
 
 .et-blog-highlight {

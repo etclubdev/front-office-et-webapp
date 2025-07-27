@@ -34,7 +34,7 @@ export const DynamicBlur = ({parentClassName}) => {
                         opacity: circle.opacity,
                         background: circle.background,
                         filter: `blur(${circle.blur}px)`,
-
+                        zIndex:-1,
                     }}
                 />
             ))}
