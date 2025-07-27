@@ -32,7 +32,7 @@
     border-radius: 50%;
 }
 
-.partner{
+.partner, .single-partner{
     position: relative;
     box-sizing: border-box;
     width: 15vw;
@@ -44,11 +44,11 @@
     align-items: center;
 }
 
-.partner:hover{
+.partner:hover, .single-partner:hover{
     transform: scale(1.05);
 }
 
-.partner img{
+.partner img, .single-partner img{
     width: 15vw;
     height: 15vw;
     border-radius: 50%;
@@ -112,16 +112,17 @@
     margin: 5%;
 }
 
+
 @media screen and (max-width: 480px) {
-    .partner{
+    .partner, .single-partner{
         width: 100px;
     }
     
-    .partner:hover{
+    .partner:hover, .single-partner:hover{
         transform: scale(1.05);
     }
     
-    .partner img{
+    .partner img, .single-partner img{
         width: 100px;
         height: 100px;
     }
