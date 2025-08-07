@@ -1,27 +1,20 @@
 import './ActivitiesPage.css';
 import { Activity } from '../../components/Activity';
 import { ActivitiesSlider } from '../../components/ActivitiesSlider';
-import { useEffect, useState } from 'react';
 import { getAllActivities } from '../../api/activity.service';
 import { Navbar } from '../../components/Navbar';
 import { PageTitle } from '../../components/PageTitle';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { CircularLoading } from '../../components/CircularLoading';
 import { DynamicBlur } from '../../components/DynamicBlur';
-
+import { useSimpleData } from '../../utils/useSimpleData';
 
 export const ActivitiesPage = () => {
-    const [activities, setActivities] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const { data } = await getAllActivities();
-            setActivities(data);
-        }
-        fetchData();
-    }, []);
+    const { data: activities, isFetching, isLoading, isError } = useSimpleData(['activities'], getAllActivities);
+    // console.log('Activities:', activities, 'Is fetching:', isFetching);
 
-    if (!activities || activities.length === 0) {
+    if (isLoading || isError) {
         return (
             <div className="loading...">
                 <Navbar />
@@ -30,6 +23,7 @@ export const ActivitiesPage = () => {
 
         );
     };
+
 
     const breadcrumbsData = [
         {
