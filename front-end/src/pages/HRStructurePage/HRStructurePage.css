@@ -44,9 +44,7 @@
     width: 36vw;
     height: auto;
     border-radius: 2vw;
-    box-shadow:
-        0.5vw 0.5vw 2vw #fffca0d8,
-        -0.1vw -0.1vw 0vw #fffb8327;
+    box-shadow: 0.5vw 0.5vw 2vw #232837d8;
     outline: none;
 }
 
