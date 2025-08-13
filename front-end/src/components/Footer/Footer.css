@@ -11,8 +11,9 @@
     align-items: center;
     z-index: 1;
 }
+
 .footer-content{
-        transform: scale(0.9);
+    transform: scale(0.9);
     width: 100%;
     height: max-content;
     padding: 1.5vw ;
@@ -97,9 +98,8 @@
 .footer-social-icon{
     width: 1.6vw;
     height: 1.6vw;
-    font-size: 0.8vw;
+    font-size: 1.5vw;
     margin-right: 1vw;
-    background: linear-gradient(90deg, #96DD99, #4E9D99, #1C4BB2);
     border-radius: 20%;
     display: flex;
     align-items: center;
@@ -177,7 +177,7 @@
     .footer-social-icon{
         width: 16px;
         height: 16px;
-        font-size: 10px;
+        font-size: 14px;
     }
     
     .footer-bottom {
