@@ -4,20 +4,15 @@ import { HorizontalNews } from '../../components/HorizontalNews';
 import { VerticalNews } from '../../components/VerticalNews';
 import { PostSlider } from '../../components/PostSlider';
 import { getAllNews } from '../../api/etNews.service';
-import { useEffect, useState } from 'react';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { CircularLoading } from '../../components/CircularLoading';
 import { DynamicBlur } from '../../components/DynamicBlur';
+import { useSimpleData } from '../../utils/useSimpleData';
 
 export const ETNewsPage = () => {
-    const [news, setNews] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            const { data } = await getAllNews();
-            setNews(data);
-        }
-        fetchData();
-    }, [])
+
+    const { data: news, isFetching, isLoading, isError } = useSimpleData(['etNews'], getAllNews);
+    // console.log('ET News:', news, 'Is fetching:', isFetching);
 
     if (!news || news.length === 0) {
         return (

@@ -7,27 +7,6 @@ import { PageTitle } from "../PageTitle";
 import Skeleton from '@mui/material/Skeleton';
 
 export const Partners = ({ partners, companions }) => {
-    const visiblePartners = partners.filter(partner => partner.visible);
-    const visibleCompanions = companions.filter(companion => companion.visible);
-
-    const settings = {
-        dots: false,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: "2vw",
-        autoplay: true,
-        autoplaySpeed: 2000,
-        initialSlide: 0,
-        nextArrow: <SliderArrow icon={faChevronRight} />,
-        prevArrow: <SliderArrow icon={faChevronLeft} />,
-        responsive: [
-            { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } },
-            { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } },
-            { breakpoint: 480, settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: true } }
-        ]
-    };
 
     if (!partners || !companions || partners.length === 0 || companions.length === 0) {
         return (
@@ -53,6 +32,30 @@ export const Partners = ({ partners, companions }) => {
             </div>
         )
     }
+
+    const visiblePartners = partners.filter(partner => partner.visible);
+    const visibleCompanions = companions.filter(companion => companion.visible);
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "2vw",
+        autoplay: true,
+        autoplaySpeed: 2000,
+        initialSlide: 0,
+        nextArrow: <SliderArrow icon={faChevronRight} />,
+        prevArrow: <SliderArrow icon={faChevronLeft} />,
+        responsive: [
+            { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } },
+            { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: true } },
+            { breakpoint: 480, settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: true } }
+        ]
+    };
+
+    
 
     return (
         <div className="partners-section">

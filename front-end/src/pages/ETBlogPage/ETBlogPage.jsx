@@ -7,17 +7,11 @@ import { getAllBlogs } from '../../api/etBlog.service';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { CircularLoading } from '../../components/CircularLoading';
 import { DynamicBlur } from '../../components/DynamicBlur';
-import { useEffect, useState } from 'react';
+import { useSimpleData } from '../../utils/useSimpleData';
 
 export const ETBlogPage = () => {
-    const [news, setNews] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            const { data } = await getAllBlogs();
-            setNews(data);
-        }
-        fetchData();
-    }, [])
+    const { data: news, isFetching, isLoading, isError } = useSimpleData(['etBlog'], getAllBlogs);
+    // console.log('ET Blog:', news, 'Is fetching:', isFetching);
 
         if (!news || news.length === 0) {
         return (

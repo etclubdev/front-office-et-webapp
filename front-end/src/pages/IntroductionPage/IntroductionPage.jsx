@@ -9,6 +9,17 @@ import { DynamicBlur } from '../../components/DynamicBlur';
 import { CircularLoading } from '../../components/CircularLoading';
 import styled from 'styled-components';
 
+const ResponsiveBreadcrumbs = styled(CustomBreadcrumbs)`
+  width: 70%;
+  padding-bottom: 2vw;
+  top: 1vw;
+
+  @media screen and (max-width: 768px) {
+    top: 1vw;
+  }
+`;
+
+
 export const IntroductionPage = () => {
 
     const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +27,7 @@ export const IntroductionPage = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 2000);
+        }, 100);
 
         return () => clearTimeout(timer);
     }, []);
@@ -40,17 +51,6 @@ export const IntroductionPage = () => {
             title: "Giới thiệu"
         }
     ]
-
-    const ResponsiveBreadcrumbs = styled(CustomBreadcrumbs)`
-        width: 70%;
-        padding-bottom: 2vw;
-        top: 1vw;
-
-        @media screen and (max-width: 768px) {
-            top: 1vw;
-        }
-        `;
-
 
     return (
         <div className="introduction-page">

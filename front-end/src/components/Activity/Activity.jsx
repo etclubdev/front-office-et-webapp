@@ -8,7 +8,7 @@ export const Activity = ({ index, activity, ongoing }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const highlightItem = document.querySelector(`#${activity.activity_id}`);
+        const highlightItem = document.getElementById(activity.activity_id);
 
         if (isVisible && ongoing) {
             if (index === 0) {
