@@ -35,7 +35,7 @@ export const HRStructurePage = () => {
                     hrData.map((department, index) => {
                         if (index % 2 === 0)
                             return (
-                                <div className="hr-structure-branch even">
+                                <div className="hr-structure-branch even" key={department.id}>
                                     <img src={require(`../../mocks${department.image}`)} alt="" className="hr-structure-img" />
                                     <div className="hr-structure-content">
                                         <p className="hr-structure-name">{department.name}</p>
@@ -45,7 +45,7 @@ export const HRStructurePage = () => {
                             )
                         else {
                             return (
-                                <div className="hr-structure-branch odd">
+                                <div className="hr-structure-branch odd" key={department.id}>
                                     <div className="hr-structure-content">
                                         <p className="hr-structure-name">{department.name}</p>
                                         <p className="hr-structure-desc">{department.desc}</p>

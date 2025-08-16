@@ -95,7 +95,7 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
           </Link>
         )
       }
-      <a
+      <div
         className="nav-item dropbtn"
         onClick={() => isMobile && handleDropdownClick('about')}
       >
@@ -109,11 +109,11 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
           <Link id="2nd" to="/hr-structure"><p>Cơ cấu tổ chức</p></Link>
           {/* <Link id="3rd" to="/faqs"><p>FAQs</p></Link> */}
         </div>
-      </a>
+      </div>
       <Link to='/activities' className="nav-item">
         <p className="nav-item-content">Hoạt động</p>
       </Link>
-      <a
+      <div
         className="nav-item dropbtn"
         onClick={() => isMobile && handleDropdownClick('etzone')}
       >
@@ -126,7 +126,7 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
           <Link id="1st" to="/et-news"><p>ET News</p></Link>
           <Link id="2nd" to="/et-blog"><p>ET Blog</p></Link>
         </div>
-      </a>
+      </div>
       {/* <Link to='/collaborator-seeking' className="nav-item">
         <p className="nav-item-content">Tìm kiếm CTV</p>
       </Link> */}

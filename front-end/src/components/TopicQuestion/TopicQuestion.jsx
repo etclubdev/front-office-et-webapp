@@ -2,7 +2,6 @@ import './TopicQuestion.css';
 import Question from '../Question';
 
 export const TopicQuestion = ({ topicQuestion, title }) => {
-    
     return (
         <div className="topic-question">
             <div className="topic-title-container">
@@ -12,7 +11,9 @@ export const TopicQuestion = ({ topicQuestion, title }) => {
             </div>
             <>
                 {
-                    topicQuestion?.map(item => <Question key={item.id} item={item} />)
+                    topicQuestion?.map(item => (
+                        <Question key={item.faq_id} item={item} />
+                    ))
                 }
             </>
         </div>

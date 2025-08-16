@@ -1,5 +1,4 @@
 import './FAQsPage.css';
-import { useEffect, useState } from 'react';
 import { TopicQuestion } from '../../components/TopicQuestion';
 import { PageTitle } from '../../components/PageTitle';
 import { getAllFAQs } from '../../api/faq.service';
@@ -7,16 +6,11 @@ import { Navbar } from '../../components/Navbar';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { DynamicBlur } from '../../components/DynamicBlur';
 import { CircularLoading } from '../../components/CircularLoading';
+import { useSimpleData } from '../../utils/useSimpleData'; 
 
 export const FAQsPage = () => {
-    const [faqs, setFAQs] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            const { data } = await getAllFAQs();
-            setFAQs(data);
-        }
-        fetchData();
-    }, [])
+    const { data: faqs, isFetching, isLoading, isError } = useSimpleData(['faqs'], getAllFAQs);
+    // console.log('FAQs:', faqs, 'Is fetching:', isFetching);
 
     if (!faqs || faqs.length === 0) {
         return (

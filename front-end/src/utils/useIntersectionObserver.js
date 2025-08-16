@@ -3,7 +3,6 @@ import { useEffect } from "react";
 export const useIntersectionObserver = (ref, observedSelector, visibleClass = "visible", options = { threshold: 0.1 }) => {
     useEffect(() => {
 
-        console.log(ref.current);
         if (!ref?.current || !observedSelector) return;
 
         const observer = new IntersectionObserver((entries) => {
