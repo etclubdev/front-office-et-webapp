@@ -17,7 +17,9 @@ export const Statistics = ({ statistics }) => {
     if (!statistics || statistics.length === 0) {
         return (
             <div>
-                <PageTitle fontSize="3vw">{STATISTICS_TITLE}</PageTitle>
+                <Heading level={1} className="statistics-section-title">
+                    {STATISTICS_TITLE}
+                </Heading>
 
                 <div className="skeleton-alt-stts">
 
