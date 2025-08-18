@@ -93,11 +93,15 @@
     animation: expand-contract 4s infinite ease-in-out;
 }
 
-
+@media (min-width: 481px) and (max-width: 768px) {
+    .hr-structure-page{
+        padding-top: 120px;
+    }
+}
 
 @media(max-width: 739px) {
     .hr-structure-page{
-        padding-top: 70px;
+        padding-top: 100px;
     }
     .hr-structure-name.title{
         font-size: 20px;
