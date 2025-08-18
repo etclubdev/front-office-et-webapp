@@ -38,7 +38,17 @@ export const Introduction = ({ banners }) => {
           if (!banner.visible) return null;
           else
             return (
-              <img key={banner.banner_id} src={banner.image_url} alt={banner.banner_name} />
+              <img
+                key={banner.banner_id}
+                src={banner.image_url}
+                alt={banner.banner_name}
+                loading='lazy'
+                onClick={() => {
+                  if (banner.hypertext_link) {
+                    window.open(banner?.hypertext_link, "_blank");
+                  }
+                }}
+              />
             )
         })}
       </Slider>
