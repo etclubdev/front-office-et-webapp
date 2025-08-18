@@ -30,7 +30,7 @@ export const VerticalNews = ({ news, isETNews }) => {
                 </div>
             </div>
             <div className="vertical-news-container">
-                <Heading level={3} className="vertical-news-title">{news?.title}</Heading>
+                <Heading level={3} className="vertical-news-title">{trimText(news?.title, 50)}</Heading>
                 <p className="vertical-news-content">{trimText(news?.meta_description, 90)}</p>
                 <div className="vertical-news-time">
                     <img src={clockIcon} alt="clock icon" className="clock-icon" />

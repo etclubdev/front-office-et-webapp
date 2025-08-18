@@ -33,7 +33,6 @@
     justify-content: center;
     align-items: center;
     margin: 20px 0;
-    font-size: 3em;
     background: linear-gradient(0deg, #47A8B4 0%, #5D3E91 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -131,11 +130,11 @@
 
 .et-post-slider .slick-list {
     width: 100%;
-    height: 470px;
+    height: 500px;
 }
 
 .et-post-slider .slick-track {
-    height: 470px;
+    height: 500px;
 }
 
 .posts-container {

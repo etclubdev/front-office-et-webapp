@@ -149,7 +149,8 @@
 /* Desktop */
 @media (min-width: 1024px) {
     .vertical-news {
-        min-height: 22em;
+        min-height: 430px;
+        max-height: 430px;
     }
 
     .vertical-news-content {

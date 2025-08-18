@@ -13,7 +13,7 @@ import { Heading } from "../../components/Typography/Typography";
 export const ETNewsPage = () => {
 
     const { data: news, isFetching, isLoading, isError } = useSimpleData(['etNews'], getAllNews);
-    // console.log('ET News:', news, 'Is fetching:', isFetching);
+    console.log('ET News:', news, 'Is fetching:', isFetching);
 
     if (!news || news.length === 0) {
         return (
@@ -36,6 +36,16 @@ export const ETNewsPage = () => {
         }
     ]
 
+    const visibleGroupedNews = Object.entries(news?.groupedNews || {}).reduce(
+        (acc, [category, items]) => ({
+            ...acc,
+            [category]: items.filter(item => item.visible),
+        }),
+        {}
+    );
+
+    const visibleLastestNews = news?.latestNews?.filter(item => item.visible) || [];
+
     return (
         <div className="etnews-page">
             <Navbar />
@@ -48,22 +58,25 @@ export const ETNewsPage = () => {
                     </div>
                     <div className="highlight-news">
                         <div id="highlight-news-1">
-                            <VerticalNews isETNews news={news?.latestNews?.[0]} />
+                            <VerticalNews isETNews news={visibleLastestNews[0]} />
                         </div>
-                        <div id="highlight-news-2">
-                            {
-                                news?.latestNews
-                                    ?.filter((_, index) => index !== 0)
-                                    .map((item, index) => (
-                                        <HorizontalNews isETNews key={'highlight-news-' + index} news={item} />
-                                    ))
-                            }
-                        </div>
+                        {
+                            visibleLastestNews?.length > 1 && (
+                                <div id="highlight-news-2">
+                                    {
+                                        visibleLastestNews.filter((_, index) => index !== 0)
+                                            .map((item, index) => (
+                                                <HorizontalNews isETNews key={'highlight-news-' + index} news={item} />
+                                            ))
+                                    }
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
                 <div className="et-news-categories">
                     {
-                        Object.entries(news?.groupedNews || {})
+                        Object.entries(visibleGroupedNews || {})
                             .filter(([_, newsList]) => newsList?.length > 0)
                             .map(([category, newsList], index) => (
                                 <PostSlider
