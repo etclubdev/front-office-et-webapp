@@ -28,21 +28,15 @@ export const HomePage = () => {
       <div className="homepage-section">
         <AboutUsSection />
       </div>
+
       <Characteristics />
+      <Statistics statistics={achievements} />
+
       <div className="homepage-section">
-
-        <div className="division-bar-container">
-          <div className="division-bar"></div>
-        </div>
-        <Statistics statistics={achievements} />
-
         <Partners partners={partners?.experts} companions={partners?.businesses} />
-
-        <div className="division-bar-container">
-          <div className="division-bar"></div>
-        </div>
         <FAQ questions={faqs} />
       </div>
+      
     </div>
   );
 };

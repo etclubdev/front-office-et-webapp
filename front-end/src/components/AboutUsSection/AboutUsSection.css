@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 2vw;
-    margin: 7vw 0 0 0;
+    margin-top: 150px;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
@@ -33,9 +33,8 @@
 }
 
 .bio-logo img {
-    width: 20vw;
+    width: 250px;
     height: auto;
-    transition: width 0.5s ease;
 }
 
 .bio-detail {
@@ -47,7 +46,7 @@
 
 .about-us-title {
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
     background: linear-gradient(180deg, #47A8B4 0%, #5D3E91 100%);
     font-size: 3vw;
     font-weight: 900;
@@ -66,10 +65,10 @@
 }
 
 .detail-img {
-    width: 20vw;
+    width: 250px;
     object-fit: cover;
-    height: 17vw;
-    border-radius: 2vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
     box-shadow: 16px 17px 31.9px -5px #737373;
     line-height: 1.5;
 }
@@ -77,9 +76,10 @@
 .detail-desc {
     font-family: 'Montserrat';
     font-weight: 500;
-    width: 20vw;
+    width: 250px;
     height: auto;
-    font-size: 1.1vw;
+    font-size: 0.8rem;
+    line-height: 1.5;
     text-align: justify;
     color: #0F4081;
 }
@@ -98,24 +98,33 @@
 
 /* Responsive adjustments */
 @media screen and (max-width: 1024px) {
+    .aboutus-section{
+        margin-top: 100px;
+    }
     .about-us-title {
-        font-size: 4vw; 
         width: 80%;
     }
     .bio-logo img {
-        width: 30vw; 
+        width: 200px; 
+    }
+
+    .detail-img {
+        width: 230px;
+    }
+
+    .detail-desc {
+        font-size: 12px;
+        width: 80%;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
     .aboutus-section{
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
     .about-us-title {
-        font-size: 5vw;
         width: 100%;
-        margin-bottom: 20px;
     }
 
     .bio{
@@ -153,18 +162,19 @@
     }
 
     .detail-desc {
-        font-size: 9px;
+        font-size: 16px;
         width: 70%;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .aboutus-section{
         opacity: 1 !important;
         transform: translateY(0) !important;
+        margin-top: 50px;
     }
+
     .about-us-title {
-        font-size: 5vw;
         width: 100%;
         margin-bottom: 20px;
     }
@@ -195,12 +205,12 @@
     }
 
     .bio-logo img {
-        width: 50vw;
+        width: 200px;
     }
 
     .detail-img {
-        width: 40vw;
-        height: 35vw;
+        width: 170px;
+        aspect-ratio: 1 / 1;
     }
 
     .detail-desc {

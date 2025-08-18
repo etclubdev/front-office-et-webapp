@@ -56,9 +56,7 @@
 .hr-structure-name{
     padding-top: 1vw;
     font-size: 2vw;
-     font-weight: 900;
      text-align: center;
-     font-family: 'BeVietnamPro';
     background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
     background-clip: text;
     -webkit-background-clip: text;

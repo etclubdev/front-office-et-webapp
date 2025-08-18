@@ -29,7 +29,7 @@
 
 .question-content{
     margin: 0;
-    font-size: 1.5vw;
+    font-size: 20px;
     font-weight: 500;
     margin-left: 2.5vw;
 }
@@ -49,8 +49,8 @@
 
 .answer-content{
     margin: 0;
-    font-size: 1.3vw;
-    line-height: 2vw;
+    font-size: 16px;
+    line-height: 1.5;
     opacity: 0.9;
     white-space: pre-line;
 }

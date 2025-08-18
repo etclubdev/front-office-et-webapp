@@ -61,7 +61,7 @@ export const IntroductionPage = () => {
                 <div className="et-cover">
                     {/* <p className="et-text">WE ARE</p> */}
                     <p className="we-are">WE ARE</p>
-                    <img className="et-logo" src={textLogo} alt="Economic Technology" />
+                    <img className="et-logo" src={textLogo} alt="Economic Technology" loading="lazy" />
                 </div>
             </div>
             <div className="introduction-content">

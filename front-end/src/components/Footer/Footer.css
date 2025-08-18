@@ -125,7 +125,7 @@
     width: 35%;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .footer-content{
         flex-direction: column;
         align-items: center;
@@ -182,5 +182,125 @@
     
     .footer-bottom {
         font-size: 12px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+    }
+    .footer-aboutET{
+        width: 90% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-item{
+        max-width: 100%;
+        width: 90%;
+    }
+
+    .footer-aboutET-logo{
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    .footer-aboutET-title{
+        width: 100%;
+        font-size: 20px;
+        color: white;
+        margin-top: 0.7vw;
+    }
+    
+    .footer-aboutET-desc{
+        font-size: 20px;
+    }
+    
+    .footer-item-title{
+        font-size: 20px;
+        width: 100%;
+    }   
+    
+    .footer-item-content{
+        font-size: 20px;
+    }
+
+    .footer-social-link{
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .footer-social-icon{
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+    }
+    
+    .footer-bottom {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-content{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+    }
+    .footer-aboutET{
+        width: 90% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-item{
+        max-width: 100%;
+        width: 90%;
+    }
+
+    .footer-aboutET-logo{
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    .footer-aboutET-title{
+        width: 100%;
+        font-size: 20px;
+        color: white;
+        margin-top: 0.7vw;
+    }
+    
+    .footer-aboutET-desc{
+        font-size: 20px;
+    }
+    
+    .footer-item-title{
+        font-size: 20px;
+        width: 100%;
+    }   
+    
+    .footer-item-content{
+        font-size: 20px;
+    }
+
+    .footer-social-link{
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .footer-social-icon{
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+    }
+    
+    .footer-bottom {
+        font-size: 18px;
     }
 }

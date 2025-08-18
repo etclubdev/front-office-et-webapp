@@ -8,9 +8,13 @@
     transform: scale(85%) !important;
 }
 
-.partners-section .page-title{
+.partners-section .partners-title{
     text-align: left;
-    margin-top: 4vw;
+    font-family: 'Montserrat';
+    background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .companions-title {
@@ -49,19 +53,19 @@
 }
 
 .partner img, .single-partner img{
-    width: 15vw;
-    height: 15vw;
+    width: 200px;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
-    border: 0.65vw solid #1d2f5c;
+    border: 8px solid #1d2f5c;
     box-sizing: border-box;
     object-fit: cover;
 }
 
 .partner-name{
     margin: 1vw 0 0.5vw 0;
-    width: 15vw;
+    width: 200px;
     font-family: 'BeVietnamPro';
-    font-size: 1.2vw;
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
     background: black;
@@ -70,8 +74,8 @@
 }
 
 .partner-role{
-    font-size: 1vw;
-    width: 15vw;
+    font-size: 18px;
+    width: 200px;
     font-family: 'BeVietnamPro';
     font-weight: 500;
     text-align: center;
@@ -104,6 +108,11 @@
     opacity: 1;
 }
 
+.partners-section .slick-list {
+    width: 100%;
+    min-height: 400px;
+}
+
 .skeleton-alt {
     display: flex;
     justify-content: space-around;
@@ -113,7 +122,7 @@
 }
 
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .partner, .single-partner{
         width: 100px;
     }
@@ -123,19 +132,22 @@
     }
     
     .partner img, .single-partner img{
-        width: 100px;
-        height: 100px;
+        width: 120px;
     }
     
     .partner-name{
         margin: 1vw 0 0.5vw 0;
-        width: 100px;
-        font-size: 10px;
+        width: 120px;
+        font-size: 13px;
     }
     
     .partner-role{
-        font-size: 7px;
-        width: 100px;
+        font-size: 10px;
+        width: 120px;
     }
-    
+
+    .partners-section .slick-list {
+        width: 100%;
+        min-height: 200px;
+    }
 }
