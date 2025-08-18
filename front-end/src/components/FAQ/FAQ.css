@@ -9,23 +9,6 @@
     gap: 4vw;
 }
 
-.FAQ-section.visible {
-    opacity: 1;
-    animation: zoomIn 1s ease-in-out;
-}
-
-@keyframes zoomIn {
-    0% {
-        transform: scale(0.7);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 .FAQ-section .faqs-title,
 .skeleton-alt-faqs .faqs-title {
     text-align: center;
@@ -34,120 +17,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.FAQ-items {
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    gap: 2vw;
-}
-
-.FAQ-item {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.FAQ-question {
-    width: 100%;
-    height: 3vw;
-    background: rgba(154, 153, 153, 0.13);
-    border-radius: 0.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-.FAQ-question.active {
-    box-shadow: 0 0.3vw 1vw 0.1vw rgba(7, 93, 180, 0.25);
-}
-
-.FAQ-question:hover {
-    background: rgba(94, 93, 93, 0.13);
-}
-
-.question-content {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 500;
-    margin-left: 2.5vw;
-}
-
-.question-button {
-    width: 1.5vw;
-    margin-right: 2.5vw;
-}
-
-.question-button.Collapse {
-    filter: brightness(1);
-}
-
-.FAQ-answer {
-    width: 90%;
-    margin-top: 1vw;
-    padding-left: 2vw;
-    border-left: 0.2vw solid rgba(89, 191, 231, 0.62);
-}
-
-.answer-content {
-    margin: 0 0 1vw 0;
-    font-size: 14px;
-    line-height: 1.5;
-    opacity: 0.9;
-}
-
-.answer-list {
-    padding-left: 2vw;
-    margin: 0;
-    list-style-type: disc;
-    font-size: 1.2vw;
-    color: black;
-}
-
-.answer-list-item {
-    margin-bottom: 0.5vw;
-    line-height: 1.8vw;
-}
-
-.answer-enter {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 500ms ease;
-}
-
-.answer-enter-active {
-    max-height: 50vw;
-    opacity: 1;
-}
-
-.answer-exit {
-    max-height: 50vw;
-    opacity: 1;
-    overflow: hidden;
-    transition: all 400ms ease;
-}
-
-.answer-exit-active {
-    max-height: 0;
-    opacity: 0;
-}
-
-.division-bar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
-}
-
-.division-bar {
-    width: 50%;
-    height: 3px;
-    background: linear-gradient(107deg, #3493C8 44.83%, #6AB8E0 68.38%);
-    border-radius: 2px;
 }
 
 .more-info-container {
@@ -183,6 +52,10 @@
     cursor: pointer;
 }
 
+.FAQ-section .topic-title-container {
+    display: none;
+}
+
 .skeleton-alt-faqs {
     margin: 5%;
 }
@@ -193,34 +66,6 @@
         margin-top: 0;
     }
 
-    .FAQ-items {
-        margin-top: 20px;
-        width: 100%;
-    }
-
-    .FAQ-question {
-        height: 30px;
-    }
-
-    .FAQ-section .question-content {
-        font-size: 14px;
-    }
-
-    .FAQ-section .question-button {
-        width: 15px;
-        margin-right: 2.5vw;
-    }
-
-    .FAQ-section .answer-content {
-        font-size: 12px;
-        line-height: 1.5;
-    }
-
-    .division-bar {
-        width: 50%;
-        height: 1px;
-    }
-
     .more-info-link {
         font-size: 14px;
         font-family: 'Montserrat';
@@ -228,28 +73,6 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    .FAQ-items {
-        width: 100%;
-    }
-
-    .FAQ-question {
-        height: 40px;
-        font-size: 18px;
-    }
-
-    .FAQ-section .question-content {
-        font-size: 16px;
-    }
-
-    .FAQ-section .question-button {
-        width: 20px;
-    }
-
-    .FAQ-section .answer-content {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
     .division-bar {
         width: 60%;
         height: 2px;
@@ -262,28 +85,6 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .FAQ-items {
-        width: 100%;
-    }
-
-    .FAQ-question {
-        height: 40px;
-        font-size: 18px;
-    }
-
-    .FAQ-section .question-content {
-        font-size: 16px;
-    }
-
-    .FAQ-section .question-button {
-        width: 20px;
-    }
-
-    .FAQ-section .answer-content {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
     .division-bar {
         width: 60%;
         height: 2px;

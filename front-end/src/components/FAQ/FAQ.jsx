@@ -7,6 +7,7 @@ import minusIcon from '../../mocks/images/FAQs/minus.png';
 import { PageTitle } from '../PageTitle/PageTitle.jsx';
 import Skeleton from '@mui/material/Skeleton';
 import { Heading } from '../Typography/Typography.jsx';
+import { TopicQuestion } from '../TopicQuestion/TopicQuestion.jsx';
 
 export const FAQ = ({ questions }) => {
 
@@ -33,7 +34,8 @@ export const FAQ = ({ questions }) => {
     return (
         <div className="FAQ-section">
             <Heading level={1} className="faqs-title">{FAQ_TITLE}</Heading>
-            <div className="FAQ-items">
+            <TopicQuestion topicQuestion={questions} />
+            {/* <div className="FAQ-items">
                 {questions.map(question => (
                     <div key={question.faq_id} className="FAQ-item">
                         <div
@@ -73,7 +75,7 @@ export const FAQ = ({ questions }) => {
                         </CSSTransition>
                     </div>
                 ))}
-            </div>
+            </div> */}
             <div className="more-info-container">
                 <a href="/faqs" className="more-info-link">
                     Tìm hiểu thêm
