@@ -149,9 +149,9 @@
         line-height: 1.5;
     }
 
-    .category-title-icon {
+    /* .category-title-icon {
         display: none;
-    }
+    } */
 
     .category-title {
         font-size: 18px !important;

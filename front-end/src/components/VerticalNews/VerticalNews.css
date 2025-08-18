@@ -1,15 +1,15 @@
 .vertical-news {
-    width: 22vw;
+    width: 290px;
     display: flex;
     flex-direction: column;
     transition: scale 0.2s ease-in-out;
     cursor: pointer;
     min-height: 22em;
-    margin-left: 0.2em;
     backdrop-filter: blur(70px);
-    padding: 2%;
+    padding: 4%;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 1vw 0 #e9e9e9;
+    align-items: center;
 }
 
 .vertical-news:hover {
@@ -17,7 +17,7 @@
 }
 
 .vertical-news-img-container {
-    width: 100%;
+    width: 280px;
     position: relative;
 }
 
@@ -25,8 +25,7 @@
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
-    margin-right: 2vw;
-    border-radius: 0.5vw;
+    border-radius: 10px;
 }
 
 .vertical-news-container {
@@ -36,19 +35,15 @@
 .vertical-news-title {
     width: 100%;
     color: #0F4081;
-    font-size: 1.1em;
-    font-weight: 900;
     font-family: 'BeVietnamPro';
     line-height: 1.5;
     text-align: left;
-    margin: 1vw 0 0.5vw 0;
-    font-size: 19px;
+    margin: 10px 0 8px 0;
 }
 
 .vertical-news-content {
     width: 100%;
     color: #000;
-    font-size: 1em;
     text-align: justify;
     margin: 0;
     line-height: 1.5;
@@ -58,56 +53,56 @@
 .vertical-news-time {
     display: flex;
     color: #838383;
-    font-size: 0.8vw;
+    font-size: 10px;
 }
 
 .clock-icon {
-    width: 0.8vw;
-    margin-right: 1vw;
+    width: 15px;
+    margin-right: 10px;
 }
 
 .vertical-news .et-news-tag {
     position: absolute;
     bottom: 0;
     width: fit-content;
-    margin: 0.1vw 0.5vw;
+    margin: 2px 8px;
     z-index: 1;
 }
 
 .vertical-news .tag-name {
     position: relative;
-    outline: 0.1vw solid #fff;
-    outline-offset: 0.17vw;
+    outline: 1px solid #fff;
+    outline-offset: 2px;
     z-index: 1000;
-    transform: translateX(1vw);
+    transform: translateX(8px);
 }
 
 .vertical-news .tag-square {
     position: relative;
     z-index: 1;
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 20px;
+    height: 20px;
     background-color: #ff0000;
 }
 
 .vertical-news #tag-square-1 {
-    transform: translate(0.4vw, 0.9vw);
+    transform: translate(1px, 12px);
 }
 
 .vertical-news #tag-square-2 {
-    transform: translate(7.8vw, -0.9vw);
+    transform: translate(82px, -12px);
 }
 
 .vertical-news .tag-name p {
-    padding: 0.1vw;
+    padding: 2px;
     width: fit-content;
-    font-size: 1.5vw;
+    font-size: 16px;
     font-weight: 900;
     margin: 0;
     background-color: #fff;
     color: #102e44;
-    border: 0.2vw solid #102e44;
-    outline: 0.1vw solid #fff;
+    border: 3px solid #102e44;
+    outline: 1px solid #fff;
 }
 
 /* Mobile */
@@ -140,7 +135,6 @@
 @media (min-width: 740px) and (max-width: 1023px) {
     .vertical-news {
         min-height: 20em;
-        margin-left: 0.2em;
     }
 
     .vertical-news-title {
@@ -156,11 +150,6 @@
 @media (min-width: 1024px) {
     .vertical-news {
         min-height: 22em;
-        margin-left: 0.2em;
-    }
-
-    .vertical-news-title {
-        font-size: 19px;
     }
 
     .vertical-news-content {

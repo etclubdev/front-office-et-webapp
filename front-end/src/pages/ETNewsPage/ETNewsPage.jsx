@@ -8,6 +8,7 @@ import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { CircularLoading } from '../../components/CircularLoading';
 import { DynamicBlur } from '../../components/DynamicBlur';
 import { useSimpleData } from '../../utils/useSimpleData';
+import { Heading } from "../../components/Typography/Typography";
 
 export const ETNewsPage = () => {
 
@@ -43,7 +44,7 @@ export const ETNewsPage = () => {
             <div className="et-news-section">
                 <div className="et-news-highlight">
                     <div className="highlight-title">
-                        <p style={{margin: "0"}}>ET NEWS</p>
+                        <Heading level={1}>ET NEWS</Heading>
                     </div>
                     <div className="highlight-news">
                         <div id="highlight-news-1">
