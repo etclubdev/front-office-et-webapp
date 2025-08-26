@@ -9,6 +9,17 @@ import { DynamicBlur } from '../../components/DynamicBlur';
 import { CircularLoading } from '../../components/CircularLoading';
 import styled from 'styled-components';
 
+const ResponsiveBreadcrumbs = styled(CustomBreadcrumbs)`
+  width: 70%;
+  padding-bottom: 2vw;
+  top: 1vw;
+
+  @media screen and (max-width: 768px) {
+    top: 1vw;
+  }
+`;
+
+
 export const IntroductionPage = () => {
 
     const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +27,7 @@ export const IntroductionPage = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 2000);
+        }, 100);
 
         return () => clearTimeout(timer);
     }, []);
@@ -41,17 +52,6 @@ export const IntroductionPage = () => {
         }
     ]
 
-    const ResponsiveBreadcrumbs = styled(CustomBreadcrumbs)`
-        width: 70%;
-        padding-bottom: 2vw;
-        top: 1vw;
-
-        @media screen and (max-width: 768px) {
-            top: 1vw;
-        }
-        `;
-
-
     return (
         <div className="introduction-page">
             <Navbar />
@@ -61,7 +61,7 @@ export const IntroductionPage = () => {
                 <div className="et-cover">
                     {/* <p className="et-text">WE ARE</p> */}
                     <p className="we-are">WE ARE</p>
-                    <img className="et-logo" src={textLogo} alt="Economic Technology" />
+                    <img className="et-logo" src={textLogo} alt="Economic Technology" loading="lazy" />
                 </div>
             </div>
             <div className="introduction-content">

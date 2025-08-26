@@ -16,19 +16,19 @@
             "id": 2,
             "name": "BAN TÀI CHÍNH - ĐỐI NGOẠI",
             "image": "/images/hr-structure/fer.jpg",
-            "desc": "Ban đối ngoại là đại diện cho hình ảnh ET Club tới các đối tác doanh nghiệp, với trách nhiệm đàm phán, đem về cho CLB những quyền lợi về hỗ trợ tài chính, truyền thông, bảo trợ chuyên môn."
+            "desc": "Ban Tài chính - Đối ngoại là đại diện cho hình ảnh ET Club tới các đối tác doanh nghiệp, với trách nhiệm đàm phán, đem về cho CLB những quyền lợi về hỗ trợ tài chính, truyền thông, bảo trợ chuyên môn."
         },
         {
             "id": 3,
             "name": "BAN TRUYỀN THÔNG",
             "image": "/images/hr-structure/pr.jpg",
-            "desc": "Ban truyền thông gồm 2 tiểu ban là Content và Media (Design, Photo, Video editor). Truyền thông giữ vai trò quan trọng trong việc xây dựng và tổng hợp nội dung về các lĩnh vực Công nghệ - Kỹ  thuật từ đó đưa hình ảnh CLB đến gần hơn với các bạn sinh viên."
+            "desc": "Ban Truyền thông gồm 2 tiểu ban là Content và Media (Design, Photo, Video editor). Truyền thông giữ vai trò quan trọng trong việc xây dựng và tổng hợp nội dung về các lĩnh vực Công nghệ - Kỹ  thuật từ đó đưa hình ảnh CLB đến gần hơn với các bạn sinh viên."
         },
         {
             "id": 4,
-            "name": "BAN KỸ THUẬT CÔNG NGHỆ",
+            "name": "BAN CHUYÊN MÔN",
             "image": "/images/hr-structure/tech.jpg",
-            "desc": "Ban Kỹ thuật - Công nghệ đảm nhận các khía cạnh thuần kỹ thuật như phát triển website CLB, điều hành nhóm cộng đồng và hướng dẫn, hỗ trợ thành viên CLB về những vấn đề kỹ thuật khi vận hành."
+            "desc": "Ban Chuyên môn đảm nhận các khía cạnh thuần kỹ thuật như phát triển website CLB, điều hành nhóm cộng đồng và hướng dẫn, hỗ trợ thành viên CLB về những vấn đề kỹ thuật khi vận hành."
         }
     ]
 }

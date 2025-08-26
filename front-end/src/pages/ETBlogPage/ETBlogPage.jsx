@@ -7,19 +7,14 @@ import { getAllBlogs } from '../../api/etBlog.service';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { CircularLoading } from '../../components/CircularLoading';
 import { DynamicBlur } from '../../components/DynamicBlur';
-import { useEffect, useState } from 'react';
+import { useSimpleData } from '../../utils/useSimpleData';
+import { Heading } from '../../components/Typography/Typography';
 
 export const ETBlogPage = () => {
-    const [news, setNews] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            const { data } = await getAllBlogs();
-            setNews(data);
-        }
-        fetchData();
-    }, [])
+    const { data: news, isFetching, isLoading, isError } = useSimpleData(['etBlog'], getAllBlogs);
+    // console.log('ET Blog:', news, 'Is fetching:', isFetching);
 
-        if (!news || news.length === 0) {
+    if (!news || news.length === 0) {
         return (
             <div className="loading...">
                 <Navbar />
@@ -40,34 +35,44 @@ export const ETBlogPage = () => {
         }
     ]
 
+    const visibleHighlightedNews = news?.highlighted?.filter(item => item.visible) || [];
+    const visibleAllNews = news?.all?.filter(item => item.visible) || [];
 
     return (
         <div className="etblog-page">
             <Navbar />
-                        <DynamicBlur parentClassName="root-container" />
+            <DynamicBlur parentClassName="root-container" />
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
             <div className="et-blog-section">
                 <div className="et-blog-highlight">
-                    <div className="highlight-title">ET BLOG</div>
-                    <div className="highlight-news">
-                        <div id="highlight-blog-1">
-                            <VerticalNews news={news?.highlighted?.[0]} />
-                        </div>
-                        <div id="highlight-blog-2">
-                            {
-                                news?.highlighted
-                                    ?.filter((_, index) => index !== 0)
-                                    .map((item, index) => (
-                                        <HorizontalNews key={`highlight-blog-${index}`} news={item} />
-                                    ))
-                            }
+                    <Heading level={1} className="highlight-title">ET BLOG</Heading>
+                    {
+                        visibleHighlightedNews.length > 0 && (
+                            <div className="highlight-news">
+                                <div id="highlight-blog-1">
+                                    <VerticalNews news={visibleHighlightedNews?.[0]} />
+                                </div>
+                                {
+                                    visibleHighlightedNews?.length > 1 && (
+                                        <div id="highlight-blog-2">
+                                            {
+                                                visibleHighlightedNews
+                                                    ?.filter((_, index) => index !== 0)
+                                                    .map((item, index) => (
+                                                        <HorizontalNews key={`highlight-blog-${index}`} news={item} />
+                                                    ))
+                                            }
 
-                        </div>
-                    </div>
+                                        </div>
+                                    )
+                                }
+                            </div>
+                        )
+                    }
                 </div>
                 <div className="et-blog-categories">
                     <PostSlider
-                        newsList={news?.all}
+                        newsList={visibleAllNews}
                         title="Tin mới nhất"
                         categoryid={`blog-list`}
                         isETNews={false}

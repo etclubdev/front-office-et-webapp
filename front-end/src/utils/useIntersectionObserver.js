@@ -3,8 +3,7 @@ import { useEffect } from "react";
 export const useIntersectionObserver = (ref, observedSelector, visibleClass = "visible", options = { threshold: 0.1 }) => {
     useEffect(() => {
 
-        console.log(ref.current);
-        if (!ref?.current || !observedSelector) return;
+        if (!ref?.current) return;
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -12,7 +11,10 @@ export const useIntersectionObserver = (ref, observedSelector, visibleClass = "v
             });
         }, options);
 
-        const elements = ref.current.querySelectorAll('.' + observedSelector);
+        const elements = observedSelector
+            ? ref.current.querySelectorAll("." + observedSelector)
+            : [ref.current];
+
         elements.forEach(el => observer.observe(el));
 
         return () => {

@@ -3,11 +3,11 @@ import { CSSTransition } from 'react-transition-group';
 import './Question.css';
 import plusIcon from '../../mocks/images/FAQs/plus.png';
 import minusIcon from '../../mocks/images/FAQs/minus.png';
-
+import { Heading } from '../Typography/Typography';
 
 export const Question = ({ item }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [toggleIcon, setIcon] = useState(minusIcon);
+    const [toggleIcon, setIcon] = useState(plusIcon);
 
     const questionRef = useRef(null);
     
@@ -29,7 +29,7 @@ export const Question = ({ item }) => {
             className="question-container"
         >
             <div className={`question ${isOpen ? 'active' : ''}`}onClick={toggleAnswer} ref={questionRef}>
-                <p className="question-content">{item.question}</p>
+                <Heading level={3} className="question-content">{item.question}</Heading>
                 <img className="question-button" src={toggleIcon} alt="plus" />
             </div>
             <CSSTransition

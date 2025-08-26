@@ -4,20 +4,16 @@ import { HorizontalNews } from '../../components/HorizontalNews';
 import { VerticalNews } from '../../components/VerticalNews';
 import { PostSlider } from '../../components/PostSlider';
 import { getAllNews } from '../../api/etNews.service';
-import { useEffect, useState } from 'react';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { CircularLoading } from '../../components/CircularLoading';
 import { DynamicBlur } from '../../components/DynamicBlur';
+import { useSimpleData } from '../../utils/useSimpleData';
+import { Heading } from "../../components/Typography/Typography";
 
 export const ETNewsPage = () => {
-    const [news, setNews] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            const { data } = await getAllNews();
-            setNews(data);
-        }
-        fetchData();
-    }, [])
+
+    const { data: news, isFetching, isLoading, isError } = useSimpleData(['etNews'], getAllNews);
+    console.log('ET News:', news, 'Is fetching:', isFetching);
 
     if (!news || news.length === 0) {
         return (
@@ -40,6 +36,16 @@ export const ETNewsPage = () => {
         }
     ]
 
+    const visibleGroupedNews = Object.entries(news?.groupedNews || {}).reduce(
+        (acc, [category, items]) => ({
+            ...acc,
+            [category]: items.filter(item => item.visible),
+        }),
+        {}
+    );
+
+    const visibleLastestNews = news?.latestNews?.filter(item => item.visible) || [];
+
     return (
         <div className="etnews-page">
             <Navbar />
@@ -48,26 +54,33 @@ export const ETNewsPage = () => {
             <div className="et-news-section">
                 <div className="et-news-highlight">
                     <div className="highlight-title">
-                        <p style={{margin: "0"}}>ET NEWS</p>
+                        <Heading level={1}>ET NEWS</Heading>
                     </div>
-                    <div className="highlight-news">
-                        <div id="highlight-news-1">
-                            <VerticalNews isETNews news={news?.latestNews?.[0]} />
-                        </div>
-                        <div id="highlight-news-2">
-                            {
-                                news?.latestNews
-                                    ?.filter((_, index) => index !== 0)
-                                    .map((item, index) => (
-                                        <HorizontalNews isETNews key={'highlight-news-' + index} news={item} />
-                                    ))
-                            }
-                        </div>
-                    </div>
+                    {
+                        visibleLastestNews.length > 0 && (
+                            <div className="highlight-news">
+                                <div id="highlight-news-1">
+                                    <VerticalNews isETNews news={visibleLastestNews[0]} />
+                                </div>
+                                {
+                                    visibleLastestNews?.length > 1 && (
+                                        <div id="highlight-news-2">
+                                            {
+                                                visibleLastestNews.filter((_, index) => index !== 0)
+                                                    .map((item, index) => (
+                                                        <HorizontalNews isETNews key={'highlight-news-' + index} news={item} />
+                                                    ))
+                                            }
+                                        </div>
+                                    )
+                                }
+                            </div>
+                        )
+                    }
                 </div>
                 <div className="et-news-categories">
                     {
-                        Object.entries(news?.groupedNews || {})
+                        Object.entries(visibleGroupedNews || {})
                             .filter(([_, newsList]) => newsList?.length > 0)
                             .map(([category, newsList], index) => (
                                 <PostSlider

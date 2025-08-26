@@ -2,28 +2,27 @@ import './ActivitiesSlider.css';
 
 import { Activity } from '../Activity';
 import { ActivitiesNextArrow } from '../ActivitiesNextArrow';
-
+import { PrevArrow } from '../PrevArrow';
+import { NextArrow } from '../NextArrow';
 import Slider from "react-slick";
 import { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-
+import { Heading } from '../Typography/Typography';
 import toogleIcon from '../../mocks/images/activities/toogleIcon.png';
 
 const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 2.5,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "14vw",
     autoplay: true,
     autoplaySpeed: 2000,
     initialSlide: 0,
-    nextArrow: <ActivitiesNextArrow />,
-    prevArrow: <></>,
+    nextArrow: <PrevArrow />,
+    prevArrow: <NextArrow />,
     responsive: [
-        { breakpoint: 1200, settings: { slidesToShow: 2.5, slidesToScroll: 1 } },
-        { breakpoint: 768, settings: { slidesToShow: 2.5, slidesToScroll: 1 } },
+        { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1 }},
+        { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1 }},
         { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1, centerPadding: "1vw", arrows: false } }
     ]
 };
@@ -46,15 +45,14 @@ export const ActivitiesSlider = ({activities, category, categoryId}) => {
 
     return(
         <div className="activities-slider">
-            <div className="activities-title-container">
+            <div className="activities-title-container" onClick={toggleSlider}>
                 <img 
                     id={categoryId}
                     className="activities-title-icon"
                     src={toogleIcon}
-                    onClick={toggleSlider}
                     alt="Activities Icon"
                 />
-                <p className="activities-slider-title">{category}</p>
+                <Heading level={2} className="activities-slider-title">{category}</Heading>
                 <div className="activities-division-bar"></div>
             </div>
 
@@ -72,7 +70,7 @@ export const ActivitiesSlider = ({activities, category, categoryId}) => {
                                 ))
                             }
                         </Slider>
-                    ) : <div style={{display: "flex", gap: "5.5vw"}}>
+                    ) : <div className='activities-container'>
                         {
                             activities?.map((item) => (
                                 <Activity key={item.activity_id} activity={item}/>

@@ -1,5 +1,4 @@
 import './FAQsPage.css';
-import { useEffect, useState } from 'react';
 import { TopicQuestion } from '../../components/TopicQuestion';
 import { PageTitle } from '../../components/PageTitle';
 import { getAllFAQs } from '../../api/faq.service';
@@ -7,16 +6,12 @@ import { Navbar } from '../../components/Navbar';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { DynamicBlur } from '../../components/DynamicBlur';
 import { CircularLoading } from '../../components/CircularLoading';
+import { useSimpleData } from '../../utils/useSimpleData';
+import { Heading } from '../../components/Typography/Typography'
 
 export const FAQsPage = () => {
-    const [faqs, setFAQs] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            const { data } = await getAllFAQs();
-            setFAQs(data);
-        }
-        fetchData();
-    }, [])
+    const { data: faqs, isFetching, isLoading, isError } = useSimpleData(['faqs'], getAllFAQs);
+    // console.log('FAQs:', faqs, 'Is fetching:', isFetching);
 
     if (!faqs || faqs.length === 0) {
         return (
@@ -43,19 +38,21 @@ export const FAQsPage = () => {
             <Navbar />
             <DynamicBlur parentClassName="root-container" />
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%", paddingBottom: "2vw" }}></CustomBreadcrumbs>
-            <PageTitle>CÂU HỎI THƯỜNG GẶP</PageTitle>
-            <div className="topic-questions">
-                {
-                    Object.keys(faqs).map((key) => {
-                        return (
-                            <TopicQuestion
-                                key={key}
-                                topicQuestion={faqs?.[key]}
-                                title={`Câu hỏi về ${key}`}
-                            />
-                        )
-                    })
-                }
+            <div className="faqs-section">
+                <Heading level={1} className="faqs-title">CÂU HỎI THƯỜNG GẶP</Heading>
+                <div className="topic-questions">
+                    {
+                        Object.keys(faqs).map((key) => {
+                            return (
+                                <TopicQuestion
+                                    key={key}
+                                    topicQuestion={faqs?.[key]}
+                                    title={`Câu hỏi về ${key}`}
+                                />
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     )

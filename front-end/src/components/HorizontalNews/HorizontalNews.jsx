@@ -1,6 +1,6 @@
 import './HorizontalNews.css';
 import getRelativeTime from '../../utils/getRelativeTimeUtil';
-import getFirstSentence from '../../utils/getFirstSentenceUtil';
+import { trimText } from '../../utils/trimTextUtil';
 import clockIcon from '../../mocks/images/etnews/clock-icon.svg';
 import { useNavigate } from 'react-router-dom';
 
@@ -28,8 +28,8 @@ export const HorizontalNews = ({ news, isETNews }) => {
                 </div>
             </div>
             <div className="horizontal-news-container">
-                <p className="horizontal-news-title">{news?.title}</p>
-                <p className="horizontal-news-content">{getFirstSentence(news?.meta_description)}</p>
+                <p className="horizontal-news-title">{trimText(news?.title, 65)}</p>
+                <p className="horizontal-news-content">{trimText(news?.meta_description, 70)}</p>
                 <div className="horizontal-news-time">
                     <img src={clockIcon} alt="clock icon" className="clock-icon" />
                     <p className="relative-time">{getRelativeTime(news?.created_on)}</p>

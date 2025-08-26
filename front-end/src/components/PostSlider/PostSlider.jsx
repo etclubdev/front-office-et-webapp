@@ -8,6 +8,8 @@ import { NextArrow } from '../NextArrow';
 import { PrevArrow } from '../PrevArrow';
 import { v4 as uuidv4 } from 'uuid';
 
+import { Heading } from '../Typography/Typography';
+
 import toogleIcon from '../../mocks/images/etnews/toogleIcon.png';
 
 const settings = {
@@ -15,14 +17,16 @@ const settings = {
     swipe: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
     autoplaySpeed: 2000,
+    initialSlide: 0,
     pauseOnFocus: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     variableWidth: false,
     responsive: [
         { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1 } },
-        { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+        { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 1 } },
         { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false } }
     ]
 };
@@ -44,14 +48,13 @@ export const PostSlider = ({ newsList, categoryid = "id", title, isETNews }) => 
 
     return (
         <div className="et-post-slider">
-            <div className="category-title-container">
+            <div className="category-title-container" onClick={toggleSlider}>
                 <img id={`${categoryid}-icon`}
                     className="category-title-icon"
                     src={toogleIcon}
-                    onClick={toggleSlider}
                     alt="Category Icon"
                 />
-                <p className="category-title">{title}</p>
+                <Heading level={2} className="category-title">{title}</Heading>
                 <div className="category-division-bar"></div>
             </div>
 
@@ -68,7 +71,7 @@ export const PostSlider = ({ newsList, categoryid = "id", title, isETNews }) => 
                                 <VerticalNews key={uuidv4()} news={item} isETNews={isETNews} />
                             ))}
                         </Slider>
-                    ) : <div style={{ display: "flex", gap: "5.5vw" }}>
+                    ) : <div className='posts-container'>
                         {
                             newsList?.map((item) => (
                                 <VerticalNews key={uuidv4()} news={item} isETNews={isETNews} />

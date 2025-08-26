@@ -1,9 +1,10 @@
-.details-post h1 {
+
+
+/* .details-post h1 {
     font-size: clamp(20px, 4vw, 32px);
     overflow-wrap: break-word;
 }
 
-/* Tối thiểu 20px, tối đa 32px */
 .details-post h2 {
     font-size: clamp(18px, 3.5vw, 28px);
     overflow-wrap: break-word;
@@ -37,6 +38,10 @@
 
 .details-post div {
     overflow-wrap: break-word;
+} */
+
+.details-post p {
+    overflow-wrap: break-word;
 }
 
 .details-post {
@@ -65,7 +70,7 @@
     font-family: 'BeVietnamPro';
     font-weight: 600;
     margin-bottom: 10px;
-    color: #0B2F60;
+    color: #00B4DB;
 }
 
 .details-info {
@@ -73,7 +78,7 @@
     margin: 1vw 0;
     display: flex;
     justify-content: space-between;
-    color: #5C5E63;
+    color: #0083B0;
 }
 
 .details-info-item {
@@ -98,10 +103,15 @@
     margin: 40px 0;
 }
 
+.details-references{
+    width: 80%;
+}
+
 @media(max-width: 739px) {
     .details-post {
         width: 100%;
         justify-content: center;
+        margin-top: 10px;
     }
 
     .details-container {

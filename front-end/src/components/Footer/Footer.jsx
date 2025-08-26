@@ -1,7 +1,7 @@
 import './Footer.css';
 import { horizontalLogo } from '../../assets/images/logos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faYoutube, faLinkedinIn, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faSquareYoutube, faSquareLinkedin, faSquareFacebook } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 
 export const Footer = () => {
@@ -33,25 +33,25 @@ export const Footer = () => {
                     <div className="footer-item-title">Follow us</div>
                     <div className="footer-social">
                         <div className="footer-social-icon">
-                            <FontAwesomeIcon icon={faFacebook} />
+                            <FontAwesomeIcon icon={faSquareFacebook} />
                         </div>
                         <a className="footer-social-link" href='https://www.facebook.com/groups/955638881998102'>Group cộng đồng</a>
                     </div>
                     <div className="footer-social">
                         <div className="footer-social-icon">
-                            <FontAwesomeIcon icon={faLinkedinIn} />
+                            <FontAwesomeIcon icon={faSquareLinkedin} />
                         </div>
                         <a className="footer-social-link" href='https://www.linkedin.com/company/economic-technology-club-ueh/?originalSubdomain=vn'>Linkedin</a>
                     </div>
                     <div className="footer-social">
                         <div className="footer-social-icon">
-                            <FontAwesomeIcon icon={faYoutube} />
+                            <FontAwesomeIcon icon={faSquareYoutube} />
                         </div>
                         <a className="footer-social-link" href='https://www.youtube.com/c/C%C3%A2ul%E1%BA%A1cb%E1%BB%99C%C3%B4ngNgh%E1%BB%87KinhT%E1%BA%BF'>Youtube</a>
                     </div>
                     <div className="footer-social">
                         <div className="footer-social-icon">
-                            <FontAwesomeIcon icon={faFacebook} />
+                            <FontAwesomeIcon icon={faSquareFacebook} />
                         </div>
                         <a className="footer-social-link" href='https://www.facebook.com/ETClub.UEH'>Facebook</a>
                     </div>

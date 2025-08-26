@@ -22,7 +22,7 @@ export const DynamicBlur = ({parentClassName}) => {
 
     return (
         <div className="dynamic-blur-container">
-            {circles.map((circle, index) => (
+            {/* {circles.map((circle, index) => (
                 <div
                     key={index}
                     className="dynamic-blur-circle"
@@ -37,7 +37,7 @@ export const DynamicBlur = ({parentClassName}) => {
                         zIndex:-1,
                     }}
                 />
-            ))}
+            ))} */}
         </div>
     )
 }
