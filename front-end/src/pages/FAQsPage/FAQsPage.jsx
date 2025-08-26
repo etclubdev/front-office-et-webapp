@@ -6,7 +6,7 @@ import { Navbar } from '../../components/Navbar';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { DynamicBlur } from '../../components/DynamicBlur';
 import { CircularLoading } from '../../components/CircularLoading';
-import { useSimpleData } from '../../utils/useSimpleData'; 
+import { useSimpleData } from '../../utils/useSimpleData';
 import { Heading } from '../../components/Typography/Typography'
 
 export const FAQsPage = () => {
@@ -38,19 +38,21 @@ export const FAQsPage = () => {
             <Navbar />
             <DynamicBlur parentClassName="root-container" />
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%", paddingBottom: "2vw" }}></CustomBreadcrumbs>
-            <Heading level={1} className="faqs-title">CÂU HỎI THƯỜNG GẶP</Heading>
-            <div className="topic-questions">
-                {
-                    Object.keys(faqs).map((key) => {
-                        return (
-                            <TopicQuestion
-                                key={key}
-                                topicQuestion={faqs?.[key]}
-                                title={`Câu hỏi về ${key}`}
-                            />
-                        )
-                    })
-                }
+            <div className="faqs-section">
+                <Heading level={1} className="faqs-title">CÂU HỎI THƯỜNG GẶP</Heading>
+                <div className="topic-questions">
+                    {
+                        Object.keys(faqs).map((key) => {
+                            return (
+                                <TopicQuestion
+                                    key={key}
+                                    topicQuestion={faqs?.[key]}
+                                    title={`Câu hỏi về ${key}`}
+                                />
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     )
