@@ -3,6 +3,7 @@ import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
 import './IntroductionContent.css';
 import { introduction } from '../../mocks/data';
 import { leftBranch, rightBranch, tree } from '../../mocks/images/introduction';
+import { Heading, Paragraph } from '../Typography/Typography.jsx';
 
 export const IntroductionContent = () => {
     const ref = useRef(null);
@@ -16,7 +17,7 @@ export const IntroductionContent = () => {
                         case 'history': {
                             return (
                                 <div className="introduction-item" id="introduction-history" key={item.id}>
-                                    <p className="introduction-title">{item.title}</p>
+                                    <Heading level={1} className="introduction-title">{item.title}</Heading>
                                     <div className="introduction-history-tree">
                                         <div className="left-tree">
                                             {
@@ -56,7 +57,7 @@ export const IntroductionContent = () => {
                         default: {
                             return (
                                 <div className="introduction-item" key={item.id || `default-${index}`}>
-                                    <p className="introduction-title">{item.title}</p>
+                                    <Heading level={1} className="introduction-title">{item.title}</Heading>
                                     <div className="introduction-container">
                                         {index % 2 === 0 && (
                                             <img className="introduction-img" src={require(`../../mocks${item.img}`)} alt="" />
@@ -67,7 +68,7 @@ export const IntroductionContent = () => {
                                                     {item.desc.map((text, i) => <li key={`${item.id}-desc-${i}`}>{text}</li>)}
                                                 </ul>
                                             ) : (
-                                                <p className="introduction-desc">{item.desc}</p>
+                                                <Paragraph className="introduction-desc">{item.desc}</Paragraph>
                                             )
                                         }
                                         {index % 2 !== 0 && (

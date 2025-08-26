@@ -5,6 +5,7 @@ import { Navbar } from '../../components/Navbar';
 import { HRStructure } from '../../mocks/data';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { DynamicBlur } from '../../components/DynamicBlur';
+import { Heading, Paragraph } from '../../components/Typography/Typography';
 
 const hrData = HRStructure.hrStructure;
 
@@ -29,7 +30,7 @@ export const HRStructurePage = () => {
             <Navbar />
             <DynamicBlur parentClassName="root-container" />
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
-            <p className="hr-structure-name title">CƠ CẤU TỔ CHỨC</p>
+            <Heading level={1} className="hr-structure-name title">CƠ CẤU TỔ CHỨC</Heading>
             <div className="hr-structure-tree" ref={ref}>
                 {
                     hrData.map((department, index) => {
@@ -38,8 +39,8 @@ export const HRStructurePage = () => {
                                 <div className="hr-structure-branch even" key={department.id}>
                                     <img src={require(`../../mocks${department.image}`)} alt="" className="hr-structure-img" />
                                     <div className="hr-structure-content">
-                                        <p className="hr-structure-name">{department.name}</p>
-                                        <p className="hr-structure-desc">{department.desc}</p>
+                                        <Heading level={2} className="hr-structure-name">{department.name}</Heading>
+                                        <Paragraph className="hr-structure-desc">{department.desc}</Paragraph>
                                     </div>
                                 </div>
                             )
@@ -47,8 +48,8 @@ export const HRStructurePage = () => {
                             return (
                                 <div className="hr-structure-branch odd" key={department.id}>
                                     <div className="hr-structure-content">
-                                        <p className="hr-structure-name">{department.name}</p>
-                                        <p className="hr-structure-desc">{department.desc}</p>
+                                        <Heading level={2} className="hr-structure-name">{department.name}</Heading>
+                                        <Paragraph className="hr-structure-desc">{department.desc}</Paragraph>
                                     </div>
                                     <img src={require(`../../mocks${department.image}`)} alt="" className="hr-structure-img" />
                                 </div>

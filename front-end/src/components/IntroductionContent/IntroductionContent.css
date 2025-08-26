@@ -20,7 +20,6 @@
 }
 
 .introduction-items .introduction-title {
-    font-size: 3vw;
     font-weight: 900;
     text-align: center;
     background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
@@ -40,8 +39,8 @@
 .introduction-items .introduction-desc {
     width: 55%;
     color: #0F4081;
-    font-size: 1.2vw;
-    line-height: 2.2vw;
+    font-size: 1rem;
+    line-height: 1.5;
     text-align: justify;
 }
 
@@ -61,11 +60,12 @@
 #introduction-history {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 #introduction-history .introduction-title {
-    font-size: 3vw;
-    margin-right: 8vw;
+    width: 220px;
+    margin-right: 50px;
     text-align: left;
 }
 

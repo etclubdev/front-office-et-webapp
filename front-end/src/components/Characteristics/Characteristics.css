@@ -1,26 +1,30 @@
 .characteristics-section {
-    margin: 5vw 0 0 0;
+    margin: 100px 0 0 0;
     width: 100%;
     height: auto;
-    opacity: 0;
+    opacity: 1;
     display: flex;
     flex-direction: column;
 }
 
-.characteristics-section.visible {
-    opacity: 1;
-    animation: zoomIn 3s ease-in-out;
+.characteristics-section.visible .char1-container,
+.characteristics-section.visible .char2-container,
+.characteristics-section.visible .char3-container,
+.characteristics-section.visible .char4-container {
+    animation: zoomInOut 2s ease-in-out;
 }
 
-@keyframes zoomIn {
+@keyframes zoomInOut {
     0% {
-        transform: scale(0.7);
-        opacity: 0;
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
     }
 
     100% {
         transform: scale(1);
-        opacity: 1;
     }
 }
 
@@ -36,7 +40,7 @@
     color: #000;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: 'BeVietnamPro';
-    font-size: 2.7vw;
+    font-size: 40px;
     font-style: normal;
     font-weight: 300;
     line-height: 2;
@@ -53,10 +57,10 @@
     color: #F0DEA9;
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
-    text-shadow: 0.4vw 0.4vw 0 #1E285F;
+    text-shadow: 5px 5px 0 #1E285F;
     /* title test */
     font-family: Montserrat;
-    font-size: 3.5vw;
+    font-size: 50px;
     font-style: italic;
     font-weight: 700;
     line-height: 1.5;
@@ -65,7 +69,7 @@
 
 .decor-bar {
     flex: 1;
-    height: 1vw;
+    height: 10px;
     margin: 2vh 0;
     background: #1E285F;
 }
@@ -74,7 +78,7 @@
     color: #1E285F;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: 'Montserrat';
-    font-size: 2.5vw;
+    font-size: 30px;
     font-style: normal;
     font-weight: 900;
     line-height: 1.5;
@@ -119,6 +123,7 @@
     position: relative;
     width: 30vw;
     height: 30vw;
+    transition: scale 0.2s ease-in-out;
 }
 
 .char1-container {
@@ -141,10 +146,18 @@
     left: 0;
 }
 
+
+.char1-container:hover,
+.char2-container:hover,
+.char3-container:hover,
+.char4-container:hover {
+    transform: scale(1.05);
+}
+
 .characteristics-item-title {
     /* position: absolute; */
     margin: 0 3vw;
-    font-size: 2.2vw;
+    font-size: 32px;
     color: white;
     text-shadow: 0.1vw 0.1vw 0.3 #292929;
     font-family: 'BeVietnamPro';
@@ -154,7 +167,7 @@
     /* position: absolute; */
     width: 18vw;
     color: white;
-    font-size: 0.9vw;
+    font-size: 14px;
     font-family: 'Montserrat';
     font-weight: 400;
     line-height: 1.5;
@@ -215,7 +228,59 @@
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1024px) {
+    .heading {
+        width: 90%;
+    }
+
+    .heading-first {
+        font-size: 30px;
+    }
+
+    .heading-middle {
+        gap: 1vw;
+    }
+
+    .word {
+        font-size: 40px;
+    }
+
+    .heading-last {
+        font-size: 24px;
+    }
+
+    .characteristics-item-title {
+        font-size: 24px;
+    }
+
+    .characteristics-item-desc {
+        width: 200px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .char1-container,
+    .char2-container,
+    .char3-container,
+    .char4-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .char1,
+    .char2,
+    .char3,
+    .char4 {
+        width: 270px;
+        height: 270px;
+    }
+
+
+    .characteristics-item-image {
+        width: 95px;
+        height: 95px;
+    }
+}
 
 @media screen and (max-width: 768px) {}
 
@@ -322,20 +387,20 @@
         top: 5%;
         left: -10%;
     }
-    
+
     .char2-container {
         top: 0%;
         left: 10%;
     }
-    
+
     .char3-container {
         top: -5%;
         left: -10%;
     }
-    
+
     .char4-container {
         top: -5%;
         left: 5%;
     }
-    
+
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import './VerticalNews.css';
 import getRelativeTime from '../../utils/getRelativeTimeUtil';
-import getFirstSentence from '../../utils/getFirstSentenceUtil';
+import { trimText } from '../../utils/trimTextUtil';
 import clockIcon from '../../mocks/images/etnews/clock-icon.svg';
 import { useNavigate } from 'react-router-dom';
+import { Heading, Paragraph } from '../Typography/Typography';
 
 export const VerticalNews = ({ news, isETNews }) => {
     const navigate = useNavigate();
@@ -29,8 +30,8 @@ export const VerticalNews = ({ news, isETNews }) => {
                 </div>
             </div>
             <div className="vertical-news-container">
-                <p className="vertical-news-title">{news?.title}</p>
-                <p className="vertical-news-content">{getFirstSentence(news?.meta_description)}</p>
+                <Heading level={3} className="vertical-news-title">{trimText(news?.title, 50)}</Heading>
+                <p className="vertical-news-content">{trimText(news?.meta_description, 90)}</p>
                 <div className="vertical-news-time">
                     <img src={clockIcon} alt="clock icon" className="clock-icon" />
                     <p className="relative-time">{getRelativeTime(news?.created_on)}</p>

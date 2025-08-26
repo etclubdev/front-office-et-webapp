@@ -1,12 +1,13 @@
 import './TopicQuestion.css';
 import Question from '../Question';
+import { Heading } from '../Typography/Typography';
 
 export const TopicQuestion = ({ topicQuestion, title }) => {
     return (
         <div className="topic-question">
             <div className="topic-title-container">
                 <div className="topic-title-division"></div>
-                <p className="topic-title">{title}</p>
+                <Heading level={2} className="topic-title">{title}</Heading>
                 <div className="topic-title-division"></div>
             </div>
             <>
