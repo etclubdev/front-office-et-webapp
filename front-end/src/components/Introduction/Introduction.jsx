@@ -13,7 +13,7 @@ export const Introduction = ({ banners }) => {
     slidesToScroll: 1,
     centerMode: false,
     adaptiveHeight: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     initialSlide: 0,
     nextArrow: <SliderArrow icon={faChevronRight} />,

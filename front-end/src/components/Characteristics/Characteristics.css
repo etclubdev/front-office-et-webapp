@@ -123,7 +123,7 @@
     position: relative;
     width: 30vw;
     height: 30vw;
-    transition: all 0.2s ease-in-out;
+    transition: scale 0.2s ease-in-out;
 }
 
 .char1-container {
