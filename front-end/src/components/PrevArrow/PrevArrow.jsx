@@ -7,9 +7,9 @@ export const PrevArrow = (props) => {
         onClick={onClick} 
         style={{
           position: "absolute",
-          width: "2.5vw",
-          left: "-5vw", 
-          top: "25%",
+          width: "30px",
+          left: "-50px", 
+          top: "35%",
           transform: "translateY(-50%)",
           cursor: "pointer",
         }}

@@ -68,7 +68,7 @@ export const PostDetailsPage = () => {
         <div className="details-page">
             <Navbar />
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
-            <img src={require(`../../mocks/images/detailPost/alt-img.png`)} alt="null" className="post-cover" />
+            <img src={require(`../../mocks/images/detailPost/alt-img-v2.png`)} alt="null" className="post-cover" />
             <PostDetails details={details} thumbnailShowed={!pathname.includes('et-blog')} />
         </div>
     );

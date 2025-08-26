@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './HomePage.css';
 import { Navbar } from '../../components/Navbar';
 import { AboutUsSection } from '../../components/AboutUsSection';
@@ -7,58 +6,18 @@ import { Characteristics } from '../../components/Characteristics';
 import { Partners } from '../../components/Partners';
 import { Introduction } from '../../components/Introduction';
 import { FAQ } from '../../components/FAQ';
-import { getBanners } from '../../api/banners.service';
-import { getPartners } from '../../api/partners.service';
-import { getFAQs } from '../../api/faqs.service';
-import { getAchievement } from '../../api/achievement.service';
 import { DynamicBlur } from '../../components/DynamicBlur';
+import { useHomePageData } from '../../utils/useHomePageData';
 
 export const HomePage = () => {
-  const [banners, setBanners] = useState([]);
-  const [expertPartners, setExpertPartners] = useState([]);
-  const [businessPartners, setBusinessPartners] = useState([]);
-  const [faqData, setFaqData] = useState([]);
-  const [statisticsData, setStatisticsData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const bannersResponse = await getBanners();
-        const bannersData = bannersResponse.data || [];
-
-        const partnersResponse = await getPartners();
-        const partnersData = partnersResponse.data || {};
-        const experts = partnersData["Đối tác chuyên gia"] || [];
-        const businesses = partnersData["Đối tác doanh nghiệp"] || [];
-
-        const faqsResponse = await getFAQs();
-        const faqsData = faqsResponse.data || {};
-        const allFaqs = faqsData["ET Club"] || [];
-        const selectedFaqs = allFaqs.filter(faq => faq.visible);
-
-        const achievementResponse = await getAchievement();
-        const achievementData = achievementResponse.data || [];
-        const visibleAchievements = achievementData.filter(item => item.visible);
-
-        setBanners(bannersData);
-        setExpertPartners(experts);
-        setBusinessPartners(businesses);
-        setFaqData(selectedFaqs);
-        setStatisticsData(visibleAchievements);
-
-        console.log("Banners data:", bannersData);
-        console.log("Partners data:", partnersData);
-        console.log("Expert Partners:", experts);
-        console.log("Business Partners:", businesses);
-        console.log("Selected FAQs:", selectedFaqs);
-        console.log("Statistics data:", visibleAchievements);
-      } catch (err) {
-        console.error("Lỗi khi gọi API:", err);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const {
+    banners,
+    partners,
+    faqs,
+    achievements,
+    isLoading,
+    isError,
+  } = useHomePageData();
 
   return (
     <div className="homepage">
@@ -69,21 +28,15 @@ export const HomePage = () => {
       <div className="homepage-section">
         <AboutUsSection />
       </div>
+
       <Characteristics />
+      <Statistics statistics={achievements} />
+
       <div className="homepage-section">
-
-        <div className="division-bar-container">
-          <div className="division-bar"></div>
-        </div>
-        <Statistics statistics={statisticsData} />
-
-        <Partners partners={expertPartners} companions={businessPartners} />
-
-        <div className="division-bar-container">
-          <div className="division-bar"></div>
-        </div>
-        <FAQ questions={faqData} />
+        <Partners partners={partners?.experts} companions={partners?.businesses} />
+        <FAQ questions={faqs} />
       </div>
+      
     </div>
   );
 };

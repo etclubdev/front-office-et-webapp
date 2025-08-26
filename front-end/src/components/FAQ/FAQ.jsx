@@ -6,19 +6,21 @@ import plusIcon from '../../mocks/images/FAQs/plus.png';
 import minusIcon from '../../mocks/images/FAQs/minus.png';
 import { PageTitle } from '../PageTitle/PageTitle.jsx';
 import Skeleton from '@mui/material/Skeleton';
+import { Heading } from '../Typography/Typography.jsx';
+import { TopicQuestion } from '../TopicQuestion/TopicQuestion.jsx';
 
 export const FAQ = ({ questions }) => {
 
-    const [activeQuestion, setActiveQuestion] = useState(null);
+    const [activeQuestion, setActiveQuestion] = useState([]);
 
     const toggleAnswer = (id) => {
-        setActiveQuestion(activeQuestion === id ? null : id);
+        setActiveQuestion(prev => prev.includes(id) ? prev.filter(q => q !== id) : [...prev, id]);
     };
 
     if (!questions || questions.length === 0) {
         return (
             <div className="skeleton-alt-faqs">
-                <PageTitle>{FAQ_TITLE}</PageTitle>
+                <Heading level={1} className="faqs-title">{FAQ_TITLE}</Heading>
                 <Skeleton variant="rectangular" width="100%" height="21vw" />
                 <div className="more-info-container">
                     <a href="/faqs" className="more-info-link">
@@ -31,24 +33,25 @@ export const FAQ = ({ questions }) => {
 
     return (
         <div className="FAQ-section">
-            <PageTitle>{FAQ_TITLE}</PageTitle>
-            <div className="FAQ-items">
+            <Heading level={1} className="faqs-title">{FAQ_TITLE}</Heading>
+            <TopicQuestion topicQuestion={questions} />
+            {/* <div className="FAQ-items">
                 {questions.map(question => (
                     <div key={question.faq_id} className="FAQ-item">
                         <div
-                            className={`FAQ-question ${activeQuestion === question.faq_id ? 'active' : ''}`}
+                            className={`FAQ-question ${activeQuestion.includes(question.faq_id) ? 'active' : ''}`}
                             onClick={() => toggleAnswer(question.faq_id)}
                         >
                             <p className="question-content">{question.question}</p>
                             <img
                                 className="question-button"
-                                src={activeQuestion === question.faq_id ? minusIcon : plusIcon}
-                                alt={activeQuestion === question.faq_id ? "Collapse" : "Expand"}
+                                src={activeQuestion.includes(question.faq_id) ? minusIcon : plusIcon}
+                                alt={activeQuestion.includes(question.faq_id) ? "Collapse" : "Expand"}
                             />
                         </div>
 
                         <CSSTransition
-                            in={activeQuestion === question.faq_id}
+                            in={activeQuestion.includes(question.faq_id)}
                             timeout={400}
                             classNames="answer"
                             unmountOnExit
@@ -72,7 +75,7 @@ export const FAQ = ({ questions }) => {
                         </CSSTransition>
                     </div>
                 ))}
-            </div>
+            </div> */}
             <div className="more-info-container">
                 <a href="/faqs" className="more-info-link">
                     Tìm hiểu thêm

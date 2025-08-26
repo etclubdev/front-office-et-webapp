@@ -7,9 +7,9 @@ export const NextArrow = (props) => {
         onClick={onClick}
         style={{
           position: "absolute",
-          width: "2.5vw",
-          right: "-4vw", 
-          top: "25%",
+          width: "30px",
+          right: "-50px", 
+          top: "35%",
           transform: "translateY(-50%)",
           cursor: "pointer",
         }}

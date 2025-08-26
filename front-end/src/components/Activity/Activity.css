@@ -14,13 +14,11 @@
     box-shadow: 0.2vw 0.2vw 1vw 0 #A1EFF2;
     border-radius: 20px;
     width: fit-content !important;
-    max-width: 90% !important;
 }
 
 .activity-name{
-    margin-top: 2vw;
+    margin-top: 14px;
     color: #0F4081;
-     font-size: 1.3vw;
      font-weight: 900;
      font-family: 'BeVietnamPro';
     text-align: center;
@@ -28,5 +26,6 @@
 
 .activity-desc{
     text-align: justify;
-    font-size: 1vw;
+    font-size: 12px;
+    line-height: 1.5;
 }

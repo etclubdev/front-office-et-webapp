@@ -7,7 +7,7 @@ export const ActivitiesNextArrow = (props) => {
         onClick={onClick}
         style={{
         position: "absolute",
-        right: "-5vw", 
+        right: "-5%", 
         top: "40%",
         transform: "translateY(-50%)",
         cursor: "pointer",

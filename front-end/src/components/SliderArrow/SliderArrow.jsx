@@ -7,7 +7,7 @@ export const SliderArrow = (props) => {
       className={`${className} custom-arrow`}
       style={{
         height: "100%",
-        color: "#fff",
+        color: "#1d2f5c",
         position: "absolute",
         top: "50%",
         zIndex: 2,

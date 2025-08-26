@@ -4,11 +4,36 @@ import { SliderArrow } from "../SliderArrow";
 import { COMPANION_CONTENT, PARTNERS_CONTENT } from '../../constants';
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { PageTitle } from "../PageTitle";
+import { Heading } from "../Typography/Typography";
 import Skeleton from '@mui/material/Skeleton';
 
 export const Partners = ({ partners, companions }) => {
-    const visiblePartners = partners.filter(partner => partner.visible);
-    const visibleCompanions = companions.filter(companion => companion.visible);
+
+    const visiblePartners = partners?.filter(partner => partner.visible);
+    const visibleCompanions = companions?.filter(companion => companion.visible);
+
+    if (!visiblePartners || !visibleCompanions || visiblePartners.length === 0 || visibleCompanions.length === 0) {
+        return (
+            <div className="partners-section">
+                <Heading level={1} className="partners-title">{PARTNERS_CONTENT.title}</Heading>
+                <div className="skeleton-alt">
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                </div>
+                <div className="division-bar-container">
+                    <div className="division-bar"></div>
+                </div>
+                <Heading level={1} className="partners-title">{COMPANION_CONTENT.title}</Heading>
+                <div className="skeleton-alt">
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                    <Skeleton variant="circular" width="15vw" height="15vw" />
+                </div>
+            </div>
+        )
+    }
+
 
     const settings = {
         dots: false,
@@ -16,7 +41,7 @@ export const Partners = ({ partners, companions }) => {
         slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
-        centerPadding: "2vw",
+        centerPadding: "0",
         autoplay: true,
         autoplaySpeed: 2000,
         initialSlide: 0,
@@ -29,37 +54,11 @@ export const Partners = ({ partners, companions }) => {
         ]
     };
 
-    if (!partners || !companions || partners.length === 0 || companions.length === 0) {
-        return (
-            <div className="partners-section">
-                <div className="division-bar-container">
-                    <div className="division-bar"></div>
-                </div>
-                <PageTitle>{PARTNERS_CONTENT.title}</PageTitle>
-                <div className="skeleton-alt">
-                    <Skeleton variant="circular" width="15vw" height="15vw" />
-                    <Skeleton variant="circular" width="15vw" height="15vw" />
-                    <Skeleton variant="circular" width="15vw" height="15vw" />
-                </div>
-                <div className="division-bar-container">
-                    <div className="division-bar"></div>
-                </div>
-                <PageTitle>{COMPANION_CONTENT.title}</PageTitle>
-                <div className="skeleton-alt">
-                    <Skeleton variant="circular" width="15vw" height="15vw" />
-                    <Skeleton variant="circular" width="15vw" height="15vw" />
-                    <Skeleton variant="circular" width="15vw" height="15vw" />
-                </div>
-            </div>
-        )
-    }
+
 
     return (
         <div className="partners-section">
-            <div className="division-bar-container">
-                <div className="division-bar"></div>
-            </div>
-            <PageTitle>{PARTNERS_CONTENT.title}</PageTitle>
+            <Heading level={1} className="partners-title">{PARTNERS_CONTENT.title}</Heading>
             <div>
                 {visiblePartners.length === 1 ? (
                     <div className="single-partner">
@@ -86,7 +85,7 @@ export const Partners = ({ partners, companions }) => {
             <div className="division-bar-container">
                 <div className="division-bar"></div>
             </div>
-            <PageTitle>{COMPANION_CONTENT.title}</PageTitle>
+            <Heading level={1} className="partners-title">{COMPANION_CONTENT.title}</Heading>
             <div>
                 {
                     visibleCompanions.length === 1 ? (
@@ -111,6 +110,9 @@ export const Partners = ({ partners, companions }) => {
                         </Slider>
                     )
                 }
+            </div>
+            <div className="division-bar-container">
+                <div className="division-bar"></div>
             </div>
         </div>
     )
