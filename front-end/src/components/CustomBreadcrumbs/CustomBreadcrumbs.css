@@ -1,7 +1,10 @@
 .breadcrumb-container {
     position: absolute;
     top: 5vw;
+}
 
+.nav-item-content.breadcrumb-item{
+    color: #178DE2;
 }
 
 @media screen and (max-width: 768px) {
@@ -12,5 +15,6 @@
     .breadcrumb-container {
         position: absolute;
         top: 10vw;
+        left: 7vw;
     }
 }
