@@ -46,25 +46,29 @@ export const ETBlogPage = () => {
             <div className="et-blog-section">
                 <div className="et-blog-highlight">
                     <Heading level={1} className="highlight-title">ET BLOG</Heading>
-                    <div className="highlight-news">
-                        <div id="highlight-blog-1">
-                            <VerticalNews news={visibleHighlightedNews?.[0]} />
-                        </div>
-                        {
-                            visibleHighlightedNews?.length > 1 && (
-                                <div id="highlight-blog-2">
-                                    {
-                                        visibleHighlightedNews
-                                            ?.filter((_, index) => index !== 0)
-                                            .map((item, index) => (
-                                                <HorizontalNews key={`highlight-blog-${index}`} news={item} />
-                                            ))
-                                    }
-
+                    {
+                        visibleHighlightedNews.length > 0 && (
+                            <div className="highlight-news">
+                                <div id="highlight-blog-1">
+                                    <VerticalNews news={visibleHighlightedNews?.[0]} />
                                 </div>
-                            )
-                        }
-                    </div>
+                                {
+                                    visibleHighlightedNews?.length > 1 && (
+                                        <div id="highlight-blog-2">
+                                            {
+                                                visibleHighlightedNews
+                                                    ?.filter((_, index) => index !== 0)
+                                                    .map((item, index) => (
+                                                        <HorizontalNews key={`highlight-blog-${index}`} news={item} />
+                                                    ))
+                                            }
+
+                                        </div>
+                                    )
+                                }
+                            </div>
+                        )
+                    }
                 </div>
                 <div className="et-blog-categories">
                     <PostSlider

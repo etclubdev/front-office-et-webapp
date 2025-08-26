@@ -28,7 +28,7 @@ export const HorizontalNews = ({ news, isETNews }) => {
                 </div>
             </div>
             <div className="horizontal-news-container">
-                <p className="horizontal-news-title">{news?.title}</p>
+                <p className="horizontal-news-title">{trimText(news?.title, 65)}</p>
                 <p className="horizontal-news-content">{trimText(news?.meta_description, 70)}</p>
                 <div className="horizontal-news-time">
                     <img src={clockIcon} alt="clock icon" className="clock-icon" />

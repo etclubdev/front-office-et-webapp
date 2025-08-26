@@ -3,7 +3,8 @@ import './PostDetails.css';
 import DOMPurify from "dompurify";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserTie } from '@fortawesome/free-solid-svg-icons';
-import { faClock } from '@fortawesome/free-regular-svg-icons'
+import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { Heading } from '../Typography/Typography';
 
 export const PostDetails = ({ details, thumbnailShowed = false }) => {
     const createdOn = new Date(details.created_on).toLocaleDateString("vi-VN");
@@ -11,7 +12,7 @@ export const PostDetails = ({ details, thumbnailShowed = false }) => {
     return (
         <div className="details-post">
             <div className="details-container">
-                <h1 className="details-title">{details.title}</h1>
+                <Heading level={1} className="details-title">{details.title}</Heading>
                 <div className="details-info">
                     <div className="details-info-item" id="details-time">
                         <FontAwesomeIcon icon={faClock} />
@@ -27,13 +28,19 @@ export const PostDetails = ({ details, thumbnailShowed = false }) => {
                     </div>
                 </div>
 
-                <div className="img-container" style={{display: "flex", justifyContent:"center"}}>
+                <div className="img-container" style={{ display: "flex", justifyContent: "center" }}>
                     {thumbnailShowed && <img src={details.thumbnail_image_url} alt="" />}
                 </div>
-               <div className="detail-content-container" style={{display: "flex", justifyContent:"center"}}>
-                 <div className="details-content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(details?.content) }} style={{width:"80%"}}></div>
-               </div>
-                {details.source && <p className="details-references"><strong>Nguồn: </strong>{details.source}</p>}
+                <div className="detail-content-container" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                    <div className="details-content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(details?.content) }} style={{ width: "80%" }}></div>
+                    {details.source &&
+                        <p className="details-references">
+                            <strong>Nguồn: </strong>
+                            {details.source.includes("http") ? 
+                                <a href={details.source}>{details.source}</a> :
+                                details.source}
+                        </p>}
+                </div>
             </div>
         </div>
     )
