@@ -85,12 +85,29 @@
 }
 
 @media (max-width: 480px) {
+    .hr-structure-page {
+        padding: 25vw 0;
+    }
     .hr-structure-branch {
-        width: 300px;
+        width: 350px;
+        flex-direction: column;
+        gap: 30px;
     }
 
-     .hr-structure-tree {
-        gap: 50px;
+    .hr-structure-branch.even {
+        flex-direction: column-reverse;
+    }
+
+    .hr-structure-img {
+        width: 80%;
+    }
+
+    .hr-structure-content {
+        width: 80%;
+    }
+
+    .hr-structure-tree {
+        gap: 70px;
     }
 }
 
