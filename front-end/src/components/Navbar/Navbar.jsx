@@ -6,6 +6,7 @@ import './Navbar.css';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link, useLocation } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 export const Navbar = () => {
   const [scrollingDown, setScrollingDown] = useState(false);
@@ -100,7 +101,7 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
         onClick={() => isMobile && handleDropdownClick('about')}
       >
         <div className={`nav-item-dropbtn ${isMobile && activeDropdown === 'about' ? 'show' : ''}`}>
-          <p className="nav-item-content">Về ET Club ⮛</p>
+          <div className="nav-item-content">Về ET Club <FontAwesomeIcon icon={faChevronDown} /></div>
         </div>
         <div
           className={`dropdown-content ${isMobile && activeDropdown === 'about' ? 'show' : ''}`}
@@ -118,7 +119,7 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
         onClick={() => isMobile && handleDropdownClick('etzone')}
       >
         <div className={`nav-item-dropbtn ${isMobile && activeDropdown === 'etzone' ? 'show' : ''}`}>
-          <p className="nav-item-content">ET Zone ⮛</p>
+          <div className="nav-item-content">ET Zone <FontAwesomeIcon icon={faChevronDown} /></div>
         </div>
         <div
           className={`dropdown-content ${isMobile && activeDropdown === 'etzone' ? 'show' : ''}`}
