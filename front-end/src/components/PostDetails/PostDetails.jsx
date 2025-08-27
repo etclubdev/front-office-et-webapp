@@ -32,7 +32,7 @@ export const PostDetails = ({ details, thumbnailShowed = false }) => {
                     {thumbnailShowed && <img src={details.thumbnail_image_url} alt="" />}
                 </div>
                 <div className="detail-content-container" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <div className="details-content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(details?.content) }} style={{ width: "80%" }}></div>
+                    <div className="details-content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(details?.content) }}></div>
                     {details.source &&
                         <p className="details-references">
                             <strong>Nguồn: </strong>

@@ -53,9 +53,9 @@ export const ETNewsPage = () => {
             <CustomBreadcrumbs data={breadcrumbsData} style={{ width: "70%" }}></CustomBreadcrumbs>
             <div className="et-news-section">
                 <div className="et-news-highlight">
-                    <div className="highlight-title">
-                        <Heading level={1}>ET NEWS</Heading>
-                    </div>
+                    <Heading level={1} className="highlight-title">
+                        ET NEWS
+                    </Heading>
                     {
                         visibleLastestNews.length > 0 && (
                             <div className="highlight-news">

@@ -4,6 +4,7 @@
 .etblog-page {
     width: 100vw;
     min-height: 100vh;
+    padding: 8vw 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +13,6 @@
 }
 
 .et-blog-section {
-    margin: 100px 0;
     width: 65%;
     box-sizing: border-box;
     display: flex;
@@ -57,6 +57,8 @@
     width: 97%;
     height: 100%;
     box-sizing: border-box;
+    min-width: none;
+    max-height: none;
 }
 
 #highlight-blog-1 .vertical-news-title {
@@ -247,7 +249,8 @@
 
     .etblog-page .vertical-news {
         width: 280px;
-        max-width: 420px;
+        min-height: 400px;
+        max-height: 400px;
     }
 
     .etblog-page .vertical-news-img-container {
@@ -317,6 +320,8 @@
 
     .etblog-page .vertical-news {
         width: 220px;
+        min-height: 350px;
+        max-height: 350px;
     }
 
     .etblog-page .vertical-news-img-container {

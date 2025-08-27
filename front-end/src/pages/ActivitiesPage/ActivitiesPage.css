@@ -1,5 +1,5 @@
 .activities-page {
-    padding-top: 100px;
+    padding: 8vw 0;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -106,7 +106,7 @@
 }
 
 .completed-activities .activity-container img {
-    width: 350px !important;
+    width: 300px !important;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
@@ -131,6 +131,9 @@
     width: 100%;
 }
 
+.activity-container {
+    width: 350px;
+}
 
 @media(max-width: 480px) {
     .ongoing-activities {
@@ -200,6 +203,10 @@
     .completed-activities .slick-slider {
         height: auto;
     }
+
+    .activity-container {
+        width: 310px;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -252,6 +259,10 @@
     .completed-activities .slick-slider {
         height: auto;
     }
+
+    .activity-container {
+        width: 200px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -300,8 +311,12 @@
     .completed-activities .slick-slider {
         height: auto;
     }
-    
+
     .activities-slider .activity-container .activity-name {
         width: 220px !important;
+    }
+
+    .activity-container {
+        width: 250px;
     }
 }

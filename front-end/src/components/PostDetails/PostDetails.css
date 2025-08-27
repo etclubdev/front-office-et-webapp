@@ -107,6 +107,10 @@
     width: 80%;
 }
 
+.details-content {
+    width: 80%;
+}
+
 @media(max-width: 739px) {
     .details-post {
         width: 100%;
@@ -120,6 +124,10 @@
 
     .details-info-item {
         font-size: 10px;
+    }
+
+    .details-content {
+        width: 90%;
     }
 }
 

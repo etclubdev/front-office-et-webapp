@@ -4,11 +4,13 @@
     display: flex;
     flex-direction: column;
     margin: 5%;
+    align-items: center;
+    gap: 60px;
 }
 
 .introduction-item {
-    z-index: 1000;
-    padding: 1vw 0;
+    width: 1000px;
+    padding: 10px 0;
     opacity: 0;
     transform: translateY(10vw);
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -20,16 +22,14 @@
 }
 
 .introduction-items .introduction-title {
-    font-weight: 900;
     text-align: center;
     background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .introduction-items .introduction-container {
-    margin-top: 5vw;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,19 +74,20 @@
 }
 
 .tree-trunk {
-    width: 2.5vw;
+    width: 40px;
     object-fit: cover;
 }
 
 .left-tree,
 .right-tree {
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 .branch-tree {
-    width: 20vw;
+    width: 100%;
 }
 
 .branch-container {
@@ -96,19 +97,19 @@
 
 .left-tree .branch-container {
     position: relative;
-    top: 2vw;
-    right: -1.3vw;
+    top: 20px;
+    right: -20px;
 }
 
 .right-tree .branch-container {
     align-items: flex-end;
     position: relative;
-    right: 1.4vw;
+    right: 20px;
 }
 
 .branch-title {
-    font-size: 2vw;
-    font-weight: 900;
+    font-size: 28px;
+    font-weight: 600;
     background: linear-gradient(60deg, #4696E3 0.01%, #55B3E9 55.17%, #2e8f84 99.99%, #3ab2a4);
     background-clip: text;
     -webkit-background-clip: text;
@@ -117,107 +118,150 @@
 
 .branch-content {
     position: absolute;
-    width: 12vw;
+    width: 160px;
     color: #0F4081;
-    font-size: 0.8vw;
+    font-size: 10px;
     text-align: justify;
+    line-height: 1.5;
 }
 
 .left-tree .branch-content {
-    top: 1vw;
-    left: 1.5vw;
+    top: 10px;
+    left: 30px;
 }
 
 .right-tree .branch-content {
-    top: 1vw;
-    right: 1.5vw;
+    top: 10px;
+    right: 30px;
 }
 
 .branch-title {
-    width: 15vw;
+    width: 200px;
     position: absolute;
-    top: -4.5vw;
-
+    top: -60px;
     text-align: center;
 }
 
-
-.introduction-circle {
-    width: 50vw;
-    height: 50vw;
-}
-
-#circle-1 {
-    position: absolute;
-    top: -10vh;
-    left: -30vw;
-}
-
-#circle-2 {
-    position: absolute;
-    top: -10vh;
-    right: -30vw;
-}
-
-#circle-3 {
-    position: absolute;
-    top: 20vh;
-    right: -20vw;
-}
-
-#circle-4 {
-    position: absolute;
-    top: 250vh;
-    left: -30vw;
-}
-
-#circle-5 {
-    position: absolute;
-    top: 180vh;
-    right: -40vw;
-}
-
-@media(max-width: 739px) {
-
+@media (max-width: 468px) {
     .introduction-items {
-        width: 90%;
-        margin-top: 10vw;
-
+        margin-top: 50px;
+        gap: 30px;
     }
 
-    .introduction-items .introduction-title {
-        font-size: 30px;
+    .introduction-item {
+        width: 95%;
     }
 
     .introduction-items .introduction-container {
         flex-direction: column;
-        gap: 20px
-    }
-
-    .introduction-items .introduction-img {
-        width: 70%;
-        height: 70%;
+        align-items: center;
+        gap: 20px;
     }
 
     .introduction-items .introduction-desc {
-        width: 80%;
-        font-size: 12px;
-        line-height: 1.5;
+        width: 100%;
+        font-size: 0.9rem;
+        list-style: none;
         padding: 0;
+    }
+
+    .introduction-items .introduction-img {
+        width: 80%;
+        height: auto;
     }
 
     #introduction-history {
         flex-direction: column;
         align-items: center;
-    }
-
-    .introduction-history-tree {
-        margin-top: 40px;
+        gap: 20px;
     }
 
     #introduction-history .introduction-title {
+        width: 100%;
         text-align: center;
-        font-size: 30px;
+        margin: 0;
+    }
+
+    .tree-trunk {
+        width: 20px;
+    }
+
+    .left-tree,
+    .right-tree {
+        width: 130px;
+    }
+
+    .branch-title {
+        font-size: 16px;
+        width: 90px;
+        top: -35px;
+    }
+
+    .left-tree .branch-container {
+        position: relative;
+        top: 15px;
+        right: -10px;
+    }
+
+    .right-tree .branch-container {
+        align-items: flex-end;
+        position: relative;
+        right: 10px;
+    }
+
+    .branch-content {
+        width: 90px;
+        font-size: 7px;
+    }
+
+    .left-tree .branch-content {
+        top: 10px;
+        left: 0px;
+    }
+
+    .right-tree .branch-content {
+        top: 10px;
+        right: 0px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 469px) {
+    .introduction-items {
+        margin-top: 50px;
+        gap: 40px;
+    }
+
+    .introduction-item {
+        width: 500px;
+    }
+
+    .introduction-items .introduction-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .introduction-items .introduction-desc {
+        width: 100%;
+        font-size: 0.95rem;
+        list-style: none;
+        padding: 0;
+    }
+
+    .introduction-items .introduction-img {
+        width: 60%;
+        height: auto;
+    }
+
+    #introduction-history {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #introduction-history .introduction-title {
+        width: 100%;
+        text-align: center;
         margin: 0;
     }
 
@@ -225,45 +269,89 @@
         width: 30px;
     }
 
-    .branch-title {
-        font-size: 2vw;
-        font-weight: 900;
-        background: linear-gradient(60deg, #4696E3 0.01%, #55B3E9 55.17%, #2e8f84 99.99%, #3ab2a4);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .branch-content {
-        width: 90px;
-        color: #0F4081;
-        font-size: 9px;
-    }
-
-    .left-tree .branch-content {
-        left: 10px;
-    }
-
-    .right-tree .branch-content {
-        right: 10px;
+    .left-tree,
+    .right-tree {
+        width: 200px;
     }
 
     .branch-title {
+        font-size: 20px;
         width: 120px;
-        font-size: 18px;
-        top: -40px;
-    }
-
-    .branch-tree {
-        width: 150px;
+        top: -45px;
     }
 
     .left-tree .branch-container {
-        top: 2vw;
+        position: relative;
+        top: 18px;
         right: -15px;
     }
 
     .right-tree .branch-container {
+        align-items: flex-end;
+        position: relative;
         right: 15px;
+    }
+
+    .branch-content {
+        width: 120px;
+        font-size: 8px;
+    }
+
+    .left-tree .branch-content {
+        top: 10px;
+        left: 10px;
+    }
+
+    .right-tree .branch-content {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .introduction-item {
+        width: 700px;
+    }
+
+    .tree-trunk {
+        width: 30px;
+    }
+
+    .left-tree,
+    .right-tree {
+        width: 200px;
+    }
+
+    .branch-title {
+        font-size: 20px;
+        width: 120px;
+        top: -45px;
+    }
+
+    .left-tree .branch-container {
+        position: relative;
+        top: 18px;
+        right: -15px;
+    }
+
+    .right-tree .branch-container {
+        align-items: flex-end;
+        position: relative;
+        right: 15px;
+    }
+
+    .branch-content {
+        width: 120px;
+        font-size: 8px;
+    }
+
+    .left-tree .branch-content {
+        top: 10px;
+        left: 10px;
+    }
+
+    .right-tree .branch-content {
+        top: 10px;
+        right: 10px;
     }
 }
