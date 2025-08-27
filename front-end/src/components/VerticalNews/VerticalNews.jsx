@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { Heading, Paragraph } from '../Typography/Typography';
 
 export const VerticalNews = ({ news, isETNews }) => {
+    const isTablet = window.innerWidth >= 481 && window.innerWidth <= 1024;
     const navigate = useNavigate();
 
     if (news && !news.visible) return;
@@ -30,8 +31,8 @@ export const VerticalNews = ({ news, isETNews }) => {
                 </div>
             </div>
             <div className="vertical-news-container">
-                <Heading level={3} className="vertical-news-title">{trimText(news?.title, 50)}</Heading>
-                <p className="vertical-news-content">{trimText(news?.meta_description, 90)}</p>
+                <Heading level={3} className="vertical-news-title">{isTablet ? trimText(news?.title, 30) : trimText(news?.title, 50)}</Heading>
+                <p className="vertical-news-content">{isTablet ? trimText(news?.meta_description, 60) :trimText(news?.meta_description, 90)}</p>
                 <div className="vertical-news-time">
                     <img src={clockIcon} alt="clock icon" className="clock-icon" />
                     <p className="relative-time">{getRelativeTime(news?.created_on)}</p>
