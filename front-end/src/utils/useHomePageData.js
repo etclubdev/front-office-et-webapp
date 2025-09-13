@@ -24,7 +24,7 @@ export const useHomePageData = () => {
     queryKey: ['faqs'],
     queryFn: getFAQs,
     select: (res) => {
-      const allFaqs = res?.data?.['Về ET Club'] || [];
+      const allFaqs = res?.data?.['ET Club'] || [];
       return allFaqs.filter((faq) => faq.visible);
     },
   });

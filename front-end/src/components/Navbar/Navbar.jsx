@@ -101,7 +101,7 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
         onClick={() => isMobile && handleDropdownClick('about')}
       >
         <div className={`nav-item-dropbtn ${isMobile && activeDropdown === 'about' ? 'show' : ''}`}>
-          <div className="nav-item-content">Về ET Club <FontAwesomeIcon icon={faChevronDown} /></div>
+          <div className="nav-item-content">Về ET Club <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
         </div>
         <div
           className={`dropdown-content ${isMobile && activeDropdown === 'about' ? 'show' : ''}`}
@@ -119,7 +119,7 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
         onClick={() => isMobile && handleDropdownClick('etzone')}
       >
         <div className={`nav-item-dropbtn ${isMobile && activeDropdown === 'etzone' ? 'show' : ''}`}>
-          <div className="nav-item-content">ET Zone <FontAwesomeIcon icon={faChevronDown} /></div>
+          <div className="nav-item-content">ET Zone <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
         </div>
         <div
           className={`dropdown-content ${isMobile && activeDropdown === 'etzone' ? 'show' : ''}`}
