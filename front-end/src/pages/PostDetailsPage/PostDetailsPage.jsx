@@ -9,6 +9,18 @@ import { Navbar } from "../../components/Navbar";
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { CircularLoading } from "../../components/CircularLoading";
 
+const getBreadcrumbsName = (pathname) => {
+    if (pathname.includes('activities')) {
+        return { href: '/activities', title: 'Hoạt động' };
+    } else if (pathname.includes('et-news')) {
+        return { href: '/et-news', title: 'Bản tin ET' };
+    } else if (pathname.includes('et-blog')) {
+        return { href: '/et-blog', title: 'Bờ lốc ET' };
+    }
+    return null; // fallback
+};
+
+
 export const PostDetailsPage = () => {
     const { pathname } = useLocation();
     const { id } = useParams();
@@ -51,18 +63,12 @@ export const PostDetailsPage = () => {
             href: "/",
             title: "Trang chủ"
         },
-        {
-            href: "/activities",
-            title: "Hoạt động"
-        },
+        getBreadcrumbsName(pathname),
         {
             href: "#",
             title: "Bài viết"
         }
     ]
-
-    console.log(details);
-    
 
     return (
         <div className="details-page">

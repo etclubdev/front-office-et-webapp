@@ -47,7 +47,7 @@ export const FAQsPage = () => {
                                 <TopicQuestion
                                     key={key}
                                     topicQuestion={faqs?.[key]}
-                                    title={`Câu hỏi về ${key}`}
+                                    title={key !== "Khác" ? `Câu hỏi về ${key}` : "Câu hỏi khác"}
                                 />
                             )
                         })
