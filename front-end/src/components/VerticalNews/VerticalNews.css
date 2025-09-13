@@ -1,5 +1,7 @@
 .vertical-news {
     width: 290px;
+    height: 455px;
+    max-height: 455px;
     display: flex;
     flex-direction: column;
     transition: scale 0.2s ease-in-out;
@@ -149,7 +151,7 @@
 }
 
 /* Desktop */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
     .vertical-news {
         min-height: 430px;
         max-height: 430px;
@@ -158,4 +160,4 @@
     .vertical-news-content {
         font-size: 10px;
     }
-}
+} */
