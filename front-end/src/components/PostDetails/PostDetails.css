@@ -96,11 +96,9 @@
 }
 
 .details-container img {
-    width: fit-content;
-    max-width: 80%;
+    width: 80%;
     height: auto;
     display: block;
-    margin: 40px 0;
 }
 
 .details-references{
@@ -109,6 +107,10 @@
 
 .details-content {
     width: 80%;
+}
+
+.details-content-header {
+    margin-bottom: 50px;
 }
 
 @media(max-width: 739px) {
@@ -122,12 +124,16 @@
         width: 100%;
     }
 
+    .details-container img {
+        width: 100%;
+    }
+
     .details-info-item {
         font-size: 10px;
     }
 
     .details-content {
-        width: 90%;
+        width: 100%;
     }
 }
 
