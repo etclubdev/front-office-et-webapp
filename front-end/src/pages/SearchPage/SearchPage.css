@@ -21,10 +21,11 @@
 }
 
 .search-section .close-btn{
-    width: 3vw;  
-    height: 3vw; 
     transition: transform 0.3s ease;
-    color: #3e5391
+    color: #3e5391;
+    border: none;
+    background: transparent;
+    font-size: 30px;
 }
 
 .search-section .close-btn:hover{
