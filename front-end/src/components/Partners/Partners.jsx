@@ -3,7 +3,6 @@ import './Partners.css';
 import { SliderArrow } from "../SliderArrow";
 import { COMPANION_CONTENT, PARTNERS_CONTENT } from '../../constants';
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { PageTitle } from "../PageTitle";
 import { Heading } from "../Typography/Typography";
 import Skeleton from '@mui/material/Skeleton';
 
