@@ -45,8 +45,9 @@
 }
 
 .details-post {
+    top: -30px;
     width: 70%;
-    padding: 5%;
+    padding: 0 5%;
     max-width: 1200px;
     min-height: 100vh;
     height: auto;
