@@ -15,18 +15,22 @@ export const AboutUsSection = () => {
 
     return (
         <div className='aboutus-section' ref={ref}>
-            <Heading level={1} className="about-us-title">{DEPARTMENT_TITLE}</Heading>
+            <Heading level={1} className="about-us-title">
+                <span>{DEPARTMENT_TITLE.firstPart}</span>
+                <br />
+                <span>{DEPARTMENT_TITLE.secondPart}</span>
+            </Heading>
             <div className="bio">
                 <div className="bio-logo">
                     <img src={verticalLogo} alt="ET Club" />
                 </div>
                 <div id='detail-item-1' className="bio-detail">
-                    <img className='detail-img' src={require(`../../mocks${bioItem[0].image}`)} alt="ET Club" />
+                    <img className='detail-img' src={bioItem[0].image} alt="ET Club" />
                     <p className='detail-desc'>{bioItem[0].content}</p>
                 </div>
                 <div id='detail-item-2' className="bio-detail">
                     <p className='detail-desc'>{bioItem[1].content}</p>
-                    <img className='detail-img' src={require(`../../mocks${bioItem[1].image}`)} alt="ET Club" />
+                    <img className='detail-img' src={bioItem[1].image} alt="ET Club" />
                 </div>
             </div>
         </div >
