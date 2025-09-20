@@ -205,6 +205,14 @@
         margin-bottom: 20px;
     }
 
+    .about-us-title-1 {
+        font-size: 18px;
+    }
+
+    .about-us-title-2 {
+        font-size: 22px;
+    }
+
     .bio {
         flex-direction: column;
         gap: 40px

@@ -16,9 +16,9 @@ export const AboutUsSection = () => {
     return (
         <div className='aboutus-section' ref={ref}>
             <Heading level={1} className="about-us-title">
-                <span>{DEPARTMENT_TITLE.firstPart}</span>
+                <span className='about-us-title-1'>{DEPARTMENT_TITLE.firstPart}</span>
                 <br />
-                <span>{DEPARTMENT_TITLE.secondPart}</span>
+                <span className='about-us-title-2'>{DEPARTMENT_TITLE.secondPart}</span>
             </Heading>
             <div className="bio">
                 <div className="bio-logo">
