@@ -123,7 +123,7 @@
     position: relative;
     width: 30vw;
     height: 30vw;
-    transition: scale 0.2s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
 
 .char1-container {
@@ -151,7 +151,7 @@
 .char2-container:hover,
 .char3-container:hover,
 .char4-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .characteristics-item-title {

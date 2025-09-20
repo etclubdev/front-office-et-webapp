@@ -57,7 +57,7 @@ export const SearchPage = () => {
                     </button>
                 </div>
                 <div className="search-input">
-                    <div className="vertical-bar"></div>
+                    {/* <div className="vertical-bar"></div> */}
                     <input
                         placeholder='Nhập từ khóa tìm kiếm'
                         type="text"

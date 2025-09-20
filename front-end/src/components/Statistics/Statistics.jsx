@@ -2,8 +2,7 @@
 import './Statistics.css';
 import { useRef, useState } from 'react';
 import AnimatedNumber from './AnimatedNumber';
-import { STATISTICS_TITLE } from '../../constants';
-import { PageTitle } from '../../components/PageTitle';
+import { STATISTICS_TITLE, STATISTICS_IMAGE } from '../../constants';
 import { Heading } from '../Typography/Typography';
 import Skeleton from '@mui/material/Skeleton';
 import { statisticsBackground } from '../../assets/images/et';
@@ -38,7 +37,7 @@ export const Statistics = ({ statistics }) => {
             <div className="statistics-background"></div>
             <img
                 className="statistics-background-image"
-                src={statisticsBackground}
+                src={STATISTICS_IMAGE}
                 alt=""
                 loading="lazy"
             />

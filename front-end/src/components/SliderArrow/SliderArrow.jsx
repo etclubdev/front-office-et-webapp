@@ -9,7 +9,7 @@ export const SliderArrow = (props) => {
         height: "100%",
         color: "#1d2f5c",
         position: "absolute",
-        top: "50%",
+        top: "49.5%",
         zIndex: 2,
         transition: "opacity 0.3s ease-in-out",
         opacity: 0,
