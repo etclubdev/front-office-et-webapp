@@ -2,7 +2,7 @@ import './IntroductionPage.css';
 import { useEffect, useState } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { IntroductionContent } from '../../components/IntroductionContent';
-import { introduction } from '../../assets/images/et';
+import { INTRODUCTION_IMAGE } from '../../constants';
 import { textLogo } from '../../assets/images/logos';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
 import { DynamicBlur } from '../../components/DynamicBlur';
@@ -57,7 +57,7 @@ export const IntroductionPage = () => {
             <Navbar />
             <DynamicBlur parentClassName="root-container" />
             <div className="et-avatar">
-                <img className='et-img' src={introduction} alt="" />
+                <img className='et-img' src={INTRODUCTION_IMAGE} alt="" />
                 <div className="et-cover">
                     {/* <p className="et-text">WE ARE</p> */}
                     <p className="we-are">WE ARE</p>

@@ -1,6 +1,6 @@
 import './App.css';
 // eslint-disable-next-line no-unused-vars
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { useEffect } from 'react'
 import { HomePage } from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
@@ -39,6 +39,8 @@ function App() {
         </>
       } */}
       <Routes>
+        <Route path="*" element={<Navigate to="/" replace />} />
+
         <Route path="/search" element={<SearchPage />} /> 
         <Route path="/activities/:id" element={<PostDetailsPage />} />
         <Route path="/et-news/:id" element={<PostDetailsPage />} />

@@ -37,7 +37,7 @@ export const HRStructurePage = () => {
                         if (index % 2 === 0)
                             return (
                                 <div className="hr-structure-branch even" key={department.id}>
-                                    <img src={require(`../../mocks${department.image}`)} alt="" className="hr-structure-img" />
+                                    <img src={department.image} alt="" className="hr-structure-img" />
                                     <div className="hr-structure-content">
                                         <Heading level={2} className="hr-structure-name">{department.name}</Heading>
                                         <Paragraph className="hr-structure-desc">{department.desc}</Paragraph>
@@ -51,7 +51,7 @@ export const HRStructurePage = () => {
                                         <Heading level={2} className="hr-structure-name">{department.name}</Heading>
                                         <Paragraph className="hr-structure-desc">{department.desc}</Paragraph>
                                     </div>
-                                    <img src={require(`../../mocks${department.image}`)} alt="" className="hr-structure-img" />
+                                    <img src={department.image} alt="" className="hr-structure-img" />
                                 </div>
                             )
                         }
