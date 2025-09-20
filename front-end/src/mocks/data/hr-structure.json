@@ -2,33 +2,33 @@
     "hrStructure": [
         {
             "id": 0,
-            "name": "BAN SỰ KIỆN",
-            "image": "/images/hr-structure/event.jpg",
-            "desc": "Ban Sự kiện phụ trách tổ chức và quản lý các sự kiện của một tổ chức. Ban Sự kiện đóng vai trò quan trọng trong việc lên kế hoạch tôt chức và tạo ra các trải nghiệm đáng nhớ cho sinh viên qua các sự kiện."
+            "name": "BAN CHUYÊN MÔN",
+            "image": "https://res.cloudinary.com/dgqolusci/image/upload/v1758388471/tech_z7ipvx.jpg",
+            "desc": "Ban Chuyên môn đảm nhận các khía cạnh thuần kỹ thuật như phát triển website CLB, điều hành nhóm cộng đồng và hướng dẫn, hỗ trợ thành viên CLB về những vấn đề kỹ thuật khi vận hành."
         },
         {
             "id": 1,
-            "name": "BAN NHÂN SỰ - TỔ CHỨC",
-            "image": "/images/hr-structure/hr.jpg",
-            "desc": "Ban Nhân sự - Tổ chức tại ET là một bộ phận đóng vai trò then chốt trong việc kết nối tất cả các bộ phận và các ban với nhau. Nhiệm vụ chính của ban là đảm bảo sự phân công nhân lực hợp lý giúp mọi hoạt động trong CLB diễn ra mượt mà, đồng bộ."
+            "name": "BAN SỰ KIỆN",
+            "image": "https://res.cloudinary.com/dgqolusci/image/upload/v1758388471/event_tqgnoc.jpg",
+            "desc": "Ban Sự kiện phụ trách tổ chức và quản lý các sự kiện của một tổ chức. Ban Sự kiện đóng vai trò quan trọng trong việc lên kế hoạch tổ chức và tạo ra các trải nghiệm đáng nhớ cho sinh viên qua các sự kiện."
         },
         {
             "id": 2,
             "name": "BAN TÀI CHÍNH - ĐỐI NGOẠI",
-            "image": "/images/hr-structure/fer.jpg",
+            "image": "https://res.cloudinary.com/dgqolusci/image/upload/v1758388470/fer_qzzs1v.jpg",
             "desc": "Ban Tài chính - Đối ngoại là đại diện cho hình ảnh ET Club tới các đối tác doanh nghiệp, với trách nhiệm đàm phán, đem về cho CLB những quyền lợi về hỗ trợ tài chính, truyền thông, bảo trợ chuyên môn."
         },
         {
             "id": 3,
             "name": "BAN TRUYỀN THÔNG",
-            "image": "/images/hr-structure/pr.jpg",
+            "image": "https://res.cloudinary.com/dgqolusci/image/upload/v1758388471/pr_mkibgm.jpg",
             "desc": "Ban Truyền thông gồm 2 tiểu ban là Content và Media (Design, Photo, Video editor). Truyền thông giữ vai trò quan trọng trong việc xây dựng và tổng hợp nội dung về các lĩnh vực Công nghệ - Kỹ  thuật từ đó đưa hình ảnh CLB đến gần hơn với các bạn sinh viên."
         },
         {
             "id": 4,
-            "name": "BAN CHUYÊN MÔN",
-            "image": "/images/hr-structure/tech.jpg",
-            "desc": "Ban Chuyên môn đảm nhận các khía cạnh thuần kỹ thuật như phát triển website CLB, điều hành nhóm cộng đồng và hướng dẫn, hỗ trợ thành viên CLB về những vấn đề kỹ thuật khi vận hành."
+            "name": "BAN NHÂN SỰ - TỔ CHỨC",
+            "image": "https://res.cloudinary.com/dgqolusci/image/upload/v1758388471/hr_o5jqob.jpg",
+            "desc": "Ban Nhân sự - Tổ chức tại ET là một bộ phận đóng vai trò then chốt trong việc kết nối tất cả các bộ phận và các ban với nhau. Nhiệm vụ chính của ban là đảm bảo sự phân công nhân lực hợp lý giúp mọi hoạt động trong CLB diễn ra mượt mà, đồng bộ."
         }
     ]
 }
