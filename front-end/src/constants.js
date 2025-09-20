@@ -18,11 +18,8 @@ export const GETINVOLVED_CONTENT = {
     desc: "Nhanh tay nhấn “ĐĂNG KÝ NGAY” bên dưới để trở thành mảnh ghép đặc biệt của ET",
     signUp: "ĐĂNG KÝ NGAY"
 }
-export const INTRODUCTION_CONTENT = {
-    title: "Economic Technology",
-    desc: "Câu lạc bộ Công nghệ Kinh tế - ET Club được thành lập vào ngày 25/05/2018 trực thuộc LCH SV Khoa BIT Đại học Kinh tế TP.HCM",
-    more: "Tìm hiểu thêm.."
-}
+export const INTRODUCTION_IMAGE = "https://res.cloudinary.com/dgqolusci/image/upload/v1758389265/introduction-min_ofuwdl.jpg"
+
 export const PARTNERS_CONTENT = {
     title: "CHUYÊN GIA ĐỒNG HÀNH",
     desc: "ET chân thành cảm ơn các thầy cô/ anh chị đã đồng hành và ủng hộ hoạt động của CLB"
@@ -53,7 +50,7 @@ export const navbarLinks = [
         dropdown: true,
         items: [
             { id: "1st", label: "ET News", url: "/et-news" },
-            { id: "2nd", label: "ET Blog", url: "/ew-blog" },
+            { id: "2nd", label: "ET Blog", url: "/et-blog" },
         ]
     },
     { id: "ctv", label: "Tìm kiếm CTV", url: "https://ctv2025.etclub.vn/" },
