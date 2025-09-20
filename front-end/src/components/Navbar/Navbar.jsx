@@ -94,11 +94,7 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
                 </div>
               </div>
               <div className={`dropdown-content ${isMobile && activeDropdown === link.id ? 'show' : ''}`}>
-                {link.items.map(item => item.url.startsWith('http') ? (
-                  <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer">
-                    <p>{item.label}</p>
-                  </a>
-                ) : (
+                {link.items.map(item => (
                   <Link key={item.id} to={item.url}>
                     <p>{item.label}</p>
                   </Link>
@@ -110,11 +106,11 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
 
         // Normal link
         return (link.id !== "ctv") ? (
-          <a key={link.id} href={link.url} target="_blank" rel="noopener noreferrer" className="nav-item">
+          <a key={link.id} href={link.url} className="nav-item">
             <p className="nav-item-content">{link.label}</p>
           </a>
         ) : (
-          <Link key={link.id} to={link.url} className={`nav-item ${!isMobile && "ctv"}`}>
+          <Link key={link.id} to={link.url} target="_blank" rel="noopener noreferrer" className={`nav-item ${!isMobile && "ctv"}`}>
             <p className="nav-item-content">{link.label}</p>
           </Link>
         );
