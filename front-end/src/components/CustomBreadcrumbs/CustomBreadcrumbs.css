@@ -18,3 +18,15 @@
         left: 7vw;
     }
 }
+
+@media (min-width: 740px) and (max-width: 1023px)  {
+    .breadcrumb-item {
+        font-size: 10px !important;
+    }
+
+    .breadcrumb-container {
+        position: absolute;
+        top: 10vw;
+        left: 7vw;
+    }
+}

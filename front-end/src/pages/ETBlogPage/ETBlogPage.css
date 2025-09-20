@@ -58,8 +58,8 @@
     height: 100%;
     box-sizing: border-box;
     min-width: none;
-    height: 475px;
-    min-height: 475px;
+    height: 440px;
+    min-height: 440px;
 }
 
 #highlight-blog-1 .vertical-news-title {
@@ -172,6 +172,14 @@
         width: 100%;
         height: auto;
         box-sizing: border-box;
+        min-height: auto;
+    }
+
+    .etblog-page #highlight-blog-1 .vertical-news {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        max-height: none;
     }
 
     .etblog-page #highlight-blog-2 {
@@ -188,7 +196,7 @@
     }
 
     .etblog-page .vertical-news {
-        width: 320px;
+        width: 340px;
     }
 
     .etblog-page .vertical-news-img-container {

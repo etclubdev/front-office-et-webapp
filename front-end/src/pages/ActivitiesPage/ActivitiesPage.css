@@ -161,13 +161,13 @@
     .ongoing-activities .activity-container.highlight-1,
     .ongoing-activities .activity-container.highlight-2 {
         width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     .ongoing-activities .activity-container.highlight-1 .activity-image,
     .ongoing-activities .activity-container.highlight-2 .activity-image {
-        max-width: 250px;
-        height: 250px;
-        width: 250px;
+        max-width: 100%;
         aspect-ratio: 1/1;
     }
 
@@ -267,6 +267,7 @@
 
 @media (min-width: 769px) and (max-width: 1200px) {
     .activities-section {
+        margin-top: 80px;
         width: 90%;
     }
 
