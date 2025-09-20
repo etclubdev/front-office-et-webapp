@@ -13,7 +13,7 @@ export default function getRelativeTime(date){
     const diffInYears = Math.round(diffInDays / 365); // Approximate years
 
     if (diffInDays === 0) {
-        return "today";
+        return "Today";
     } else if (Math.abs(diffInDays) < 30) {
         return diffInDays > 0 
             ? diffInDays === 1 

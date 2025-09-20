@@ -40,7 +40,7 @@
 .introduction-page .et-logo {
     width: 50vw;
     position: relative;
-    top:2vw
+    top: 2vw
 }
 
 .introduction-page .introduction-content {
@@ -54,15 +54,15 @@
     flex-direction: column;
 }
 
-.we-are{
+.we-are {
     margin: 5vw 0 0 0;
-        font-size: 5vw;
-     font-weight: 900;
-     text-align: center;
+    font-size: 5vw;
+    font-weight: 900;
+    text-align: center;
     background: linear-gradient(135deg, #47A8B4 0%, #5D3E91 100%);
-     background-clip: text;
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media(max-width: 739px) {
@@ -71,12 +71,26 @@
         font-size: 25px;
     }
 
+    .introduction-page .et-avatar {
+        min-height: 30vh;
+    }
+
     .introduction-page .et-logo {
         width: 80vw;
         top: 50px;
     }
 
-    .we-are{
-    margin: 13vw 0 28vw 0;
+    .we-are {
+        margin: 13vw 0 28vw 0;
+    }
 }
+
+@media (min-width: 740px) and (max-width: 1200px) {
+    .introduction-page {
+        margin-top: 50px;
+    }
+
+    .introduction-page .et-avatar {
+        min-height: 40vh;
+    }
 }
