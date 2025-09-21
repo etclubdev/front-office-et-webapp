@@ -66,12 +66,12 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
         // Search
         if (link.search) {
           return (
-            <a key={link.id} href={link.url} state={{ from: location.pathname }} className="searchbar-group">
+            <Link key={link.id} to={link.url} state={{ from: location.pathname }} className="searchbar-group">
               <div className="search-container">
                 <div className="search-icon"><FontAwesomeIcon icon={faSearch} /></div>
                 <div className="input-placeholder">{link.label}</div>
               </div>
-            </a>
+            </Link>
           );
         }
 
