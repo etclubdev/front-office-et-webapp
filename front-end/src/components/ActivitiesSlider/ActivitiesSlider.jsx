@@ -18,8 +18,8 @@ const settings = {
     autoplay: true,
     autoplaySpeed: 2000,
     initialSlide: 0,
-    nextArrow: <PrevArrow />,
-    prevArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     responsive: [
         { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 1 }},
         { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1 }},
