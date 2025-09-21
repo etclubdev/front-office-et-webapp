@@ -52,6 +52,8 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const handleDropdownClick = (id) => setActiveDropdown(prev => (prev === id ? null : id));
 
+  const location = useLocation();
+  
   return (
     <div
       className={`nav-menu ${menuOpen ? 'show' : ''}`}
@@ -63,20 +65,13 @@ const NavbarMenu = ({ isMobile, menuOpen, handleSetIsNavBarHovered }) => {
       {navbarLinks.map(link => {
         // Search
         if (link.search) {
-          return isMobile ? (
-            <a key={link.id} href={link.url} className="searchbar-group">
+          return (
+            <Link key={link.id} to={link.url} state={{ from: location.pathname }} className="searchbar-group">
               <div className="search-container">
                 <div className="search-icon"><FontAwesomeIcon icon={faSearch} /></div>
                 <div className="input-placeholder">{link.label}</div>
               </div>
-            </a>
-          ) : (
-            <a key={link.id} href={link.url} className="searchbar-group">
-              <div className="search-container">
-                <div className="search-icon"><FontAwesomeIcon icon={faSearch} /></div>
-                <div className="input-placeholder">{link.label}</div>
-              </div>
-            </a>
+            </Link>
           );
         }
 
