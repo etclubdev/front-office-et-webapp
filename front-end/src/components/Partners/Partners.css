@@ -123,6 +123,9 @@
 
 
 @media (max-width: 480px) {
+    .partners-section .skeleton-alt {
+        gap: 50px;
+    }
     .partner, .single-partner{
         width: 100px;
     }
