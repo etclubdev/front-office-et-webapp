@@ -23,7 +23,7 @@ export const Footer = () => {
                     <Link to='/activities' className="footer-item-content">Chương trình</Link>
                     <Link to='/et-news' className="footer-item-content">ET News</Link>
                     <Link to='/et-blog' className="footer-item-content">ET Blog</Link>
-                    <Link to='/collaborator-seeking' className="footer-item-content">Tìm kiếm CTV</Link>
+                    <a href='https://ctv2025.etclub.vn/' target="_blank" rel="noopener noreferrer" className="footer-item-content">Tìm kiếm CTV</a>
                 </div>
                 <div className="footer-item">
                     <div className="footer-item-title">Hỗ trợ</div>
@@ -35,25 +35,25 @@ export const Footer = () => {
                         <div className="footer-social-icon">
                             <FontAwesomeIcon icon={faSquareFacebook} />
                         </div>
-                        <a className="footer-social-link" href='https://www.facebook.com/groups/955638881998102'>Group cộng đồng</a>
-                    </div>
-                    <div className="footer-social">
-                        <div className="footer-social-icon">
-                            <FontAwesomeIcon icon={faSquareLinkedin} />
-                        </div>
-                        <a className="footer-social-link" href='https://www.linkedin.com/company/economic-technology-club-ueh/?originalSubdomain=vn'>Linkedin</a>
-                    </div>
-                    <div className="footer-social">
-                        <div className="footer-social-icon">
-                            <FontAwesomeIcon icon={faSquareYoutube} />
-                        </div>
-                        <a className="footer-social-link" href='https://www.youtube.com/c/C%C3%A2ul%E1%BA%A1cb%E1%BB%99C%C3%B4ngNgh%E1%BB%87KinhT%E1%BA%BF'>Youtube</a>
+                        <a className="footer-social-link" target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/ETClub.UEH'>Facebook</a>
                     </div>
                     <div className="footer-social">
                         <div className="footer-social-icon">
                             <FontAwesomeIcon icon={faSquareFacebook} />
                         </div>
-                        <a className="footer-social-link" href='https://www.facebook.com/ETClub.UEH'>Facebook</a>
+                        <a className="footer-social-link" target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/groups/955638881998102'>Group cộng đồng</a>
+                    </div>
+                    <div className="footer-social">
+                        <div className="footer-social-icon">
+                            <FontAwesomeIcon icon={faSquareLinkedin} />
+                        </div>
+                        <a className="footer-social-link" target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/company/economic-technology-club-ueh/?originalSubdomain=vn'>Linkedin</a>
+                    </div>
+                    <div className="footer-social">
+                        <div className="footer-social-icon">
+                            <FontAwesomeIcon icon={faSquareYoutube} />
+                        </div>
+                        <a className="footer-social-link" target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/c/C%C3%A2ul%E1%BA%A1cb%E1%BB%99C%C3%B4ngNgh%E1%BB%87KinhT%E1%BA%BF'>Youtube</a>
                     </div>
                 </div>
             </div>
