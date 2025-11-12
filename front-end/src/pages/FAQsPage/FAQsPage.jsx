@@ -1,6 +1,5 @@
 import './FAQsPage.css';
 import { TopicQuestion } from '../../components/TopicQuestion';
-import { PageTitle } from '../../components/PageTitle';
 import { getAllFAQs } from '../../api/faq.service';
 import { Navbar } from '../../components/Navbar';
 import { CustomBreadcrumbs } from '../../components/CustomBreadcrumbs'
@@ -10,7 +9,7 @@ import { useSimpleData } from '../../utils/useSimpleData';
 import { Heading } from '../../components/Typography/Typography'
 
 export const FAQsPage = () => {
-    const { data: faqs, isFetching, isLoading, isError } = useSimpleData(['faqs'], getAllFAQs);
+    const { data: faqs } = useSimpleData(['faqs'], getAllFAQs);
     // console.log('FAQs:', faqs, 'Is fetching:', isFetching);
 
     if (!faqs || faqs.length === 0) {
