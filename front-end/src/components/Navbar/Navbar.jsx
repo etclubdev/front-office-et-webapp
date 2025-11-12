@@ -8,6 +8,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { navbarLinks } from "../../constants";
 
+const scrolledAnimation = ["/", "/et-trashslayer"]
+
 export const Navbar = () => {
   const [scrollingDown, setScrollingDown] = useState(false);
   const [isNabBarHovered, setIsNavBarHovered] = useState(false);
@@ -23,7 +25,7 @@ export const Navbar = () => {
   }, []);
 
   const hrefggleMenu = () => setMenuOpen(!menuOpen);
-  const isNotHomepage = location.pathname !== '/';
+  const isNotHomepage = !scrolledAnimation.includes(location.pathname);
 
   return (
     <div className={`nav-section ${(scrollingDown || isNotHomepage || isNabBarHovered) ? 'scrolled' : ''}`}>
