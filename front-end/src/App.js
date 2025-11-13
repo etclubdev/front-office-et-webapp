@@ -13,6 +13,7 @@ import { IntroductionPage } from './pages/IntroductionPage';
 import { HRStructurePage } from './pages/HRStructurePage/HRStructurePage';
 import { ComingSoonPage } from './pages/ComingSoonPage';
 import { useLocation } from 'react-router-dom';
+import { TrashslayerPage } from './pages/TrashslayerPage';
 // import { useLocation, matchPath } from 'react-router-dom';
 import { Footer } from './components/Footer';
 // import  TetCountDownTimerPage  from './pages/EventPages/TetCountDownTimerPage/TetCountDownTimerPage';
@@ -53,6 +54,8 @@ function App() {
         <Route path="/hr-structure" element={<HRStructurePage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/collaborator-seeking" element={<ComingSoonPage />} />
+
+        <Route path="/et-trashslayer" element={<TrashslayerPage />} /> 
       </Routes>
       <Footer />
     </div>

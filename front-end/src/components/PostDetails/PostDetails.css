@@ -38,6 +38,27 @@
     overflow-wrap: break-word;
 } */
 
+.details-content blockquote {
+  border-left: 4px solid #4a90e2; /* Thanh bên trái màu xanh */
+  margin: 1em 0;
+  padding: 0.8em 1em;
+  background: #f7f9fc;           /* Nền nhạt */
+  font-style: italic;            /* Chữ nghiêng */
+  color: #333;                   /* Màu chữ */
+  border-radius: 6px;            /* Bo góc */
+}
+
+.details-content iframe {
+  width: 100%;
+  max-width: 800px; /* hoặc tùy container */
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: 8px;
+  display: block;
+  margin: 1rem auto;
+}
+
+
 .details-post p {
     overflow-wrap: break-word;
 }

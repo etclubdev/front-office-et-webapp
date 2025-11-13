@@ -1,7 +1,6 @@
 import './ActivitiesSlider.css';
 
 import { Activity } from '../Activity';
-import { ActivitiesNextArrow } from '../ActivitiesNextArrow';
 import { PrevArrow } from '../PrevArrow';
 import { NextArrow } from '../NextArrow';
 import Slider from "react-slick";

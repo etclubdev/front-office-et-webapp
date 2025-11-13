@@ -15,8 +15,6 @@ export const HomePage = () => {
     partners,
     faqs,
     achievements,
-    isLoading,
-    isError,
   } = useHomePageData();
 
   return (

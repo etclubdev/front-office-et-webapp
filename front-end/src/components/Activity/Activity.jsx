@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { lazy, useEffect } from 'react';
+import { useEffect } from 'react';
 import './Activity.css';
 import { useNavigate } from 'react-router-dom';
 import { Heading } from '../Typography/Typography';

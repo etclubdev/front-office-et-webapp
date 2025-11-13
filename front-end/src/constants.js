@@ -56,3 +56,11 @@ export const navbarLinks = [
     { id: "ctv", label: "Tìm kiếm CTV", url: "https://ctv2025.etclub.vn/" },
     { id: "search", label: "Tìm kiếm", url: "/search", search: true } 
 ];
+
+export const TRASHSLAYER_CONTENT = {
+    background: "https://res.cloudinary.com/dgqolusci/image/upload/v1762970545/7o31lH_mi83dk.png",
+    name: "ET - TRASHSLAYER",
+    desc: "ET - Trash Slayer is a Top-Down 2D Shooter game. Players will take on the role of Em Tun (ET) to explore polluted places in the city to clean up trash, helping the trash monsters here no longer rebel. The game has simple, easy-to-understand gameplay that creates a pleasant but no less exciting feeling for players.",
+    downloadLink: "https://buzlc2kz.itch.io/et-trashslayer",
+    tutorialLink: "https://bit.ly/ET_GameInstruction",
+}

@@ -7,6 +7,8 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 import { Heading } from '../Typography/Typography';
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-light.css";
+import "katex/dist/katex.min.css";
+import renderMathInElement from "katex/contrib/auto-render";
 
 export const PostDetails = ({ details, thumbnailShowed = false }) => {
     const createdOn = new Date(details.created_on).toLocaleDateString("vi-VN");
@@ -15,6 +17,13 @@ export const PostDetails = ({ details, thumbnailShowed = false }) => {
         document.querySelectorAll("pre code").forEach(block => {
             block.innerHTML = block.innerHTML.replace(/<br\s*\/?>/gi, "\n")
             hljs.highlightElement(block);
+        });
+
+        renderMathInElement(document.querySelector(".details-content"), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "\\(", right: "\\)", display: false },
+            ]
         });
     }, [details.content]);
 
@@ -42,7 +51,7 @@ export const PostDetails = ({ details, thumbnailShowed = false }) => {
                     {thumbnailShowed && <img src={details.thumbnail_image_url} alt="" />}
                 </div>
                 <div className="detail-content-container" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <div className="details-content prose max-w-none" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(details?.content) }}></div>
+                    <div className="details-content prose max-w-none" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(details?.content, { ADD_TAGS: ["iframe", "video", "source"], ADD_ATTR: ["allow", "allowfullscreen", "frameborder", "scrolling"] }) }}></div>
                     {details.source &&
                         <p className="details-references">
                             <strong>Nguồn: </strong>
