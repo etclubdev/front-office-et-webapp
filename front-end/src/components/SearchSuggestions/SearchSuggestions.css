@@ -1,93 +1,181 @@
-.suggestions{
-    width: 100%;
-    height: auto;
-}
-
-.suggestions-text{
-    font-size: 2vw;
-    font-style: italic;
-    color: #4696E3;
-}
-
-.suggestion{
+.suggestions-container {
     display: flex;
     flex-direction: column;
-    margin: 2vw 0;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    gap: 18px;
+    padding: 25px;
+    margin-top: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
-.suggestion:hover{
-    transform: scale(1.02);
+.suggestions-container::-webkit-scrollbar {
+    width: 6px;
 }
-.suggestion-type{
-    margin: 0;
-    text-align: right;
-    font-size: 1vw;
+
+.suggestions-container::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.suggestions-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+/* .suggestions-container:hover {
+    scrollbar-width: auto;
+} */
+
+.suggestion-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px;
+    background: rgba(30, 40, 95, 0.32);
+    border-radius: 12px;
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: relative;
+    min-height: 100px;
+}
+
+.suggestion-card:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.suggestion-card:hover .suggestion-title,
+.suggestion-card:hover .suggestion-desc {
+    color: #03045E
+}
+
+.suggestion-card:hover .suggestion-type-tag {
+    -webkit-text-fill-color: #03045E;
+    background: none;
+}
+
+
+.suggestion-left img.suggestion-thumb {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 18px;
+}
+
+.suggestion-right {
+    flex: 1;
+    color: white;
+}
+
+.suggestion-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+}
+
+.suggestion-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.9;
+    text-align: justify;
+}
+
+.suggestion-type-tag {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 13px;
     font-weight: 500;
-    background: linear-gradient(135deg, #47A8B4 2%, #3e5391 80%);
+    font-weight: bold;
+    background: white;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.suggestion-post{
-    display: flex;
-    min-height: 9vw;
-    background: rgba(30, 40, 95, 0.199);
-}
-
-
-.suggestion-img{
-    height: 9vw;
-    aspect-ratio: 1/1;
-    box-sizing: border-box;
-    margin-right: 2vw;
-    object-fit: cover;
-}
-
-.suggestion-content{
-    width: 70%;
-    color: #fff;
-}
-
-.suggestion-title {
-    font-weight: bold;
-    font-size: 1.3vw
-}
-
-.suggestion-desc {
-    font-size: 1vw;
-    line-height: 1.5;
-    text-align: justify;
-}
-
 @media screen and (max-width: 768px) {
-    .suggestion-type{
-        font-size: 10px;
-        font-weight: 500;
+    .suggestions-container {
+        padding: 15px;
+        gap: 12px;
+        max-height: 70vh;
     }
-    
-    .suggestion-post{
-        min-height: 70px;
+
+    .suggestion-card {
+        padding: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: auto;
     }
-    
-    
-    .suggestion-img{
-        height: 80px;
-        aspect-ratio: 1/1;
-        box-sizing: border-box;
-        margin-right: 10px;
-        object-fit: cover;
-        justify-content: center;
+
+    .suggestion-thumb {
+        width: 70px !important;
+        height: 70px !important;
+        margin-right: 12px;
+        margin-bottom: 10px;
     }
-    
+
+    .suggestion-right {
+        width: 100%;
+    }
+
     .suggestion-title {
-        font-size: 10px
+        font-size: 12px;
+        width: 75%;
+        text-align: justify;
     }
-    
+
     .suggestion-desc {
-        font-size: 8px;
-        line-height: 1.5;
+        font-size: 10px;
+    }
+
+    .suggestion-type-tag {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .suggestions-container {
+        padding: 20px;
+        gap: 16px;
+        max-height: 75vh;
+    }
+
+    .suggestion-card {
+        padding: 16px;
+        flex-direction: row; /* vẫn giữ row */
+        align-items: center;
+        min-height: 90px;
+    }
+
+    .suggestion-left img.suggestion-thumb {
+        width: 80px;
+        height: 80px;
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+
+    .suggestion-right {
+        width: calc(100% - 80px - 16px);
+    }
+
+    .suggestion-title {
+        font-size: 16px;
+        max-width: 80%;
+        align-items: center;
+    }
+
+    .suggestion-desc {
+        font-size: 12px;
+    }
+
+    .suggestion-type-tag {
+        font-size: 11px;
     }
 }

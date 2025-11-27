@@ -11,26 +11,41 @@ export const SearchSuggestions = ({ searchData }) => {
         navigate(`${to}/${id}`);
     }
 
-    return (
-        <div className="suggestions">
-            {
-                searchData?.map(item => {
-                    const postType = getPostType(item.table);
+    if (!searchData || searchData.length === 0) return null;
 
-                    return (
-                        <div key={item[postType.id]} className="suggestion" onClick={() => onClick(postType.to, item[postType.id])}>
-                            <p className='suggestion-type'>{postType.type}</p>
-                            <div className='suggestion-post'>
-                                <img className='suggestion-img' src={item?.thumbnail_image_url} alt="" />
-                                <div className="suggestion-content">
-                                    <p className="suggestion-title">{item.title}</p>
-                                    <p className="suggestion-desc">{trimText(item.meta_description, 100)}</p>
-                                </div>
-                            </div>
+    return (
+        <div className="suggestions-container">
+            {searchData?.map((item) => {
+                const postType = getPostType(item.table);
+
+
+                return (
+                    <div
+                        key={item[postType.id]}
+                        className="suggestion-card"
+                        onClick={() => onClick(postType.to, item[postType.id])}
+                    >
+                        <div className="suggestion-left">
+                            <img
+                                className="suggestion-thumb"
+                                src={item?.thumbnail_image_url}
+                                alt="thumbnail"
+                            />
                         </div>
-                    )
-                })
-            }
+
+
+                        <div className="suggestion-right">
+                            <p className="suggestion-title">{item.title}</p>
+                            <p className="suggestion-desc">
+                                {trimText(item.meta_description, 120)}
+                            </p>
+                        </div>
+
+
+                        <div className="suggestion-type-tag">{postType.type}</div>
+                    </div>
+                );
+            })}
         </div>
-    )
+    );
 }
